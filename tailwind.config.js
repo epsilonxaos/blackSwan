@@ -1,23 +1,26 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
-      "./public/index.php",
-        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        './storage/framework/views/*.php',
+        "./public/index.php",
+        "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
+        "./storage/framework/views/*.php",
         "./resources/**/*.blade.php",
         "./resources/**/*.{js,ts,jsx,tsx}",
-        "./node_modules/flowbite/**/*.js"
+        "./node_modules/flowbite/**/*.js",
     ],
-    darkMode: 'class', // or 'class'
+    darkMode: "class", // or 'class'
     theme: {
         extend: {
+            colors: {
+                gris: "#868686",
+            },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                instrument: ["Instrument Sans", "sans-serif"],
             },
         },
     },
-
-    plugins: [require('@tailwindcss/forms'), require('flowbite/plugin')],
+    plugins: [require("@tailwindcss/forms"), require("flowbite/plugin")],
 };

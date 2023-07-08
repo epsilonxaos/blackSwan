@@ -1,3 +1,13 @@
 @tailwind base;
-@tailwind components; 
+@tailwind components;
 @tailwind utilities;
+
+body,
+html {
+    font-family: "Instrument Sans";
+    font-weight: 500;
+}
+
+svg.text-white {
+    fill: white;
+}

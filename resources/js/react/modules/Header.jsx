@@ -28,13 +28,13 @@ export default function Header() {
                     <img
                         src={logo}
                         alt="Black Swan logo"
-                        className="max-w-[180px] lg:max-w-[280px]"
+                        className="max-w-[180px] sm:max-w-[280px]"
                     />
 
                     <button
                         type="button"
                         onClick={() => setActive(!active)}
-                        className="transition-colors border border-white rounded-lg py-[2px] px-[8px] bg-black hover:bg-white hover:text-black text-xs md:text-sm"
+                        className="transition-colors border border-white rounded-lg py-[2px] px-[8px] bg-black hover:bg-white hover:text-black text-xs sm:text-sm"
                     >
                         Menú
                     </button>

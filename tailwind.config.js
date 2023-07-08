@@ -15,6 +15,7 @@ module.exports = {
         extend: {
             colors: {
                 gris: "#868686",
+                grisClaro: "#CBCBCB",
             },
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],

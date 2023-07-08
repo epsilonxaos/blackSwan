@@ -15,7 +15,7 @@
 </head>
 
 <body class="antialiased">
-    <div id="root" class="min-h-screen"></div>
+    <div id="root" class="min-h-screen pt-[64px] sm:pt-[67px ]"></div>
 </body>
 
 </html>

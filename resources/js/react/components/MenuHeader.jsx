@@ -4,13 +4,13 @@ import Parrafo from "./Parrafo";
 
 export default function MenuHeader({ active, handlerClose }) {
     return (
-        <nav className="w-full fixed top-0 left-0 bg-black text-white h-screen pt-20 pb-6 overflow-hidden md:max-h-[650px]">
+        <nav className="w-full fixed z-40 top-0 left-0 bg-black text-white h-screen pt-20 pb-6 overflow-hidden md:max-h-[650px]">
             <MainContainer
                 className={
                     "overflow-auto h-full flex items-center justify-between md:justify-center flex-col"
                 }
             >
-                <Parrafo className="text-gris max-w-[300px] md:max-w-[680px] tracking-[-0.54px] opacity-80 mx-auto">
+                <Parrafo className="text-gris max-w-[300px] md:max-w-[680px] opacity-80 mx-auto">
                     Desarrollamos estrategias integrales que permitan que{" "}
                     <span className="underline">lo inesperado</span> sea una
                     realidad en cada uno de nuestros rubros de especialización.

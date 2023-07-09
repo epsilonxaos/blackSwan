@@ -10,7 +10,7 @@ export default function Header() {
     return (
         <>
             <header className="bg-black text-white w-full fixed z-50 top-0 left-0">
-                <MainContainer className="flex items-center justify-between min-h-[64px]">
+                <MainContainer className="px-4 flex items-center justify-between min-h-[64px]">
                     <ul className="flex items-center justify-center font-normal text-sm">
                         <li>
                             <a href="#" className="underline font-bold">

@@ -6,7 +6,7 @@ import cisne from "../../../img/web/cisne.svg";
 export default function Footer() {
     return (
         <footer className="bg-black py-[50px] lg:pb-[20px] lg:pt-[150px] text-white">
-            <MainContainer>
+            <MainContainer className={"px-4"}>
                 <div className="lg:flex items-start justify-between">
                     {/* Rutas */}
                     <div className="px-[8vw] sm:px-0">

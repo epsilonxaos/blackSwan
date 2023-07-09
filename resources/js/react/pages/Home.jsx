@@ -113,6 +113,7 @@ export default function Home() {
                     style="underline"
                     className="justify-center gap-2 border-none"
                 >
+                    {/* Capital */}
                     <Tabs.Item title="Capital" className="">
                         <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                             <div className="mb-[30px] lg:mb-0 lg:pr-[60px] lg:max-w-[540px] 2xl:pr-[200px] 2xl:max-w-[680px]">
@@ -152,6 +153,8 @@ export default function Home() {
                             </div>
                         </div>
                     </Tabs.Item>
+
+                    {/* Real State */}
                     <Tabs.Item active title="Real State">
                         <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                             <div className="mb-[30px] lg:mb-0 lg:pr-[60px] lg:max-w-[540px] 2xl:pr-[200px] 2xl:max-w-[680px]">
@@ -192,6 +195,8 @@ export default function Home() {
                             </div>
                         </div>
                     </Tabs.Item>
+
+                    {/* Hospitalary */}
                     <Tabs.Item title="Hospitality">
                         <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                             <div className="mb-[30px] lg:mb-0 lg:pr-[60px] lg:max-w-[540px] 2xl:pr-[200px] 2xl:max-w-[680px]">

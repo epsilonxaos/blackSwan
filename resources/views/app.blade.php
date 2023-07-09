@@ -14,7 +14,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/react/App.jsx'])
 </head>
 
-<body class="antialiased">
+<body class="antialiased bg-white">
     <div id="root" class="min-h-screen pt-[64px] sm:pt-[67px ]"></div>
 </body>
 

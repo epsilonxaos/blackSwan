@@ -6,14 +6,15 @@ import { HiArrowDown } from "react-icons/hi";
 import { LiaRegistered } from "react-icons/lia";
 import { Tabs } from "flowbite-react";
 
-import capital from "../../../img/web/capital/capital.svg";
+import real from "../../../img/web/real/real.svg";
+import realText from "../../../img/web/real/realText.svg";
 import play from "../../../img/web/play.svg";
-import onlyCapital from "../../../img/web/recursos-oscuros/onlyCapital.svg";
+import onlyReal from "../../../img/web/recursos-oscuros/onlyReal.svg";
 import IMGkiller from "../../../img/web/capital/killer.png";
 import IMGgrupo from "../../../img/web/capital/grupo.png";
 import IMGfitorade from "../../../img/web/capital/fitorade.jpg";
 
-export default function Capital() {
+export default function RealState() {
     return (
         <main>
             {/* Banner principal */}
@@ -22,12 +23,17 @@ export default function Capital() {
                     className={"py-[60px] md:py-[100px] min-h-[700px]"}
                 >
                     <img
-                        src={capital}
-                        alt="Capital"
-                        className="w-[160px] mx-auto mb-[70px] lg:mb-[90px]"
+                        src={real}
+                        alt="Real State"
+                        className="w-[70px] mx-auto mb-[40px] lg:mb-[60px]"
+                    />
+                    <img
+                        src={realText}
+                        alt="Real State"
+                        className="w-[256px] xl:w-[400px] mx-auto mb-[70px] lg:mb-[90px]"
                     />
                     <Titulo className="text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px]">
-                        Impulsamos el rendimiento
+                        Construimos hoy <br /> el patrimonio del futuro
                     </Titulo>
 
                     <Boton className="mb-[40px] lg:mb-[150px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
@@ -44,91 +50,107 @@ export default function Capital() {
             </div>
 
             {/* Informacion */}
-            <MainContainer className={"pt-[60px] pb-[30px] lg:pb-[100px]"}>
+            <MainContainer
+                className={"pt-[60px] pb-[30px] lg:pb-[100px] px-[30px]"}
+            >
                 <hr className="border-black mb-[20px] hidden md:block" />
                 <div className="flex items-center justify-between">
                     <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                        CAPITAL{" "}
-                        <LiaRegistered className="text-[16px] relative -top-1" />
+                        REAL ESTATE{" "}
+                        <LiaRegistered className="text-[16px] relative top-[2px]" />
                     </Titulo>
                     <img
-                        src={onlyCapital}
-                        className="w-[80px] relative -top-[6px]"
+                        src={onlyReal}
+                        className="w-[40px] md:w-[60px] relative -top-[6px]"
                         alt="Capital"
                     />
                 </div>
                 <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
-                    Impulsamos el rendimiento
+                    Construimos hoy <br />
+                    el patrimonio del futuro
                 </h3>
-                <Titulo className="text-[30px] mb-[40px] lg:mb-[50px]">
-                    En el 2005 se fundó <br />
-                    <span className="font-bold">Black Swan Capital,</span>
+                <Titulo className="text-[26px] mb-[40px] lg:mb-[50px]">
+                    <span className="font-bold">Black Swan Real Estate,</span>
                 </Titulo>
                 <Parrafo className="text-justify mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto">
-                    Una unidad de negocio cien por ciento financiero que inició
-                    su crecimiento con el desarrollo de proyectos de inversión
-                    inmobiliaria y posteriormente se ha ampliado a otros rubros
-                    de negocio, como lo es principalmente el de hospitalidad.
+                    Es una unidad de negocio{" "}
+                    <span className="font-bold">
+                        especializada en el desarrollo y construcción de
+                        proyectos en el rubro inmobiliario,
+                    </span>{" "}
+                    que surge a partir de Grupo RAS, constructora enfocada en la
+                    supervisión de viviendas sociales fundada en por los socios
+                    del grupo en 1997.
                 </Parrafo>
                 <Parrafo className="text-justify  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto">
-                    Durante los primeros años desarrollaron proyectos
-                    inmobiliarios con servicios completos y de vivienda
-                    vertical, que fueron respaldados por la experiencia y
-                    capital acumulado desde 1997. Hoy la empresa cuenta con más
-                    de cien mil metros cuadrados supervisados, veinte mil metros
-                    cuadrados construidos y más de cuatrocientos mil metros
-                    cuadrados desarrollados.
+                    Durante el 2005, los socios deciden llevar la empresa a otro
+                    nivel a través del desarrollo de{" "}
+                    <span className="font-bold">
+                        proyectos inmobiliarios con servicios completos y de
+                        vivienda vertical,
+                    </span>{" "}
+                    basados en la experiencia e inversiones acumuladas desde sus
+                    inicios.
                 </Parrafo>
                 <Parrafo className="text-justify mb-[40px] md:w-[90%] max-w-[1300px] mx-auto">
-                    Progresivamente, los socios desarrollan, operan y/o
-                    invierten en empresas como lo han sido: <br />
-                    Cigno Hotels, Casa Amate Hostals, Killer Quake o Grupo
-                    Libera, que cuentan con los parámetros económicos necesarios
-                    y/o la filosofía de trabajo de la empresa.
+                    Hoy en día,{" "}
+                    <span className="font-bold">
+                        la empresa cuenta con más de
+                    </span>
                 </Parrafo>
 
                 <ul className="lg:flex lg:items-start lg:justify-around lg:max-w-[1200px] md:mb-[50px] mx-auto">
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            280 Millones
+                            100 mil m
+                            <sup className="text-[16px] relative top-[-12px] md:top-[-18px]">
+                                2
+                            </sup>
                         </h4>
                         <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
-                            En ventas totales
-                        </Parrafo>
-                        <Parrafo className="leading-[1.2]">
-                            Alcanzadas durante el añó 2022
+                            Supervisados
                         </Parrafo>
                     </li>
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            $1,500,000
+                            400 mil m
+                            <sup className="text-[16px] relative top-[-12px] md:top-[-18px]">
+                                2
+                            </sup>
                         </h4>
                         <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
-                            Ventas estimadas aseguradas
-                        </Parrafo>
-                        <Parrafo className="leading-[1.2]">
-                            Para los próximos 4 años
+                            Desarrollados
                         </Parrafo>
                     </li>
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            800 Millones
+                            20 mil m
+                            <sup className="text-[16px] relative top-[-12px] md:top-[-18px]">
+                                2
+                            </sup>
                         </h4>
                         <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
-                            Valor empresarial con activos
-                        </Parrafo>
-                        <Parrafo className="leading-[1.2]">
-                            Al día de hoy.
+                            Construidos
                         </Parrafo>
                     </li>
                 </ul>
 
-                <Parrafo className="text-justify sm:text-center mb-[40px]">
-                    Está en proceso el desarrollo de su{" "}
+                <Parrafo className="text-justify  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto">
+                    Proyectos como Única Living, Kantara Residencial, Yukán
+                    Townhouses, Tótem Residencial, entre otros, así como los más
+                    de mil clientes satisfechos y varias dependencias de
+                    Gobierno a nivel local y nacional, sustentan los casos de
+                    éxito y logros de esta unidad de negocio.
+                </Parrafo>
+                <Parrafo className="text-justify mb-[40px] md:w-[90%] max-w-[1300px] mx-auto">
+                    Al día de hoy, continúan en{" "}
                     <span className="font-bold">
-                        primer fondo de inversión:
+                        proyecto privadas residenciales y proyectos verticales
+                        con el sello responsabilidad medioambiental y la
+                        filosofía wellness,
                     </span>{" "}
-                    Black Swan Fund.
+                    basado en ello, planean desarrollar más de diez millones de
+                    metros cuadrados en los próximos 5 años.
                 </Parrafo>
             </MainContainer>
 
@@ -142,8 +164,8 @@ export default function Capital() {
                 className={"pt-[60px] pb-[30px] lg:pt-[100px] lg:pb-[90px]"}
             >
                 <Titulo className="text-[30px] mb-[40px] md:text-[32px]">
-                    <span className="font-bold">Black Swan Capital</span> cuenta
-                    con los siguientes proyectos
+                    <span className="font-bold">Black Swan Real State</span>{" "}
+                    cuenta con los siguientes proyectos
                 </Titulo>
 
                 <Tabs.Group

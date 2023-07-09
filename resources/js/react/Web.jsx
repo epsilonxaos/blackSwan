@@ -2,6 +2,7 @@ import Footer from "./modules/Footer";
 import Header from "./modules/Header";
 import Capital from "./pages/Capital";
 import Home from "./pages/Home";
+import Hospitalary from "./pages/Hospitalary";
 import RealState from "./pages/RealState";
 
 export default function Web() {
@@ -9,7 +10,7 @@ export default function Web() {
         <>
             <Header />
             {/* <Home /> */}
-            <RealState />
+            <Hospitalary />
             <Footer />
         </>
     );

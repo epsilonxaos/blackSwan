@@ -10,9 +10,8 @@ import hospitalary from "../../../img/web/hospitalary/hospitalary.svg";
 import hospitalaryText from "../../../img/web/hospitalary/hospitalaryText.svg";
 import play from "../../../img/web/play.svg";
 import onlyHospitality from "../../../img/web/recursos-oscuros/onlyHospitality.svg";
-import IMGkiller from "../../../img/web/capital/killer.png";
-import IMGgrupo from "../../../img/web/capital/grupo.png";
-import IMGfitorade from "../../../img/web/capital/fitorade.jpg";
+import IMGcasaamate from "../../../img/web/hospitalary/casaamate.png";
+import IMGcignohotel from "../../../img/web/hospitalary/cignohotel.jpg";
 
 export default function Hospitalary() {
     return (
@@ -114,12 +113,12 @@ export default function Hospitalary() {
                     style="underline"
                     className="justify-center gap-2 border-none"
                 >
-                    {/* Fitorade */}
-                    <Tabs.Item active title="Fitorade" className="">
+                    {/* Cigno Hotel */}
+                    <Tabs.Item active title="Cigno Hotel" className="">
                         <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                             <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
                                 <img
-                                    src={IMGfitorade}
+                                    src={IMGcignohotel}
                                     className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
 									xl:h-full w-full max-w-full"
                                     alt="Capital"
@@ -128,28 +127,28 @@ export default function Hospitalary() {
                             <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
                                 <div className="flex flex-col h-full justify-center">
                                     <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                        Fitorade
+                                        Cigno Hotel
                                     </Titulo>
                                     <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                        Daily Meal Plan
+                                        Hotel Boutique
                                     </h3>
                                     <Parrafo className="text-justify">
-                                        Servicio de comida saludable en Mérida
-                                        en el que tenemos el compromiso de
-                                        ofrecer comidas elaboradas con alimentos
-                                        integrales y completamente saludables.
+                                        Hotel boutique enfocado en convertirse
+                                        en un refugio para exploradores que
+                                        buscan en cada viaje una experiencia
+                                        enriquecedora.
                                     </Parrafo>
                                 </div>
                             </div>
                         </div>
                     </Tabs.Item>
 
-                    {/* Grupo Libera */}
-                    <Tabs.Item title="Grupo Libera" className="">
+                    {/* Casa Amate */}
+                    <Tabs.Item title="Casa Amate" className="">
                         <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                             <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
                                 <img
-                                    src={IMGgrupo}
+                                    src={IMGcasaamate}
                                     className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
 									xl:h-full w-full max-w-full"
                                     alt="Capital"
@@ -158,47 +157,16 @@ export default function Hospitalary() {
                             <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
                                 <div className="flex flex-col h-full justify-center">
                                     <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                        Grupo Libera
+                                        Casa Amate
                                     </Titulo>
                                     <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                        Comercialización y desarrollo de bienes
-                                        inmuebles.
+                                        Hoteles Experiencia.
                                     </h3>
                                     <Parrafo className="text-justify">
-                                        Empresa enfocada en la comercialización
-                                        de proyectos inmobiliarios que tienen
-                                        como objetivo asegurar tu futuro
-                                        invirtiendo en las mejores zonas del
-                                        estado de Yucatán.
-                                    </Parrafo>
-                                </div>
-                            </div>
-                        </div>
-                    </Tabs.Item>
-
-                    {/* Killer Quake */}
-                    <Tabs.Item title="Killer Quake" className="">
-                        <div className="flex flex-col lg:flex-row w-full pt-[70px]">
-                            <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
-                                <img
-                                    src={IMGkiller}
-                                    className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
-									xl:h-full w-full max-w-full"
-                                    alt="Capital"
-                                />
-                            </div>
-                            <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
-                                <div className="flex flex-col h-full justify-center">
-                                    <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                        Killer Quake
-                                    </Titulo>
-                                    <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                        Comercialización
-                                    </h3>
-                                    <Parrafo className="text-justify">
-                                        Empresa enfocada en la creación de
-                                        contenido que se plasma en diferentes
-                                        artículos disponibles a la venta.
+                                        Hostal boutique temático enfocado en la
+                                        experiencia única: arte, diversión y
+                                        gastronomía. Lugar para viajeros que
+                                        desean ser un local más.
                                     </Parrafo>
                                 </div>
                             </div>

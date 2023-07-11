@@ -6,11 +6,13 @@ import Home from "./pages/Home";
 import Hospitalary from "./pages/Hospitalary";
 import RealState from "./pages/RealState";
 import Nosotros from "./pages/Nosotros";
+import ScrollToTop from "./components/ScrollToTop";
 
 const router = createBrowserRouter([
     {
         element: (
             <>
+                <ScrollToTop />
                 <Header />
                 <Outlet />
                 <Footer />

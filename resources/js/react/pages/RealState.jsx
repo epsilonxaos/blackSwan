@@ -10,11 +10,74 @@ import real from "../../../img/web/real/real.svg";
 import realText from "../../../img/web/real/realText.svg";
 import play from "../../../img/web/play.svg";
 import onlyReal from "../../../img/web/recursos-oscuros/onlyReal.svg";
-import IMGkiller from "../../../img/web/capital/killer.png";
-import IMGgrupo from "../../../img/web/capital/grupo.png";
-import IMGfitorade from "../../../img/web/capital/fitorade.jpg";
+
+import IMGalmaresidencial from "../../../img/web/real/almaresidencial.png";
+import IMGarenales from "../../../img/web/real/arenales.jpg";
+import IMGsantamar from "../../../img/web/real/santamar.jpg";
+import IMGtotem from "../../../img/web/real/totem.png";
+import IMGunicaliving from "../../../img/web/real/unicaliving.jpg";
+import IMGxekenyxakah from "../../../img/web/real/xekenyxakah.png";
+import IMGxomak from "../../../img/web/real/xomak.jpg";
+import IMGyukan from "../../../img/web/real/yukan.jpg";
 
 export default function RealState() {
+    const proyectos = [
+        {
+            cover: IMGtotem,
+            title: "Tótem Residencial",
+            subtitle: "Residencial Sustentable",
+            text: "Este proyecto residencial sustentable se ubica en Celestún, Yucatán y tiene como esencia la admiración, respeto y protección de la naturaleza, así como un compromiso con el desarrollo económico y social de las comunidades locales.",
+        },
+        {
+            cover: IMGunicaliving,
+            title: "Única Living",
+            subtitle: "Residencial Sustentable",
+            text: "Desarrollo residencial ubicado al norte de Mérida, Yucatán equipado con las mejores amenidades para disfrutar con comodidad y confort.",
+        },
+        {
+            cover: IMGyukan,
+            title: "Yukan Town Houses",
+            subtitle: "Residencial Sustentable",
+            text: "Conjunto de townhouses ubicado al norte de Mérida, equipados con las mejores amenidades y equipados de forma cómoda y funcional.",
+        },
+        {
+            cover: IMGarenales,
+            title: "Arenales",
+            subtitle: "Residencial Sustentable",
+            text: "Esta privada residencial cuenta con todas las amenidades para disfrutar la belleza de Yucatán y sus costas, gozando de altos niveles de seguridad y comodidad.",
+        },
+        {
+            cover: IMGsantamar,
+            title: "Santa Mar",
+            subtitle: "Residencial Sustentable",
+            text: [
+                "Santa Mar es un proyecto <span class='font-bold'>residencial privado con un enfoque wellness.</span> Su principal objetivo es ofrecer un espacio para disfrutar de una vida en pleno equilibrio mental, emocional y físico, con todas sus amenidades necesarias.",
+                "A diez minutos de Santa Mar se encuentra Sisal, donde se construirá un Club de Playa frente al mar.",
+            ],
+        },
+        {
+            cover: IMGalmaresidencial,
+            title: "Alma Residencial",
+            subtitle: "Residencial Sustentable",
+            text: "Es una privada pensada para las familias que buscan un lugar tranquilo con amplios espacios de recreo; localizada en la mejor zona residencial de crecimiento de Yucatán. El perfecto equilibrio entre urbanidad y tranquilidad.",
+        },
+        {
+            cover: IMGxomak,
+            title: "Xomak",
+            subtitle: "Residencial Sustentable",
+            text: "Conjunto de lujosos departamentos boho chic tipo estudio ubicados en Tulum, Quintana Roo, que conjuntan comodidad y sofisticación en un destino de ensueño.",
+        },
+        {
+            cover: IMGxekenyxakah,
+            title: "Xexén xakáh",
+            subtitle: "Residencial Sustentable",
+            text: [
+                "Este desarrollo consta de <span class='font-bold'>26 unidades totalmente urbanizadas</span> y creadas para complacer al más exquisito gusto, lo cual las hace perfectas para complacer a los residentes y experimentar una convivencia armoniosa en <span class='font-bold'>Tulum</span>.",
+                "El complejo se divide en dos edificios de cuatro niveles: Jardín, Medio Bajo, Medio Alto y Azotea.",
+            ],
+        },
+    ];
+
     return (
         <main>
             {/* Banner principal */}
@@ -175,96 +238,47 @@ export default function RealState() {
                     style="underline"
                     className="justify-center gap-2 border-none"
                 >
-                    {/* Fitorade */}
-                    <Tabs.Item active title="Fitorade" className="">
-                        <div className="flex flex-col lg:flex-row w-full pt-[70px]">
-                            <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
-                                <img
-                                    src={IMGfitorade}
-                                    className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
+                    {/* Única Living */}
+                    {proyectos.map((item) => (
+                        <Tabs.Item active title={item.title} className="">
+                            <div className="flex flex-col lg:flex-row w-full pt-[70px]">
+                                <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
+                                    <img
+                                        src={item.cover}
+                                        className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
 									xl:h-full w-full max-w-full"
-                                    alt="Capital"
-                                />
-                            </div>
-                            <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
-                                <div className="flex flex-col h-full justify-center">
-                                    <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                        Fitorade
-                                    </Titulo>
-                                    <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                        Daily Meal Plan
-                                    </h3>
-                                    <Parrafo className="text-justify">
-                                        Servicio de comida saludable en Mérida
-                                        en el que tenemos el compromiso de
-                                        ofrecer comidas elaboradas con alimentos
-                                        integrales y completamente saludables.
-                                    </Parrafo>
+                                        alt={item.title}
+                                    />
+                                </div>
+                                <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
+                                    <div className="flex flex-col h-full justify-center">
+                                        <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
+                                            {item.title}
+                                        </Titulo>
+                                        <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
+                                            {item.subtitle}
+                                        </h3>
+                                        {typeof item.text == "string" ? (
+                                            <Parrafo className="text-justify">
+                                                {item.text}
+                                            </Parrafo>
+                                        ) : (
+                                            item.text.map((tx, idx) => (
+                                                <Parrafo
+                                                    className={`text-justify ${
+                                                        item.length == idx + 1
+                                                            ? ""
+                                                            : "mb-[30px]"
+                                                    }`}
+                                                    textParse={tx}
+                                                ></Parrafo>
+                                            ))
+                                        )}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </Tabs.Item>
-
-                    {/* Grupo Libera */}
-                    <Tabs.Item title="Grupo Libera" className="">
-                        <div className="flex flex-col lg:flex-row w-full pt-[70px]">
-                            <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
-                                <img
-                                    src={IMGgrupo}
-                                    className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
-									xl:h-full w-full max-w-full"
-                                    alt="Capital"
-                                />
-                            </div>
-                            <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
-                                <div className="flex flex-col h-full justify-center">
-                                    <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                        Grupo Libera
-                                    </Titulo>
-                                    <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                        Comercialización y desarrollo de bienes
-                                        inmuebles.
-                                    </h3>
-                                    <Parrafo className="text-justify">
-                                        Empresa enfocada en la comercialización
-                                        de proyectos inmobiliarios que tienen
-                                        como objetivo asegurar tu futuro
-                                        invirtiendo en las mejores zonas del
-                                        estado de Yucatán.
-                                    </Parrafo>
-                                </div>
-                            </div>
-                        </div>
-                    </Tabs.Item>
-
-                    {/* Killer Quake */}
-                    <Tabs.Item title="Killer Quake" className="">
-                        <div className="flex flex-col lg:flex-row w-full pt-[70px]">
-                            <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
-                                <img
-                                    src={IMGkiller}
-                                    className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
-									xl:h-full w-full max-w-full"
-                                    alt="Capital"
-                                />
-                            </div>
-                            <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
-                                <div className="flex flex-col h-full justify-center">
-                                    <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                        Killer Quake
-                                    </Titulo>
-                                    <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                        Comercialización
-                                    </h3>
-                                    <Parrafo className="text-justify">
-                                        Empresa enfocada en la creación de
-                                        contenido que se plasma en diferentes
-                                        artículos disponibles a la venta.
-                                    </Parrafo>
-                                </div>
-                            </div>
-                        </div>
-                    </Tabs.Item>
+                        </Tabs.Item>
+                    ))}
                 </Tabs.Group>
             </MainContainer>
         </main>

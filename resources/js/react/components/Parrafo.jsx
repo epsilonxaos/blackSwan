@@ -1,6 +1,11 @@
 import { twMerge } from "tailwind-merge";
+import parse from "html-react-parser";
 
-export default function Parrafo({ className = "", children }) {
+export default function Parrafo({
+    className = "",
+    children = null,
+    textParse = "",
+}) {
     return (
         <p
             className={twMerge(
@@ -8,7 +13,7 @@ export default function Parrafo({ className = "", children }) {
                 className
             )}
         >
-            {children}
+            {textParse ? parse(textParse) : children}
         </p>
     );
 }

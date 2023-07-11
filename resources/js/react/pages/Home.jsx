@@ -1,7 +1,8 @@
 import MainContainer from "../components/MainContainer";
 import Parrafo from "../components/Parrafo";
 import Titulo from "../components/Titulo";
-import { Tabs } from "flowbite-react";
+// import { Tabs } from "flowbite-react";
+import Tabs from "../components/Tabs";
 import { LiaRegistered } from "react-icons/lia";
 
 import frasePrincipal from "../../../img/web/frase-principal.svg";
@@ -19,8 +20,11 @@ import IMGcapital from "../../../img/web/capital.png";
 import IMGreal from "../../../img/web/real.png";
 import IMGhospitality from "../../../img/web/hospitality.png";
 import Boton from "../components/Buttons";
+import { useState } from "react";
 
 export default function Home() {
+    const [defaultTab, setDefaultTab] = useState("tabCapital");
+
     return (
         <main>
             {/* Banner principal */}
@@ -49,8 +53,8 @@ export default function Home() {
                     </div>
                 </MainContainer>
             </div>
-            {/* Black Swan */}
 
+            {/* Black Swan */}
             <MainContainer className={"py-[65px] md:py-[100px]"}>
                 <img
                     src={bSngr}
@@ -101,20 +105,36 @@ export default function Home() {
                 </ul>
             </MainContainer>
 
+            {/* Separacion */}
             <MainContainer>
                 <hr className="border-black" />
             </MainContainer>
 
+            {/* Secciones */}
             <MainContainer className={"py-[65px] md:py-[100px]"}>
                 <Titulo>Conoce más de nuestras tres divisiones</Titulo>
 
-                <Tabs.Group
-                    aria-label="Tabs with underline"
-                    style="underline"
-                    className="justify-center gap-2 border-none"
-                >
-                    {/* Capital */}
-                    <Tabs.Item title="Capital" className="">
+                <Tabs defaultTab="tabCapital">
+                    <Tabs.Button
+                        tabid="tabCapital"
+                        handleDefaultTab={(data) => setDefaultTab(data)}
+                    >
+                        Capital
+                    </Tabs.Button>
+                    <Tabs.Button
+                        tabid="tabRealState"
+                        handleDefaultTab={(data) => setDefaultTab(data)}
+                    >
+                        Real State
+                    </Tabs.Button>
+                    <Tabs.Button
+                        tabid="tabHospitality"
+                        handleDefaultTab={(data) => setDefaultTab(data)}
+                    >
+                        Hospitality
+                    </Tabs.Button>
+
+                    <Tabs.Container tabref={"tabCapital"}>
                         <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                             <div className="mb-[30px] lg:mb-0 lg:pr-[60px] lg:max-w-[540px] 2xl:pr-[200px] 2xl:max-w-[680px]">
                                 <img
@@ -152,10 +172,8 @@ export default function Home() {
                                 />
                             </div>
                         </div>
-                    </Tabs.Item>
-
-                    {/* Real State */}
-                    <Tabs.Item active title="Real State">
+                    </Tabs.Container>
+                    <Tabs.Container tabref={"tabRealState"}>
                         <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                             <div className="mb-[30px] lg:mb-0 lg:pr-[60px] lg:max-w-[540px] 2xl:pr-[200px] 2xl:max-w-[680px]">
                                 <img
@@ -194,10 +212,8 @@ export default function Home() {
                                 />
                             </div>
                         </div>
-                    </Tabs.Item>
-
-                    {/* Hospitalary */}
-                    <Tabs.Item title="Hospitality">
+                    </Tabs.Container>
+                    <Tabs.Container tabref={"tabHospitality"}>
                         <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                             <div className="mb-[30px] lg:mb-0 lg:pr-[60px] lg:max-w-[540px] 2xl:pr-[200px] 2xl:max-w-[680px]">
                                 <img
@@ -235,8 +251,8 @@ export default function Home() {
                                 />
                             </div>
                         </div>
-                    </Tabs.Item>
-                </Tabs.Group>
+                    </Tabs.Container>
+                </Tabs>
             </MainContainer>
         </main>
     );

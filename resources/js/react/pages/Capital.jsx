@@ -19,18 +19,20 @@ export default function Capital() {
             {/* Banner principal */}
             <div className="bg-black">
                 <MainContainer
-                    className={"py-[60px] md:py-[100px] min-h-[700px]"}
+                    className={
+                        "py-[60px] md:py-[100px] min-h-[700px] lg:h-[calc(100vh-68px)] lg:max-h-[870px]"
+                    }
                 >
                     <img
                         src={capital}
                         alt="Capital"
                         className="w-[160px] mx-auto mb-[70px] lg:mb-[90px]"
                     />
-                    <Titulo className="text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px]">
+                    <Titulo className="text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] xl:flex xl:items-center xl:justify-center">
                         Impulsamos el rendimiento
                     </Titulo>
 
-                    <Boton className="mb-[40px] lg:mb-[150px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
+                    <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
                         <img src={play} alt="Play icon" className="mr-[4px]" />{" "}
                         Ver video
                     </Boton>

@@ -3,7 +3,7 @@ import { CapitalIcon, Hospitalary, RealStateIcon } from "./Icons";
 import MainContainer from "./MainContainer";
 import Parrafo from "./Parrafo";
 
-export default function MenuHeader() {
+export default function MenuHeader({ active, handlerClose }) {
     return (
         <nav className="w-full fixed z-40 top-0 left-0 bg-black text-white h-screen pt-20 pb-6 overflow-hidden md:max-h-[650px]">
             <MainContainer
@@ -19,17 +19,17 @@ export default function MenuHeader() {
 
                 <ul className="flex w-full max-w-6xl mx-auto items-center justify-center md:justify-around flex-col md:flex-row max-md:gap-10 landscape:py-12 md:py-[120px]">
                     <li>
-                        <Link to={"capital"}>
+                        <Link onClick={handlerClose} to={"capital"}>
                             <CapitalIcon className="text-white w-[140px]" />
                         </Link>
                     </li>
                     <li>
-                        <Link to={"real-state"}>
+                        <Link onClick={handlerClose} to={"real-state"}>
                             <RealStateIcon className="text-white w-[140px]" />
                         </Link>
                     </li>
                     <li>
-                        <Link to={"hospitality"}>
+                        <Link onClick={handlerClose} to={"hospitality"}>
                             <Hospitalary className="text-white w-[140px]" />
                         </Link>
                     </li>
@@ -37,7 +37,11 @@ export default function MenuHeader() {
 
                 <ul className="flex items-center justify-center font-normal text-sm">
                     <li>
-                        <Link to={"nosotros"} className="underline">
+                        <Link
+                            onClick={handlerClose}
+                            to={"nosotros"}
+                            className="underline"
+                        >
                             NOSOTROS
                         </Link>
                     </li>

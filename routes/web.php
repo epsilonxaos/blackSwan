@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'app')->where('path', '.*');
 Route::view('/capital', 'app')->where('path', '.*');
+Route::view('/real-state', 'app')->where('path', '.*');
+Route::view('/hospitality', 'app')->where('path', '.*');
+Route::view('/nosotros', 'app')->where('path', '.*');
 
 Route::get('/dashboard', function () {
 	return view('dashboard');

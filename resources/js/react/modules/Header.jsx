@@ -41,12 +41,7 @@ export default function Header() {
                 </MainContainer>
             </header>
 
-            {active && (
-                <MenuHeader
-                    active={active}
-                    handlerClose={() => setActive(false)}
-                />
-            )}
+            {active && <MenuHeader />}
         </>
     );
 }

@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import { CapitalIcon, Hospitalary, RealStateIcon } from "./Icons";
 import MainContainer from "./MainContainer";
 import Parrafo from "./Parrafo";
 
-export default function MenuHeader({ active, handlerClose }) {
+export default function MenuHeader() {
     return (
         <nav className="w-full fixed z-40 top-0 left-0 bg-black text-white h-screen pt-20 pb-6 overflow-hidden md:max-h-[650px]">
             <MainContainer
@@ -18,27 +19,27 @@ export default function MenuHeader({ active, handlerClose }) {
 
                 <ul className="flex w-full max-w-6xl mx-auto items-center justify-center md:justify-around flex-col md:flex-row max-md:gap-10 landscape:py-12 md:py-[120px]">
                     <li>
-                        <a href="#">
+                        <Link to={"capital"}>
                             <CapitalIcon className="text-white w-[140px]" />
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#">
+                        <Link to={"real-state"}>
                             <RealStateIcon className="text-white w-[140px]" />
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#">
+                        <Link to={"hospitality"}>
                             <Hospitalary className="text-white w-[140px]" />
-                        </a>
+                        </Link>
                     </li>
                 </ul>
 
                 <ul className="flex items-center justify-center font-normal text-sm">
                     <li>
-                        <a href="#" className="underline">
+                        <Link to={"nosotros"} className="underline">
                             NOSOTROS
-                        </a>
+                        </Link>
                     </li>
                     <li className="px-1">/</li>
                     <li>

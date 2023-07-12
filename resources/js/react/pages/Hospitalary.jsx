@@ -4,7 +4,7 @@ import Parrafo from "../components/Parrafo";
 import Boton from "../components/Buttons";
 import { HiArrowDown } from "react-icons/hi";
 import { LiaRegistered } from "react-icons/lia";
-import { Tabs } from "flowbite-react";
+import Tabs from "../components/Tabs";
 
 import hospitalary from "../../../img/web/hospitalary/hospitalary.svg";
 import hospitalaryText from "../../../img/web/hospitalary/hospitalaryText.svg";
@@ -14,6 +14,23 @@ import IMGcasaamate from "../../../img/web/hospitalary/casaamate.png";
 import IMGcignohotel from "../../../img/web/hospitalary/cignohotel.jpg";
 
 export default function Hospitalary() {
+    const proyectos = [
+        {
+            id: "tabcignohotel",
+            cover: IMGcignohotel,
+            title: "Cigno Hotel",
+            subtitle: "Hotel Boutique",
+            text: "Hotel boutique enfocado en convertirse en un refugio para exploradores que buscan en cada viaje una experiencia enriquecedora.",
+        },
+        {
+            id: "tabcasaamate",
+            cover: IMGcasaamate,
+            title: "Casa Amate",
+            subtitle: "Hoteles Experiencia",
+            text: "Hostal boutique temático enfocado en la experiencia única: arte, diversión y gastronomía. Lugar para viajeros que desean ser un local más.",
+        },
+    ];
+
     return (
         <main>
             {/* Banner principal */}
@@ -108,71 +125,56 @@ export default function Hospitalary() {
                     cuenta con los siguientes proyectos
                 </Titulo>
 
-                <Tabs.Group
-                    aria-label="Tabs with underline"
-                    style="underline"
-                    className="justify-center gap-2 border-none"
-                >
-                    {/* Cigno Hotel */}
-                    <Tabs.Item active title="Cigno Hotel" className="">
-                        <div className="flex flex-col lg:flex-row w-full pt-[70px]">
-                            <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
-                                <img
-                                    src={IMGcignohotel}
-                                    className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
-									xl:h-full w-full max-w-full"
-                                    alt="Capital"
-                                />
-                            </div>
-                            <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
-                                <div className="flex flex-col h-full justify-center">
-                                    <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                        Cigno Hotel
-                                    </Titulo>
-                                    <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                        Hotel Boutique
-                                    </h3>
-                                    <Parrafo className="text-justify">
-                                        Hotel boutique enfocado en convertirse
-                                        en un refugio para exploradores que
-                                        buscan en cada viaje una experiencia
-                                        enriquecedora.
-                                    </Parrafo>
-                                </div>
-                            </div>
-                        </div>
-                    </Tabs.Item>
+                <Tabs defaultTab={"tabcignohotel"}>
+                    <div className="flex justify-between w-full max-w-[300px] mx-auto">
+                        {proyectos.map((item) => (
+                            <Tabs.Button tabid={item.id} className="w-1/2">
+                                {item.title}
+                            </Tabs.Button>
+                        ))}
+                    </div>
 
-                    {/* Casa Amate */}
-                    <Tabs.Item title="Casa Amate" className="">
-                        <div className="flex flex-col lg:flex-row w-full pt-[70px]">
-                            <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
-                                <img
-                                    src={IMGcasaamate}
-                                    className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
-									xl:h-full w-full max-w-full"
-                                    alt="Capital"
-                                />
-                            </div>
-                            <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
-                                <div className="flex flex-col h-full justify-center">
-                                    <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                        Casa Amate
-                                    </Titulo>
-                                    <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                        Hoteles Experiencia.
-                                    </h3>
-                                    <Parrafo className="text-justify">
-                                        Hostal boutique temático enfocado en la
-                                        experiencia única: arte, diversión y
-                                        gastronomía. Lugar para viajeros que
-                                        desean ser un local más.
-                                    </Parrafo>
+                    {proyectos.map((item) => (
+                        <Tabs.Container tabref={item.id}>
+                            <div className="flex flex-col lg:flex-row w-full pt-[70px]">
+                                <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
+                                    <img
+                                        src={item.cover}
+                                        className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
+										xl:h-full w-full max-w-full"
+                                        alt={item.title}
+                                    />
+                                </div>
+                                <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
+                                    <div className="flex flex-col h-full justify-center">
+                                        <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
+                                            {item.title}
+                                        </Titulo>
+                                        <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
+                                            {item.subtitle}
+                                        </h3>
+                                        {typeof item.text == "string" ? (
+                                            <Parrafo className="text-justify">
+                                                {item.text}
+                                            </Parrafo>
+                                        ) : (
+                                            item.text.map((tx, idx) => (
+                                                <Parrafo
+                                                    className={`text-justify ${
+                                                        item.length == idx + 1
+                                                            ? ""
+                                                            : "mb-[30px]"
+                                                    }`}
+                                                    textParse={tx}
+                                                ></Parrafo>
+                                            ))
+                                        )}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </Tabs.Item>
-                </Tabs.Group>
+                        </Tabs.Container>
+                    ))}
+                </Tabs>
             </MainContainer>
         </main>
     );

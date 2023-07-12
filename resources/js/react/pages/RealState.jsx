@@ -4,7 +4,7 @@ import Parrafo from "../components/Parrafo";
 import Boton from "../components/Buttons";
 import { HiArrowDown } from "react-icons/hi";
 import { LiaRegistered } from "react-icons/lia";
-import { Tabs } from "flowbite-react";
+import Tabs from "../components/Tabs";
 
 import real from "../../../img/web/real/real.svg";
 import realText from "../../../img/web/real/realText.svg";
@@ -23,30 +23,31 @@ import IMGyukan from "../../../img/web/real/yukan.jpg";
 export default function RealState() {
     const proyectos = [
         {
-            cover: IMGtotem,
-            title: "Tótem Residencial",
-            subtitle: "Residencial Sustentable",
-            text: "Este proyecto residencial sustentable se ubica en Celestún, Yucatán y tiene como esencia la admiración, respeto y protección de la naturaleza, así como un compromiso con el desarrollo económico y social de las comunidades locales.",
-        },
-        {
+            id: "tabunicaliving",
             cover: IMGunicaliving,
             title: "Única Living",
             subtitle: "Residencial Sustentable",
             text: "Desarrollo residencial ubicado al norte de Mérida, Yucatán equipado con las mejores amenidades para disfrutar con comodidad y confort.",
         },
         {
-            cover: IMGyukan,
-            title: "Yukan Town Houses",
+            id: "tabalmaresidencial",
+            cover: IMGalmaresidencial,
+            title: "Alma Residencial",
             subtitle: "Residencial Sustentable",
-            text: "Conjunto de townhouses ubicado al norte de Mérida, equipados con las mejores amenidades y equipados de forma cómoda y funcional.",
+            text: "Es una privada pensada para las familias que buscan un lugar tranquilo con amplios espacios de recreo; localizada en la mejor zona residencial de crecimiento de Yucatán. El perfecto equilibrio entre urbanidad y tranquilidad.",
         },
         {
-            cover: IMGarenales,
-            title: "Arenales",
+            id: "tabxekenyxakah",
+            cover: IMGxekenyxakah,
+            title: "Xexén xakáh",
             subtitle: "Residencial Sustentable",
-            text: "Esta privada residencial cuenta con todas las amenidades para disfrutar la belleza de Yucatán y sus costas, gozando de altos niveles de seguridad y comodidad.",
+            text: [
+                "Este desarrollo consta de <span class='font-bold'>26 unidades totalmente urbanizadas</span> y creadas para complacer al más exquisito gusto, lo cual las hace perfectas para complacer a los residentes y experimentar una convivencia armoniosa en <span class='font-bold'>Tulum</span>.",
+                "El complejo se divide en dos edificios de cuatro niveles: Jardín, Medio Bajo, Medio Alto y Azotea.",
+            ],
         },
         {
+            id: "tabsantamar",
             cover: IMGsantamar,
             title: "Santa Mar",
             subtitle: "Residencial Sustentable",
@@ -56,25 +57,32 @@ export default function RealState() {
             ],
         },
         {
-            cover: IMGalmaresidencial,
-            title: "Alma Residencial",
+            id: "tabarenales",
+            cover: IMGarenales,
+            title: "Arenales",
             subtitle: "Residencial Sustentable",
-            text: "Es una privada pensada para las familias que buscan un lugar tranquilo con amplios espacios de recreo; localizada en la mejor zona residencial de crecimiento de Yucatán. El perfecto equilibrio entre urbanidad y tranquilidad.",
+            text: "Esta privada residencial cuenta con todas las amenidades para disfrutar la belleza de Yucatán y sus costas, gozando de altos niveles de seguridad y comodidad.",
         },
         {
+            id: "tabtotem",
+            cover: IMGtotem,
+            title: "Tótem Residencial",
+            subtitle: "Residencial Sustentable",
+            text: "Este proyecto residencial sustentable se ubica en Celestún, Yucatán y tiene como esencia la admiración, respeto y protección de la naturaleza, así como un compromiso con el desarrollo económico y social de las comunidades locales.",
+        },
+        {
+            id: "tabyukan",
+            cover: IMGyukan,
+            title: "Yukan Town Houses",
+            subtitle: "Residencial Sustentable",
+            text: "Conjunto de townhouses ubicado al norte de Mérida, equipados con las mejores amenidades y equipados de forma cómoda y funcional.",
+        },
+        {
+            id: "tabxomak",
             cover: IMGxomak,
             title: "Xomak",
             subtitle: "Residencial Sustentable",
             text: "Conjunto de lujosos departamentos boho chic tipo estudio ubicados en Tulum, Quintana Roo, que conjuntan comodidad y sofisticación en un destino de ensueño.",
-        },
-        {
-            cover: IMGxekenyxakah,
-            title: "Xexén xakáh",
-            subtitle: "Residencial Sustentable",
-            text: [
-                "Este desarrollo consta de <span class='font-bold'>26 unidades totalmente urbanizadas</span> y creadas para complacer al más exquisito gusto, lo cual las hace perfectas para complacer a los residentes y experimentar una convivencia armoniosa en <span class='font-bold'>Tulum</span>.",
-                "El complejo se divide en dos edificios de cuatro niveles: Jardín, Medio Bajo, Medio Alto y Azotea.",
-            ],
         },
     ];
 
@@ -233,20 +241,26 @@ export default function RealState() {
                     cuenta con los siguientes proyectos
                 </Titulo>
 
-                <Tabs.Group
-                    aria-label="Tabs with underline"
-                    style="underline"
-                    className="justify-center gap-2 border-none"
-                >
-                    {/* Única Living */}
+                <Tabs defaultTab={"tabtotem"}>
+                    <div className="flex justify-center flex-wrap w-full max-w-[780px] mx-auto">
+                        {proyectos.map((item) => (
+                            <Tabs.Button
+                                tabid={item.id}
+                                className="w-1/2 md:w-1/4 max-w-none text-[13px] md:text-[16px]"
+                            >
+                                {item.title}
+                            </Tabs.Button>
+                        ))}
+                    </div>
+
                     {proyectos.map((item) => (
-                        <Tabs.Item active title={item.title} className="">
+                        <Tabs.Container tabref={item.id}>
                             <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                                 <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
                                     <img
                                         src={item.cover}
                                         className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
-									xl:h-full w-full max-w-full"
+										xl:h-full w-full max-w-full"
                                         alt={item.title}
                                     />
                                 </div>
@@ -277,9 +291,9 @@ export default function RealState() {
                                     </div>
                                 </div>
                             </div>
-                        </Tabs.Item>
+                        </Tabs.Container>
                     ))}
-                </Tabs.Group>
+                </Tabs>
             </MainContainer>
         </main>
     );

@@ -14,6 +14,30 @@ import IMGgrupo from "../../../img/web/capital/grupo.png";
 import IMGfitorade from "../../../img/web/capital/fitorade.jpg";
 
 export default function Capital() {
+    const proyectos = [
+        {
+            id: "tabFitorade",
+            cover: IMGfitorade,
+            title: "Fitorade",
+            subtitle: "Daily Meal Plan",
+            text: "Servicio de comida saludable en Mérida en el que tenemos el compromiso de ofrecer comidas elaboradas con alimentos integrales y completamente saludables.",
+        },
+        {
+            id: "tabGrupoLibera",
+            cover: IMGgrupo,
+            title: "Grupo Libera",
+            subtitle: "omercialización y desarrollo de bienes inmuebles",
+            text: "Empresa enfocada en la comercialización de proyectos inmobiliarios que tienen como objetivo asegurar tu futuro invirtiendo en las mejores zonas del estado de Yucatán.",
+        },
+        {
+            id: "tabKillerQuake",
+            cover: IMGkiller,
+            title: "Killer Quake",
+            subtitle: "Comercialización",
+            text: "Empresa enfocada en la creación de contenido que se plasma en diferentes artículos disponibles a la venta.",
+        },
+    ];
+
     return (
         <main>
             {/* Banner principal */}
@@ -148,113 +172,55 @@ export default function Capital() {
                     con los siguientes proyectos
                 </Titulo>
 
-                <Tabs defaultTab="tabFitorade">
+                <Tabs defaultTab={"tabFitorade"}>
                     <div className="flex justify-between w-full max-w-[480px] mx-auto">
-                        <Tabs.Button
-                            tabid="tabFitorade"
-                            handleDefaultTab={(data) => setDefaultTab(data)}
-                        >
-                            Fitorade
-                        </Tabs.Button>
-                        <Tabs.Button
-                            tabid="tabGrupoLibera"
-                            handleDefaultTab={(data) => setDefaultTab(data)}
-                        >
-                            Grupo Libera
-                        </Tabs.Button>
-                        <Tabs.Button
-                            tabid="tabKillerQuake"
-                            handleDefaultTab={(data) => setDefaultTab(data)}
-                        >
-                            Killer Quake
-                        </Tabs.Button>
+                        {proyectos.map((item) => (
+                            <Tabs.Button tabid={item.id} className="w-1/2">
+                                {item.title}
+                            </Tabs.Button>
+                        ))}
                     </div>
 
-                    <Tabs.Container tabref={"tabFitorade"}>
-                        <div className="flex flex-col lg:flex-row w-full pt-[70px]">
-                            <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
-                                <img
-                                    src={IMGfitorade}
-                                    className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
-									xl:h-full w-full max-w-full"
-                                    alt="Capital"
-                                />
-                            </div>
-                            <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
-                                <div className="flex flex-col h-full justify-center">
-                                    <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                        Fitorade
-                                    </Titulo>
-                                    <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                        Daily Meal Plan
-                                    </h3>
-                                    <Parrafo className="text-justify">
-                                        Servicio de comida saludable en Mérida
-                                        en el que tenemos el compromiso de
-                                        ofrecer comidas elaboradas con alimentos
-                                        integrales y completamente saludables.
-                                    </Parrafo>
+                    {proyectos.map((item) => (
+                        <Tabs.Container tabref={item.id}>
+                            <div className="flex flex-col lg:flex-row w-full pt-[70px]">
+                                <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
+                                    <img
+                                        src={item.cover}
+                                        className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
+										xl:h-full w-full max-w-full"
+                                        alt={item.title}
+                                    />
+                                </div>
+                                <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
+                                    <div className="flex flex-col h-full justify-center">
+                                        <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
+                                            {item.title}
+                                        </Titulo>
+                                        <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
+                                            {item.subtitle}
+                                        </h3>
+                                        {typeof item.text == "string" ? (
+                                            <Parrafo className="text-justify">
+                                                {item.text}
+                                            </Parrafo>
+                                        ) : (
+                                            item.text.map((tx, idx) => (
+                                                <Parrafo
+                                                    className={`text-justify ${
+                                                        item.length == idx + 1
+                                                            ? ""
+                                                            : "mb-[30px]"
+                                                    }`}
+                                                    textParse={tx}
+                                                ></Parrafo>
+                                            ))
+                                        )}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </Tabs.Container>
-                    <Tabs.Container tabref={"tabGrupoLibera"}>
-                        <div className="flex flex-col lg:flex-row w-full pt-[70px]">
-                            <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
-                                <img
-                                    src={IMGgrupo}
-                                    className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
-									xl:h-full w-full max-w-full"
-                                    alt="Capital"
-                                />
-                            </div>
-                            <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
-                                <div className="flex flex-col h-full justify-center">
-                                    <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                        Grupo Libera
-                                    </Titulo>
-                                    <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                        Comercialización y desarrollo de bienes
-                                        inmuebles.
-                                    </h3>
-                                    <Parrafo className="text-justify">
-                                        Empresa enfocada en la comercialización
-                                        de proyectos inmobiliarios que tienen
-                                        como objetivo asegurar tu futuro
-                                        invirtiendo en las mejores zonas del
-                                        estado de Yucatán.
-                                    </Parrafo>
-                                </div>
-                            </div>
-                        </div>
-                    </Tabs.Container>
-                    <Tabs.Container tabref={"tabKillerQuake"}>
-                        <div className="flex flex-col lg:flex-row w-full pt-[70px]">
-                            <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
-                                <img
-                                    src={IMGkiller}
-                                    className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
-									xl:h-full w-full max-w-full"
-                                    alt="Capital"
-                                />
-                            </div>
-                            <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
-                                <div className="flex flex-col h-full justify-center">
-                                    <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                        Killer Quake
-                                    </Titulo>
-                                    <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                        Comercialización
-                                    </h3>
-                                    <Parrafo className="text-justify">
-                                        Empresa enfocada en la creación de
-                                        contenido que se plasma en diferentes
-                                        artículos disponibles a la venta.
-                                    </Parrafo>
-                                </div>
-                            </div>
-                        </div>
-                    </Tabs.Container>
+                        </Tabs.Container>
+                    ))}
                 </Tabs>
             </MainContainer>
         </main>

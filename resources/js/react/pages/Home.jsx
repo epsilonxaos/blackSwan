@@ -115,24 +115,26 @@ export default function Home() {
                 <Titulo>Conoce más de nuestras tres divisiones</Titulo>
 
                 <Tabs defaultTab="tabCapital">
-                    <Tabs.Button
-                        tabid="tabCapital"
-                        handleDefaultTab={(data) => setDefaultTab(data)}
-                    >
-                        Capital
-                    </Tabs.Button>
-                    <Tabs.Button
-                        tabid="tabRealState"
-                        handleDefaultTab={(data) => setDefaultTab(data)}
-                    >
-                        Real State
-                    </Tabs.Button>
-                    <Tabs.Button
-                        tabid="tabHospitality"
-                        handleDefaultTab={(data) => setDefaultTab(data)}
-                    >
-                        Hospitality
-                    </Tabs.Button>
+                    <div className="flex justify-between w-full max-w-[480px] mx-auto">
+                        <Tabs.Button
+                            tabid="tabCapital"
+                            handleDefaultTab={(data) => setDefaultTab(data)}
+                        >
+                            Capital
+                        </Tabs.Button>
+                        <Tabs.Button
+                            tabid="tabRealState"
+                            handleDefaultTab={(data) => setDefaultTab(data)}
+                        >
+                            Real State
+                        </Tabs.Button>
+                        <Tabs.Button
+                            tabid="tabHospitality"
+                            handleDefaultTab={(data) => setDefaultTab(data)}
+                        >
+                            Hospitality
+                        </Tabs.Button>
+                    </div>
 
                     <Tabs.Container tabref={"tabCapital"}>
                         <div className="flex flex-col lg:flex-row w-full pt-[70px]">

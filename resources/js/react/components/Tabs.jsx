@@ -25,15 +25,26 @@ const Tab = ({
     return (
         <div
             tabid={tabid}
-            className={`${
-                currentTab === tabid ? "active group" : ""
-            } ${className}`}
+            className={twMerge(
+                `${
+                    currentTab === tabid
+                        ? "active group text-black"
+                        : "text-gray-400"
+                } min-w-[100px] max-w-[130px] w-1/3 text-center p-[8px] transition-colors cursor-pointer`,
+                className
+            )}
             onClick={() => {
                 setCurrentTab(tabid);
                 handleDefaultTab(tabid);
             }}
         >
-            {children}
+            <span
+                className={`block pb-[10px] w-full border-b ${
+                    currentTab === tabid ? "border-black" : "border-gray-300"
+                }`}
+            >
+                {children}
+            </span>
         </div>
     );
 };

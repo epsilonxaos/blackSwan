@@ -4,7 +4,7 @@ import Parrafo from "../components/Parrafo";
 import Boton from "../components/Buttons";
 import { HiArrowDown } from "react-icons/hi";
 import { LiaRegistered } from "react-icons/lia";
-import { Tabs } from "flowbite-react";
+import Tabs from "../components/Tabs";
 
 import capital from "../../../img/web/capital/capital.svg";
 import play from "../../../img/web/play.svg";
@@ -148,13 +148,29 @@ export default function Capital() {
                     con los siguientes proyectos
                 </Titulo>
 
-                <Tabs.Group
-                    aria-label="Tabs with underline"
-                    style="underline"
-                    className="justify-center gap-2 border-none"
-                >
-                    {/* Fitorade */}
-                    <Tabs.Item active title="Fitorade" className="">
+                <Tabs defaultTab="tabFitorade">
+                    <div className="flex justify-between w-full max-w-[480px] mx-auto">
+                        <Tabs.Button
+                            tabid="tabFitorade"
+                            handleDefaultTab={(data) => setDefaultTab(data)}
+                        >
+                            Fitorade
+                        </Tabs.Button>
+                        <Tabs.Button
+                            tabid="tabGrupoLibera"
+                            handleDefaultTab={(data) => setDefaultTab(data)}
+                        >
+                            Grupo Libera
+                        </Tabs.Button>
+                        <Tabs.Button
+                            tabid="tabKillerQuake"
+                            handleDefaultTab={(data) => setDefaultTab(data)}
+                        >
+                            Killer Quake
+                        </Tabs.Button>
+                    </div>
+
+                    <Tabs.Container tabref={"tabFitorade"}>
                         <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                             <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
                                 <img
@@ -181,10 +197,8 @@ export default function Capital() {
                                 </div>
                             </div>
                         </div>
-                    </Tabs.Item>
-
-                    {/* Grupo Libera */}
-                    <Tabs.Item title="Grupo Libera" className="">
+                    </Tabs.Container>
+                    <Tabs.Container tabref={"tabGrupoLibera"}>
                         <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                             <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
                                 <img
@@ -213,10 +227,8 @@ export default function Capital() {
                                 </div>
                             </div>
                         </div>
-                    </Tabs.Item>
-
-                    {/* Killer Quake */}
-                    <Tabs.Item title="Killer Quake" className="">
+                    </Tabs.Container>
+                    <Tabs.Container tabref={"tabKillerQuake"}>
                         <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                             <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
                                 <img
@@ -242,8 +254,8 @@ export default function Capital() {
                                 </div>
                             </div>
                         </div>
-                    </Tabs.Item>
-                </Tabs.Group>
+                    </Tabs.Container>
+                </Tabs>
             </MainContainer>
         </main>
     );

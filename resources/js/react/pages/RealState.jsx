@@ -20,6 +20,12 @@ import IMGxekenyxakah from "../../../img/web/real/xekenyxakah.png";
 import IMGxomak from "../../../img/web/real/xomak.jpg";
 import IMGyukan from "../../../img/web/real/yukan.jpg";
 
+import logo1 from "../../../img/web/logos/1.png";
+import logo2 from "../../../img/web/logos/2.png";
+import logo3 from "../../../img/web/logos/3.png";
+import logo4 from "../../../img/web/logos/4.jpg";
+import logo5 from "../../../img/web/logos/5.png";
+
 export default function RealState() {
     const proyectos = [
         {
@@ -294,6 +300,51 @@ export default function RealState() {
                         </Tabs.Container>
                     ))}
                 </Tabs>
+            </MainContainer>
+
+            {/* Proyectos entregados */}
+            <MainContainer className={"py-[80px] lg:pb-[140px]"}>
+                <Parrafo className="text-[25px] mb-[80px]">
+                    Proyectos entregados
+                </Parrafo>
+
+                <ul className="flex flex-wrap justify-between max-w-[1250px] mx-auto">
+                    <li className="w-[40%] md:w-1/3 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-[70px] lg:mb-0">
+                        <img
+                            src={logo1}
+                            alt="Xomak"
+                            className="max-w-full h-auto"
+                        />
+                    </li>
+                    <li className="w-[40%] md:w-1/3 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-[70px] lg:mb-0">
+                        <img
+                            src={logo2}
+                            alt="Kantara"
+                            className="max-w-full h-auto"
+                        />
+                    </li>
+                    <li className="w-[40%] md:w-1/3 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-[70px] lg:mb-0">
+                        <img
+                            src={logo3}
+                            alt="Yukan"
+                            className="max-w-full h-auto"
+                        />
+                    </li>
+                    <li className="w-[40%] md:w-1/2 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-0">
+                        <img
+                            src={logo4}
+                            alt="Palma Real"
+                            className="max-w-full h-auto"
+                        />
+                    </li>
+                    <li className="w-[100%] md:w-1/2 lg:w-auto h-[120px] flex items-end justify-center">
+                        <img
+                            src={logo5}
+                            alt="Unica"
+                            className="max-w-full h-auto"
+                        />
+                    </li>
+                </ul>
             </MainContainer>
         </main>
     );

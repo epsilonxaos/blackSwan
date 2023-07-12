@@ -5,7 +5,7 @@ import cisne from "../../../img/web/cisne.svg";
 
 export default function Footer() {
     return (
-        <footer className="bg-black py-[50px] lg:pb-[20px] lg:pt-[150px] text-white">
+        <footer className="bg-black py-[50px] lg:pb-[40px] lg:pt-[130px] text-white">
             <MainContainer className={"px-4"}>
                 <div className="lg:flex items-start justify-between">
                     {/* Rutas */}
@@ -13,7 +13,7 @@ export default function Footer() {
                         <div className="grid grid-cols-2 sm:grid-cols-4 justify-center items-center xl:w-[700px] 2xl:w-[870px]">
                             <div className="col-span-1 mb-[75px] lg:mb-0">
                                 <div className="w-[140px] mr-auto ml-0 lg:ml-0 lg:mr-auto">
-                                    <Parrafo className="text-grisClaro text-left mb-8">
+                                    <Parrafo className="text-[#747474] text-left mb-8 text-[16px]">
                                         Social
                                     </Parrafo>
                                     <ul>
@@ -43,7 +43,7 @@ export default function Footer() {
                             </div>
                             <div className="col-span-1 mb-[75px] lg:mb-0">
                                 <div className="w-[140px] ml-auto mr-0 sm:mx-auto lg:ml-0 lg:mr-auto">
-                                    <Parrafo className="text-grisClaro text-left mb-8">
+                                    <Parrafo className="text-[#747474] text-left mb-8 text-[16px]">
                                         Contacto
                                     </Parrafo>
                                     <ul>
@@ -73,7 +73,7 @@ export default function Footer() {
                             </div>
                             <div className="col-span-1 mb-[75px] lg:mb-0">
                                 <div className="w-[140px] mr-auto ml-0 sm:mx-auto lg:ml-0 lg:mr-auto">
-                                    <Parrafo className="text-grisClaro text-left mb-8">
+                                    <Parrafo className="text-[#747474] text-left mb-8 text-[16px]">
                                         Divisiones
                                     </Parrafo>
                                     <ul>
@@ -103,7 +103,7 @@ export default function Footer() {
                             </div>
                             <div className="col-span-1 mb-[75px] lg:mb-0">
                                 <div className="w-[140px] ml-auto mr-0 lg:ml-0 lg:mr-auto">
-                                    <Parrafo className="text-grisClaro text-left mb-8">
+                                    <Parrafo className="text-[#747474] text-left mb-8 text-[16px]">
                                         Nosotros
                                     </Parrafo>
                                     <ul>
@@ -136,7 +136,7 @@ export default function Footer() {
 
                     {/* Newsletter */}
                     <div className="px-[8vw] sm:px-0">
-                        <Parrafo className="text-grisClaro text-left text-[16px]">
+                        <Parrafo className="text-[#747474] text-left mb-8 text-[16px]">
                             Newsletter
                         </Parrafo>
                         <Parrafo className="text-white text-left text-[16px]">
@@ -151,7 +151,7 @@ export default function Footer() {
                     />
                 </div>
 
-                <div className="w-full lg:flex lg:items-center lg:justify-between lg:pt-[300px]">
+                <div className="w-full lg:flex lg:items-center lg:justify-between lg:pt-[130px]">
                     <Parrafo className="text-white text-[16px] font-normal">
                         © BLACK SWAN, 2023
                     </Parrafo>

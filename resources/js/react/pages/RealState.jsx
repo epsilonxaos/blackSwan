@@ -89,12 +89,12 @@ export default function RealState() {
                 >
                     <img
                         src={real}
-                        alt="Real State"
+                        alt="Real Estate"
                         className="w-[70px] mx-auto mb-[40px] lg:mb-[60px]"
                     />
                     <img
                         src={realText}
-                        alt="Real State"
+                        alt="Real Estate"
                         className="w-[256px] xl:w-[400px] mx-auto mb-[70px] lg:mb-[90px]"
                     />
                     <Titulo className="text-white leading-[1] mb-[65px] lg:mb-[100px] xl:text-[70px]">
@@ -229,7 +229,7 @@ export default function RealState() {
                 className={"pt-[60px] pb-[30px] lg:pt-[100px] lg:pb-[90px]"}
             >
                 <Titulo className="text-[30px] mb-[40px] md:text-[32px]">
-                    <span className="font-bold">Black Swan Real State</span>{" "}
+                    <span className="font-bold">Black Swan Real Estate</span>{" "}
                     cuenta con los siguientes proyectos
                 </Titulo>
 

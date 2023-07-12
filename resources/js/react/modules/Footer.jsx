@@ -87,7 +87,7 @@ export default function Footer() {
                                         <li>
                                             <a href="#">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    Real State
+                                                    Real Estate
                                                 </Parrafo>
                                             </a>
                                         </li>

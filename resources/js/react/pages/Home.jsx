@@ -154,8 +154,8 @@ export default function Home() {
                         </div>
                     </Tabs.Item>
 
-                    {/* Real State */}
-                    <Tabs.Item active title="Real State">
+                    {/* Real Estate */}
+                    <Tabs.Item active title="Real Estate">
                         <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                             <div className="mb-[30px] lg:mb-0 lg:pr-[60px] lg:max-w-[540px] 2xl:pr-[200px] 2xl:max-w-[680px]">
                                 <img

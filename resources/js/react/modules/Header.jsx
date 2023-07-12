@@ -3,6 +3,7 @@ import MainContainer from "../components/MainContainer";
 import logo from "../../../img/web/logo.svg";
 import MenuHeader from "../components/MenuHeader";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     const [active, setActive] = useState(false);
@@ -25,11 +26,13 @@ export default function Header() {
                         </li>
                     </ul>
 
-                    <img
-                        src={logo}
-                        alt="Black Swan logo"
-                        className="max-w-[180px] sm:max-w-[280px]"
-                    />
+                    <Link to={"/"} className="w-[180px] sm:w-[280px]">
+                        <img
+                            src={logo}
+                            alt="Black Swan logo"
+                            className="max-w-[180px] sm:max-w-[280px]"
+                        />
+                    </Link>
 
                     <button
                         type="button"
@@ -40,6 +43,10 @@ export default function Header() {
                     </button>
                 </MainContainer>
             </header>
+
+            {active && (
+                <div className="backdrop-blur-sm bg-black bg-opacity-50 z-30 fixed top-0 left-0 h-screen w-screen"></div>
+            )}
 
             {active && (
                 <MenuHeader

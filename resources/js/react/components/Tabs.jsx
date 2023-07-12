@@ -1,37 +1,57 @@
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { createContext, useContext, useEffect, useState } from "react";
+import { twMerge } from "tailwind-merge";
 
-let tabs = [
-    { id: 1, label: "Home" },
-    { id: 2, label: "About" },
-    { id: 3, label: "Service" },
-    { id: 4, label: "Contact" },
-];
+const DataContext = createContext(null);
 
-export default function Tabs() {
-    const [activeTab, setActiveTab] = useState(tabs[0].id);
+const Tabs = ({ defaultTab, className = "", children }) => {
+    const [currentTab, setCurrentTab] = useState(defaultTab);
+
+    useEffect(() => setCurrentTab(defaultTab), [defaultTab]);
 
     return (
-        <div className="flex gap-20">
-            {tabs.map((tab) => (
-                <button
-                    key={tab.id}
-                    onClick={() => setActiveTab(tab.id)}
-                    className={`${
-                        activeTab === tab.id ? "" : "hover:text-white/60"
-                    } text-2xl font-medium px-4 py-1.5 relative`}
-                >
-                    {activeTab === tab.id && (
-                        <motion.div
-                            layoutId="bubble"
-                            className="absolute inset-0 bg-purple-700 rounded-full -z-10"
-                            transition={{ type: "spring", duration: 0.6 }}
-                        ></motion.div>
-                    )}
+        <DataContext.Provider value={{ currentTab, setCurrentTab }}>
+            <div className={twMerge("h-full", className)}>{children}</div>
+        </DataContext.Provider>
+    );
+};
 
-                    {tab.label}
-                </button>
-            ))}
+const Tab = ({
+    tabid = "",
+    className = "",
+    handleDefaultTab = () => {},
+    children,
+}) => {
+    const { currentTab, setCurrentTab } = useContext(DataContext);
+    return (
+        <div
+            tabid={tabid}
+            className={`${
+                currentTab === tabid ? "active group" : ""
+            } ${className}`}
+            onClick={() => {
+                setCurrentTab(tabid);
+                handleDefaultTab(tabid);
+            }}
+        >
+            {children}
         </div>
     );
-}
+};
+
+const TabContainer = ({ tabref, className = "", children }) => {
+    const { currentTab } = useContext(DataContext);
+
+    return (
+        <div
+            tabref={tabref}
+            className={`${currentTab === tabref ? "" : "hidden"} ${className}`}
+        >
+            {children}
+        </div>
+    );
+};
+
+Tabs.Button = Tab;
+Tabs.Container = TabContainer;
+
+export default Tabs;

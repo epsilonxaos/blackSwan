@@ -126,7 +126,7 @@ export default function Home() {
                             tabid="tabRealState"
                             handleDefaultTab={(data) => setDefaultTab(data)}
                         >
-                            Real State
+                            Real Estate
                         </Tabs.Button>
                         <Tabs.Button
                             tabid="tabHospitality"

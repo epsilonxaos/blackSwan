@@ -5,25 +5,41 @@ import MenuHeader from "../components/MenuHeader";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
     const [active, setActive] = useState(false);
+    const { t, i18n } = useTranslation();
 
     return (
         <>
             <header className="bg-black text-white w-full fixed z-50 top-0 left-0">
                 <MainContainer className="px-4 flex items-center justify-between min-h-[64px]">
                     <ul className="flex items-center justify-center font-normal text-sm">
-                        <li>
-                            <a href="#" className="underline font-bold">
+                        <li className="cursor-pointer">
+                            <span
+                                onClick={() => i18n.changeLanguage("es")}
+                                className={
+                                    i18n.language == "es"
+                                        ? "underline font-bold"
+                                        : "opacity-60"
+                                }
+                            >
                                 ES
-                            </a>
+                            </span>
                         </li>
                         <li className="px-1">/</li>
-                        <li>
-                            <a href="#" className="opacity-60">
+                        <li className="cursor-pointer">
+                            <span
+                                onClick={() => i18n.changeLanguage("en")}
+                                className={
+                                    i18n.language == "en"
+                                        ? "underline font-bold"
+                                        : "opacity-60"
+                                }
+                            >
                                 EN
-                            </a>
+                            </span>
                         </li>
                     </ul>
 

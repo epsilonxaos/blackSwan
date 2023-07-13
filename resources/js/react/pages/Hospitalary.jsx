@@ -139,14 +139,21 @@ export default function Hospitalary() {
                 <Tabs defaultTab={"tabcignohotel"}>
                     <div className="flex justify-between w-full max-w-[300px] mx-auto">
                         {proyectos.map((item) => (
-                            <Tabs.Button tabid={item.id} className="w-1/2">
+                            <Tabs.Button
+                                key={item.id}
+                                tabid={item.id}
+                                className="w-1/2"
+                            >
                                 {item.title}
                             </Tabs.Button>
                         ))}
                     </div>
 
                     {proyectos.map((item) => (
-                        <Tabs.Container tabref={item.id}>
+                        <Tabs.Container
+                            key={"container-" + item.id}
+                            tabref={item.id}
+                        >
                             <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                                 <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
                                     <img
@@ -174,6 +181,12 @@ export default function Hospitalary() {
                                         ) : (
                                             item.text.map((tx, idx) => (
                                                 <Parrafo
+                                                    key={
+                                                        "parrafo-" +
+                                                        item.id +
+                                                        "-" +
+                                                        idx
+                                                    }
                                                     className={`text-justify ${
                                                         item.length == idx + 1
                                                             ? ""

@@ -224,6 +224,12 @@ export default function Capital() {
                                         ) : (
                                             item.text.map((tx, idx) => (
                                                 <Parrafo
+                                                    key={
+                                                        "parrafo-" +
+                                                        item.id +
+                                                        "-" +
+                                                        idx
+                                                    }
                                                     className={`text-justify ${
                                                         item.length == idx + 1
                                                             ? ""

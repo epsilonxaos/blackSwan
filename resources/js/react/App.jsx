@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import "../../fonts/stylesheet.css";
 import "../../css/app.css";
+import "./i18n";
 
 import Web from "./Web";
 import { BrowserRouter, Route, Routes } from "react-router-dom";

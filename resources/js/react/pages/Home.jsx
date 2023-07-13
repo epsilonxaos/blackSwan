@@ -24,9 +24,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import AnimatedTextWord from "../animations/AnimationTextWord";
 import TextCustom from "../components/TextCustom";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
     const [defaultTab, setDefaultTab] = useState("tabCapital");
+    const { t, i18n } = useTranslation();
 
     return (
         <main>

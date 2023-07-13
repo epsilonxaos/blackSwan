@@ -4,6 +4,7 @@ import logo from "../../../img/web/logo.svg";
 import MenuHeader from "../components/MenuHeader";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 export default function Header() {
     const [active, setActive] = useState(false);
@@ -48,12 +49,14 @@ export default function Header() {
                 <div className="backdrop-blur-sm bg-black bg-opacity-50 z-30 fixed top-0 left-0 h-screen w-screen"></div>
             )}
 
-            {active && (
-                <MenuHeader
-                    active={active}
-                    handlerClose={() => setActive(false)}
-                />
-            )}
+            <AnimatePresence mode="wait">
+                {active && (
+                    <MenuHeader
+                        active={active}
+                        handlerClose={() => setActive(false)}
+                    />
+                )}
+            </AnimatePresence>
         </>
     );
 }

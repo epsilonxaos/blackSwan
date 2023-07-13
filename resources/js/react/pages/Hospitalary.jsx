@@ -12,6 +12,8 @@ import play from "../../../img/web/play.svg";
 import onlyHospitality from "../../../img/web/recursos-oscuros/onlyHospitality.svg";
 import IMGcasaamate from "../../../img/web/hospitalary/casaamate.png";
 import IMGcignohotel from "../../../img/web/hospitalary/cignohotel.jpg";
+import AnimatedTextWord from "../animations/AnimationTextWord";
+import TextCustom from "../components/TextCustom";
 
 export default function Hospitalary() {
     const proyectos = [
@@ -50,9 +52,14 @@ export default function Hospitalary() {
                         alt="Hospitality"
                         className="w-[256px] xl:w-[400px] mx-auto mb-[70px] lg:mb-[90px]"
                     />
-                    <Titulo className="text-white leading-[1] mb-[65px] lg:mb-[100px] xl:text-[70px]">
-                        Creamos experiencias <br /> que inspiran
-                    </Titulo>
+                    <AnimatedTextWord
+                        text={"Creamos experiencias"}
+                        className="text-white leading-[1] xl:text-[70px] !mb-0"
+                    />
+                    <AnimatedTextWord
+                        text={"que inspiran"}
+                        className="text-white leading-[1] mb-[65px] lg:mb-[100px] xl:text-[70px]"
+                    />
 
                     <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
                         <img src={play} alt="Play icon" className="mr-[4px]" />{" "}
@@ -120,10 +127,14 @@ export default function Hospitalary() {
             <MainContainer
                 className={"pt-[60px] pb-[30px] lg:pt-[100px] lg:pb-[90px]"}
             >
-                <Titulo className="text-[30px] mb-[40px] md:text-[32px]">
-                    <span className="font-bold">Black Swan Hospitality</span>{" "}
-                    cuenta con los siguientes proyectos
-                </Titulo>
+                <h3 className="tracking-[-0.96px] leading-[1.05] font-medium text-center text-[30px] mb-[40px] md:text-[32px]">
+                    <TextCustom>
+                        <span className="font-bold">
+                            Black Swan Hospitality
+                        </span>{" "}
+                        cuenta con los siguientes proyectos
+                    </TextCustom>
+                </h3>
 
                 <Tabs defaultTab={"tabcignohotel"}>
                     <div className="flex justify-between w-full max-w-[300px] mx-auto">
@@ -147,11 +158,14 @@ export default function Hospitalary() {
                                 </div>
                                 <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
                                     <div className="flex flex-col h-full justify-center">
-                                        <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                            {item.title}
-                                        </Titulo>
+                                        <AnimatedTextWord
+                                            className="text-left !mb-[5px] leading-[0.6]"
+                                            text={item.title}
+                                        />
                                         <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                            {item.subtitle}
+                                            <TextCustom>
+                                                {item.subtitle}
+                                            </TextCustom>
                                         </h3>
                                         {typeof item.text == "string" ? (
                                             <Parrafo className="text-justify">

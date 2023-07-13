@@ -21,9 +21,14 @@ import IMGreal from "../../../img/web/real.png";
 import IMGhospitality from "../../../img/web/hospitality.png";
 import Boton from "../components/Buttons";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import AnimatedTextWord from "../animations/AnimationTextWord";
+import TextCustom from "../components/TextCustom";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
     const [defaultTab, setDefaultTab] = useState("tabCapital");
+    const { t, i18n } = useTranslation();
 
     return (
         <main>
@@ -112,7 +117,9 @@ export default function Home() {
 
             {/* Secciones */}
             <MainContainer className={"py-[65px] md:py-[100px]"}>
-                <Titulo>Conoce más de nuestras tres divisiones</Titulo>
+                <AnimatedTextWord
+                    text={"Conoce más de nuestras tres divisiones"}
+                />
 
                 <Tabs defaultTab="tabCapital">
                     <div className="flex justify-between w-full max-w-[480px] mx-auto">
@@ -145,12 +152,17 @@ export default function Home() {
                                     className="mb-[40px] aspect-square"
                                 />
 
-                                <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                    CAPITAL{" "}
+                                <div className="text-left !mb-[5px] leading-[0.6] flex items-start">
+                                    <AnimatedTextWord
+                                        className="text-left !mb-[5px] leading-[0.6]"
+                                        text={"CAPITAL"}
+                                    />
                                     <LiaRegistered className="text-[16px] relative -top-1" />
-                                </Titulo>
-                                <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                    Impulsamos el rendimiento
+                                </div>
+                                <h3 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
+                                    <TextCustom>
+                                        Impulsamos el rendimiento
+                                    </TextCustom>
                                 </h3>
                                 <Parrafo className="text-justify mb-[30px] md:mb-[80px]">
                                     Unidad especializada en la{" "}
@@ -163,7 +175,9 @@ export default function Home() {
                                     experiencia y filosofía de trabajo de sus
                                     fundadores.
                                 </Parrafo>
-                                <Boton>Ver más</Boton>
+                                <Link to="/capital">
+                                    <Boton>Ver más</Boton>
+                                </Link>
                             </div>
                             <div className="lg:w-[calc(100%-540px)] 2xl:w-[calc(100%-680px)]">
                                 <img
@@ -184,14 +198,20 @@ export default function Home() {
                                     className="mb-[40px] aspect-square"
                                 />
 
-                                <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                    REAL ESTATE
+                                <div className="text-left !mb-[5px] leading-[0.6] flex items-start">
+                                    <AnimatedTextWord
+                                        className="text-left !mb-[5px] leading-[0.6]"
+                                        text={"REAL ESTATE"}
+                                    />
                                     <LiaRegistered className="text-[16px] relative -top-1" />
-                                </Titulo>
-                                <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                    Construimos hoy <br /> el patrimonio del
-                                    futuro
+                                </div>
+                                <h3 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
+                                    <TextCustom>
+                                        Construimos hoy <br /> el patrimonio del
+                                        futuro
+                                    </TextCustom>
                                 </h3>
+
                                 <Parrafo className="text-justify mb-[30px] md:mb-[80px]">
                                     Es una unidad de negocio especializada en el{" "}
                                     <span className="font-bold">
@@ -203,7 +223,9 @@ export default function Home() {
                                     viviendas sociales fundada en por los socios
                                     del grupo en 1997.
                                 </Parrafo>
-                                <Boton>Ver más</Boton>
+                                <Link to={"/real-state"}>
+                                    <Boton>Ver más</Boton>
+                                </Link>
                             </div>
                             <div className="lg:w-[calc(100%-540px)] 2xl:w-[calc(100%-680px)]">
                                 <img
@@ -224,13 +246,19 @@ export default function Home() {
                                     className="mb-[40px] aspect-square"
                                 />
 
-                                <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                    HOSPITALITY
+                                <div className="text-left !mb-[5px] leading-[0.6] flex items-start">
+                                    <AnimatedTextWord
+                                        className="text-left !mb-[5px] leading-[0.6]"
+                                        text={"HOSPITALITY"}
+                                    />
                                     <LiaRegistered className="text-[16px] relative -top-1" />
-                                </Titulo>
-                                <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                    Creamos experiencias <br /> que inspiran
+                                </div>
+                                <h3 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
+                                    <TextCustom>
+                                        Creamos experiencias <br /> que inspiran
+                                    </TextCustom>
                                 </h3>
+
                                 <Parrafo className="text-justify mb-[30px] md:mb-[80px]">
                                     Durante el proceso de expansión de la
                                     empresa y gracias al{" "}
@@ -242,7 +270,9 @@ export default function Home() {
                                     rubro de la hospitalidad con un grupo de
                                     hoteles premium y hostales de experiencia.
                                 </Parrafo>
-                                <Boton>Ver más</Boton>
+                                <Link to={"hospitality"}>
+                                    <Boton>Ver más</Boton>
+                                </Link>
                             </div>
                             <div className="lg:w-[calc(100%-540px)] 2xl:w-[calc(100%-680px)]">
                                 <img

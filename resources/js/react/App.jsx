@@ -2,14 +2,16 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import "../../fonts/stylesheet.css";
 import "../../css/app.css";
+import "./i18n";
 
 import Web from "./Web";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-let container = null;
-document.addEventListener("DOMContentLoaded", function (event) {
-    if (!container) {
-        container = document.getElementById("root");
-        const root = createRoot(container);
-        root.render(<Web />);
-    }
-});
+const root = createRoot(document.getElementById("root"));
+root.render(
+    <BrowserRouter>
+        <Routes>
+            <Route path="/*" element={<Web />} />
+        </Routes>
+    </BrowserRouter>
+);

@@ -2,6 +2,7 @@ import MainContainer from "../components/MainContainer";
 import Parrafo from "../components/Parrafo";
 
 import cisne from "../../../img/web/cisne.svg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
@@ -78,25 +79,25 @@ export default function Footer() {
                                     </Parrafo>
                                     <ul>
                                         <li>
-                                            <a href="#">
+                                            <Link to={"/capital"}>
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Capital
                                                 </Parrafo>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <Link to="/real-state">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Real Estate
                                                 </Parrafo>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <Link to="/hospitality">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Hopitalidad
                                                 </Parrafo>
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>

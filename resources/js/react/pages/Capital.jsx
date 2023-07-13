@@ -12,6 +12,8 @@ import onlyCapital from "../../../img/web/recursos-oscuros/onlyCapital.svg";
 import IMGkiller from "../../../img/web/capital/killer.png";
 import IMGgrupo from "../../../img/web/capital/grupo.png";
 import IMGfitorade from "../../../img/web/capital/fitorade.jpg";
+import AnimatedTextWord from "../animations/AnimationTextWord";
+import TextCustom from "../components/TextCustom";
 
 export default function Capital() {
     const proyectos = [
@@ -26,7 +28,7 @@ export default function Capital() {
             id: "tabGrupoLibera",
             cover: IMGgrupo,
             title: "Grupo Libera",
-            subtitle: "omercialización y desarrollo de bienes inmuebles",
+            subtitle: "Comercialización y desarrollo de bienes inmuebles",
             text: "Empresa enfocada en la comercialización de proyectos inmobiliarios que tienen como objetivo asegurar tu futuro invirtiendo en las mejores zonas del estado de Yucatán.",
         },
         {
@@ -52,9 +54,10 @@ export default function Capital() {
                         alt="Capital"
                         className="w-[160px] mx-auto mb-[70px] lg:mb-[90px]"
                     />
-                    <Titulo className="text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] xl:flex xl:items-center xl:justify-center">
-                        Impulsamos el rendimiento
-                    </Titulo>
+                    <AnimatedTextWord
+                        text={"Impulsamos el rendimiento"}
+                        className="text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] xl:flex xl:items-center xl:justify-center"
+                    />
 
                     <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
                         <img src={play} alt="Play icon" className="mr-[4px]" />{" "}
@@ -86,8 +89,10 @@ export default function Capital() {
                 <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
                     Impulsamos el rendimiento
                 </h3>
-                <Titulo className="text-[30px] mb-[40px] lg:mb-[50px]">
-                    En el 2005 se fundó <br />
+                <Titulo className="text-[30px] leading-[0]">
+                    En el 2005 se fundó
+                </Titulo>
+                <Titulo className="text-[30px] leading-[0.5] mb-[40px] lg:mb-[50px]">
                     <span className="font-bold">Black Swan Capital,</span>
                 </Titulo>
                 <Parrafo className="text-justify mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto">
@@ -116,7 +121,7 @@ export default function Capital() {
                 <ul className="lg:flex lg:items-start lg:justify-around lg:max-w-[1200px] md:mb-[50px] mx-auto">
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            280 Millones
+                            <TextCustom>280 Millones</TextCustom>
                         </h4>
                         <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
                             En ventas totales
@@ -127,7 +132,7 @@ export default function Capital() {
                     </li>
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            $1,500,000
+                            <TextCustom>$1,500,000</TextCustom>
                         </h4>
                         <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
                             Ventas estimadas aseguradas
@@ -138,7 +143,7 @@ export default function Capital() {
                     </li>
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            800 Millones
+                            <TextCustom>800 Millones</TextCustom>
                         </h4>
                         <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
                             Valor empresarial con activos
@@ -167,22 +172,31 @@ export default function Capital() {
             <MainContainer
                 className={"pt-[60px] pb-[30px] lg:pt-[100px] lg:pb-[90px]"}
             >
-                <Titulo className="text-[30px] mb-[40px] md:text-[32px]">
-                    <span className="font-bold">Black Swan Capital</span> cuenta
-                    con los siguientes proyectos
-                </Titulo>
+                <h3 className="tracking-[-0.96px] leading-[1.05] font-medium text-center text-[30px] mb-[40px] md:text-[32px]">
+                    <TextCustom>
+                        <span className="font-bold">Black Swan Capital</span>{" "}
+                        cuenta con los siguientes proyectos
+                    </TextCustom>
+                </h3>
 
                 <Tabs defaultTab={"tabFitorade"}>
                     <div className="flex justify-between w-full max-w-[480px] mx-auto">
                         {proyectos.map((item) => (
-                            <Tabs.Button tabid={item.id} className="w-1/2">
+                            <Tabs.Button
+                                key={item.id}
+                                tabid={item.id}
+                                className="w-1/2"
+                            >
                                 {item.title}
                             </Tabs.Button>
                         ))}
                     </div>
 
                     {proyectos.map((item) => (
-                        <Tabs.Container tabref={item.id}>
+                        <Tabs.Container
+                            key={"container-" + item.id}
+                            tabref={item.id}
+                        >
                             <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                                 <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
                                     <img
@@ -194,11 +208,14 @@ export default function Capital() {
                                 </div>
                                 <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
                                     <div className="flex flex-col h-full justify-center">
-                                        <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                            {item.title}
-                                        </Titulo>
+                                        <AnimatedTextWord
+                                            className="text-left !mb-[5px] leading-[0.6]"
+                                            text={item.title}
+                                        />
                                         <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                            {item.subtitle}
+                                            <TextCustom>
+                                                {item.subtitle}
+                                            </TextCustom>
                                         </h3>
                                         {typeof item.text == "string" ? (
                                             <Parrafo className="text-justify">
@@ -207,6 +224,12 @@ export default function Capital() {
                                         ) : (
                                             item.text.map((tx, idx) => (
                                                 <Parrafo
+                                                    key={
+                                                        "parrafo-" +
+                                                        item.id +
+                                                        "-" +
+                                                        idx
+                                                    }
                                                     className={`text-justify ${
                                                         item.length == idx + 1
                                                             ? ""

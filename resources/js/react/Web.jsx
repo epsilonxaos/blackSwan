@@ -1,4 +1,4 @@
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./modules/Footer";
 import Header from "./modules/Header";
 import Capital from "./pages/Capital";
@@ -7,46 +7,61 @@ import Hospitalary from "./pages/Hospitalary";
 import RealState from "./pages/RealState";
 import Nosotros from "./pages/Nosotros";
 import ScrollToTop from "./components/ScrollToTop";
-
-const router = createBrowserRouter([
-    {
-        element: (
-            <>
-                <ScrollToTop />
-                <Header />
-                <Outlet />
-                <Footer />
-            </>
-        ),
-        children: [
-            {
-                path: "/",
-                element: <Home />,
-            },
-            {
-                path: "/capital",
-                element: <Capital />,
-            },
-            {
-                path: "/real-state",
-                element: <RealState />,
-            },
-            {
-                path: "/hospitality",
-                element: <Hospitalary />,
-            },
-            {
-                path: "/nosotros",
-                element: <Nosotros />,
-            },
-        ],
-    },
-]);
+import { AnimatePresence } from "framer-motion";
+import Transition from "./animations/transitions";
 
 export default function Web() {
+    const location = useLocation();
+
     return (
         <>
-            <RouterProvider router={router} />
+            <Header />
+            <ScrollToTop />
+            <AnimatePresence mode="wait">
+                <Routes location={location} key={location.pathname}>
+                    <Route
+                        index
+                        element={
+                            <Transition>
+                                <Home />
+                            </Transition>
+                        }
+                    />
+                    <Route
+                        path="/capital"
+                        element={
+                            <Transition>
+                                <Capital />
+                            </Transition>
+                        }
+                    />
+                    <Route
+                        path="/real-state"
+                        element={
+                            <Transition>
+                                <RealState />
+                            </Transition>
+                        }
+                    />
+                    <Route
+                        path="/hospitality"
+                        element={
+                            <Transition>
+                                <Hospitalary />
+                            </Transition>
+                        }
+                    />
+                    <Route
+                        path="/nosotros"
+                        element={
+                            <Transition>
+                                <Nosotros />
+                            </Transition>
+                        }
+                    />
+                </Routes>
+            </AnimatePresence>
+            <Footer />
         </>
     );
 }

@@ -25,6 +25,8 @@ import logo2 from "../../../img/web/logos/2.png";
 import logo3 from "../../../img/web/logos/3.png";
 import logo4 from "../../../img/web/logos/4.jpg";
 import logo5 from "../../../img/web/logos/5.png";
+import AnimatedTextWord from "../animations/AnimationTextWord";
+import TextCustom from "../components/TextCustom";
 
 export default function RealState() {
     const proyectos = [
@@ -111,9 +113,14 @@ export default function RealState() {
                         alt="Real Estate"
                         className="w-[256px] xl:w-[400px] mx-auto mb-[70px] lg:mb-[90px]"
                     />
-                    <Titulo className="text-white leading-[1] mb-[65px] lg:mb-[100px] xl:text-[70px]">
-                        Construimos hoy <br /> el patrimonio del futuro
-                    </Titulo>
+                    <AnimatedTextWord
+                        text={"Construimos hoy"}
+                        className="text-white leading-[1] xl:text-[70px] !mb-0"
+                    />
+                    <AnimatedTextWord
+                        text={"el patrimonio del futuro"}
+                        className="text-white leading-[1] mb-[65px] lg:mb-[100px] xl:text-[70px]"
+                    />
 
                     <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
                         <img src={play} alt="Play icon" className="mr-[4px]" />{" "}
@@ -181,10 +188,12 @@ export default function RealState() {
                 <ul className="lg:flex lg:items-start lg:justify-around lg:max-w-[1200px] md:mb-[50px] mx-auto">
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            100 mil m
-                            <sup className="text-[16px] relative top-[-12px] md:top-[-18px]">
-                                2
-                            </sup>
+                            <TextCustom>
+                                100 mil m
+                                <sup className="text-[16px] relative top-[-12px] md:top-[-18px]">
+                                    2
+                                </sup>
+                            </TextCustom>
                         </h4>
                         <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
                             Supervisados
@@ -192,10 +201,12 @@ export default function RealState() {
                     </li>
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            400 mil m
-                            <sup className="text-[16px] relative top-[-12px] md:top-[-18px]">
-                                2
-                            </sup>
+                            <TextCustom>
+                                400 mil m
+                                <sup className="text-[16px] relative top-[-12px] md:top-[-18px]">
+                                    2
+                                </sup>
+                            </TextCustom>
                         </h4>
                         <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
                             Desarrollados
@@ -203,10 +214,12 @@ export default function RealState() {
                     </li>
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            20 mil m
-                            <sup className="text-[16px] relative top-[-12px] md:top-[-18px]">
-                                2
-                            </sup>
+                            <TextCustom>
+                                20 mil m
+                                <sup className="text-[16px] relative top-[-12px] md:top-[-18px]">
+                                    2
+                                </sup>
+                            </TextCustom>
                         </h4>
                         <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
                             Construidos
@@ -242,15 +255,20 @@ export default function RealState() {
             <MainContainer
                 className={"pt-[60px] pb-[30px] lg:pt-[100px] lg:pb-[90px]"}
             >
-                <Titulo className="text-[30px] mb-[40px] md:text-[32px]">
-                    <span className="font-bold">Black Swan Real Estate</span>{" "}
-                    cuenta con los siguientes proyectos
-                </Titulo>
+                <h3 className="tracking-[-0.96px] leading-[1.05] font-medium text-center text-[30px] mb-[40px] md:text-[32px]">
+                    <TextCustom>
+                        <span className="font-bold">
+                            Black Swan Real Estate
+                        </span>{" "}
+                        cuenta con los siguientes proyectos
+                    </TextCustom>
+                </h3>
 
                 <Tabs defaultTab={"tabtotem"}>
                     <div className="flex justify-center flex-wrap w-full max-w-[780px] mx-auto">
                         {proyectos.map((item) => (
                             <Tabs.Button
+                                key={item.id}
                                 tabid={item.id}
                                 className="w-1/2 md:w-1/4 max-w-none text-[13px] md:text-[16px]"
                             >
@@ -260,7 +278,10 @@ export default function RealState() {
                     </div>
 
                     {proyectos.map((item) => (
-                        <Tabs.Container tabref={item.id}>
+                        <Tabs.Container
+                            key={"container-" + item.id}
+                            tabref={item.id}
+                        >
                             <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                                 <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
                                     <img
@@ -272,11 +293,14 @@ export default function RealState() {
                                 </div>
                                 <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
                                     <div className="flex flex-col h-full justify-center">
-                                        <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                                            {item.title}
-                                        </Titulo>
+                                        <AnimatedTextWord
+                                            className="text-left !mb-[5px] leading-[0.6]"
+                                            text={item.title}
+                                        />
                                         <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                            {item.subtitle}
+                                            <TextCustom>
+                                                {item.subtitle}
+                                            </TextCustom>
                                         </h3>
                                         {typeof item.text == "string" ? (
                                             <Parrafo className="text-justify">
@@ -285,6 +309,12 @@ export default function RealState() {
                                         ) : (
                                             item.text.map((tx, idx) => (
                                                 <Parrafo
+                                                    key={
+                                                        "parrafo-" +
+                                                        item.id +
+                                                        "-" +
+                                                        idx
+                                                    }
                                                     className={`text-justify ${
                                                         item.length == idx + 1
                                                             ? ""

@@ -2,10 +2,24 @@ import { Link } from "react-router-dom";
 import { CapitalIcon, Hospitalary, RealStateIcon } from "./Icons";
 import MainContainer from "./MainContainer";
 import Parrafo from "./Parrafo";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function MenuHeader({ active, handlerClose }) {
     return (
-        <nav className="w-full fixed z-40 top-0 left-0 bg-black text-white h-screen pt-20 pb-6 overflow-hidden md:max-h-[650px]">
+        <motion.nav
+            initial={{ opacity: 0, y: -20 }}
+            animate={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.2, type: "tween" },
+            }}
+            // exit={{
+            //     opacity: 0,
+            //     y: -20,
+            //     transition: { duration: 0.3 },
+            // }}
+            className="w-full fixed z-40 top-0 left-0 bg-black text-white h-screen pt-20 pb-6 overflow-hidden md:max-h-[650px]"
+        >
             <MainContainer
                 className={
                     "overflow-auto h-full flex items-center justify-between md:justify-center flex-col"
@@ -53,6 +67,6 @@ export default function MenuHeader({ active, handlerClose }) {
                     </li>
                 </ul>
             </MainContainer>
-        </nav>
+        </motion.nav>
     );
 }

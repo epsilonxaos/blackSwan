@@ -21,6 +21,7 @@ import IMGreal from "../../../img/web/real.png";
 import IMGhospitality from "../../../img/web/hospitality.png";
 import Boton from "../components/Buttons";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     const [defaultTab, setDefaultTab] = useState("tabCapital");
@@ -163,7 +164,9 @@ export default function Home() {
                                     experiencia y filosofía de trabajo de sus
                                     fundadores.
                                 </Parrafo>
-                                <Boton>Ver más</Boton>
+                                <Link to="/capital">
+                                    <Boton>Ver más</Boton>
+                                </Link>
                             </div>
                             <div className="lg:w-[calc(100%-540px)] 2xl:w-[calc(100%-680px)]">
                                 <img
@@ -203,7 +206,9 @@ export default function Home() {
                                     viviendas sociales fundada en por los socios
                                     del grupo en 1997.
                                 </Parrafo>
-                                <Boton>Ver más</Boton>
+                                <Link to={"/real-state"}>
+                                    <Boton>Ver más</Boton>
+                                </Link>
                             </div>
                             <div className="lg:w-[calc(100%-540px)] 2xl:w-[calc(100%-680px)]">
                                 <img
@@ -242,7 +247,9 @@ export default function Home() {
                                     rubro de la hospitalidad con un grupo de
                                     hoteles premium y hostales de experiencia.
                                 </Parrafo>
-                                <Boton>Ver más</Boton>
+                                <Link to={"hospitality"}>
+                                    <Boton>Ver más</Boton>
+                                </Link>
                             </div>
                             <div className="lg:w-[calc(100%-540px)] 2xl:w-[calc(100%-680px)]">
                                 <img

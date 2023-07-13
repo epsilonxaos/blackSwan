@@ -14,7 +14,7 @@ const ScrollToTop = () => {
                 behavior: element ? "smooth" : "auto",
                 top: element ? element.offsetTop : 0,
             });
-        }, 100);
+        }, 500);
     }, [location]);
 
     return null;

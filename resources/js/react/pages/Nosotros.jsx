@@ -4,24 +4,29 @@ import Parrafo from "../components/Parrafo";
 
 import cisne from "../../../img/web/cisne-banner.svg";
 import raulyjacobo from "../../../img/web/raulyjacobo.png";
-import equipobs from "../../../img/web/equipobs.png";
+import equipobs from "../../../img/web/equipobs.jpg";
+
+import bg from "../../../img/web/banner-nosotros.jpg";
 
 export default function Nosotros() {
     return (
         <main>
             {/* Banner principal */}
-            <div className="bg-[#636363]">
+            <div
+                className={`bg-[#7a7977] bg-center bg-no-repeat bg-blend-darken`}
+                style={{ backgroundImage: "url(" + bg + ")" }}
+            >
                 <MainContainer
                     className={
                         " pt-[55px] pb-[35px] px-0 min-h-[650px] lg:h-[calc(100vh-68px)] lg:max-h-[870px]"
                     }
                 >
-                    <div className="flex items-center justify-center md:w-1/2">
+                    <div className="flex items-center h-full">
                         <div className="max-w-max text-white">
-                            <p className="mb-[30px] lg:mb-[60px] xl:lg:mb-[90px]">
+                            <p className="mb-[30px] lg:mb-[60px] xl:mb-[90px]">
                                 (MX)
                             </p>
-                            <h1 className="font-medium text-[50px] lg:text-[75px] xl:text-[90px] tracking-[-1.5px] leading-[1.1] mb-1">
+                            <h1 className="font-medium text-[50px] lg:text-[90px] tracking-[-1.5px] leading-[1.1] mb-1">
                                 <LiaRegistered className="text-[30px] lg:text-[35px] inline relative top-[-12px] lg:top-[-22px] xl:top-[-28px]" />{" "}
                                 UN EQUIPO <br /> DE EXPERTOS
                             </h1>
@@ -35,26 +40,12 @@ export default function Nosotros() {
             </div>
 
             {/* Raul y jacobo */}
-            <MainContainer className={"px-0 lg:pl-0 pb-[25px] lg:pb-0"}>
+            <MainContainer className={"px-0 lg:pr-0 py-[25px] lg:pb-0"}>
                 <div className="flex flex-col lg:flex-row lg:items-center">
-                    <div className="w-full lg:w-1/2 mb-[25px] lg:mb-0">
-                        <img
-                            src={raulyjacobo}
-                            alt="Raúl Sánchez Díaz y Jacobo Ceh Iza"
-                            className="bg-white h-[500px] lg:h-[850px] object-cover mx-auto"
-                        />
-                    </div>
-                    <div className="w-full lg:w-1/2 px-[40px] sm:pr-0">
-                        <img
-                            src={cisne}
-                            alt="Black Swan"
-                            className="w-[70px] mx-auto mb-[25px]"
-                        />
-                        <Parrafo className="mb-[30px] font-bold text-[24px] lg:text-[28px]">
-                            Raúl Sánchez Díaz y Jacobo Ceh Iza{" "}
-                            <br className="hidden sm:block" /> forman un dúo
-                            excepcional en el <br className="hidden sm:block" />{" "}
-                            mundo empresarial.
+                    <div className="w-full mb-[30px] lg:mb-0 lg:w-1/2 px-[40px] sm:pl-0">
+                        <Parrafo className="mb-[30px] font-bold text-[24px] xl:text-[28px] text-left">
+                            Raúl Sánchez Díaz y Jacobo Ceh Iza forman un dúo
+                            excepcional en el mundo empresarial.
                         </Parrafo>
                         <Parrafo className="text-justify mb-[30px]">
                             Raúl Sánchez Díaz y Jacobo Ceh Iza, estudiaron
@@ -83,6 +74,13 @@ export default function Nosotros() {
                             de mercado para así impulsar el crecimiento
                             empresarial y económico del grupo.
                         </Parrafo>
+                    </div>
+                    <div className="w-full lg:w-1/2 mb-[25px] px-[40px] md:px-0 lg:mb-0">
+                        <img
+                            src={raulyjacobo}
+                            alt="Raúl Sánchez Díaz y Jacobo Ceh Iza"
+                            className="bg-white w-full h-[500px] lg:h-[850px] object-contain max-w-[670px] mx-auto lg:mr-0"
+                        />
                     </div>
                 </div>
             </MainContainer>

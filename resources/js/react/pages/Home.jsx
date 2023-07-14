@@ -116,8 +116,9 @@ export default function Home() {
             </MainContainer>
 
             {/* Secciones */}
-            <MainContainer className={"py-[65px] md:py-[100px]"}>
+            <MainContainer className={"py-[65px] md:py-[100px] px-[30px]"}>
                 <AnimatedTextWord
+                    className="justify-center"
                     text={"Conoce más de nuestras tres divisiones"}
                 />
 
@@ -125,18 +126,21 @@ export default function Home() {
                     <div className="flex justify-between w-full max-w-[480px] mx-auto">
                         <Tabs.Button
                             tabid="tabCapital"
+                            className=" text-[13px] md:text-[16px]"
                             handleDefaultTab={(data) => setDefaultTab(data)}
                         >
                             Capital
                         </Tabs.Button>
                         <Tabs.Button
                             tabid="tabRealState"
+                            className=" text-[13px] md:text-[16px]"
                             handleDefaultTab={(data) => setDefaultTab(data)}
                         >
                             Real Estate
                         </Tabs.Button>
                         <Tabs.Button
                             tabid="tabHospitality"
+                            className=" text-[13px] md:text-[16px]"
                             handleDefaultTab={(data) => setDefaultTab(data)}
                         >
                             Hospitality

@@ -115,11 +115,11 @@ export default function RealState() {
                     />
                     <AnimatedTextWord
                         text={"Construimos hoy"}
-                        className="text-white leading-[1] xl:text-[70px] !mb-0"
+                        className="text-white leading-[1] xl:text-[70px] !mb-0 justify-center items-center"
                     />
                     <AnimatedTextWord
                         text={"el patrimonio del futuro"}
-                        className="text-white leading-[1] mb-[65px] lg:mb-[100px] xl:text-[70px]"
+                        className="text-white leading-[1] mb-[65px] lg:mb-[100px] xl:text-[70px] justify-center items-center"
                     />
 
                     <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
@@ -253,7 +253,9 @@ export default function RealState() {
 
             {/* Proyectos */}
             <MainContainer
-                className={"pt-[60px] pb-[30px] lg:pt-[100px] lg:pb-[90px]"}
+                className={
+                    "pt-[60px] pb-[30px] lg:pt-[100px] lg:pb-[90px] px-[30px]"
+                }
             >
                 <h3 className="tracking-[-0.96px] leading-[1.05] font-medium text-center text-[30px] mb-[40px] md:text-[32px]">
                     <TextCustom>

@@ -54,7 +54,7 @@ const AnimatedTextWord = ({ text, className = "" }) => {
             initial="hidden"
             animate="visible"
             className={twMerge(
-                "text-[32px] md:text-[40px] tracking-[-0.96px] leading-[1.05] font-medium text-center mb-[30px]",
+                "text-[32px] md:text-[40px] tracking-[-0.96px] leading-[1.05] font-medium text-center mb-[30px] flex flex-wrap w-full",
                 className
             )}
         >

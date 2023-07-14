@@ -56,7 +56,7 @@ export default function Capital() {
                     />
                     <AnimatedTextWord
                         text={"Impulsamos el rendimiento"}
-                        className="text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] xl:flex xl:items-center xl:justify-center"
+                        className="text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] justify-center items-center"
                     />
 
                     <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
@@ -170,7 +170,9 @@ export default function Capital() {
 
             {/* Proyectos */}
             <MainContainer
-                className={"pt-[60px] pb-[30px] lg:pt-[100px] lg:pb-[90px]"}
+                className={
+                    "pt-[60px] pb-[30px] lg:pt-[100px] lg:pb-[90px] px-[30px]"
+                }
             >
                 <h3 className="tracking-[-0.96px] leading-[1.05] font-medium text-center text-[30px] mb-[40px] md:text-[32px]">
                     <TextCustom>
@@ -185,7 +187,7 @@ export default function Capital() {
                             <Tabs.Button
                                 key={item.id}
                                 tabid={item.id}
-                                className="w-1/2"
+                                className="w-1/2 text-[13px] md:text-[16px]"
                             >
                                 {item.title}
                             </Tabs.Button>

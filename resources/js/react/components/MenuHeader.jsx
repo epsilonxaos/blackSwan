@@ -6,8 +6,32 @@ import { motion } from "framer-motion";
 import logo1 from "../../../img/web/capital.svg";
 import logo2 from "../../../img/web/realState.svg";
 import logo3 from "../../../img/web/hospitality.svg";
+import { useContext } from "react";
+import HeaderContext from "../context/HeaderContext";
 
-export default function MenuHeader({ active, handlerClose }) {
+export default function MenuHeader() {
+    const { active, setActive } = useContext(HeaderContext);
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                delay: 0.3,
+                staggerChildren: 0.1,
+                delayChildren: 0.4,
+            },
+        },
+    };
+
+    const itemA = {
+        hidden: { scale: 0, top: 100 },
+        show: { scale: 1, top: 30 },
+    };
+    const itemB = {
+        hidden: { opacity: 0 },
+        show: { opacity: 1 },
+    };
+
     return (
         <motion.nav
             initial={{ opacity: 0, y: -20 }}
@@ -16,71 +40,87 @@ export default function MenuHeader({ active, handlerClose }) {
                 y: 0,
                 transition: { duration: 0.2, type: "tween" },
             }}
-            // exit={{
-            //     opacity: 0,
-            //     y: -20,
-            //     transition: { duration: 0.3 },
-            // }}
-            className="w-full fixed z-40 top-0 left-0 bg-black text-white h-screen pt-20 pb-6 overflow-hidden md:max-h-[650px]"
+            exit={{
+                opacity: 0,
+                y: -20,
+                transition: { duration: 0.3 },
+            }}
+            className="w-full fixed z-40 top-0 left-0 bg-black text-white h-screen pt-20 pb-6 overflow-hidden md:h-auto"
         >
             <MainContainer
                 className={
-                    "overflow-auto h-full flex items-center justify-between md:justify-center flex-col"
+                    "overflow-auto h-full flex items-center justify-between md:justify-center flex-col py-[30px] md:pt-[70px] :pb-[100px]"
                 }
             >
-                <Parrafo className="text-gris max-w-[300px] md:max-w-[680px] opacity-80 mx-auto">
+                <Parrafo className="text-gris max-w-[300px] md:max-w-[680px] opacity-80 mx-auto ">
                     Desarrollamos estrategias integrales que permitan que{" "}
                     <span className="underline">lo inesperado</span> sea una
                     realidad en cada uno de nuestros rubros de especialización.
                 </Parrafo>
 
-                <ul className="flex w-full max-w-6xl mx-auto items-center justify-center md:justify-around flex-col md:flex-row max-md:gap-10 landscape:py-12 md:py-[120px]">
-                    <li>
-                        <Link onClick={handlerClose} to={"capital"}>
+                <motion.ul
+                    variants={container}
+                    initial={!active ? "show" : "hidden"}
+                    animate={active ? "show" : "hidden"}
+                    className="flex w-full max-w-6xl mx-auto items-center justify-center md:justify-around flex-col md:flex-row max-md:gap-10 landscape:py-12 py-[50px] md:py-[120px]"
+                >
+                    <motion.li variants={itemA}>
+                        <Link onClick={() => setActive(false)} to={"capital"}>
                             <img
                                 className="w-[140px] h-[90px]"
                                 src={logo1}
                                 alt="Capital"
                             />
                         </Link>
-                    </li>
-                    <li>
-                        <Link onClick={handlerClose} to={"real-state"}>
+                    </motion.li>
+                    <motion.li variants={itemA}>
+                        <Link
+                            onClick={() => setActive(false)}
+                            to={"real-state"}
+                        >
                             <img
                                 className="w-[140px] h-[90px]"
                                 src={logo2}
                                 alt="Real Estate"
                             />
                         </Link>
-                    </li>
-                    <li>
-                        <Link onClick={handlerClose} to={"hospitality"}>
+                    </motion.li>
+                    <motion.li variants={itemA}>
+                        <Link
+                            onClick={() => setActive(false)}
+                            to={"hospitality"}
+                        >
                             <img
                                 className="w-[140px] h-[90px]"
                                 src={logo3}
                                 alt="Hospitality"
                             />
                         </Link>
-                    </li>
-                </ul>
+                    </motion.li>
+                </motion.ul>
 
-                <ul className="flex items-center justify-center font-normal text-sm">
-                    <li>
+                <motion.ul
+                    variants={container}
+                    initial={!active ? "show" : "hidden"}
+                    animate={active ? "show" : "hidden"}
+                    className="flex items-center justify-center font-normal text-sm"
+                >
+                    <motion.li variants={itemB}>
                         <Link
-                            onClick={handlerClose}
+                            onClick={() => setActive(false)}
                             to={"nosotros"}
                             className="underline"
                         >
                             NOSOTROS
                         </Link>
-                    </li>
+                    </motion.li>
                     <li className="px-1">/</li>
-                    <li>
+                    <motion.li variants={itemB}>
                         <a href="#" className="opacity-60">
                             CONTACTO
                         </a>
-                    </li>
-                </ul>
+                    </motion.li>
+                </motion.ul>
             </MainContainer>
         </motion.nav>
     );

@@ -1,0 +1,86 @@
+{
+    "verMas": "Ver más",
+    "conoceMasNosotros": "Conoce más sobre nosotros <br /> y nuestros proyectos",
+    "verVideo": "Ver video",
+
+    "home.infoInicial": [
+        "Con un historial que se remonta a 1997 con la fundación de su primera empresa, <span class='font-bold'> los socios de Black Swan han creado un grupo empresarial </span> enfocado principalmente en el desarrollo de proyectos en los rubros inmobiliarios y de hospitalidad en diferentes puntos de Yucatán, teniendo como eje rector la filosofía de los eventos poco probables pero de gran impacto.",
+        "Desde 2005, Black Swan ha puesto especial énfasis en impulsar el crecimiento económico en ciertas zonas del estado con alta plusvalía y el dinamismo turístico y residencial de la región, siempre con una visión de impacto ambiental positivo.",
+        "El grupo hoy en día se organiza en tres divisiones: capital, real estate y hospitality, cada una con un equipo de expertos especializados en sus respectivas áreas."
+    ],
+    "home.conoce_mas": "Conoce más de nuestras tres divisiones",
+    "home.capital.text": "Unidad especializada en la <span class='font-bold'> inversión y/o desarrollo </span> de proyectos con una alta proyección de crecimiento financiero en diversos rubros de negocio, basados en los 26 años de experiencia y filosofía de trabajo de sus fundadores.",
+    "home.real.text": "Es una unidad de negocio especializada en el <span className='font-bold'> desarrollo y construcción de proyectos en el rubro inmobiliario </span> , que surge a partir de Grupo RAS, constructora enfocada en la supervisión de viviendas sociales fundada en por los socios del grupo en 1997.",
+    "home.hospi.subtitulo": "Creamos experiencias <br /> que inspiran",
+    "home.hospi.text": "Durante el proceso de expansión de la empresa y gracias al <span className='font-bold'> crecimiento turístico y económico de la Península Yucateca </span> , los socios decidieron incursionar en el rubro de la hospitalidad con un grupo de hoteles premium y hostales de experiencia.",
+
+    "capital.subtitulo": "Impulsamos el rendimiento",
+    "capital.info.title_1": "En el 2005 se fundó",
+    "capital.info.text": [
+        "Una unidad de negocio cien por ciento financiero que inició su crecimiento con el desarrollo de proyectos de inversión inmobiliaria y posteriormente se ha ampliado a otros rubros de negocio, como lo es principalmente el de hospitalidad.",
+        "Durante los primeros años desarrollaron proyectos inmobiliarios con servicios completos y de vivienda vertical, que fueron respaldados por la experiencia y capital acumulado desde 1997. Hoy la empresa cuenta con más de cien mil metros cuadrados supervisados, veinte mil metros cuadrados construidos y más de cuatrocientos mil metros cuadrados desarrollados.",
+        "Progresivamente, los socios desarrollan, operan y/o invierten en empresas como lo han sido: <br /> Cigno Hotels, Casa Amate Hostals, Killer Quake o Grupo Libera, que cuentan con los parámetros económicos necesarios y/o la filosofía de trabajo de la empresa.",
+        "280 Millones",
+        "En ventas totales",
+        "Alcanzadas durante el añó 2022",
+        "Ventas estimadas aseguradas",
+        "Para los próximos 4 años",
+        "800 Millones",
+        "Valor empresarial con activos",
+        "Al día de hoy",
+        "Está en proceso el desarrollo de su <span className='font-bold'> primer fondo de inversión: </span> Black Swan Fund."
+    ],
+    "capital.proyectos.titulo": "<span className='font-bold'>Black Swan Capital</span> cuenta con los siguientes proyectos",
+    "capital.proyectos.fitorade.text": "Servicio de comida saludable en Mérida en el que tenemos el compromiso de ofrecer comidas elaboradas con alimentos integrales y completamente saludables.",
+    "capital.proyectos.libera.subtitulo": "Comercialización y desarrollo de bienes inmuebles",
+    "capital.proyectos.libera.text": "Empresa enfocada en la comercialización de proyectos inmobiliarios que tienen como objetivo asegurar tu futuro invirtiendo en las mejores zonas del estado de Yucatán.",
+    "capital.proyectos.killer.subtitulo": "Comercialización",
+    "capital.proyectos.killer.text": "Empresa enfocada en la creación de contenido que se plasma en diferentes artículos disponibles a la venta.",
+
+    "real.subtitulo.part1": "Construimos hoy",
+    "real.subtitulo.part2": "el patrimonio del futuro",
+    "real.info.text": [
+        "Es una unidad de negocio <span className='font-bold'>especializada en el desarrollo y construcción de proyectos en el rubro inmobiliario,</span> que surge a partir de Grupo RAS, constructora enfocada en la supervisión de viviendas sociales fundada en por los socios del grupo en 1997.",
+        "Durante el 2005, los socios deciden llevar la empresa a otro nivel a través del desarrollo de <span className='font-bold'>proyectos inmobiliarios con servicios completos y de vivienda vertical,</span> basados en la experiencia e inversiones acumuladas desde sus inicios.",
+        "Hoy en día,<span className='font-bold'> la empresa cuenta con más de </span>",
+        "Supervisados",
+        "Desarrollados",
+        "Construidos",
+        "Proyectos como Única Living, Kantara Residencial, Yukán Townhouses, Tótem Residencial, entre otros, así como los más de mil clientes satisfechos y varias dependencias de Gobierno a nivel local y nacional, sustentan los casos de éxito y logros de esta unidad de negocio.",
+        "Al día de hoy, continúan en<span className='font-bold'> proyecto privadas residenciales y proyectos verticales con el sello responsabilidad medioambiental y la filosofía wellness,</span> basado en ello, planean desarrollar más de diez millones de metros cuadrados en los próximos 5 años.",
+        ""
+    ],
+    "real.proyectos.titulo": "<span className='font-bold'>Black Swan Real Estate</span> cuenta con los siguientes proyectos",
+    "real.proyectos.sustentable": "Residencial Sustentable",
+    "real.proyectos.unica.text": "Desarrollo residencial ubicado al norte de Mérida, Yucatán equipado con las mejores amenidades para disfrutar con comodidad y confort.",
+    "real.proyectos.alma.text": "Es una privada pensada para las familias que buscan un lugar tranquilo con amplios espacios de recreo; localizada en la mejor zona residencial de crecimiento de Yucatán. El perfecto equilibrio entre urbanidad y tranquilidad.",
+    "real.proyectos.xexen.text": [
+        "Este desarrollo consta de <span class='font-bold'>26 unidades totalmente urbanizadas</span> y creadas para complacer al más exquisito gusto, lo cual las hace perfectas para complacer a los residentes y experimentar una convivencia armoniosa en <span class='font-bold'>Tulum</span>.",
+        "El complejo se divide en dos edificios de cuatro niveles: Jardín, Medio Bajo, Medio Alto y Azotea."
+    ],
+    "real.proyectos.santa.text": [
+        "Santa Mar es un proyecto <span class='font-bold'>residencial privado con un enfoque wellness.</span> Su principal objetivo es ofrecer un espacio para disfrutar de una vida en pleno equilibrio mental, emocional y físico, con todas sus amenidades necesarias.",
+        "A diez minutos de Santa Mar se encuentra Sisal, donde se construirá un Club de Playa frente al mar."
+    ],
+    "real.proyectos.arenales.text": "Esta privada residencial cuenta con todas las amenidades para disfrutar la belleza de Yucatán y sus costas, gozando de altos niveles de seguridad y comodidad.",
+    "real.proyectos.totem.text": "Este proyecto residencial sustentable se ubica en Celestún, Yucatán y tiene como esencia la admiración, respeto y protección de la naturaleza, así como un compromiso con el desarrollo económico y social de las comunidades locales.",
+    "real.proyectos.yukan.text": "Conjunto de townhouses ubicado al norte de Mérida, equipados con las mejores amenidades y equipados de forma cómoda y funcional.",
+    "real.proyectos.xomak.text": "Conjunto de lujosos departamentos boho chic tipo estudio ubicados en Tulum, Quintana Roo, que conjuntan comodidad y sofisticación en un destino de ensueño.",
+    "real.proyectos.entregados": "Proyectos entregados",
+
+    "hospi.subtitulo.part1": "Creamos experiencias",
+    "hospi.subtitulo.part2": "que inspiran",
+    "hospi.info.text": [
+        "Durante el proceso de expansión de la empresa y gracias al crecimiento turístico y económico de la Península Yucateca, los socios de Black Swan se han consolidado como impulsores del desarrollo, ejecución y operación de proyectos relacionados al rubro de la hospitalidad.",
+        "En 2022 se fundó el primer hotel y restaurante del grupo en el barrio de \"La Ermita\" en Mérida, Yucatán, que forma parte de los tres hoteles del grupo Cigno Hotels y que ha sido nominado a los premios \"MexBest by Quien 2023\" en la categoría de lo mejor de hospitalidad en el estado.",
+        "En el 2023 iniciaron con la construcción del segundo hotel justo frente al parque de la Plancha, inauguraron el Club de Playa Tótem en la costa de Celestún en Yucatán, y se contempla el inicio de operaciones del primero de tres hostales de experiencia del grupo Casa Amate. Se espera tener más de 500 cuartos en los próximos 5 años."
+    ],
+    "hospi.proyectos.titulo": "<span className='font-bold'>Black Swan Hospitality</span> cuenta con los siguientes proyectos",
+    "hospi.proyectos.cigno.subtitulo": "Hotel Boutique",
+    "hospi.proyectos.cigno.text": "Hotel boutique enfocado en convertirse en un refugio para exploradores que buscan en cada viaje una experiencia enriquecedora.",
+    "hospi.proyectos.casa.subtitulo": "Hoteles Experiencia",
+    "hospi.proyectos.casa.text": "Este proyecto contempla la apertura de un hostal boutique temático enfocado en generar experiencias únicas para los huéspedes con actividades que conjuntan arte, diversión y gastronomía teniendo como contexto la calle 61 del centro de Mérida.",
+
+    "nosotros.titulo.part1": "UN EQUIPO",
+    "nosotros.titulo.part2": "DE EXPERTOS"
+}

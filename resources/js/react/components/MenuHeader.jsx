@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
-import { CapitalIcon, Hospitalary, RealStateIcon } from "./Icons";
 import MainContainer from "./MainContainer";
 import Parrafo from "./Parrafo";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
+
+import logo1 from "../../../img/web/capital.svg";
+import logo2 from "../../../img/web/realState.svg";
+import logo3 from "../../../img/web/hospitality.svg";
 
 export default function MenuHeader({ active, handlerClose }) {
     return (
@@ -34,17 +37,29 @@ export default function MenuHeader({ active, handlerClose }) {
                 <ul className="flex w-full max-w-6xl mx-auto items-center justify-center md:justify-around flex-col md:flex-row max-md:gap-10 landscape:py-12 md:py-[120px]">
                     <li>
                         <Link onClick={handlerClose} to={"capital"}>
-                            <CapitalIcon className="text-white w-[140px]" />
+                            <img
+                                className="w-[140px] h-[90px]"
+                                src={logo1}
+                                alt="Capital"
+                            />
                         </Link>
                     </li>
                     <li>
                         <Link onClick={handlerClose} to={"real-state"}>
-                            <RealStateIcon className="text-white w-[140px]" />
+                            <img
+                                className="w-[140px] h-[90px]"
+                                src={logo2}
+                                alt="Real Estate"
+                            />
                         </Link>
                     </li>
                     <li>
                         <Link onClick={handlerClose} to={"hospitality"}>
-                            <Hospitalary className="text-white w-[140px]" />
+                            <img
+                                className="w-[140px] h-[90px]"
+                                src={logo3}
+                                alt="Hospitality"
+                            />
                         </Link>
                     </li>
                 </ul>

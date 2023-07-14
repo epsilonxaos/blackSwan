@@ -89,7 +89,7 @@ export default function Capital() {
                 <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
                     Impulsamos el rendimiento
                 </h3>
-                <Titulo className="text-[30px] leading-[0]">
+                <Titulo className="text-[30px] leading-[0] !mb-0">
                     En el 2005 se fundó
                 </Titulo>
                 <Titulo className="text-[30px] leading-[0.5] mb-[40px] lg:mb-[50px]">

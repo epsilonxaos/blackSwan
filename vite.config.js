@@ -9,6 +9,7 @@ export default defineConfig(({ command, mode }) => {
     return {
         server: {
             host,
+            port: 5174,
             hmr: { host },
             https: {
                 key: readFileSync(env.SERVER_HTTPS_KEY),

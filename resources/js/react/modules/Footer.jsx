@@ -1,5 +1,6 @@
 import MainContainer from "../components/MainContainer";
 import Parrafo from "../components/Parrafo";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 import cisne from "../../../img/web/cisne.svg";
 import { Link } from "react-router-dom";
@@ -140,9 +141,20 @@ export default function Footer() {
                         <Parrafo className="text-[#747474] text-left mb-8 text-[16px]">
                             Newsletter
                         </Parrafo>
-                        <Parrafo className="text-white text-left text-[16px]">
+                        <Parrafo className="text-white text-left text-[16px] mb-[15px]">
                             Compártenos tu correo
                         </Parrafo>
+                        <div className="flex">
+                            <input
+                                type="text"
+                                id="website-admin"
+                                className=" border border-r-0 bg-black outline-none focus:ring-transparent !border-white rounded-l-[14px] text-white block flex-1 min-w-0 w-full text-sm p-2.5 placeholder:text-white"
+                                placeholder="email@"
+                            />
+                            <span className="inline-flex items-center px-3 text-sm text-white bg-black rounded-none rounded-r-[14px] border border-l-0 border-gray-300 ">
+                                <AiOutlineArrowRight />
+                            </span>
+                        </div>
                     </div>
 
                     <img

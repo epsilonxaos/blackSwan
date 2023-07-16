@@ -16,8 +16,8 @@ export default function Web() {
     return (
         <>
             <Header />
-            <ScrollToTop />
             <AnimatePresence mode="wait">
+                <ScrollToTop />
                 <Routes location={location} key={location.pathname}>
                     <Route
                         index

@@ -40,11 +40,11 @@ export default function Nosotros() {
             </div>
 
             {/* Raul y jacobo */}
-            <MainContainer
-                className={"px-0 lg:pr-0 py-[25px] lg:pb-0"}
-                id="historia"
-            >
-                <div className="flex flex-col lg:flex-row lg:items-center">
+            <MainContainer className={"px-0 lg:pr-0 py-[25px] lg:pb-0"}>
+                <div
+                    className="flex flex-col lg:flex-row lg:items-center"
+                    id="historia"
+                >
                     <div className="w-full mb-[30px] lg:mb-0 lg:w-1/2 px-[40px] sm:pl-0">
                         <Parrafo className="mb-[30px] font-bold text-[24px] xl:text-[28px] text-left">
                             Raúl Sánchez Díaz y Jacobo Ceh Iza forman un dúo

@@ -126,21 +126,21 @@ export default function Footer() {
                                     </Parrafo>
                                     <ul>
                                         <li>
-                                            <Link to="/nosotros#historia">
+                                            <Link to="nosotros#historia">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Historia
                                                 </Parrafo>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/nosotros#quienesSomos">
+                                            <Link to="nosotros#quienesSomos">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Quienes Somos
                                                 </Parrafo>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/nosotros">
+                                            <Link to="nosotros">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Nuestros Valores
                                                 </Parrafo>

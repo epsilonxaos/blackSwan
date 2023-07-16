@@ -68,32 +68,18 @@ export default function Home() {
                 />
                 <div className="flex justify-center mb-[30px] md:mb-[70px]">
                     <div className="w-full md:w-5/6 max-w-[1250px]">
-                        <Parrafo className="text-justify mb-[30px]">
-                            Con un historial que se remonta a 1997 con la
-                            fundación de su primera empresa,{" "}
-                            <span className="font-bold">
-                                los socios de Black Swan han creado un grupo
-                                empresarial
-                            </span>{" "}
-                            enfocado principalmente en el desarrollo de
-                            proyectos en los rubros inmobiliarios y de
-                            hospitalidad en diferentes puntos de Yucatán,
-                            teniendo como eje rector la filosofía de los eventos
-                            poco probables pero de gran impacto.
-                        </Parrafo>
-                        <Parrafo className="text-justify mb-[30px]">
-                            Desde 2005, Black Swan ha puesto especial énfasis en
-                            impulsar el crecimiento económico en ciertas zonas
-                            del estado con alta plusvalía y el dinamismo
-                            turístico y residencial de la región, siempre con
-                            una visión de impacto ambiental positivo.
-                        </Parrafo>
-                        <Parrafo className="text-justify mb-[30px]">
-                            El grupo hoy en día se organiza en tres divisiones:
-                            capital, real estate y hospitality, cada una con un
-                            equipo de expertos especializados en sus respectivas
-                            áreas.
-                        </Parrafo>
+                        <Parrafo
+                            className="text-justify mb-[30px]"
+                            textParse={t("home.infoInicial.0")}
+                        />
+                        <Parrafo
+                            className="text-justify mb-[30px]"
+                            textParse={t("home.infoInicial.1")}
+                        />
+                        <Parrafo
+                            className="text-justify mb-[30px]"
+                            textParse={t("home.infoInicial.2")}
+                        />
                     </div>
                 </div>
 
@@ -119,7 +105,7 @@ export default function Home() {
             <MainContainer className={"py-[65px] md:py-[100px] px-[30px]"}>
                 <AnimatedTextWord
                     className="justify-center"
-                    text={"Conoce más de nuestras tres divisiones"}
+                    text={t("home.conoce_mas")}
                 />
 
                 <Tabs defaultTab="tabCapital">
@@ -165,22 +151,15 @@ export default function Home() {
                                 </div>
                                 <h3 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
                                     <TextCustom>
-                                        Impulsamos el rendimiento
+                                        {t("capital.subtitulo")}
                                     </TextCustom>
                                 </h3>
-                                <Parrafo className="text-justify mb-[30px] md:mb-[80px]">
-                                    Unidad especializada en la{" "}
-                                    <span className="font-bold">
-                                        inversión y/o desarrollo
-                                    </span>{" "}
-                                    de proyectos con una alta proyección de
-                                    crecimiento financiero en diversos rubros de
-                                    negocio, basados en los 26 años de
-                                    experiencia y filosofía de trabajo de sus
-                                    fundadores.
-                                </Parrafo>
+                                <Parrafo
+                                    className="text-justify mb-[30px] md:mb-[80px]"
+                                    textParse={t("home.capital.text")}
+                                />
                                 <Link to="/capital">
-                                    <Boton>Ver más</Boton>
+                                    <Boton>{t("verMas")}</Boton>
                                 </Link>
                             </div>
                             <div className="lg:w-[calc(100%-540px)] 2xl:w-[calc(100%-680px)]">
@@ -211,24 +190,17 @@ export default function Home() {
                                 </div>
                                 <h3 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
                                     <TextCustom>
-                                        Construimos hoy <br /> el patrimonio del
-                                        futuro
+                                        {t("real.subtitulo.part1")} <br />{" "}
+                                        {t("real.subtitulo.part2")}
                                     </TextCustom>
                                 </h3>
 
-                                <Parrafo className="text-justify mb-[30px] md:mb-[80px]">
-                                    Es una unidad de negocio especializada en el{" "}
-                                    <span className="font-bold">
-                                        desarrollo y construcción de proyectos
-                                        en el rubro inmobiliario
-                                    </span>
-                                    , que surge a partir de Grupo RAS,
-                                    constructora enfocada en la supervisión de
-                                    viviendas sociales fundada en por los socios
-                                    del grupo en 1997.
-                                </Parrafo>
+                                <Parrafo
+                                    className="text-justify mb-[30px] md:mb-[80px]"
+                                    textParse={t("home.real.text")}
+                                />
                                 <Link to={"/real-state"}>
-                                    <Boton>Ver más</Boton>
+                                    <Boton>{t("verMas")}</Boton>
                                 </Link>
                             </div>
                             <div className="lg:w-[calc(100%-540px)] 2xl:w-[calc(100%-680px)]">
@@ -259,23 +231,17 @@ export default function Home() {
                                 </div>
                                 <h3 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
                                     <TextCustom>
-                                        Creamos experiencias <br /> que inspiran
+                                        {t("hospi.subtitulo.part1")} <br />{" "}
+                                        {t("hospi.subtitulo.part2")}
                                     </TextCustom>
                                 </h3>
 
-                                <Parrafo className="text-justify mb-[30px] md:mb-[80px]">
-                                    Durante el proceso de expansión de la
-                                    empresa y gracias al{" "}
-                                    <span className="font-bold">
-                                        crecimiento turístico y económico de la
-                                        Península Yucateca
-                                    </span>
-                                    , los socios decidieron incursionar en el
-                                    rubro de la hospitalidad con un grupo de
-                                    hoteles premium y hostales de experiencia.
-                                </Parrafo>
+                                <Parrafo
+                                    className="text-justify mb-[30px] md:mb-[80px]"
+                                    textParse={t("home.hospi.text")}
+                                />
                                 <Link to={"hospitality"}>
-                                    <Boton>Ver más</Boton>
+                                    <Boton>{t("verMas")}</Boton>
                                 </Link>
                             </div>
                             <div className="lg:w-[calc(100%-540px)] 2xl:w-[calc(100%-680px)]">

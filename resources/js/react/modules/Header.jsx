@@ -60,7 +60,7 @@ export default function Header() {
                                 active ? "bg-white text-black" : "bg-black"
                             } hover:bg-white hover:text-black text-xs sm:text-sm`}
                         >
-                            {active ? "Cerrar" : "Menú"}
+                            {active ? t("cerrar") : t("menu")}
                         </button>
                     </MainContainer>
                 </header>

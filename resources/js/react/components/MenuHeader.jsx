@@ -8,9 +8,11 @@ import logo2 from "../../../img/web/realState.svg";
 import logo3 from "../../../img/web/hospitality.svg";
 import { useContext } from "react";
 import HeaderContext from "../context/HeaderContext";
+import { useTranslation } from "react-i18next";
 
 export default function MenuHeader() {
     const { active, setActive } = useContext(HeaderContext);
+    const { t, i18n } = useTranslation();
     const container = {
         hidden: { opacity: 0 },
         show: {
@@ -52,11 +54,10 @@ export default function MenuHeader() {
                     "overflow-auto h-full flex items-center justify-between md:justify-center flex-col py-[30px] md:pt-[70px] :pb-[100px]"
                 }
             >
-                <Parrafo className="text-gris max-w-[300px] md:max-w-[680px] opacity-80 mx-auto ">
-                    Desarrollamos estrategias integrales que permitan que{" "}
-                    <span className="underline">lo inesperado</span> sea una
-                    realidad en cada uno de nuestros rubros de especialización.
-                </Parrafo>
+                <Parrafo
+                    className="text-gris max-w-[300px] md:max-w-[680px] opacity-80 mx-auto"
+                    textParse={t("menu.info")}
+                />
 
                 <motion.ul
                     variants={container}
@@ -109,15 +110,15 @@ export default function MenuHeader() {
                         <Link
                             onClick={() => setActive(false)}
                             to={"nosotros"}
-                            className="underline"
+                            className="underline uppercase"
                         >
-                            NOSOTROS
+                            {t("nosotros")}
                         </Link>
                     </motion.li>
                     <li className="px-1">/</li>
                     <motion.li variants={itemB}>
-                        <a href="#" className="opacity-60">
-                            CONTACTO
+                        <a href="#footer" className="opacity-60 uppercase">
+                            {t("contacto")}
                         </a>
                     </motion.li>
                 </motion.ul>

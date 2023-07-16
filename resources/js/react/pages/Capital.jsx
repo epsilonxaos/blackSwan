@@ -14,29 +14,43 @@ import IMGgrupo from "../../../img/web/capital/grupo.png";
 import IMGfitorade from "../../../img/web/capital/fitorade.jpg";
 import AnimatedTextWord from "../animations/AnimationTextWord";
 import TextCustom from "../components/TextCustom";
+import { useTranslation } from "react-i18next";
 
 export default function Capital() {
+    const { t, i18n } = useTranslation();
     const proyectos = [
         {
             id: "tabFitorade",
             cover: IMGfitorade,
             title: "Fitorade",
-            subtitle: "Daily Meal Plan",
-            text: "Servicio de comida saludable en Mérida en el que tenemos el compromiso de ofrecer comidas elaboradas con alimentos integrales y completamente saludables.",
+            subtitle: { es: "Daily Meal Plan", en: "Daily Meal Plan" },
+            text: {
+                es: "Servicio de comida saludable en Mérida en el que tenemos el compromiso de ofrecer comidas elaboradas con alimentos integrales y completamente saludables.",
+                en: "Healthy food service in Mérida with the goal to offer meals made with whole and completely healthy foods.",
+            },
         },
         {
             id: "tabGrupoLibera",
             cover: IMGgrupo,
             title: "Grupo Libera",
-            subtitle: "Comercialización y desarrollo de bienes inmuebles",
-            text: "Empresa enfocada en la comercialización de proyectos inmobiliarios que tienen como objetivo asegurar tu futuro invirtiendo en las mejores zonas del estado de Yucatán.",
+            subtitle: {
+                es: "Comercialización y desarrollo de bienes inmuebles",
+                en: "Marketing and development of real estate",
+            },
+            text: {
+                es: "Empresa enfocada en la comercialización de proyectos inmobiliarios que tienen como objetivo asegurar tu futuro invirtiendo en las mejores zonas del estado de Yucatán.",
+                en: "Company focused on commercialization of real estate projects that aim to ensure the clients’ wealth by investing in the best areas of Yucatan.",
+            },
         },
         {
             id: "tabKillerQuake",
             cover: IMGkiller,
             title: "Killer Quake",
-            subtitle: "Comercialización",
-            text: "Empresa enfocada en la creación de contenido que se plasma en diferentes artículos disponibles a la venta.",
+            subtitle: { es: "Comercialización", en: "Commercialization" },
+            text: {
+                es: "Empresa enfocada en la creación de contenido que se plasma en diferentes artículos disponibles a la venta.",
+                en: "Company focused on the creation of content for different items available for sale.",
+            },
         },
     ];
 
@@ -55,18 +69,19 @@ export default function Capital() {
                         className="w-[160px] mx-auto mb-[70px] lg:mb-[90px]"
                     />
                     <AnimatedTextWord
-                        text={"Impulsamos el rendimiento"}
+                        text={t("capital.subtitulo")}
                         className="text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] justify-center items-center"
                     />
 
                     <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
                         <img src={play} alt="Play icon" className="mr-[4px]" />{" "}
-                        Ver video
+                        {t("verVideo")}
                     </Boton>
 
-                    <Parrafo className="text-white text-[20px] mb-[40px]">
-                        Conoce más sobre nosotros <br /> y nuestros proyectos
-                    </Parrafo>
+                    <Parrafo
+                        className="text-white text-[20px] mb-[40px]"
+                        textParse={t("conoceMasNosotros")}
+                    />
 
                     <HiArrowDown className="text-white text-[24px] mx-auto" />
                 </MainContainer>
@@ -87,80 +102,71 @@ export default function Capital() {
                     />
                 </div>
                 <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
-                    Impulsamos el rendimiento
+                    {t("capital.subtitulo")}
                 </h3>
                 <Titulo className="text-[30px] leading-[0] !mb-0">
-                    En el 2005 se fundó
+                    {t("capital.info.title_1")}
                 </Titulo>
                 <Titulo className="text-[30px] leading-[0.5] mb-[40px] lg:mb-[50px]">
                     <span className="font-bold">Black Swan Capital,</span>
                 </Titulo>
-                <Parrafo className="text-justify mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto">
-                    Una unidad de negocio cien por ciento financiero que inició
-                    su crecimiento con el desarrollo de proyectos de inversión
-                    inmobiliaria y posteriormente se ha ampliado a otros rubros
-                    de negocio, como lo es principalmente el de hospitalidad.
-                </Parrafo>
-                <Parrafo className="text-justify  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto">
-                    Durante los primeros años desarrollaron proyectos
-                    inmobiliarios con servicios completos y de vivienda
-                    vertical, que fueron respaldados por la experiencia y
-                    capital acumulado desde 1997. Hoy la empresa cuenta con más
-                    de cien mil metros cuadrados supervisados, veinte mil metros
-                    cuadrados construidos y más de cuatrocientos mil metros
-                    cuadrados desarrollados.
-                </Parrafo>
-                <Parrafo className="text-justify mb-[40px] md:w-[90%] max-w-[1300px] mx-auto">
-                    Progresivamente, los socios desarrollan, operan y/o
-                    invierten en empresas como lo han sido: <br />
-                    Cigno Hotels, Casa Amate Hostals, Killer Quake o Grupo
-                    Libera, que cuentan con los parámetros económicos necesarios
-                    y/o la filosofía de trabajo de la empresa.
-                </Parrafo>
+                <Parrafo
+                    className="text-justify mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    textParse={t("capital.info.text.0")}
+                />
+                <Parrafo
+                    className="text-justify  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    textParse={t("capital.info.text.1")}
+                />
+                <Parrafo
+                    className="text-justify  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    textParse={t("capital.info.text.2")}
+                />
+                <Parrafo
+                    className="text-justify mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    textParse={t("capital.info.text.3")}
+                />
 
                 <ul className="lg:flex lg:items-start lg:justify-around lg:max-w-[1200px] md:mb-[50px] mx-auto">
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            <TextCustom>280 Millones</TextCustom>
+                            <TextCustom>{t("capital.info.text.4")}</TextCustom>
                         </h4>
                         <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
-                            En ventas totales
+                            {t("capital.info.text.5")}
                         </Parrafo>
                         <Parrafo className="leading-[1.2]">
-                            Alcanzadas durante el añó 2022
+                            {t("capital.info.text.6")}
                         </Parrafo>
                     </li>
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            <TextCustom>$1,500,000</TextCustom>
+                            <TextCustom>{t("capital.info.text.7")}</TextCustom>
                         </h4>
                         <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
-                            Ventas estimadas aseguradas
+                            {t("capital.info.text.8")}
                         </Parrafo>
                         <Parrafo className="leading-[1.2]">
-                            Para los próximos 4 años
+                            {t("capital.info.text.9")}
                         </Parrafo>
                     </li>
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            <TextCustom>800 Millones</TextCustom>
+                            <TextCustom>{t("capital.info.text.10")}</TextCustom>
                         </h4>
                         <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
-                            Valor empresarial con activos
+                            {t("capital.info.text.11")}
                         </Parrafo>
                         <Parrafo className="leading-[1.2]">
-                            Al día de hoy.
+                            {t("capital.info.text.12")}
                         </Parrafo>
                     </li>
                 </ul>
 
-                <Parrafo className="text-justify sm:text-center mb-[40px]">
-                    Está en proceso el desarrollo de su{" "}
-                    <span className="font-bold">
-                        primer fondo de inversión:
-                    </span>{" "}
-                    Black Swan Fund.
-                </Parrafo>
+                <Parrafo
+                    className="text-justify sm:text-center mb-[40px]"
+                    textParse={t("capital.info.text.13")}
+                />
             </MainContainer>
 
             {/* Separador */}
@@ -175,10 +181,7 @@ export default function Capital() {
                 }
             >
                 <h3 className="tracking-[-0.96px] leading-[1.05] font-medium text-center text-[30px] mb-[40px] md:text-[32px]">
-                    <TextCustom>
-                        <span className="font-bold">Black Swan Capital</span>{" "}
-                        cuenta con los siguientes proyectos
-                    </TextCustom>
+                    <TextCustom textParse={t("capital.proyectos.titulo")} />
                 </h3>
 
                 <Tabs defaultTab={"tabFitorade"}>
@@ -216,30 +219,34 @@ export default function Capital() {
                                         />
                                         <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
                                             <TextCustom>
-                                                {item.subtitle}
+                                                {item.subtitle[i18n.language]}
                                             </TextCustom>
                                         </h3>
-                                        {typeof item.text == "string" ? (
+                                        {typeof item.text[i18n.language] ==
+                                        "string" ? (
                                             <Parrafo className="text-justify">
-                                                {item.text}
+                                                {item.text[i18n.language]}
                                             </Parrafo>
                                         ) : (
-                                            item.text.map((tx, idx) => (
-                                                <Parrafo
-                                                    key={
-                                                        "parrafo-" +
-                                                        item.id +
-                                                        "-" +
-                                                        idx
-                                                    }
-                                                    className={`text-justify ${
-                                                        item.length == idx + 1
-                                                            ? ""
-                                                            : "mb-[30px]"
-                                                    }`}
-                                                    textParse={tx}
-                                                ></Parrafo>
-                                            ))
+                                            item.text[i18n.language].map(
+                                                (tx, idx) => (
+                                                    <Parrafo
+                                                        key={
+                                                            "parrafo-" +
+                                                            item.id +
+                                                            "-" +
+                                                            idx
+                                                        }
+                                                        className={`text-justify ${
+                                                            item.length ==
+                                                            idx + 1
+                                                                ? ""
+                                                                : "mb-[30px]"
+                                                        }`}
+                                                        textParse={tx}
+                                                    ></Parrafo>
+                                                )
+                                            )
                                         )}
                                     </div>
                                 </div>

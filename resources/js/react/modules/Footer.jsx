@@ -4,15 +4,20 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 import cisne from "../../../img/web/cisne.svg";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+    const { t, i18n } = useTranslation();
     return (
-        <footer className="bg-black py-[50px] lg:pb-[40px] lg:pt-[130px] text-white">
+        <footer
+            className="bg-black py-[50px] lg:pb-[40px] lg:pt-[130px] text-white"
+            id="footer"
+        >
             <MainContainer className={"px-4"}>
                 <div className="lg:flex items-start justify-between">
                     {/* Rutas */}
                     <div className="px-[8vw] sm:px-0">
-                        <div className="grid grid-cols-2 sm:grid-cols-4 justify-center items-center xl:w-[700px] 2xl:w-[870px]">
+                        <div className="grid grid-cols-2 sm:grid-cols-4 justify-center items-start xl:w-[700px] 2xl:w-[870px]">
                             <div className="col-span-1 mb-[75px] lg:mb-0">
                                 <div className="w-[140px] mr-auto ml-0 lg:ml-0 lg:mr-auto">
                                     <Parrafo className="text-[#747474] text-left mb-8 text-[16px]">
@@ -58,20 +63,20 @@ export default function Footer() {
                             <div className="col-span-1 mb-[75px] lg:mb-0">
                                 <div className="w-[140px] ml-auto mr-0 sm:mx-auto lg:ml-0 lg:mr-auto">
                                     <Parrafo className="text-[#747474] text-left mb-8 text-[16px]">
-                                        Contacto
+                                        {t("contacto")}
                                     </Parrafo>
                                     <ul>
                                         <li>
                                             <a href="mailto:">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    Correo
+                                                    {t("footer.correo")}
                                                 </Parrafo>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="tel:+529999480017">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    Teléfono
+                                                    {t("footer.telefono")}
                                                 </Parrafo>
                                             </a>
                                         </li>
@@ -92,7 +97,7 @@ export default function Footer() {
                             <div className="col-span-1 mb-[75px] lg:mb-0">
                                 <div className="w-[140px] mr-auto ml-0 sm:mx-auto lg:ml-0 lg:mr-auto">
                                     <Parrafo className="text-[#747474] text-left mb-8 text-[16px]">
-                                        Divisiones
+                                        {t("footer.divisiones")}
                                     </Parrafo>
                                     <ul>
                                         <li>
@@ -122,27 +127,27 @@ export default function Footer() {
                             <div className="col-span-1 mb-[75px] lg:mb-0">
                                 <div className="w-[140px] ml-auto mr-0 lg:ml-0 lg:mr-auto">
                                     <Parrafo className="text-[#747474] text-left mb-8 text-[16px]">
-                                        Nosotros
+                                        {t("nosotros")}
                                     </Parrafo>
                                     <ul>
                                         <li>
                                             <Link to="nosotros#historia">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    Historia
+                                                    {t("footer.historia")}
                                                 </Parrafo>
                                             </Link>
                                         </li>
                                         <li>
                                             <Link to="nosotros#quienesSomos">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    Quienes Somos
+                                                    {t("footer.quienes")}
                                                 </Parrafo>
                                             </Link>
                                         </li>
                                         <li>
                                             <Link to="nosotros">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    Nuestros Valores
+                                                    {t("footer.valores")}
                                                 </Parrafo>
                                             </Link>
                                         </li>
@@ -158,7 +163,7 @@ export default function Footer() {
                             Newsletter
                         </Parrafo>
                         <Parrafo className="text-white text-left text-[16px] mb-[15px]">
-                            Compártenos tu correo
+                            {t("footer.compartir")}
                         </Parrafo>
                         <div className="flex">
                             <input
@@ -185,11 +190,11 @@ export default function Footer() {
                         © BLACK SWAN, 2023
                     </Parrafo>
                     <Parrafo className="text-white text-[16px] font-normal">
-                        Diseño y desarrollo x{" "}
+                        {t("footer.desarrollo")} x{" "}
                         <span className="font-bold">MadebyPartners®</span>
                     </Parrafo>
                     <Parrafo className="text-white text-[16px] font-normal">
-                        <a href="#">Políticas de privacidad</a>
+                        <a href="#">{t("footer.politicas")}</a>
                     </Parrafo>
                 </div>
             </MainContainer>

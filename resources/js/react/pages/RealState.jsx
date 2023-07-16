@@ -210,15 +210,15 @@ export default function RealState() {
                     <span className="font-bold">Black Swan Real Estate,</span>
                 </Titulo>
                 <Parrafo
-                    className="text-justify mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    className="text-left mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
                     textParse={t("real.info.text.0")}
                 />
                 <Parrafo
-                    className="text-justify  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    className="text-left  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
                     textParse={t("real.info.text.1")}
                 />
                 <Parrafo
-                    className="text-justify mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    className="text-left mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
                     textParse={t("real.info.text.2")}
                 />
 
@@ -265,11 +265,11 @@ export default function RealState() {
                 </ul>
 
                 <Parrafo
-                    className="text-justify  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    className="text-left  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
                     textParse={t("real.info.text.9")}
                 />
                 <Parrafo
-                    className="text-justify mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    className="text-left mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
                     textParse={t("real.info.text.10")}
                 />
             </MainContainer>
@@ -329,7 +329,7 @@ export default function RealState() {
                                         </h3>
                                         {typeof item.text[i18n.language] ==
                                         "string" ? (
-                                            <Parrafo className="text-justify">
+                                            <Parrafo className="text-left">
                                                 {item.text[i18n.language]}
                                             </Parrafo>
                                         ) : (
@@ -342,7 +342,7 @@ export default function RealState() {
                                                             "-" +
                                                             idx
                                                         }
-                                                        className={`text-justify ${
+                                                        className={`text-left ${
                                                             item.length ==
                                                             idx + 1
                                                                 ? ""

@@ -53,11 +53,11 @@ export default function Nosotros() {
                             {t("nosotros.jacobo")}
                         </Parrafo>
                         <Parrafo
-                            className="text-justify mb-[30px]"
+                            className="text-left mb-[30px]"
                             textParse={t("nInfo.0")}
                         />
                         <Parrafo
-                            className="text-justify mb-[30px]"
+                            className="text-left mb-[30px]"
                             textParse={t("nInfo.1")}
                         />
                     </div>
@@ -85,11 +85,11 @@ export default function Nosotros() {
                         textParse={t("nosotros.equipo.titulo")}
                     />
                     <Parrafo
-                        className="text-justify mb-[30px]"
+                        className="text-left mb-[30px]"
                         textParse={t("equipo.0")}
                     />
                     <Parrafo
-                        className="text-justify mb-[30px]"
+                        className="text-left mb-[30px]"
                         textParse={t("equipo.1")}
                     />
 
@@ -101,75 +101,75 @@ export default function Nosotros() {
                     <div className="flex">
                         <div className="w-full lg:w-1/2 lg:pr-4 xl:pr-6">
                             <Parrafo
-                                className="text-justify mb-0 font-bold"
+                                className="text-left mb-0 font-bold"
                                 textParse={t("valores.0")}
                             />
                             <Parrafo
-                                className="text-justify mb-[30px]"
+                                className="text-left mb-[30px]"
                                 textParse={t("valores.1")}
                             />
 
                             <Parrafo
-                                className="text-justify mb-0 font-bold"
+                                className="text-left mb-0 font-bold"
                                 textParse={t("valores.2")}
                             />
                             <Parrafo
-                                className="text-justify mb-[30px]"
+                                className="text-left mb-[30px]"
                                 textParse={t("valores.3")}
                             />
 
                             <Parrafo
-                                className="text-justify mb-0 font-bold"
+                                className="text-left mb-0 font-bold"
                                 textParse={t("valores.4")}
                             />
                             <Parrafo
-                                className="text-justify mb-[30px]"
+                                className="text-left mb-[30px]"
                                 textParse={t("valores.5")}
                             />
 
                             <Parrafo
-                                className="text-justify mb-0 font-bold"
+                                className="text-left mb-0 font-bold"
                                 textParse={t("valores.6")}
                             />
                             <Parrafo
-                                className="text-justify mb-[30px]"
+                                className="text-left mb-[30px]"
                                 textParse={t("valores.7")}
                             />
                         </div>
                         <div className="w-full lg:w-1/2 lg:pl-4 xl:pl-6">
                             <Parrafo
-                                className="text-justify mb-0 font-bold"
+                                className="text-left mb-0 font-bold"
                                 textParse={t("valores.8")}
                             />
                             <Parrafo
-                                className="text-justify mb-[30px]"
+                                className="text-left mb-[30px]"
                                 textParse={t("valores.9")}
                             />
 
                             <Parrafo
-                                className="text-justify mb-0 font-bold"
+                                className="text-left mb-0 font-bold"
                                 textParse={t("valores.10")}
                             />
                             <Parrafo
-                                className="text-justify mb-[30px]"
+                                className="text-left mb-[30px]"
                                 textParse={t("valores.11")}
                             />
 
                             <Parrafo
-                                className="text-justify mb-0 font-bold"
+                                className="text-left mb-0 font-bold"
                                 textParse={t("valores.12")}
                             />
                             <Parrafo
-                                className="text-justify mb-[30px]"
+                                className="text-left mb-[30px]"
                                 textParse={t("valores.13")}
                             />
 
                             <Parrafo
-                                className="text-justify mb-0 font-bold"
+                                className="text-left mb-0 font-bold"
                                 textParse={t("valores.14")}
                             />
                             <Parrafo
-                                className="text-justify mb-[30px]"
+                                className="text-left mb-[30px]"
                                 textParse={t("valores.15")}
                             />
                         </div>

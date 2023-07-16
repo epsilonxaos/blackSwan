@@ -81,15 +81,15 @@ export default function Home() {
                 <div className="flex justify-center mb-[30px] md:mb-[70px]">
                     <div className="w-full md:w-5/6 max-w-[1250px]">
                         <Parrafo
-                            className="text-justify mb-[30px]"
+                            className="text-left mb-[30px]"
                             textParse={t("home.infoInicial.0")}
                         />
                         <Parrafo
-                            className="text-justify mb-[30px]"
+                            className="text-left mb-[30px]"
                             textParse={t("home.infoInicial.1")}
                         />
                         <Parrafo
-                            className="text-justify mb-[30px]"
+                            className="text-left mb-[30px]"
                             textParse={t("home.infoInicial.2")}
                         />
                     </div>
@@ -167,7 +167,7 @@ export default function Home() {
                                     </TextCustom>
                                 </h3>
                                 <Parrafo
-                                    className="text-justify mb-[30px] md:mb-[80px]"
+                                    className="text-left mb-[30px] md:mb-[80px]"
                                     textParse={t("home.capital.text")}
                                 />
                                 <Link to="/capital">
@@ -208,7 +208,7 @@ export default function Home() {
                                 </h3>
 
                                 <Parrafo
-                                    className="text-justify mb-[30px] md:mb-[80px]"
+                                    className="text-left mb-[30px] md:mb-[80px]"
                                     textParse={t("home.real.text")}
                                 />
                                 <Link to={"/real-state"}>
@@ -249,7 +249,7 @@ export default function Home() {
                                 </h3>
 
                                 <Parrafo
-                                    className="text-justify mb-[30px] md:mb-[80px]"
+                                    className="text-left mb-[30px] md:mb-[80px]"
                                     textParse={t("home.hospi.text")}
                                 />
                                 <Link to={"hospitality"}>

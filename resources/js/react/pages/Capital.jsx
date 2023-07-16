@@ -111,19 +111,19 @@ export default function Capital() {
                     <span className="font-bold">Black Swan Capital,</span>
                 </Titulo>
                 <Parrafo
-                    className="text-justify mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    className="text-left mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
                     textParse={t("capital.info.text.0")}
                 />
                 <Parrafo
-                    className="text-justify  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    className="text-left  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
                     textParse={t("capital.info.text.1")}
                 />
                 <Parrafo
-                    className="text-justify  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    className="text-left  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
                     textParse={t("capital.info.text.2")}
                 />
                 <Parrafo
-                    className="text-justify mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    className="text-left mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
                     textParse={t("capital.info.text.3")}
                 />
 
@@ -164,7 +164,7 @@ export default function Capital() {
                 </ul>
 
                 <Parrafo
-                    className="text-justify sm:text-center mb-[40px]"
+                    className="text-left sm:text-center mb-[40px]"
                     textParse={t("capital.info.text.13")}
                 />
             </MainContainer>
@@ -224,7 +224,7 @@ export default function Capital() {
                                         </h3>
                                         {typeof item.text[i18n.language] ==
                                         "string" ? (
-                                            <Parrafo className="text-justify">
+                                            <Parrafo className="text-left">
                                                 {item.text[i18n.language]}
                                             </Parrafo>
                                         ) : (
@@ -237,7 +237,7 @@ export default function Capital() {
                                                             "-" +
                                                             idx
                                                         }
-                                                        className={`text-justify ${
+                                                        className={`text-left ${
                                                             item.length ==
                                                             idx + 1
                                                                 ? ""

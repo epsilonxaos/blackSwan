@@ -104,15 +104,15 @@ export default function Hospitalary() {
                     {t("hospi.subtitulo.part2")}
                 </h3>
                 <Parrafo
-                    className="text-justify mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    className="text-left mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
                     textParse={t("hospi.info.text.0")}
                 />
                 <Parrafo
-                    className="text-justify  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    className="text-left  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
                     textParse={t("hospi.info.text.1")}
                 />
                 <Parrafo
-                    className="text-justify mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
+                    className="text-left mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
                     textParse={t("hospi.info.text.2")}
                 />
             </MainContainer>
@@ -172,7 +172,7 @@ export default function Hospitalary() {
                                         </h3>
                                         {typeof item.text[i18n.language] ==
                                         "string" ? (
-                                            <Parrafo className="text-justify">
+                                            <Parrafo className="text-left">
                                                 {item.text[i18n.language]}
                                             </Parrafo>
                                         ) : (
@@ -185,7 +185,7 @@ export default function Hospitalary() {
                                                             "-" +
                                                             idx
                                                         }
-                                                        className={`text-justify ${
+                                                        className={`text-left ${
                                                             item.length ==
                                                             idx + 1
                                                                 ? ""

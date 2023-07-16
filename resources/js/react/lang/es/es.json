@@ -6,6 +6,7 @@
     "cerrar": "Cerrar",
     "menu.info": "Desarrollamos estrategias integrales que permitan que <span class='underline'>lo inesperado</span> sea una realidad en cada uno de nuestros rubros de especialización.",
 
+    "home.banner": ["HACEMOS QUE", "SUCEDA", "LO INESPERADO"],
     "home.infoInicial": [
         "Con un historial que se remonta a 1997 con la fundación de su primera empresa, <span class='font-bold'> los socios de Black Swan han creado un grupo empresarial </span> enfocado principalmente en el desarrollo de proyectos en los rubros inmobiliarios y de hospitalidad en diferentes puntos de Yucatán, teniendo como eje rector la filosofía de los eventos poco probables pero de gran impacto.",
         "Desde 2005, Black Swan ha puesto especial énfasis en impulsar el crecimiento económico en ciertas zonas del estado con alta plusvalía y el dinamismo turístico y residencial de la región, siempre con una visión de impacto ambiental positivo.",
@@ -73,6 +74,42 @@
 
     "nosotros.titulo.part1": "UN EQUIPO",
     "nosotros.titulo.part2": "DE EXPERTOS",
+    "nosotros.jacobo": "Raúl y Jacobo forman un dúo excepcional en el mundo empresarial.",
+    "nInfo": [
+        "Raúl y Jacobo estudiaron juntos la carrera de Ingeniería Industrial del año 1998 al 2002. Durante el 2005, los socios deciden desarrollar proyectos inmobiliarios con servicios completos y de vivienda vertical,  basados en la experiencia e inversiones acumuladas desde sus inicios. En el 2011, invirtieron en su primer desarrollo residencial privado, de nombre: Residencial Kantara, con 370 lotes, parques y Casa Club, punto de partida de varios desarrollos inmobiliarios ubicados en los municipios de Mérida, Telchac y Conkal.",
+        "En 2019 los socios adquirieron algunas casas antiguas en el Centro Histórico de Mérida con el objetivo de convertirlas en hoteles, como es el caso del primer hotel boutique del grupo, Cigno Hotels. Paralelamente adquirieron acciones en empresas de diversos rubros de mercado para así impulsar el crecimiento empresarial y económico del grupo."
+    ],
+    "nosotros.equipo.titulo": "Black Swan forjando un futuro impresionante.",
+    "equipo": [
+        "Raúl le recomendó a Jacobo un libro de nombre “El Cisne Negro” de Nassim Taleb, el cual explica el significado de los eventos poco probables, pero que causan gran impacto en la humanidad, así nace Black Swan con una filosofía que ha sido transmitida a sus más de 120 colaboradores directos y 200 colaboradores indirectos.",
+        "El grupo empresarial está comprometido con el sello de responsabilidad con el medioambiente y la filosofía wellness, por lo cual Black Swan se ha dado a la tarea de integrar en cada uno de sus proyectos acciones para generar un impacto positivo en estos rubros, consolidándose como agentes de cambio."
+    ],
+    "nosotros.valores": "Nuestros Valores",
+    "valores": [
+        "Humanismo consciente",
+        "Atención y conciencia plena hacia los principios humanistas en todo lo que hacemos.",
+
+        "Lealtad inquebrantable",
+        "Mantenemos nuestra adhesión hacia la empresa, así como nuestro compromiso con los clientes y entre nosotros, sin importar los obstáculos y desafíos hasta lograr nuestras metas.",
+
+        "Equidad en todos los sentidos",
+        "Trato digno, igualdad de oportunidades y justicia para todas las personas involucradas en la empresa, sin hacer distinciones de ningún aspecto.",
+
+        "Espíritu de servicio",
+        "Mantenemos una actitud y mentalidad centradas en la superación de las expectativas de nuestros clientes, compañeros de trabajo y demás partes interesadas.",
+
+        "Relaciones ganar-ganar",
+        "Nos enfocamos en que todas las partes involucradas en las actividades de la empresa internas y externas, obtengan beneficios mutuos y satisfactorios para lograr relaciones productivas de largo plazo.",
+
+        "Sinergia colaborativa",
+        "Convertimos nuestras diferencias en fortalezas, integrando una enriquecedora combinación de habilidades y competencias para un alto rendimiento.",
+
+        "La verdad nos hace libres",
+        "La transparencia y veracidad en todo lo que decimos y hacemos, nos mantiene libres de la falsedad, la duda y la incertidumbre. Honramos nuestra palabra por convicción, nos complace ser confiables.",
+
+        "Somos Cisne Negro",
+        "Logramos cosas poco probables y de gran impacto; hacemos que suceda lo inesperado, somos antifrágiles."
+    ],
 
     "contacto": "Contact",
     "nosotros": "Nosotros",

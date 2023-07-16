@@ -6,6 +6,7 @@
     "cerrar": "Close",
     "menu.info": "We develop comprehensive strategies that allow <span class='underline'>the unexpected</span> to become a reality in each of our areas of specialization.",
 
+    "home.banner": ["WE MAKE THE", "", "UNEXPECTED HAPPEN"],
     "home.infoInicial": [
         "Black Swan stands out as a business group focused primarily on real estate and hospitality development across Yucatan guided by a vision of unlikely yet remarkable events. Ever since 2005, Black Swan has worked in order to boost Yucatan’s development, making sure to have a friendly impact on the environment.",
         "Nowadays this group is divided in three branches: capital, real estate and hospitality, each one led by groups of experts dedicated to making positive changes while following the company’s vision. ",
@@ -71,8 +72,44 @@
     ],
     "hospi.proyectos.titulo": "<span className='font-bold'>Black Swan Hospitality</span> has the following projects",
 
-    "nosotros.titulo.part1": "UN EQUIPO",
-    "nosotros.titulo.part2": "DE EXPERTOS",
+    "nosotros.titulo.part1": "A TEAM",
+    "nosotros.titulo.part2": "OF EXPERTS",
+    "nosotros.jacobo": "Raúl and Jacobo form an exceptional duo in the business world.",
+    "nInfo": [
+        "Raúl and Jacobo, current partners of Black Swan, studied Industrial Engineering together from 1998 to 2002. Since 2005 they have jointly developed real estate projects with complete services and vertical housing, based on the experience and investments accumulated since its inception. In 2011 they invested in their first private residential development called Residencial Kantara with 370 lots, parks and Club House. This became their starting point for several real estate developments located in the municipalities of Mérida, Telchac and Conkal.",
+        "In 2019 the partners acquired some old houses in Mérida’s downtown with the aim of turning them into hotels, as they did with the group's first boutique hotel: Cigno Hotel. Paralelly they acquired shares in companies from various market sectors in order to boost the business and economic growth of the group."
+    ],
+    "nosotros.equipo.titulo": "Black Swan forging an impressive future.",
+    "equipo": [
+        "Some time ago Raúl recommended to Jacobo a book titled \"The Black Swan\" by Nassim Taleb, which explains the meaning of unlikely events that yet cause a great impact on humanity. This is how Black Swan was born with a philosophy that has been transmitted to its over 120 direct collaborators and 200 indirect collaborators.",
+        "Furthermore Black Swan is a business group committed to their environmental responsibility and the wellness philosophy, for which reason they have taken on the task of integrating actions in each of its projects to generate a positive impact in these areas, consolidating itself as agents of change."
+    ],
+    "nosotros.valores": "Our values",
+    "valores": [
+        "Conscious humanism",
+        "Attention and full awareness towards humanist principles in everything we do.",
+
+        "Unwavering loyalty",
+        "We maintain our adherence to the company, as well as our commitment to clients and to each other, regardless of the obstacles and challenges until we achieve our goals.",
+
+        "Equity in every way",
+        "Dignified treatment, equal opportunities and justice for all the people involved in the company, without making distinctions of any sort.",
+
+        "Service spirit",
+        "We maintain an attitude and mindset focused on exceeding the expectations of our customers, coworkers, and other stakeholders.",
+
+        "Win-win relationships",
+        "We focus our attention on all parties involved in the company's internal and external activities obtaining mutual and satisfactory benefits to achieve long-term productive relationships.",
+
+        "Collaborative synergy",
+        "We turn our differences into strengths, integrating an enriching combination of skills and competencies for high performance.",
+
+        "The truth sets us free",
+        "Transparency and veracity in everything we say and do keeps us free from falsehood, doubt and uncertainty. We honor our word out of conviction, we are pleased to be reliable.",
+
+        "We are black swan",
+        "We achieve unlikely and high-impact things; we make the unexpected happen, we are antifragile."
+    ],
 
     "contacto": "Contact",
     "nosotros": "About us",

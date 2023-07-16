@@ -4,6 +4,7 @@ import Titulo from "../components/Titulo";
 // import { Tabs } from "flowbite-react";
 import Tabs from "../components/Tabs";
 import { LiaRegistered } from "react-icons/lia";
+import { BiRegistered } from "react-icons/bi";
 
 import frasePrincipal from "../../../img/web/frase-principal.svg";
 import frasePrincipalDesk from "../../../img/web/frase-principal-desk.svg";
@@ -34,23 +35,34 @@ export default function Home() {
         <main>
             {/* Banner principal */}
             <div className="bg-[#CCCCCD]">
-                <MainContainer className={" pt-[55px] pb-[35px] px-0"}>
-                    <div className="flex flex-col lg:flex-row justify-between sm:justify-start lg:justify-between h-full">
-                        <div className="w-full">
-                            <img
-                                className="lg:hidden w-[80%] max-w-[320px] sm:max-w-[520px] mx-auto sm:ml-0"
-                                src={frasePrincipal}
-                                alt="Hacemos que suceda lo inesperado"
-                            />
-                            <img
-                                className="hidden lg:block w-[95%]"
-                                src={frasePrincipalDesk}
-                                alt="Hacemos que suceda lo inesperado"
-                            />
+                <MainContainer className={" pt-[55px] pb-0 lg:pb-[35px] px-0"}>
+                    <div className="flex flex-col md:flex-row justify-between  sm:justify-start lg:justify-between h-full ">
+                        <div className="w-full flex items-center h-full px-3 mb-[40px]">
+                            <div className="max-w-ma mx-auto">
+                                <p className="mb-[30px] lg:mb-[45px] xl:mb-[90px] font-bold">
+                                    (MX)
+                                </p>
+                                <h1 className="relative pl-[28px]">
+                                    <BiRegistered className="text-[20px] lg:text-[26px] inline absolute top-3 left-0" />
+                                    <AnimatedTextWord
+                                        className="font-medium text-[40px] md:text-[55px] lg:text-[60px] xl:text-[90px] tracking-[-1.5px] leading-[1.3] !mb-0"
+                                        text={t("home.banner.0")}
+                                    />
+                                </h1>
+                                <AnimatedTextWord
+                                    className="font-medium text-[40px] md:text-[55px] lg:text-[60px] xl:text-[90px] tracking-[-1.5px] leading-[1.3] pl-[28px] !mb-0"
+                                    text={t("home.banner.1")}
+                                />
+                                <AnimatedTextWord
+                                    className="font-medium text-[40px] md:text-[55px] lg:text-[60px] xl:text-[90px] tracking-[-1.5px] leading-[1.3] mb-[25px] lg:mb-[45px]"
+                                    text={t("home.banner.2")}
+                                />
+                                <div className="border-t-2 border-t-black w-[48px]"></div>
+                            </div>
                         </div>
                         <div className="w-full">
                             <img
-                                className="relative w-[90%] lg:w-full max-w-[320px] sm:max-w-[380px] lg:max-w-max sm:-top-[50px] sm:-right-[30px] lg:top-0  ml-auto mx-0"
+                                className="relative w-[90%] lg:w-full max-w-[320px] sm:max-w-[380px] lg:max-w-max md:-right-[30px] lg:top-0  ml-auto mx-0"
                                 src={cisnePrincipal}
                                 alt="Cisne negro"
                             />

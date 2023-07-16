@@ -20,21 +20,33 @@ export default function Footer() {
                                     </Parrafo>
                                     <ul>
                                         <li>
-                                            <a href="#">
+                                            <a
+                                                href="https://www.facebook.com/BlackSwanCapitalMx?mibextid=LQQJ4d"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Instagram
                                                 </Parrafo>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a
+                                                href="https://www.facebook.com/BlackSwanCapitalMx?mibextid=LQQJ4d"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Facebook
                                                 </Parrafo>
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="#">
+                                        <li className="hidden">
+                                            <a
+                                                href="#"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     LinkedIn
                                                 </Parrafo>
@@ -50,21 +62,25 @@ export default function Footer() {
                                     </Parrafo>
                                     <ul>
                                         <li>
-                                            <a href="#">
+                                            <a href="mailto:">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Correo
                                                 </Parrafo>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="tel:+529999480017">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Teléfono
                                                 </Parrafo>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a
+                                                href="https://goo.gl/maps/ov3ZmX4NabZxTZ2s7"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Google Maps
                                                 </Parrafo>
@@ -110,25 +126,25 @@ export default function Footer() {
                                     </Parrafo>
                                     <ul>
                                         <li>
-                                            <a href="#">
+                                            <Link to="/nosotros#historia">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Historia
                                                 </Parrafo>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <Link to="/nosotros#quienesSomos">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Quienes Somos
                                                 </Parrafo>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <Link to="/nosotros">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     Nuestros Valores
                                                 </Parrafo>
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>

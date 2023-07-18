@@ -194,7 +194,7 @@ export default function Footer() {
                         <span className="font-bold">MadebyPartners®</span>
                     </Parrafo>
                     <Parrafo className="text-white text-[16px] font-normal">
-                        <a href="#">{t("footer.politicas")}</a>
+                        <Link to="/politicas">{t("footer.politicas")}</Link>
                     </Parrafo>
                 </div>
             </MainContainer>

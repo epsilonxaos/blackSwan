@@ -5,8 +5,6 @@ import Parrafo from "../components/Parrafo";
 import cisne from "../../../img/web/cisne-banner.svg";
 import raulyjacobo from "../../../img/web/raulyjacobo.png";
 import equipobs from "../../../img/web/equipobs.jpg";
-
-import bg from "../../../img/web/banner-nosotros.jpg";
 import { useTranslation } from "react-i18next";
 
 export default function Nosotros() {
@@ -14,13 +12,10 @@ export default function Nosotros() {
     return (
         <main>
             {/* Banner principal */}
-            <div
-                className={`bg-[#7a7977] bg-center bg-no-repeat bg-blend-darken`}
-                style={{ backgroundImage: "url(" + bg + ")" }}
-            >
+            <div className="bg-[#7a7977] bg-center bg-cover bg-no-repeat bg-blend-darken bgNosotros">
                 <MainContainer
                     className={
-                        " pt-[55px] pb-[35px] px-0 min-h-[650px] lg:h-[calc(100vh-68px)] lg:max-h-[870px]"
+                        " pt-[55px] pb-[35px] px-3 min-h-[650px] lg:h-[calc(100vh-68px)] lg:max-h-[870px]"
                     }
                 >
                     <div className="flex items-center h-full">
@@ -76,7 +71,7 @@ export default function Nosotros() {
                 <img
                     src={equipobs}
                     alt="Equipo Black Swan"
-                    className="aspect-video"
+                    className="aspect-video object-contain"
                     id="quienesSomos"
                 />
                 <div className="pt-[50px] pb-[70px] px-[40px] sm:px-[30px] max-w-[1100px] mx-auto">
@@ -98,7 +93,7 @@ export default function Nosotros() {
                         textParse={t("nosotros.valores")}
                     />
 
-                    <div className="flex">
+                    <div className="flex flex-col lg:flex-row">
                         <div className="w-full lg:w-1/2 lg:pr-4 xl:pr-6">
                             <Parrafo
                                 className="text-left mb-0 font-bold"

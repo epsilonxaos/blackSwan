@@ -9,6 +9,7 @@ import Nosotros from "./pages/Nosotros";
 import ScrollToTop from "./components/ScrollToTop";
 import { AnimatePresence } from "framer-motion";
 import Transition from "./animations/transitions";
+import Politicas from "./pages/Politicas";
 
 export default function Web() {
     const location = useLocation();
@@ -56,6 +57,14 @@ export default function Web() {
                         element={
                             <Transition>
                                 <Nosotros />
+                            </Transition>
+                        }
+                    />
+                    <Route
+                        path="/politicas"
+                        element={
+                            <Transition>
+                                <Politicas />
                             </Transition>
                         }
                     />

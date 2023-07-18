@@ -20,6 +20,7 @@ Route::view('/capital', 'app')->where('path', '.*');
 Route::view('/real-state', 'app')->where('path', '.*');
 Route::view('/hospitality', 'app')->where('path', '.*');
 Route::view('/nosotros', 'app')->where('path', '.*');
+Route::view('/politicas', 'app')->where('path', '.*');
 
 Route::get('/dashboard', function () {
 	return view('dashboard');

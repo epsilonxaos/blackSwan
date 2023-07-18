@@ -8,6 +8,26 @@ html {
     font-weight: 500;
 }
 
+body {
+    min-height: 100vh;
+    min-height: fill-available;
+    min-height: -webkit-fill-available;
+}
+html {
+    height: fill-available;
+    height: -webkit-fill-available;
+}
+
 svg.text-white {
     fill: white;
+}
+
+.bgNosotros {
+    background-image: url("../img/web/banner-nosotros-m.png");
+}
+
+@media screen and (min-width: 768px) {
+    .bgNosotros {
+        background-image: url("../img/web/banner-nosotros.jpg");
+    }
 }

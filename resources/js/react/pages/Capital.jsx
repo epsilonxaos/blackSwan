@@ -15,6 +15,7 @@ import IMGfitorade from "../../../img/web/capital/fitorade.jpg";
 import AnimatedTextWord from "../animations/AnimationTextWord";
 import TextCustom from "../components/TextCustom";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function Capital() {
     const { t, i18n } = useTranslation();
@@ -60,7 +61,7 @@ export default function Capital() {
             <div className="bg-black">
                 <MainContainer
                     className={
-                        "py-[60px] md:py-[100px] min-h-[700px] lg:h-[calc(100vh-68px)] lg:max-h-[870px]"
+                        "py-[60px] md:py-[100px] min-h-[700px] lg:min-h-[850px] lg:h-[calc(100vh-68px)] lg:max-h-[870px]"
                     }
                 >
                     <img
@@ -83,12 +84,17 @@ export default function Capital() {
                         textParse={t("conoceMasNosotros")}
                     />
 
-                    <HiArrowDown className="text-white text-[24px] mx-auto" />
+                    <Link to="#info">
+                        <HiArrowDown className="text-white text-[24px] mx-auto" />
+                    </Link>
                 </MainContainer>
             </div>
 
             {/* Informacion */}
-            <MainContainer className={"pt-[60px] pb-[30px] lg:pb-[100px]"}>
+            <MainContainer
+                className={"pt-[70px] pb-[30px] lg:pb-[100px]"}
+                id={"info"}
+            >
                 <hr className="border-black mb-[20px] hidden md:block" />
                 <div className="flex items-center justify-between">
                     <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
@@ -101,7 +107,7 @@ export default function Capital() {
                         alt="Capital"
                     />
                 </div>
-                <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
+                <h3 className="text-gris text-left md:text-center text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
                     {t("capital.subtitulo")}
                 </h3>
                 <Titulo className="text-[30px] leading-[0] !mb-0">
@@ -214,7 +220,7 @@ export default function Capital() {
                                 <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
                                     <div className="flex flex-col h-full justify-center">
                                         <AnimatedTextWord
-                                            className="text-left !mb-[5px] leading-[0.6]"
+                                            className="text-left !mb-[5px] leading-[1.3]"
                                             text={item.title}
                                         />
                                         <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">

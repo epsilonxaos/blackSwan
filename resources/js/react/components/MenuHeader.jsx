@@ -63,7 +63,7 @@ export default function MenuHeader() {
                     variants={container}
                     initial={!active ? "show" : "hidden"}
                     animate={active ? "show" : "hidden"}
-                    className="flex w-full max-w-6xl mx-auto items-center justify-center md:justify-around flex-col md:flex-row max-md:gap-10 landscape:py-12 py-[50px] md:py-[120px]"
+                    className="flex w-full max-w-6xl mx-auto items-center justify-center md:justify-around flex-col md:flex-row max-md:gap-8 landscape:py-12 py-[30px] md:py-[120px]"
                 >
                     <motion.li variants={itemA}>
                         <Link onClick={() => setActive(false)} to={"capital"}>

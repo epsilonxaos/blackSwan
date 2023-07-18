@@ -39,13 +39,13 @@
 
         "Está en proceso el desarrollo de su <span className='font-bold'>primer fondo de inversión:</span> Black Swan Fund."
     ],
-    "capital.proyectos.titulo": "<span className='font-bold'>Black Swan Capital</span> cuenta con los siguientes proyectos",
+    "capital.proyectos.titulo": "<span className='font-bold'>Black Swan Capital</span> cuenta con los siguientes proyectos equity",
 
     "real.subtitulo.part1": "Construimos hoy",
     "real.subtitulo.part2": "el patrimonio del futuro",
     "real.info.text": [
         "Es una unidad de negocio <span class='font-bold'>especializada en el desarrollo y construcción de proyectos en el rubro inmobiliario,</span> que surge a partir de Grupo RAS, constructora enfocada en la supervisión de viviendas sociales fundada por los socios del grupo en 1997.",
-        "Durante el 2005, los socios deciden llevar la empresa a otro nivel a través del desarrollo de <span className='font-bold'>royectos inmobiliarios con servicios completos y de vivienda vertical,</span> basados en la experiencia e inversiones acumuladas desde sus inicios.",
+        "Durante el 2005, los socios deciden llevar la empresa a otro nivel a través del desarrollo de <span className='font-bold'>proyectos inmobiliarios con servicios completos y de vivienda vertical,</span> basados en la experiencia e inversiones acumuladas desde sus inicios.",
         "Hoy en día,<span className='font-bold'> la empresa cuenta con más de </span>",
 
         "100 Mil ",
@@ -111,14 +111,14 @@
         "Logramos cosas poco probables y de gran impacto; hacemos que suceda lo inesperado, somos antifrágiles."
     ],
 
-    "contacto": "Contact",
+    "contacto": "Contacto",
     "nosotros": "Nosotros",
-    "footer.correo": "Email",
-    "footer.telefono": "Phone",
+    "footer.correo": "Correo",
+    "footer.telefono": "Teléfono",
     "footer.divisiones": "Divisiones",
     "footer.historia": "Historia",
-    "footer.quienes": "Quienes Somos",
-    "footer.valores": "Nuestros Valores",
+    "footer.quienes": "Quienes somos",
+    "footer.valores": "Nuestros valores",
     "footer.compartir": "Compártenos tu correo",
     "footer.desarrollo": "Diseño y desarrollo",
     "footer.politicas": "Políticas de privacidad"

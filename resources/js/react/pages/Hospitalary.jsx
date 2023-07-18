@@ -15,6 +15,7 @@ import IMGcignohotel from "../../../img/web/hospitalary/cignohotel.jpg";
 import AnimatedTextWord from "../animations/AnimationTextWord";
 import TextCustom from "../components/TextCustom";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function Hospitalary() {
     const { t, i18n } = useTranslation();
@@ -47,13 +48,13 @@ export default function Hospitalary() {
             <div className="bg-black">
                 <MainContainer
                     className={
-                        "py-[60px] md:py-[100px] min-h-[700px] lg:h-[calc(100vh-68px)] lg:max-h-[870px]"
+                        "py-[60px] md:py-[100px] min-h-[700px]  lg:min-h-[850px] lg:h-[calc(100vh-68px)] lg:max-h-[870px]"
                     }
                 >
                     <img
                         src={hospitalary}
                         alt="Hospitality"
-                        className="w-[70px] mx-auto mb-[40px] lg:mb-[60px]"
+                        className="w-[50px] mx-auto mb-[40px] lg:mb-[60px]"
                     />
                     <img
                         src={hospitalaryText}
@@ -66,7 +67,7 @@ export default function Hospitalary() {
                     />
                     <AnimatedTextWord
                         text={t("hospi.subtitulo.part2")}
-                        className="text-white leading-[1.2] mb-[65px] lg:mb-[100px] xl:text-[70px] justify-center items-center"
+                        className="text-white leading-[1.2] mb-[55px] lg:mb-[80px] xl:text-[70px] justify-center items-center"
                     />
 
                     <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
@@ -79,13 +80,16 @@ export default function Hospitalary() {
                         textParse={t("conoceMasNosotros")}
                     />
 
-                    <HiArrowDown className="text-white text-[24px] mx-auto" />
+                    <Link to={"#info"}>
+                        <HiArrowDown className="text-white text-[24px] mx-auto" />
+                    </Link>
                 </MainContainer>
             </div>
 
             {/* Informacion */}
             <MainContainer
-                className={"pt-[60px] pb-[30px] lg:pb-[100px] px-[30px]"}
+                className={"pt-[70px] pb-[30px] lg:pb-[100px] px-[30px]"}
+                id="info"
             >
                 <hr className="border-black mb-[20px] hidden md:block" />
                 <div className="flex items-center justify-between">
@@ -162,7 +166,7 @@ export default function Hospitalary() {
                                 <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
                                     <div className="flex flex-col h-full justify-center">
                                         <AnimatedTextWord
-                                            className="text-left !mb-[5px] leading-[0.6]"
+                                            className="text-left !mb-[5px] leading-[1.3]"
                                             text={item.title}
                                         />
                                         <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">

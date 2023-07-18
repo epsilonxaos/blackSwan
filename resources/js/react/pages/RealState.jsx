@@ -28,6 +28,7 @@ import logo5 from "../../../img/web/logos/5.png";
 import AnimatedTextWord from "../animations/AnimationTextWord";
 import TextCustom from "../components/TextCustom";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 export default function RealState() {
     const { t, i18n } = useTranslation();
@@ -36,6 +37,7 @@ export default function RealState() {
             id: "tabunicaliving",
             cover: IMGunicaliving,
             title: "Única Living",
+            url: "https://unicaliving.mx/",
             subtitle: {
                 es: "Residencial Sustentable",
                 en: "Sustainable Residential",
@@ -62,6 +64,7 @@ export default function RealState() {
             id: "tabxekenyxakah",
             cover: IMGxekenyxakah,
             title: "Xexén xakáh",
+            url: "https://xexenyxakah.com/",
             subtitle: {
                 es: "Residencial Sustentable",
                 en: "Sustainable Residential",
@@ -78,6 +81,7 @@ export default function RealState() {
             id: "tabsantamar",
             cover: IMGsantamar,
             title: "Santa Mar",
+            url: "https://santamarsisal.mx/",
             subtitle: {
                 es: "Residencial Sustentable",
                 en: "Sustainable Residential",
@@ -94,6 +98,7 @@ export default function RealState() {
             id: "tabarenales",
             cover: IMGarenales,
             title: "Arenales",
+            url: "https://grupolibera.mx/desarrolloArenales/",
             subtitle: {
                 es: "Residencial Sustentable",
                 en: "Sustainable Residential",
@@ -107,6 +112,7 @@ export default function RealState() {
             id: "tabtotem",
             cover: IMGtotem,
             title: "Tótem Residencial",
+            url: "https://totemsustentable.mx",
             subtitle: {
                 es: "Residencial Sustentable",
                 en: "Sustainable Residential",
@@ -119,7 +125,8 @@ export default function RealState() {
         {
             id: "tabyukan",
             cover: IMGyukan,
-            title: "Yukan Town Houses",
+            title: "Yukán Town Houses",
+            url: "https://yukan.mx",
             subtitle: {
                 es: "Residencial Sustentable",
                 en: "Sustainable Residential",
@@ -133,6 +140,7 @@ export default function RealState() {
             id: "tabxomak",
             cover: IMGxomak,
             title: "Xomak",
+            url: "https://xomaktulum.com/",
             subtitle: {
                 es: "Residencial Sustentable",
                 en: "Sustainable Residential",
@@ -150,13 +158,13 @@ export default function RealState() {
             <div className="bg-black">
                 <MainContainer
                     className={
-                        "py-[60px] md:py-[100px] min-h-[700px] lg:h-[calc(100vh-68px)] lg:max-h-[870px]"
+                        "py-[60px] md:py-[100px] min-h-[700px] lg:min-h-[850px] lg:h-[calc(100vh-68px)] lg:max-h-[870px]"
                     }
                 >
                     <img
                         src={real}
                         alt="Real Estate"
-                        className="w-[70px] mx-auto mb-[40px] lg:mb-[60px]"
+                        className="w-[50px] mx-auto mb-[40px] lg:mb-[60px]"
                     />
                     <img
                         src={realText}
@@ -169,7 +177,7 @@ export default function RealState() {
                     />
                     <AnimatedTextWord
                         text={t("real.subtitulo.part2")}
-                        className="text-white leading-[1.2] mb-[65px] lg:mb-[100px] xl:text-[70px] justify-center items-center"
+                        className="text-white leading-[1.1] mb-[55px] lg:mb-[80px] xl:text-[70px] justify-center items-center"
                     />
 
                     <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
@@ -182,13 +190,16 @@ export default function RealState() {
                         textParse={t("conoceMasNosotros")}
                     />
 
-                    <HiArrowDown className="text-white text-[24px] mx-auto" />
+                    <Link to={"#info"}>
+                        <HiArrowDown className="text-white text-[24px] mx-auto" />
+                    </Link>
                 </MainContainer>
             </div>
 
             {/* Informacion */}
             <MainContainer
-                className={"pt-[60px] pb-[30px] lg:pb-[100px] px-[30px]"}
+                className={"pt-[70px] pb-[30px] lg:pb-[100px] px-[30px]"}
+                id="info"
             >
                 <hr className="border-black mb-[20px] hidden md:block" />
                 <div className="flex items-center justify-between">
@@ -202,11 +213,11 @@ export default function RealState() {
                         alt="Real estate"
                     />
                 </div>
-                <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
+                <h3 className="text-gris text-left md:text-center text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
                     {t("real.subtitulo.part1")} <br />
                     {t("real.subtitulo.part2")}
                 </h3>
-                <Titulo className="text-[26px] mb-[40px] lg:mb-[50px]">
+                <Titulo className="text-[26px] mb-[40px] lg:mb-[50px] text-left">
                     <span className="font-bold">Black Swan Real Estate,</span>
                 </Titulo>
                 <Parrafo
@@ -319,7 +330,7 @@ export default function RealState() {
                                 <div className="lg:pl-[60px] lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px]">
                                     <div className="flex flex-col h-full justify-center">
                                         <AnimatedTextWord
-                                            className="text-left !mb-[5px] leading-[0.6]"
+                                            className="text-left !mb-[5px] leading-[1.3]"
                                             text={item.title}
                                         />
                                         <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
@@ -327,31 +338,43 @@ export default function RealState() {
                                                 {item.subtitle[i18n.language]}
                                             </TextCustom>
                                         </h3>
-                                        {typeof item.text[i18n.language] ==
-                                        "string" ? (
-                                            <Parrafo className="text-left">
-                                                {item.text[i18n.language]}
-                                            </Parrafo>
-                                        ) : (
-                                            item.text[i18n.language].map(
-                                                (tx, idx) => (
-                                                    <Parrafo
-                                                        key={
-                                                            "parrafo-" +
-                                                            item.id +
-                                                            "-" +
-                                                            idx
-                                                        }
-                                                        className={`text-left ${
-                                                            item.length ==
-                                                            idx + 1
-                                                                ? ""
-                                                                : "mb-[30px]"
-                                                        }`}
-                                                        textParse={tx}
-                                                    ></Parrafo>
+                                        <div className="mb-[30px] md:mb-[80px]">
+                                            {typeof item.text[i18n.language] ==
+                                            "string" ? (
+                                                <Parrafo className="text-left">
+                                                    {item.text[i18n.language]}
+                                                </Parrafo>
+                                            ) : (
+                                                item.text[i18n.language].map(
+                                                    (tx, idx) => (
+                                                        <Parrafo
+                                                            key={
+                                                                "parrafo-" +
+                                                                item.id +
+                                                                "-" +
+                                                                idx
+                                                            }
+                                                            className={`text-left ${
+                                                                item.length ==
+                                                                idx + 1
+                                                                    ? ""
+                                                                    : "mb-[30px]"
+                                                            }`}
+                                                            textParse={tx}
+                                                        ></Parrafo>
+                                                    )
                                                 )
-                                            )
+                                            )}
+                                        </div>
+
+                                        {item?.url && (
+                                            <a
+                                                href={item.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <Boton>{t("verMas")}</Boton>
+                                            </a>
                                         )}
                                     </div>
                                 </div>
@@ -373,35 +396,35 @@ export default function RealState() {
                         <img
                             src={logo1}
                             alt="Xomak"
-                            className="max-w-full h-auto"
+                            className="max-w-[150px] h-auto"
                         />
                     </li>
                     <li className="w-[40%] md:w-1/3 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-[70px] lg:mb-0">
                         <img
                             src={logo2}
                             alt="Kantara"
-                            className="max-w-full h-auto"
+                            className="max-w-[150px] h-auto"
                         />
                     </li>
                     <li className="w-[40%] md:w-1/3 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-[70px] lg:mb-0">
                         <img
                             src={logo3}
                             alt="Yukan"
-                            className="max-w-full h-auto"
+                            className="max-w-[150px] h-auto"
                         />
                     </li>
                     <li className="w-[40%] md:w-1/2 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-0">
                         <img
                             src={logo4}
                             alt="Palma Real"
-                            className="max-w-full h-auto"
+                            className="max-w-[150px] h-auto"
                         />
                     </li>
                     <li className="w-[100%] md:w-1/2 lg:w-auto h-[120px] flex items-end justify-center">
                         <img
                             src={logo5}
                             alt="Unica"
-                            className="max-w-full h-auto"
+                            className="max-w-[150px] h-[70%] md:h-[80%]"
                         />
                     </li>
                 </ul>

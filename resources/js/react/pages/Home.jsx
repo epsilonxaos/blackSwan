@@ -18,7 +18,7 @@ import onlyReal from "../../../img/web/recursos-oscuros/onlyReal.svg";
 import hospitality from "../../../img/web/recursos-oscuros/hospitality.svg";
 import onlyHospitality from "../../../img/web/recursos-oscuros/onlyHospitality.svg";
 import IMGcapital from "../../../img/web/capital.png";
-import IMGreal from "../../../img/web/real.png";
+import IMGreal from "../../../img/web/real.jpg";
 import IMGhospitality from "../../../img/web/hospitality.png";
 import Boton from "../components/Buttons";
 import { useState } from "react";

@@ -29,7 +29,7 @@ export default function Nosotros() {
                                 {t("nosotros.titulo.part2")}
                             </h1>
                             <h3 className="font-medium text-[13px] lg:text-[18px] xl:text-[24px] tracking-[1.95px] uppercase mb-[25px] lg:mb-[45px]">
-                                Raúl Sánchez Díaz y Jacobo Ceh Iza
+                                Raúl y Jacobo
                             </h3>
                             <div className="border-t-2 border-t-white w-[48px]"></div>
                         </div>
@@ -59,7 +59,7 @@ export default function Nosotros() {
                     <div className="w-full lg:w-1/2 mb-[25px] px-[40px] md:px-0 lg:mb-0">
                         <img
                             src={raulyjacobo}
-                            alt="Raúl Sánchez Díaz y Jacobo Ceh Iza"
+                            alt="Raúl y Jacobo"
                             className="bg-white w-full h-[500px] lg:h-[850px] object-contain max-w-[670px] mx-auto lg:mr-0"
                         />
                     </div>
@@ -84,7 +84,7 @@ export default function Nosotros() {
                         textParse={t("equipo.0")}
                     />
                     <Parrafo
-                        className="text-left mb-[30px]"
+                        className="text-left mb-[75px]"
                         textParse={t("equipo.1")}
                     />
 
@@ -93,7 +93,7 @@ export default function Nosotros() {
                         textParse={t("nosotros.valores")}
                     />
 
-                    <div className="flex flex-col lg:flex-row">
+                    <div className="flex flex-col lg:flex-row" id="valores">
                         <div className="w-full lg:w-1/2 lg:pr-4 xl:pr-6">
                             <Parrafo
                                 className="text-left mb-0 font-bold"

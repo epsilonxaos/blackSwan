@@ -56,14 +56,14 @@ export default function RealState() {
                 en: "Sustainable Residential",
             },
             text: {
-                es: "Es una privada pensada para las familias que buscan un lugar tranquilo con amplios espacios de recreo; localizada en la mejor zona residencial de crecimiento de Yucatán. El perfecto equilibrio entre urbanidad y tranquilidad.",
+                es: "Es una privada pensada para las familias que buscan un lugar tranquilo con amplios espacios de recreación; localizada en la mejor zona residencial de crecimiento de Yucatán. El perfecto equilibrio entre urbanidad y tranquilidad.",
                 en: "This is a private residential project designed for families who look for a quiet place with wide spaces for recreation. It is located in the best growing residential area of Yucatan and offers the perfect balance between urbanity and tranquility.",
             },
         },
         {
             id: "tabxekenyxakah",
             cover: IMGxekenyxakah,
-            title: "Xexén xakáh",
+            title: "Xexén y Xakáh",
             url: "https://xexenyxakah.com/",
             subtitle: {
                 es: "Residencial Sustentable",
@@ -80,7 +80,7 @@ export default function RealState() {
         {
             id: "tabsantamar",
             cover: IMGsantamar,
-            title: "Santa Mar",
+            title: "Santamar",
             url: "https://santamarsisal.mx/",
             subtitle: {
                 es: "Residencial Sustentable",
@@ -88,7 +88,7 @@ export default function RealState() {
             },
             text: {
                 es: [
-                    "Santa Mar es un proyecto residencial privado con un enfoque wellness. Su principal objetivo es ofrecer un espacio para disfrutar de una vida en pleno equilibrio mental, emocional y físico, con todas sus amenidades necesarias.",
+                    "Santamar es un proyecto residencial privado con un enfoque wellness. Su principal objetivo es ofrecer un espacio para disfrutar de una vida en pleno equilibrio mental, emocional y físico, con todas sus amenidades necesarias.",
                     "A diez minutos de Santa Mar se encuentra Sisal, donde se construirá un Club de Playa frente al mar.",
                 ],
                 en: "Santa Mar is a private residential project with a wellness philosophy focus. Its main objective is to offer a place where people can enjoy a life in full mental, emotional and physical balance, with all its necessary amenities. Ten minutes away from Santa Mar is Sisal, where a Beach Club will be built facing the sea.",
@@ -104,8 +104,8 @@ export default function RealState() {
                 en: "Sustainable Residential",
             },
             text: {
-                es: "Esta privada residencial cuenta con todas las amenidades para disfrutar la belleza de Yucatán y sus costas, gozando de altos niveles de seguridad y comodidad.",
-                en: "This private residential project has every amenity required to fully enjoy the beauty of Yucatan’s coasts with high levels of security and comfort.",
+                es: "Este proyecto de terrenos residenciales totalmente urbanizados está ubicado en Progreso, a pocos minutos de la hermosa playa de este puerto. Arenales cuenta con amenidades de primera categoría que aseguran la calidad de vida y comodidad de sus residentes.",
+                en: "This fully urbanized residential land project is located in Progreso, very close from the beautiful beach of this port. Arenales has first-class amenities that ensure a high quality of life and comfort of its residents.",
             },
         },
         {
@@ -118,14 +118,14 @@ export default function RealState() {
                 en: "Sustainable Residential",
             },
             text: {
-                es: "Este proyecto residencial sustentable se ubica en Celestún, Yucatán y tiene como esencia la admiración, respeto y protección de la naturaleza, así como un compromiso con el desarrollo económico y social de las comunidades locales.",
-                en: "This sustainable residential project is located in Celestún, Yucatán and has as its essence the admiration, respect and protection of nature, as well as a commitment to the economic and social development of local communities.",
+                es: "Este proyecto residencial sustentable se ubica en Celestún, Yucatán y tiene como esencia la admiración, respeto y protección de la naturaleza, así como un compromiso con el desarrollo económico y social de las comunidades locales. Dentro de sus amenidades, Tótem residencial cuenta con un club de playa frente al mar.",
+                en: "This sustainable residential project is located in Celestún, Yucatán and has as its essence the admiration, respect and protection of nature, as well as a commitment to the economic and social development of local communities. Among its amenities, Tótem Residencial has a beautiful beach club facing the sea.",
             },
         },
         {
             id: "tabyukan",
             cover: IMGyukan,
-            title: "Yukán Town Houses",
+            title: "Yukán Townhouses",
             url: "https://yukan.mx",
             subtitle: {
                 es: "Residencial Sustentable",
@@ -180,10 +180,10 @@ export default function RealState() {
                         className="text-white leading-[1.1] mb-[55px] lg:mb-[80px] xl:text-[70px] justify-center items-center"
                     />
 
-                    <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
+                    {/* <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
                         <img src={play} alt="Play icon" className="mr-[4px]" />{" "}
                         {t("verVideo")}
-                    </Boton>
+                    </Boton> */}
 
                     <Parrafo
                         className="text-white text-[20px] mb-[40px]"
@@ -213,11 +213,11 @@ export default function RealState() {
                         alt="Real estate"
                     />
                 </div>
-                <h3 className="text-gris text-left md:text-center text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
+                <h3 className="text-gris text-left  text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
                     {t("real.subtitulo.part1")} <br />
                     {t("real.subtitulo.part2")}
                 </h3>
-                <Titulo className="text-[26px] mb-[40px] lg:mb-[50px] text-left">
+                <Titulo className="text-[26px] mb-[40px] lg:mb-[50px] text-left md:text-center">
                     <span className="font-bold">Black Swan Real Estate,</span>
                 </Titulo>
                 <Parrafo
@@ -300,7 +300,7 @@ export default function RealState() {
                     <TextCustom textParse={t("real.proyectos.titulo")} />
                 </h3>
 
-                <Tabs defaultTab={"tabtotem"}>
+                <Tabs defaultTab={"tabunicaliving"}>
                     <div className="flex justify-center flex-wrap w-full max-w-[780px] mx-auto">
                         {proyectos.map((item) => (
                             <Tabs.Button

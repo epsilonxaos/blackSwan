@@ -23,6 +23,7 @@
         "flowbite-react": "^0.4.10",
         "framer-motion": "^10.12.18",
         "fs": "^0.0.1-security",
+        "fslightbox-react": "^1.7.6",
         "html-react-parser": "^4.0.0",
         "i18next": "^23.2.11",
         "react-i18next": "^13.0.2",

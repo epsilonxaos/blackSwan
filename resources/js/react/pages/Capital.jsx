@@ -16,9 +16,12 @@ import AnimatedTextWord from "../animations/AnimationTextWord";
 import TextCustom from "../components/TextCustom";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import FsLightbox from "fslightbox-react";
+import { useState } from "react";
 
 export default function Capital() {
     const { t, i18n } = useTranslation();
+    const [toggler, setToggler] = useState(false);
     const proyectos = [
         {
             id: "tabFitorade",
@@ -26,7 +29,7 @@ export default function Capital() {
             title: "Fitorade",
             subtitle: { es: "Daily Meal Plan", en: "Daily Meal Plan" },
             text: {
-                es: "Servicio de comida saludable en Mérida en el que tenemos el compromiso de ofrecer comidas elaboradas con alimentos integrales y completamente saludables.",
+                es: "Servicio de comida saludable en Mérida que ofrece comidas elaboradas con alimentos integrales y completamente saludables.",
                 en: "Healthy food service in Mérida with the goal to offer meals made with whole and completely healthy foods.",
             },
         },
@@ -74,7 +77,19 @@ export default function Capital() {
                         className="text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] justify-center items-center"
                     />
 
-                    <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
+                    <FsLightbox
+                        toggler={toggler}
+                        sources={[
+                            "https://www.youtube.com/watch?v=3nQNiWdeH2Q",
+                        ]}
+                    />
+                    <Boton
+                        // onClick={() => {
+                        //     console.log("click");
+                        //     setToggler(!toggler);
+                        // }}
+                        className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white"
+                    >
                         <img src={play} alt="Play icon" className="mr-[4px]" />{" "}
                         {t("verVideo")}
                     </Boton>
@@ -107,10 +122,10 @@ export default function Capital() {
                         alt="Capital"
                     />
                 </div>
-                <h3 className="text-gris text-left md:text-center text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
+                <h3 className="text-gris text-left text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
                     {t("capital.subtitulo")}
                 </h3>
-                <Titulo className="text-[30px] leading-[0] !mb-0">
+                <Titulo className="text-[30px] leading-[0] text-left md:text-center !mb-0">
                     {t("capital.info.title_1")}
                 </Titulo>
                 <Titulo className="text-[30px] leading-[0.5] mb-[40px] lg:mb-[50px]">

@@ -8,7 +8,7 @@
 
     "home.banner": ["HACEMOS QUE", "SUCEDA", "LO INESPERADO"],
     "home.infoInicial": [
-        "Con un historial que se remonta a 1997 con la fundación de su primera empresa, <span class='font-bold'> los socios de Black Swan han creado un grupo empresarial </span> enfocado principalmente en el desarrollo de proyectos en los rubros inmobiliarios y de hospitalidad en diferentes puntos de Yucatán, teniendo como eje rector la filosofía de los eventos poco probables pero de gran impacto.",
+        "Con un historial que se remonta a 1997 con la fundación de su primera empresa, <span class='font-bold'> los socios de Black Swan han creado un grupo empresarial </span> enfocado principalmente en el desarrollo de proyectos en los rubros inmobiliarios y de hotelería en diferentes puntos de Yucatán, teniendo como eje rector la filosofía de los eventos poco probables pero de gran impacto.",
         "Desde 2005, Black Swan ha puesto especial énfasis en impulsar el crecimiento económico en ciertas zonas del estado con alta plusvalía y el dinamismo turístico y residencial de la región, siempre con una visión de impacto ambiental positivo.",
         "<span class='font-bold'>El grupo hoy en día se organiza en tres divisiones: </span> capital, real estate y hospitality, cada una con un equipo de expertos especializados en sus respectivas áreas."
     ],
@@ -22,12 +22,12 @@
     "capital.info.text": [
         "Una unidad de negocio cien por ciento financiero que inició su crecimiento con el desarrollo de proyectos de inversión inmobiliaria y posteriormente se ha ampliado a otros rubros de negocio, como lo es principalmente el de hotelería.",
         "Durante los primeros años desarrollaron proyectos inmobiliarios con servicios completos y de vivienda vertical, que fueron respaldados por la experiencia y capital  acumulado desde 1997. Hoy la empresa cuenta con más de cien mil metros cuadrados supervisados, veinte mil metros cuadrados construidos y más de cuatrocientos mil metros cuadrados desarrollados.",
-        "Progresivamente, los socios desarrollan, operan y/o invierten en empresas como lo han sido: <br /> Cigno Hotels, Casa Amate Hostals, Fitorade, Killer Quake o Grupo Libera, que cuentan con los parámetros económicos necesarios y/o la filosofía de trabajo de la empresa.",
+        "Progresivamente, los socios desarrollan, operan y/o invierten en empresas como lo han sido: <br /> Cigno Hotels, Casa Amate Hostals, Fitorade, Killer Quake o Grupo Libera, que cuentan con los parámetros económicos necesarios y la filosofía de trabajo de la empresa.",
         "",
 
         "280 Millones",
         "En ventas totales",
-        "Alcanzadas durante el añó 2022",
+        "Alcanzadas durante el año 2022",
 
         "$1,500,000",
         "Ventas estimadas aseguradas",
@@ -58,7 +58,7 @@
         "Desarrollados",
 
         "Proyectos como Única Living, Kantara Residencial, Yukán Townhouses, Tótem Residencial, entre otros, así como los más de mil clientes satisfechos y varias dependencias de Gobierno a nivel local y nacional, sustentan los casos de éxito y logros de esta unidad de negocio.",
-        "Al día de hoy la empresa continúa trabajando en el desarrollo de residencias privadas y proyectos verticales con el sello de responsabilidad medioambiental y con la filosofía wellness. Con esta visión en mente se planea desarrollar más de diez millones de metros cuadrados en los próximos cinco años."
+        "Al día de hoy, la empresa continúa trabajando en el desarrollo de residencias privadas y proyectos verticales con el sello de responsabilidad medioambiental y con la filosofía wellness. Con esta visión en mente se planea desarrollar más de diez millones de metros cuadrados en los próximos cinco años."
     ],
     "real.proyectos.titulo": "<span className='font-bold'>Black Swan Real Estate</span> cuenta con los siguientes proyectos",
     "real.proyectos.entregados": "Proyectos entregados",
@@ -117,7 +117,7 @@
     "footer.telefono": "Teléfono",
     "footer.divisiones": "Divisiones",
     "footer.historia": "Historia",
-    "footer.quienes": "Quienes somos",
+    "footer.quienes": "Quiénes somos",
     "footer.valores": "Nuestros valores",
     "footer.compartir": "Compártenos tu correo",
     "footer.desarrollo": "Diseño y desarrollo",

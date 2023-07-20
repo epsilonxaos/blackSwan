@@ -26,7 +26,7 @@ export default function Footer() {
                                     <ul>
                                         <li>
                                             <a
-                                                href="https://www.facebook.com/BlackSwanCapitalMx?mibextid=LQQJ4d"
+                                                href="https://instagram.com/blackswancapitalmx?igshid=Y2I2MzMwZWM3ZA=="
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >
@@ -117,7 +117,7 @@ export default function Footer() {
                                         <li>
                                             <Link to="/hospitality">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    Hopitalidad
+                                                    Hospitality
                                                 </Parrafo>
                                             </Link>
                                         </li>
@@ -145,7 +145,7 @@ export default function Footer() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="nosotros">
+                                            <Link to="nosotros#valores">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
                                                     {t("footer.valores")}
                                                 </Parrafo>

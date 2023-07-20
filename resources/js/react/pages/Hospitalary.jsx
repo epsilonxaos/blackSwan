@@ -26,8 +26,8 @@ export default function Hospitalary() {
             title: "Cigno Hotel",
             subtitle: "Hotel Boutique Ermita",
             text: {
-                es: "Hotel boutique enfocado en convertirse en un refugio para exploradores que buscan en cada viaje una experiencia enriquecedora, ubicado La Ermita, la cual recientemente ha obtenido la distinción de ser el primer barrio mágico de la capital yucateca debido a su riqueza histórica y cultural.",
-                en: 'Boutique hotel focused on becoming a refuge for explorers who seek an enriching experience on each trip. It is located in La Ermita, which has recently obtained the distinction of being the first "Barrio Mágico" (Magic neighborhood) of the Mérida due to its historical and cultural wealth.',
+                es: "Hotel boutique enfocado en convertirse en un refugio para exploradores que buscan en cada viaje una experiencia enriquecedora, ubicado en La Ermita, la cual recientemente ha obtenido la distinción de ser el primer barrio mágico de la capital yucateca debido a su riqueza histórica y cultural.",
+                en: 'Boutique hotel focused on becoming a refuge for explorers who seek an enriching experience on each trip. It is located in La Ermita, which has recently obtained the distinction of being the first "Barrio Mágico" (Magic neighborhood) of Mérida due to its historical and cultural wealth.',
             },
         },
         {

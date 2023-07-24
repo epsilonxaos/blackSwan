@@ -23,7 +23,7 @@ import IMGyukan from "../../../img/web/real/yukan.jpg";
 import logo1 from "../../../img/web/logos/1.png";
 import logo2 from "../../../img/web/logos/2.png";
 import logo3 from "../../../img/web/logos/3.png";
-import logo4 from "../../../img/web/logos/4.jpg";
+import logo4 from "../../../img/web/logos/4.png";
 import logo5 from "../../../img/web/logos/5.png";
 import AnimatedTextWord from "../animations/AnimationTextWord";
 import TextCustom from "../components/TextCustom";
@@ -89,9 +89,9 @@ export default function RealState() {
             text: {
                 es: [
                     "Santamar es un proyecto residencial privado con un enfoque wellness. Su principal objetivo es ofrecer un espacio para disfrutar de una vida en pleno equilibrio mental, emocional y físico, con todas sus amenidades necesarias.",
-                    "A diez minutos de Santa Mar se encuentra Sisal, donde se construirá un Club de Playa frente al mar.",
+                    "A diez minutos de Santamar se encuentra Sisal, donde se construirá un Club de Playa frente al mar.",
                 ],
-                en: "Santa Mar is a private residential project with a wellness philosophy focus. Its main objective is to offer a place where people can enjoy a life in full mental, emotional and physical balance, with all its necessary amenities. Ten minutes away from Santa Mar is Sisal, where a Beach Club will be built facing the sea.",
+                en: "Santamar is a private residential project with a wellness philosophy focus. Its main objective is to offer a place where people can enjoy a life in full mental, emotional and physical balance, with all its necessary amenities. Ten minutes away from Santa Mar is Sisal, where a Beach Club will be built facing the sea.",
             },
         },
         {

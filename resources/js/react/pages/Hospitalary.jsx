@@ -11,6 +11,8 @@ import hospitalaryText from "../../../img/web/hospitalary/hospitalaryText.svg";
 import play from "../../../img/web/play.svg";
 import onlyHospitality from "../../../img/web/recursos-oscuros/onlyHospitality.svg";
 import IMGcasaamate from "../../../img/web/hospitalary/casaamate.png";
+import IMGamate from "../../../img/web/hospitalary/amate.jpg";
+import IMGtotem from "../../../img/web/hospitalary/totem.jpg";
 import IMGcignohotel from "../../../img/web/hospitalary/cignohotel.jpg";
 import AnimatedTextWord from "../animations/AnimationTextWord";
 import TextCustom from "../components/TextCustom";
@@ -21,23 +23,49 @@ export default function Hospitalary() {
     const { t, i18n } = useTranslation();
     const proyectos = [
         {
+            id: "tabcasaamate",
+            cover: IMGcasaamate,
+            title: "Casa Amate",
+            subtitle: {
+                es: "Hoteles de experiencias",
+                en: "Hoteles de experiencias",
+            },
+            text: {
+                es: "Este proyecto contempla la apertura de un hostal boutique temático enfocado en generar experiencias únicas para los huéspedes con actividades que conjuntan arte, diversión y gastronomía teniendo como contexto la calle 61 del centro de Mérida.",
+                en: "This project contemplates the upcoming opening of a themed boutique hostel focused on generating unique experiences for guests with activities that combine art, fun and gastronomy having the 61th street from Merida’s downtown as its scenario.",
+            },
+        },
+        {
             id: "tabcignohotel",
             cover: IMGcignohotel,
             title: "Cigno Hotel",
-            subtitle: "Hotel Boutique Ermita",
+            subtitle: {
+                es: "Hotel Boutique Ermita",
+                en: "Hotel Boutique Ermita",
+            },
             text: {
                 es: "Hotel boutique enfocado en convertirse en un refugio para exploradores que buscan en cada viaje una experiencia enriquecedora, ubicado en La Ermita, la cual recientemente ha obtenido la distinción de ser el primer barrio mágico de la capital yucateca debido a su riqueza histórica y cultural.",
                 en: 'Boutique hotel focused on becoming a refuge for explorers who seek an enriching experience on each trip. It is located in La Ermita, which has recently obtained the distinction of being the first "Barrio Mágico" (Magic neighborhood) of Mérida due to its historical and cultural wealth.',
             },
         },
         {
-            id: "tabcasaamate",
-            cover: IMGcasaamate,
-            title: "Casa Amate",
-            subtitle: "Hoteles de experiencias",
+            id: "tabcignohotel",
+            cover: IMGamate,
+            title: "Amate Experiencia",
+            subtitle: { es: "Tours personalizados", en: "Tailored tours" },
             text: {
-                es: "Este proyecto contempla la apertura de un hostal boutique temático enfocado en generar experiencias únicas para los huéspedes con actividades que conjuntan arte, diversión y gastronomía teniendo como contexto la calle 61 del centro de Mérida.",
-                en: "This project contemplates the upcoming opening of a themed boutique hostel focused on generating unique experiences for guests with activities that combine art, fun and gastronomy having the 61th street from Merida’s downtown as its scenario.",
+                es: "Actividades diseñadas por personas locales para ofrecerle a los visitantes la oportunidad de disfrutar los atractivos turísticos, gastronómicos y culturales de Yucatán de forma personalizada y cercana.",
+                en: "Amate Experiencias is a fresh way to enjoy the finest attractions of Mérida and Yucatán in a personalized way carefully designed by local people.",
+            },
+        },
+        {
+            id: "tabcignohotel",
+            cover: IMGtotem,
+            title: "Tótem Beach Club",
+            subtitle: { es: "Club de playa", en: "Beachside club" },
+            text: {
+                es: "Club de playa ubicado frente al mar de Celestún, Yucatán que cuenta con restaurante, piscinas, y todas las amenidades necesarias para disfrutar cómodamente del sol y la arena en familia, en pareja o con amigos. El club ofrece membresías para socios así como pases para el público en general.",
+                en: "This brand new beach club located by the sea of Celestún, Yucatán has a restaurant, swimming pools, and all the necessary amenities to comfortably enjoy the sun and sand along with family, significant other, or friends. The club offers memberships as well as passes for the general public.",
             },
         },
     ];
@@ -171,7 +199,7 @@ export default function Hospitalary() {
                                         />
                                         <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
                                             <TextCustom>
-                                                {item.subtitle}
+                                                {item.subtitle[i18n.language]}
                                             </TextCustom>
                                         </h3>
                                         {typeof item.text[i18n.language] ==

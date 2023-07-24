@@ -47,7 +47,7 @@ export default function MenuHeader() {
                 y: -20,
                 transition: { duration: 0.3 },
             }}
-            className="w-full fixed z-40 top-0 left-0 bg-black text-white h-screen pt-20 pb-6 overflow-hidden md:h-auto"
+            className="w-full fixed z-40 top-0 left-0 bg-black text-white h-full pt-20 pb-6 overflow-hidden md:h-auto"
         >
             <MainContainer
                 className={

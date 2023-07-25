@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ComandosController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,9 +23,11 @@ Route::view('/hospitality', 'app')->where('path', '.*');
 Route::view('/nosotros', 'app')->where('path', '.*');
 Route::view('/politicas', 'app')->where('path', '.*');
 
-Route::get('/dashboard', function () {
+Route::get('/comandos', function () {
 	return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/dashboard', [ComandosController::class, 'executeComands'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
 	Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

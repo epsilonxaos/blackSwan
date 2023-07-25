@@ -3,6 +3,8 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ComandosController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProyectoController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,6 +68,18 @@ Route::middleware(['auth:admin', 'verified'])->prefix('/admin')->group(function 
 		Route::patch('/update/{id?}', [AdminController::class, 'updateProfile'])->name('panel.usuarios.update');
 		Route::put('/update/{id?}/password', [AdminController::class, 'updateProfilePassword'])->name('panel.usuarios.update.password');
 		Route::delete('/destroy/{id?}', [AdminController::class, 'destroyProfile'])->name('panel.usuarios.destroy');
+	});
+
+	// Proyectos
+	Route::prefix('/proyectos')->group(function () {
+		Route::get('/store', [ProyectoController::class, 'store']);
+		// Route::get('/', [AdminController::class, 'index'])->name('panel.usuarios.index');
+		// Route::get('/create', [AdminController::class, 'create'])->name('panel.usuarios.create');
+		// Route::post('/store', [AdminController::class, 'store'])->name('panel.usuarios.store');
+		// Route::get('/edit/{id?}', [AdminController::class, 'editProfileId'])->name('panel.usuarios.edit');
+		// Route::patch('/update/{id?}', [AdminController::class, 'updateProfile'])->name('panel.usuarios.update');
+		// Route::put('/update/{id?}/password', [AdminController::class, 'updateProfilePassword'])->name('panel.usuarios.update.password');
+		// Route::delete('/destroy/{id?}', [AdminController::class, 'destroyProfile'])->name('panel.usuarios.destroy');
 	});
 });
 

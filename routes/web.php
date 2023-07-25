@@ -23,22 +23,15 @@ Route::view('/hospitality', 'app')->where('path', '.*');
 Route::view('/nosotros', 'app')->where('path', '.*');
 Route::view('/politicas', 'app')->where('path', '.*');
 
-Route::get('/comandos', function () {
-	return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::get('/dashboard', [ComandosController::class, 'executeComands'])->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
 	Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 	Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 	Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-
 Route::middleware('guest')->prefix('/admin')->group(function () {
 	Route::get('/', [AdminController::class, 'iniciarSesionView'])->name('panel.access');
+	// Route::get('/', [AdminController::class, 'iniciarSesionView'])->name('panel.access');
 	Route::post('/login', [AdminController::class, 'login'])->name('panel.login');
 	Route::get('/register', [AdminController::class, 'registrarAdmin'])->name('panel.register');
 });
@@ -46,6 +39,16 @@ Route::middleware('guest')->prefix('/admin')->group(function () {
 Route::middleware(['auth:admin', 'verified'])->prefix('/admin')->group(function () {
 	Route::post('/logout', [AdminController::class, 'logout'])->name('panel.logout');
 	Route::get('/dashboard', [AdminController::class, 'dashboardAdmin'])->name('panel.dashboard');
+
+	//Roles
+	Route::prefix('/roles')->group(function () {
+		Route::get('/', [RoleController::class, 'index'])->name('panel.roles.index');
+		Route::get('/nuevo', [RoleController::class, 'create'])->name('panel.roles.create');
+		Route::get('/editar/{id}', [RoleController::class, 'edit'])->name('panel.roles.edit');
+		Route::post('/store', [RoleController::class, 'store'])->name('panel.roles.store');
+		Route::put('/update/{id}', [RoleController::class, 'update'])->name('panel.roles.update');
+		Route::delete('/destroy/{id}', [RoleController::class, 'destroy'])->name('panel.roles.destroy');
+	});
 
 
 	Route::prefix('/perfil')->group(function () {

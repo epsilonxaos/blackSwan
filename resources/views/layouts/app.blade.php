@@ -37,6 +37,13 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <style>
+        .dropify-preview {
+            display: flex !important;
+            justify-content: center;
+            align-items: center
+        }
+    </style>
 </head>
 
 <body class="antialiased font-inter">

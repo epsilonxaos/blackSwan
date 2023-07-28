@@ -50,7 +50,7 @@ export default function RealState() {
         {
             id: "tabalmaresidencial",
             cover: IMGalmaresidencial,
-            title: "Alma Residencial",
+            title: "Alma Cholul",
             subtitle: {
                 es: "Residencial Sustentable",
                 en: "Sustainable Residential",
@@ -218,7 +218,7 @@ export default function RealState() {
                     {t("real.subtitulo.part2")}
                 </h3>
                 <Titulo className="text-[26px] mb-[40px] lg:mb-[50px] text-left md:text-center">
-                    <span className="font-bold">Black Swan Real Estate,</span>
+                    <span className="font-bold">Black Swan Real Estate</span>
                 </Titulo>
                 <Parrafo
                     className="text-left mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"

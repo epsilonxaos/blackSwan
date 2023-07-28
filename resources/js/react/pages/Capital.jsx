@@ -26,6 +26,7 @@ export default function Capital() {
         {
             id: "tabFitorade",
             cover: IMGfitorade,
+            url: "https://www.fitorade.com/",
             title: "Fitorade",
             subtitle: { es: "Daily Meal Plan", en: "Daily Meal Plan" },
             text: {
@@ -37,6 +38,7 @@ export default function Capital() {
             id: "tabGrupoLibera",
             cover: IMGgrupo,
             title: "Grupo Libera",
+            url: "https://www.grupolibera.mx/",
             subtitle: {
                 es: "Comercialización y desarrollo de bienes inmuebles",
                 en: "Marketing and development of real estate",
@@ -49,6 +51,7 @@ export default function Capital() {
         {
             id: "tabKillerQuake",
             cover: IMGkiller,
+            url: "https://killerquake.com.mx/",
             title: "Killer Quake",
             subtitle: { es: "Comercialización", en: "Commercialization" },
             text: {
@@ -129,7 +132,7 @@ export default function Capital() {
                     {t("capital.info.title_1")}
                 </Titulo>
                 <Titulo className="text-[30px] leading-[0.5] mb-[40px] lg:mb-[50px]">
-                    <span className="font-bold">Black Swan Capital,</span>
+                    <span className="font-bold">Black Swan Capital</span>
                 </Titulo>
                 <Parrafo
                     className="text-left mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
@@ -243,31 +246,42 @@ export default function Capital() {
                                                 {item.subtitle[i18n.language]}
                                             </TextCustom>
                                         </h3>
-                                        {typeof item.text[i18n.language] ==
-                                        "string" ? (
-                                            <Parrafo className="text-left">
-                                                {item.text[i18n.language]}
-                                            </Parrafo>
-                                        ) : (
-                                            item.text[i18n.language].map(
-                                                (tx, idx) => (
-                                                    <Parrafo
-                                                        key={
-                                                            "parrafo-" +
-                                                            item.id +
-                                                            "-" +
-                                                            idx
-                                                        }
-                                                        className={`text-left ${
-                                                            item.length ==
-                                                            idx + 1
-                                                                ? ""
-                                                                : "mb-[30px]"
-                                                        }`}
-                                                        textParse={tx}
-                                                    ></Parrafo>
+                                        <div className="mb-[30px] md:mb-[80px]">
+                                            {typeof item.text[i18n.language] ==
+                                            "string" ? (
+                                                <Parrafo className="text-left">
+                                                    {item.text[i18n.language]}
+                                                </Parrafo>
+                                            ) : (
+                                                item.text[i18n.language].map(
+                                                    (tx, idx) => (
+                                                        <Parrafo
+                                                            key={
+                                                                "parrafo-" +
+                                                                item.id +
+                                                                "-" +
+                                                                idx
+                                                            }
+                                                            className={`text-left ${
+                                                                item.length ==
+                                                                idx + 1
+                                                                    ? ""
+                                                                    : "mb-[30px]"
+                                                            }`}
+                                                            textParse={tx}
+                                                        ></Parrafo>
+                                                    )
                                                 )
-                                            )
+                                            )}
+                                        </div>
+                                        {item?.url && (
+                                            <a
+                                                href={item.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <Boton>{t("verMas")}</Boton>
+                                            </a>
                                         )}
                                     </div>
                                 </div>

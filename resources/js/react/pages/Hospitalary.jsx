@@ -28,7 +28,7 @@ export default function Hospitalary() {
             title: "Casa Amate",
             subtitle: {
                 es: "Hoteles de experiencias",
-                en: "Hoteles de experiencias",
+                en: "Experience hotels",
             },
             text: {
                 es: "Este proyecto contempla la apertura de un hostal boutique temático enfocado en generar experiencias únicas para los huéspedes con actividades que conjuntan arte, diversión y gastronomía teniendo como contexto la calle 61 del centro de Mérida.",
@@ -38,6 +38,7 @@ export default function Hospitalary() {
         {
             id: "tabcignohotel",
             cover: IMGcignohotel,
+            url: "https://www.cignohotel.com/es/",
             title: "Cigno Hotel",
             subtitle: {
                 es: "Hotel Boutique Ermita",
@@ -49,9 +50,10 @@ export default function Hospitalary() {
             },
         },
         {
-            id: "tabcignohotel",
+            id: "tabcamate",
             cover: IMGamate,
-            title: "Amate Experiencia",
+            url: "https://experience.casaamate.com/",
+            title: "Amate Experiencias",
             subtitle: { es: "Tours personalizados", en: "Tailored tours" },
             text: {
                 es: "Actividades diseñadas por personas locales para ofrecerle a los visitantes la oportunidad de disfrutar los atractivos turísticos, gastronómicos y culturales de Yucatán de forma personalizada y cercana.",
@@ -59,8 +61,9 @@ export default function Hospitalary() {
             },
         },
         {
-            id: "tabcignohotel",
+            id: "tabctotem",
             cover: IMGtotem,
+            url: "https://clubdeplayatotem.com/",
             title: "Tótem Beach Club",
             subtitle: { es: "Club de playa", en: "Beachside club" },
             text: {
@@ -164,13 +167,13 @@ export default function Hospitalary() {
                     <TextCustom textParse={t("hospi.proyectos.titulo")} />
                 </h3>
 
-                <Tabs defaultTab={"tabcignohotel"}>
-                    <div className="flex justify-between w-full max-w-[300px] mx-auto">
+                <Tabs defaultTab={"tabcasaamate"}>
+                    <div className="flex justify-center flex-wrap w-full max-w-[780px] mx-auto">
                         {proyectos.map((item) => (
                             <Tabs.Button
                                 key={item.id}
                                 tabid={item.id}
-                                className="w-1/2 text-[13px] md:text-[16px]"
+                                className="w-1/2 md:w-1/4 max-w-none text-[13px] md:text-[16px]"
                             >
                                 {item.title}
                             </Tabs.Button>
@@ -202,31 +205,42 @@ export default function Hospitalary() {
                                                 {item.subtitle[i18n.language]}
                                             </TextCustom>
                                         </h3>
-                                        {typeof item.text[i18n.language] ==
-                                        "string" ? (
-                                            <Parrafo className="text-left">
-                                                {item.text[i18n.language]}
-                                            </Parrafo>
-                                        ) : (
-                                            item.text[i18n.language].map(
-                                                (tx, idx) => (
-                                                    <Parrafo
-                                                        key={
-                                                            "parrafo-" +
-                                                            item.id +
-                                                            "-" +
-                                                            idx
-                                                        }
-                                                        className={`text-left ${
-                                                            item.length ==
-                                                            idx + 1
-                                                                ? ""
-                                                                : "mb-[30px]"
-                                                        }`}
-                                                        textParse={tx}
-                                                    ></Parrafo>
+                                        <div className="mb-[30px] md:mb-[80px]">
+                                            {typeof item.text[i18n.language] ==
+                                            "string" ? (
+                                                <Parrafo className="text-left">
+                                                    {item.text[i18n.language]}
+                                                </Parrafo>
+                                            ) : (
+                                                item.text[i18n.language].map(
+                                                    (tx, idx) => (
+                                                        <Parrafo
+                                                            key={
+                                                                "parrafo-" +
+                                                                item.id +
+                                                                "-" +
+                                                                idx
+                                                            }
+                                                            className={`text-left ${
+                                                                item.length ==
+                                                                idx + 1
+                                                                    ? ""
+                                                                    : "mb-[30px]"
+                                                            }`}
+                                                            textParse={tx}
+                                                        ></Parrafo>
+                                                    )
                                                 )
-                                            )
+                                            )}
+                                        </div>
+                                        {item?.url && (
+                                            <a
+                                                href={item.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <Boton>{t("verMas")}</Boton>
+                                            </a>
                                         )}
                                     </div>
                                 </div>

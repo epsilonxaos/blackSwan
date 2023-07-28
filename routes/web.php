@@ -72,14 +72,13 @@ Route::middleware(['auth:admin', 'verified'])->prefix('/admin')->group(function 
 
 	// Proyectos
 	Route::prefix('/proyectos')->group(function () {
-		Route::get('/store', [ProyectoController::class, 'store']);
-		// Route::get('/', [AdminController::class, 'index'])->name('panel.usuarios.index');
-		// Route::get('/create', [AdminController::class, 'create'])->name('panel.usuarios.create');
-		// Route::post('/store', [AdminController::class, 'store'])->name('panel.usuarios.store');
-		// Route::get('/edit/{id?}', [AdminController::class, 'editProfileId'])->name('panel.usuarios.edit');
-		// Route::patch('/update/{id?}', [AdminController::class, 'updateProfile'])->name('panel.usuarios.update');
-		// Route::put('/update/{id?}/password', [AdminController::class, 'updateProfilePassword'])->name('panel.usuarios.update.password');
-		// Route::delete('/destroy/{id?}', [AdminController::class, 'destroyProfile'])->name('panel.usuarios.destroy');
+		Route::get('{seccion}/', [ProyectoController::class, 'index'])->name('panel.proyectos.index');
+		Route::get('{seccion}/create', [ProyectoController::class, 'create'])->name('panel.proyectos.create');
+		Route::post('{seccion}/store', [ProyectoController::class, 'store'])->name('panel.proyectos.store');
+		Route::get('{seccion}/edit/{id}', [ProyectoController::class, 'edit'])->name('panel.proyectos.edit');
+		Route::put('{seccion}/update/{id}', [ProyectoController::class, 'update'])->name('panel.proyectos.update');
+		Route::delete('/destroy/{id}', [ProyectoController::class, 'destroy'])->name('panel.proyectos.destroy');
+		Route::post('/change/status', [ProyectoController::class, 'changeStatus'])->name('panel.proyectos.changeStatus');
 	});
 });
 

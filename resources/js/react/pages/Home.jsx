@@ -42,13 +42,13 @@ export default function Home() {
                                 <p className="mb-[30px] lg:mb-[45px] xl:mb-[90px] font-bold">
                                     (MX)
                                 </p>
-                                <h1 className="relative pl-[28px]">
+                                <div className="relative pl-[28px]">
                                     <BiRegistered className="text-[20px] lg:text-[26px] inline absolute top-3 left-0" />
                                     <AnimatedTextWord
                                         className="font-medium text-[35px] md:text-[40px] lg:text-[55px] xl:text-[70px] 2xl:text-[90px] tracking-[-1.5px] leading-[1.3] !mb-0"
                                         text={t("home.banner.0")}
                                     />
-                                </h1>
+                                </div>
                                 <AnimatedTextWord
                                     className="font-medium text-[35px] md:text-[40px] lg:text-[55px] xl:text-[70px] 2xl:text-[90px] tracking-[-1.5px] leading-[1.3] pl-[28px] !mb-0"
                                     text={t("home.banner.1")}

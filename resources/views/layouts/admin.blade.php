@@ -12,9 +12,25 @@
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+
     <!-- Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/css/panel/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('plugins/dropify/css/dropify.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('css/admin/app.css') }}"> --}}
+    <style>
+        .dropify-render {
+            margin: auto;
+        }
+
+        .bg-cover {
+            width: 100px;
+            height: 60px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 6px
+        }
+    </style>
     @stack('style')
 </head>
 
@@ -34,9 +50,10 @@
         </div>
     </div>
 
-    {{-- <script src="{{ asset('plugins/sweetalert/sweetalert2@11.js') }}"></script>
+    <script src="{{ asset('plugins/sweetalert/sweetalert2@11.js') }}"></script>
+
     <script>
-        var DateTime = luxon.DateTime;
+        // var DateTime = luxon.DateTime;
 
         function deleteSubmitForm(id) {
             Swal.fire({
@@ -52,8 +69,12 @@
                 }
             });
         }
-    </script> --}}
+    </script>
 
+    <script src="{{ asset('plugins/jquery/jquery-3.7.0.min.js') }}"></script>
+    <script src="{{ asset('plugins/dropify/js/dropify.min.js') }}"></script>
+    <script src="{{ asset('js/panel/app.js') }}"></script>
+    @vite(['resources/js/panel/trumbowygInit.js'])
     @stack('script')
 </body>
 

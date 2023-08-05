@@ -36,6 +36,20 @@ $(".trumbowyg-panel").trumbowyg({
     ],
 });
 
+$(".shorttext").trumbowyg({
+    btns: [
+        ["viewHTML"],
+        ["strong", "em", "del"],
+        ["link"],
+        ["justifyLeft", "justifyCenter", "justifyRight", "justifyFull"],
+        ["unorderedList", "orderedList"],
+        ["horizontalRule"],
+        ["removeformat"],
+    ],
+});
+$(".shorttext").closest(".trumbowyg-box").css("min-height", "100px");
+$(".shorttext").prev(".trumbowyg-editor").css("min-height", "100px");
+
 window.cambiar_status = function (el, id, status, url) {
     axios
         .post(url, {

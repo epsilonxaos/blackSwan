@@ -88,7 +88,7 @@
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                                 for="info">Información</label>
-                                            <small class="pb-2 d-block">Recomendamos siempre que al copiar y pegar
+                                            <small class="pb-2 block">Recomendamos siempre que al copiar y pegar
                                                 información desde algún sitio o archivo eliminar el formato de los textos
                                                 para un óptimo funcionamiento, esto se puede realizar desde el mismo editor
                                                 de texto presionando el siguiente botón <img
@@ -118,7 +118,7 @@
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                                 for="info">Información</label>
-                                            <small class="pb-2 d-block">Recomendamos siempre que al copiar y pegar
+                                            <small class="pb-2 block">Recomendamos siempre que al copiar y pegar
                                                 información desde algún sitio o archivo eliminar el formato de los textos
                                                 para un óptimo funcionamiento, esto se puede realizar desde el mismo editor
                                                 de texto presionando el siguiente botón <img

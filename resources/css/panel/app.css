@@ -84,3 +84,8 @@ table tbody tr td {
     opacity: 0.6;
     pointer-events: none;
 }
+
+.trumbowyg-box {
+    font-weight: initial;
+    font-size: 12px;
+}

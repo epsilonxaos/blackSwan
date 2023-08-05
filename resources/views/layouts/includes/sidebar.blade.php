@@ -2,32 +2,126 @@
     class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
     aria-label="Sidebar">
     <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800 text-sm">
-        <ul class="space-y-2 font-medium">
+
+        <h3 class="flex items-center justify-start font-bold">
+            <svg class="icon icon-tabler icon-tabler-app-window mr-2" width="30" height="20" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"></path>
+                <path d="M6 8h.01"></path>
+                <path d="M9 8h.01"></path>
+            </svg> General
+        </h3>
+        <ul class="pt-1 mt-1 mb-[30px] space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
             <li>
-                <a href="{{ route('panel.dashboard') }}"
-                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ request()->is('admin/dashboard') ? 'bg-gray-100' : '' }}">
-                    <svg aria-hidden="true"
-                        class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                        <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                <a href="{{ route('panel.website.edit', ['seccion' => 'inicio']) }}"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ request()->is('admin/website/inicio*') ? 'bg-gray-100' : '' }}">
+
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                        </path>
+                        <path d="M6 8h.01"></path>
+                        <path d="M9 8h.01"></path>
                     </svg>
-                    <span class="ml-3">Dashboard</span>
+                    <span class="ml-3">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('panel.website.edit', ['seccion' => 'nosotros']) }}"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ request()->is('admin/website/nosotros*') ? 'bg-gray-100' : '' }}">
+
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                        </path>
+                        <path d="M6 8h.01"></path>
+                        <path d="M9 8h.01"></path>
+                    </svg>
+                    <span class="ml-3">Nosotros</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('panel.website.edit', ['seccion' => 'contacto']) }}"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ request()->is('admin/website/contacto*') ? 'bg-gray-100' : '' }}">
+
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                        </path>
+                        <path d="M6 8h.01"></path>
+                        <path d="M9 8h.01"></path>
+                    </svg>
+                    <span class="ml-3">Contacto</span>
                 </a>
             </li>
         </ul>
 
-        <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
+
+        <h3 class="flex items-center justify-start font-bold">
+            <img class="w-[30px] h-[30px] object-center mr-2"
+                src="{{ Vite::asset('resources/img/panel/onlycapital.svg') }}" alt=""> Capital
+        </h3>
+        <ul class="pt-1 mt-1 mb-[30px] space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
+            <li>
+                <a href="{{ route('panel.website.edit', ['seccion' => 'capital']) }}"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ request()->is('admin/website/contacto*') ? 'bg-gray-100' : '' }}">
+
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                        </path>
+                        <path d="M6 8h.01"></path>
+                        <path d="M9 8h.01"></path>
+                    </svg>
+                    <span class="ml-3">Textos</span>
+                </a>
+            </li>
             <li>
                 <a href="{{ route('panel.proyectos.index', ['seccion' => 'capital']) }}"
                     class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ request()->is('admin/proyectos/capital*') ? 'bg-gray-100' : '' }}">
                     <svg aria-hidden="true"
                         class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                        <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 4h3l2 2h5a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2">
+                        </path>
+                        <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h2"></path>
                     </svg>
-                    <span class="ml-3">Capital</span>
+                    <span class="ml-3">Proyectos</span>
+                </a>
+            </li>
+        </ul>
+
+
+        <h3 class="flex items-center justify-start font-bold">
+            <img class="w-[30px] h-[15px] object-center mr-2"
+                src="{{ Vite::asset('resources/img/panel/onlyreal.svg') }}" alt=""> Real Estate
+        </h3>
+        <ul class="pt-1 mt-1 mb-[30px] space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
+            <li>
+                <a href="{{ route('panel.website.edit', ['seccion' => 'real']) }}"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ request()->is('admin/website/contacto*') ? 'bg-gray-100' : '' }}">
+
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                        </path>
+                        <path d="M6 8h.01"></path>
+                        <path d="M9 8h.01"></path>
+                    </svg>
+                    <span class="ml-3">Textos</span>
                 </a>
             </li>
             <li>
@@ -35,23 +129,53 @@
                     class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ request()->is('admin/proyectos/real*') ? 'bg-gray-100' : '' }}">
                     <svg aria-hidden="true"
                         class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                        <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                        width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 4h3l2 2h5a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2">
+                        </path>
+                        <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h2"></path>
                     </svg>
-                    <span class="ml-3">Real estate</span>
+                    <span class="ml-3">Proyectos</span>
+                </a>
+            </li>
+        </ul>
+
+
+        <h3 class="flex items-center justify-start font-bold">
+            <img class="w-[30px] h-[15px] object-center mr-2"
+                src="{{ Vite::asset('resources/img/panel/onlyhospitality.svg') }}" alt=""> Hospitality
+        </h3>
+        <ul class="pt-1 mt-1 mb-[30px] space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
+            <li>
+                <a href="{{ route('panel.website.edit', ['seccion' => 'hospitality']) }}"
+                    class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ request()->is('admin/website/contacto*') ? 'bg-gray-100' : '' }}">
+
+                    <svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                        </path>
+                        <path d="M6 8h.01"></path>
+                        <path d="M9 8h.01"></path>
+                    </svg>
+                    <span class="ml-3">Textos</span>
                 </a>
             </li>
             <li>
                 <a href="{{ route('panel.proyectos.index', ['seccion' => 'hospitality']) }}"
                     class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ request()->is('admin/proyectos/hospitality*') ? 'bg-gray-100' : '' }}">
                     <svg aria-hidden="true"
-                        class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
-                        <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                        class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M9 4h3l2 2h5a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2">
+                        </path>
+                        <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h2"></path>
                     </svg>
-                    <span class="ml-3">Hospitality</span>
+                    <span class="ml-3">Proyectos</span>
                 </a>
             </li>
         </ul>
@@ -59,7 +183,23 @@
         {{-- * usuarios y permisos --}}
         @canany([PermissionKey::Admin['permissions']['index']['name'],
             PermissionKey::Role['permissions']['index']['name']])
-            <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
+            <h3 class="flex items-center justify-start font-bold">
+                <svg class="icon icon-tabler icon-tabler-adjustments mr-2" width="30" height="20"
+                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M4 10a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                    <path d="M6 4v4"></path>
+                    <path d="M6 12v8"></path>
+                    <path d="M10 16a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                    <path d="M12 4v10"></path>
+                    <path d="M12 18v2"></path>
+                    <path d="M16 7a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"></path>
+                    <path d="M18 4v1"></path>
+                    <path d="M18 9v11"></path>
+                </svg> Configuraciones
+            </h3>
+            <ul class="pt-1 mt-1 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
                 @can(PermissionKey::Admin['permissions']['index']['name'])
                     <li>
                         <a href="{{ route('panel.usuarios.index') }}"

@@ -1,0 +1,125 @@
+{
+    "verMas": "See more",
+    "conoceMasNosotros": "Learn more about us <br /> and our projects",
+    "verVideo": "Watch video",
+    "menu": "Menu",
+    "cerrar": "Close",
+    "menu.info": "We develop comprehensive strategies that allow <span class='underline'>the unexpected</span> to become a reality in each of our areas of specialization.",
+
+    "home.banner": ["WE MAKE THE", "", "UNEXPECTED HAPPEN"],
+    "home.infoInicial": [
+        "Black Swan stands out as a business group focused primarily on real estate and hospitality development across Yucatan guided by a vision of unlikely yet remarkable events. Ever since 2005, Black Swan has worked in order to boost Yucatan’s development, making sure to have a friendly impact on the environment.",
+        "Nowadays this group is divided in three branches: capital, real estate and hospitality, each one led by groups of experts dedicated to making positive changes while following the company’s vision. ",
+        ""
+    ],
+    "home.conoce_mas": "Learn more about our three divisions",
+    "home.capital.text": "This unit specializes in investment and development of projects with a high projection of financial growth in various business areas, based on the 26 years of experience and work philosophy of its founders.",
+    "home.real.text": "This branch is dedicated to high quality real estate development backed up by Black Swan’s owners experience which dates back to 1997.",
+    "home.hospi.text": "This branch fully draws on Yucatan’s touristic vocation in order to create mind blowing experiences through premium class hotels and hostels.",
+
+    "capital.subtitulo": "Boosting performance",
+    "capital.info.title_1": "In 2005",
+    "capital.info.text": [
+        "Was founded as a 100% financial business unit that began its growth with the development of real estate investment projects and has subsequently expanded to other business lines, such as hotels.",
+        "During its first years Black Swan developed real estate projects with complete services and vertical housing, which were supported by the experience and accumulated capital since 1997. Today the company has over one hundred thousand square meters supervised, twenty thousand square meters built and more than four hundred thousand square meters developed.",
+        "Eventually Black Swan’s partners started developing, operating and/or investing in other companies such as: Cigno Hotels, Casa Amate Hostals, Fitorade, Killer Quake and Grupo Libera, which have the necessary economic parameters and the company's work philosophy.",
+        "During the year 2022, the group reached total sales of 280 million pesos and estimated insured sales of $1,500,000 pesos for the next four years. The company’s value today reaches assets worth 800 million pesos. Similarly Black Swan - Capital is undergoing a process to develop its first investment fund: Black Swan Fund.",
+
+        "$280 million",
+        "Total sales during 2022",
+        "",
+
+        "$1.5 million",
+        "Insured sales",
+        "For the upcoming four years",
+
+        "$800 million",
+        "Black Swan’s assets current value",
+        "",
+
+        ""
+    ],
+    "capital.proyectos.titulo": "<span className='font-bold'>Black Swan Capital</span> has the following projects",
+
+    "real.subtitulo.part1": "Building today",
+    "real.subtitulo.part2": "tomorrow’s wealth",
+    "real.info.text": [
+        "is a business unit specialized in developing real estate projects which arises from RAS Constructora, a construction company focused on the supervision of social housing founded by the group's partners back in 1997.",
+        "During 2005 Black Swan’s partners decided to take the company to the next level through the development of real estate projects with complete services and vertical housing, based on the experience and investments accumulated since its inception.",
+        "Today the company has over:",
+
+        "100k ",
+        "Square meters supervised",
+
+        "20k",
+        "Built",
+
+        "400k",
+        "Developed",
+
+        "Projects such as Única Living, Kantára Residencial, Yukán Townhouses, Tótem Residencial, among others, as well as more than a thousand satisfied customers including various Mexican government agencies support the success stories and achievements of this business unit.",
+        "To this day, the company continues to work on the development of private residences and vertical projects with the seal of environmental responsibility and the wellness philosophy. With this vision in mind, it is planned to develop more than ten million square meters in the next five years."
+    ],
+    "real.proyectos.titulo": "<span className='font-bold'>Black Swan Real Estate</span> has the following projects",
+    "real.proyectos.entregados": "Projects delivered",
+
+    "hospi.subtitulo.part1": "Creating",
+    "hospi.subtitulo.part2": "inspiring experiences",
+    "hospi.info.text": [
+        "During Black Swan's expansion process and thanks to the tourism and economic growth of the Yucatecan Peninsula, the company's partners began to promote the development, execution and operation of hospitality projects.",
+        "In 2022 the group's first hotel and restaurant was founded in La Ermita, an iconic and historical neighborhood in Mérida, Yucatán, which is part of a three hotels project under the Cigno Hotels label, and which has been nominated for the \"MexBest by Quien 2023\" awards in the category of the best hospitality in the state, as well as the LADIs 2023 awards in the category of best conversion project.",
+        "In 2023 the group began with the construction of their second hotel in front of La Plancha park in Mérida, inaugurated the Tótem Beach Club on the coast of Celestún in Yucatán, and started operations of the first of three experience hostels called Casa Encuentro. In this scenario, it is projected to have more than five hundred rooms in the next five years."
+    ],
+    "hospi.proyectos.titulo": "<span className='font-bold'>Black Swan Hospitality</span> has the following projects",
+
+    "nosotros.titulo.part1": "A TEAM",
+    "nosotros.titulo.part2": "OF EXPERTS",
+    "nosotros.jacobo": "Raúl and Jacobo form an exceptional duo in the business world.",
+    "nInfo": [
+        "Raúl and Jacobo, current partners of Black Swan, studied Industrial Engineering together from 1998 to 2002. Since 2005 they have jointly developed real estate projects with complete services and vertical housing, based on the experience and investments accumulated since its inception. In 2011 they invested in their first private residential development called Residencial Kantára with 370 lots, parks and Club House. This became their starting point for several real estate developments located in the municipalities of Mérida, Telchac and Conkal.",
+        "In 2019 the partners acquired some old houses in Mérida’s downtown with the aim of turning them into hotels, as they did with the group's first boutique hotel: Cigno Hotel. Paralelly they acquired shares in companies from various market sectors in order to boost the business and economic growth of the group."
+    ],
+    "nosotros.equipo.titulo": "Black Swan forging an impressive future.",
+    "equipo": [
+        "Some time ago Raúl recommended to Jacobo a book titled \"The Black Swan\" by Nassim Taleb, which explains the meaning of unlikely events that yet cause a great impact on humanity. This is how Black Swan was born with a philosophy that has been transmitted to its over 120 direct collaborators and 200 indirect collaborators.",
+        "Furthermore Black Swan is a business group committed to their environmental responsibility and the wellness philosophy, for which reason they have taken on the task of integrating actions in each of its projects to generate a positive impact in these areas, consolidating itself as agents of change."
+    ],
+    "nosotros.valores": "Our values",
+    "valores": [
+        "Conscious humanism",
+        "Attention and full awareness towards humanist principles in everything we do.",
+
+        "Unwavering loyalty",
+        "We maintain our adherence to the company, as well as our commitment to clients and to each other, regardless of the obstacles and challenges until we achieve our goals.",
+
+        "Equity in every way",
+        "Dignified treatment, equal opportunities and justice for all the people involved in the company, without making distinctions of any sort.",
+
+        "Service spirit",
+        "We maintain an attitude and mindset focused on exceeding the expectations of our customers, coworkers, and other stakeholders.",
+
+        "Win-win relationships",
+        "We focus our attention on all parties involved in the company's internal and external activities obtaining mutual and satisfactory benefits to achieve long-term productive relationships.",
+
+        "Collaborative synergy",
+        "We turn our differences into strengths, integrating an enriching combination of skills and competencies for high performance.",
+
+        "The truth sets us free",
+        "Transparency and veracity in everything we say and do keeps us free from falsehood, doubt and uncertainty. We honor our word out of conviction, we are pleased to be reliable.",
+
+        "We are black swan",
+        "We achieve unlikely and high-impact things; we make the unexpected happen, we are antifragile."
+    ],
+
+    "contacto": "Contact",
+    "nosotros": "About us",
+    "footer.correo": "Email",
+    "footer.telefono": "Phone",
+    "footer.divisiones": "Divisions",
+    "footer.historia": "History",
+    "footer.quienes": "About us",
+    "footer.valores": "Our values",
+    "footer.compartir": "Share us your email",
+    "footer.desarrollo": "Design and development",
+    "footer.politicas": "Privacy policies"
+}

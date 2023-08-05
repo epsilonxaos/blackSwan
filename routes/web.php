@@ -5,6 +5,7 @@ use App\Http\Controllers\ComandosController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProyectoController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -79,6 +80,12 @@ Route::middleware(['auth:admin', 'verified'])->prefix('/admin')->group(function 
 		Route::put('{seccion}/update/{id}', [ProyectoController::class, 'update'])->name('panel.proyectos.update');
 		Route::delete('/destroy/{id}', [ProyectoController::class, 'destroy'])->name('panel.proyectos.destroy');
 		Route::post('/change/status', [ProyectoController::class, 'changeStatus'])->name('panel.proyectos.changeStatus');
+	});
+
+	// Website
+	Route::prefix('/website')->group(function () {
+		Route::get('{seccion}/edit', [WebsiteController::class, 'edit'])->name('panel.website.edit');
+		Route::put('{seccion}/update', [WebsiteController::class, 'update'])->name('panel.website.update');
 	});
 });
 

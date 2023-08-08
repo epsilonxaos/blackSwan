@@ -9,8 +9,10 @@ import logo3 from "../../../img/web/hospitality.svg";
 import { useContext } from "react";
 import HeaderContext from "../context/HeaderContext";
 import { useTranslation } from "react-i18next";
+import AppContext from "../context/AppContext";
 
 export default function MenuHeader() {
+    const { state } = useContext(AppContext);
     const { active, setActive } = useContext(HeaderContext);
     const { t, i18n } = useTranslation();
     const container = {
@@ -56,7 +58,7 @@ export default function MenuHeader() {
             >
                 <Parrafo
                     className="text-gris max-w-[300px] md:max-w-[680px] opacity-80 mx-auto"
-                    textParse={t("menu.info")}
+                    textParse={t(state.textsi18n[i18n.language].header_info)}
                 />
 
                 <motion.ul

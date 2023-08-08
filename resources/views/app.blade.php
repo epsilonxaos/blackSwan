@@ -33,7 +33,7 @@
 </head>
 
 <body class="antialiased bg-white">
-    <div id="root" class="min-h-screen pt-[64px] sm:pt-[67px ]"></div>
+    <div id="root" class=""></div>
 </body>
 
 </html>

@@ -53,18 +53,13 @@ export default function Home() {
                                     className="font-medium text-[35px] md:text-[40px] lg:text-[55px] xl:text-[70px] 2xl:text-[90px] tracking-[-1.5px] leading-[1.3] pl-[28px] !mb-0"
                                     text={t("home.banner.1")}
                                 /> */}
-                                {state.textsi18n[i18n.language]
-                                    .home_s1_title2 ? (
-                                    <TextCustom
-                                        className="leading-[1.3] text-center w-full font-medium text-[35px] md:text-[40px] lg:text-[55px] xl:text-[70px] 2xl:text-[90px] tracking-[-1.5px] mb-[25px] lg:mb-[45px]"
-                                        textParse={
-                                            state.textsi18n[i18n.language]
-                                                .home_s1_title2
-                                        }
-                                    />
-                                ) : (
-                                    <div className="mb-[25px] lg:mb-[45px]"></div>
-                                )}
+                                <TextCustom
+                                    className="leading-[1.3] text-center w-full font-medium text-[35px] md:text-[40px] lg:text-[55px] xl:text-[70px] 2xl:text-[90px] tracking-[-1.5px] pb-[25px] lg:pb-[45px] block"
+                                    textParse={
+                                        state.textsi18n[i18n.language]
+                                            .home_s1_title2 ?? ""
+                                    }
+                                />
                                 <div className="border-t-2 border-t-black w-[48px]"></div>
                             </div>
                         </div>

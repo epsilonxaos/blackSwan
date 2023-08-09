@@ -21,6 +21,9 @@ export default function Web() {
         loading: true,
         website: null,
         textsi18n: null,
+        capital: null,
+        real: null,
+        hospitality: null,
     };
     const [state, dispatch] = useReducer(reducer, initialArgs);
 
@@ -32,6 +35,16 @@ export default function Web() {
             dispatch({
                 website: response.data.website,
                 textsi18n: response.data.textsi18n,
+                capital: response.data.capital,
+                real: response.data.real,
+                hospitality: response.data.hospitality,
+            });
+            console.log({
+                website: response.data.website,
+                textsi18n: response.data.textsi18n,
+                capital: response.data.capital,
+                real: response.data.real,
+                hospitality: response.data.hospitality,
             });
             setTimeout(() => {
                 dispatch({ loading: false });

@@ -1,0 +1,242 @@
+[
+    {
+        "cover": "img/web/capital/fitorade.jpg",
+        "website": "https://www.fitorade.com/",
+        "status": 1,
+        "seccion": "capital",
+        "es": {
+            "title": "Fitorade",
+            "subtitle": "Daily Meal Plan",
+            "info": "Servicio de comida saludable en Mérida que ofrece comidas elaboradas con alimentos integrales y completamente saludables."
+        },
+        "en": {
+            "title": "Fitorade",
+            "subtitle": "Daily Meal Plan",
+            "info": "Healthy food service in Mérida with the goal to offer meals made with whole and completely healthy foods."
+        }
+    },
+    {
+        "cover": "img/web/capital/grupo.png",
+        "website": "https://www.grupolibera.mx/",
+        "status": 1,
+        "seccion": "capital",
+        "es": {
+            "title": "Grupo Libera",
+            "subtitle": "Comercialización y desarrollo de bienes inmuebles",
+            "info": "Empresa enfocada en la comercialización de proyectos inmobiliarios que tienen como objetivo asegurar tu futuro invirtiendo en las mejores zonas del estado de Yucatán."
+        },
+        "en": {
+            "title": "Grupo Libera",
+            "subtitle": "Marketing and development of real estate",
+            "info": "Company focused on commercialization of real estate projects that aim to ensure the clients’ wealth by investing in the best areas of Yucatan."
+        }
+    },
+    {
+        "cover": "img/web/capital/killer.png",
+        "website": "https://killerquake.com.mx/",
+        "status": 1,
+        "seccion": "capital",
+        "es": {
+            "title": "Killer Quake",
+            "subtitle": "Comercialización",
+            "info": "Empresa enfocada en la creación de contenido que se plasma en diferentes artículos disponibles a la venta."
+        },
+        "en": {
+            "title": "Killer Quake",
+            "subtitle": "Commercialization",
+            "info": "Company focused on the creation of content for different items available for sale."
+        }
+    },
+    {
+        "cover": "img/web/real/unicaliving.jpg",
+        "website": "https://unicaliving.mx/",
+        "status": 1,
+        "seccion": "real",
+        "es": {
+            "title": "Única Living",
+            "subtitle": "Residencial Sustentable",
+            "info": "Desarrollo residencial ubicado al norte de Mérida, Yucatán, equipado con las mejores amenidades para disfrutar con comodidad y confort."
+        },
+        "en": {
+            "title": "Única Living",
+            "subtitle": "Sustainable Residential",
+            "info": "Residential development located north of Mérida, Yucatán, equipped with the best amenities to enjoy with ease and comfort."
+        }
+    },
+    {
+        "cover": "img/web/real/almaresidencial.png",
+        "website": "",
+        "status": 1,
+        "seccion": "real",
+        "es": {
+            "title": "Alma Cholul",
+            "subtitle": "Residencial Sustentable",
+            "info": "Es una privada pensada para las familias que buscan un lugar tranquilo con amplios espacios de recreación; localizada en la mejor zona residencial de crecimiento de Yucatán. El perfecto equilibrio entre urbanidad y tranquilidad."
+        },
+        "en": {
+            "title": "Alma Cholul",
+            "subtitle": "Sustainable Residential",
+            "info": "This is a private residential project designed for families who look for a quiet place with wide spaces for recreation. It is located in the best growing residential area of Yucatan and offers the perfect balance between urbanity and tranquility."
+        }
+    },
+    {
+        "cover": "img/web/real/xekenyxakah.png",
+        "website": "https://xexenyxakah.com/",
+        "status": 1,
+        "seccion": "real",
+        "es": {
+            "title": "Xexén y Xakáh",
+            "subtitle": "Residencial Sustentable",
+            "info": "Este desarrollo consta de 26 unidades totalmente urbanizadas y creadas para complacer al más exquisito gusto, lo cual las hace perfectas para complacer a los residentes y experimentar una convivencia armoniosa en Tulum. El complejo se divide en dos edificios de cuatro niveles: Jardín, Medio Bajo, Medio Alto y Azotea."
+        },
+        "en": {
+            "title": "Xexén y Xakáh",
+            "subtitle": "Sustainable Residential",
+            "info": "This development consists of 26 fully urbanized units created to please the most exquisite taste with a harmonious coexistence in Tulum. The complex is divided into two buildings with four levels: Garden, Medium Low, Medium High and Rooftop."
+        }
+    },
+    {
+        "cover": "img/web/real/santamar.jpg",
+        "website": "https://santamarsisal.mx/",
+        "status": 1,
+        "seccion": "real",
+        "es": {
+            "title": "Santamar",
+            "subtitle": "Residencial Sustentable",
+            "info": "Santamar es un proyecto residencial privado con un enfoque wellness. Su principal objetivo es ofrecer un espacio para disfrutar de una vida en pleno equilibrio mental, emocional y físico, con todas sus amenidades necesarias. A diez minutos de Santamar se encuentra Sisal, donde se construirá un Club de Playa frente al mar."
+        },
+        "en": {
+            "title": "Santamar",
+            "subtitle": "Sustainable Residential",
+            "info": "Santamar is a private residential project with a wellness philosophy focus. Its main objective is to offer a place where people can enjoy a life in full mental, emotional and physical balance, with all its necessary amenities. Ten minutes away from Santa Mar is Sisal, where a Beach Club will be built facing the sea."
+        }
+    },
+    {
+        "cover": "img/web/real/arenales.jpg",
+        "website": "https://grupolibera.mx/desarrolloArenales/",
+        "status": 1,
+        "seccion": "real",
+        "es": {
+            "title": "Arenales",
+            "subtitle": "Residencial Sustentable",
+            "info": "Este proyecto de terrenos residenciales totalmente urbanizados está ubicado en Progreso, a pocos minutos de la hermosa playa de este puerto. Arenales cuenta con amenidades de primera categoría que aseguran la calidad de vida y comodidad de sus residentes."
+        },
+        "en": {
+            "title": "Arenales",
+            "subtitle": "Sustainable Residential",
+            "info": "This fully urbanized residential land project is located in Progreso, very close from the beautiful beach of this port. Arenales has first-class amenities that ensure a high quality of life and comfort of its residents."
+        }
+    },
+    {
+        "cover": "img/web/real/totem.png",
+        "website": "https://totemsustentable.mx",
+        "status": 1,
+        "seccion": "real",
+        "es": {
+            "title": "Tótem Residencial",
+            "subtitle": "Residencial Sustentable",
+            "info": "Este proyecto residencial sustentable se ubica en Celestún, Yucatán y tiene como esencia la admiración, respeto y protección de la naturaleza, así como un compromiso con el desarrollo económico y social de las comunidades locales. Dentro de sus amenidades, Tótem residencial cuenta con un club de playa frente al mar."
+        },
+        "en": {
+            "title": "Tótem Residencial",
+            "subtitle": "Sustainable Residential",
+            "info": "This sustainable residential project is located in Celestún, Yucatán and has as its essence the admiration, respect and protection of nature, as well as a commitment to the economic and social development of local communities. Among its amenities, Tótem Residencial has a beautiful beach club facing the sea."
+        }
+    },
+    {
+        "cover": "img/web/real/yukan.jpg",
+        "website": "https://yukan.mx",
+        "status": 1,
+        "seccion": "real",
+        "es": {
+            "title": "Yukán Townhouses",
+            "subtitle": "Residencial Sustentable",
+            "info": "Conjunto de townhouses ubicado al norte de Mérida, equipados con las mejores amenidades y equipados de forma cómoda y funcional."
+        },
+        "en": {
+            "title": "Yukán Townhouses",
+            "subtitle": "Sustainable Residential",
+            "info": "Set of townhouses located north of Mérida, equipped with the best amenities in a comfortable and functional way."
+        }
+    },
+    {
+        "cover": "img/web/real/xomak.jpg",
+        "website": "https://xomaktulum.com/",
+        "status": 1,
+        "seccion": "real",
+        "es": {
+            "title": "Xomak",
+            "subtitle": "Residencial Sustentable",
+            "info": "Conjunto de lujosos departamentos boho chic tipo estudio ubicados en Tulum, Quintana Roo, que conjuntan comodidad y sofisticación en un destino de ensueño."
+        },
+        "en": {
+            "title": "Xomak",
+            "subtitle": "Sustainable Residential",
+            "info": "Set of luxurious boho chic studio apartments located in Tulum, Quintana Roo, which combine comfort and sophistication in a dream destination."
+        }
+    },
+    {
+        "cover": "img/web/hospitalary/casaamate.png",
+        "website": "",
+        "status": 1,
+        "seccion": "hospitality",
+        "es": {
+            "title": "Casa Amate",
+            "subtitle": "Hoteles de experiencias",
+            "info": "Este proyecto contempla la apertura de un hostal boutique temático enfocado en generar experiencias únicas para los huéspedes con actividades que conjuntan arte, diversión y gastronomía teniendo como contexto la calle 61 del centro de Mérida."
+        },
+        "en": {
+            "title": "Casa Amate",
+            "subtitle": "Experience hotels",
+            "info": "This project contemplates the upcoming opening of a themed boutique hostel focused on generating unique experiences for guests with activities that combine art, fun and gastronomy having the 61th street from Merida’s downtown as its scenario."
+        }
+    },
+    {
+        "cover": "img/web/hospitalary/cignohotel.jpg",
+        "website": "https://www.cignohotel.com/es/",
+        "status": 1,
+        "seccion": "hospitality",
+        "es": {
+            "title": "Cigno Hotel",
+            "subtitle": "Hotel Boutique Ermita",
+            "info": "Hotel boutique enfocado en convertirse en un refugio para exploradores que buscan en cada viaje una experiencia enriquecedora, ubicado en La Ermita, la cual recientemente ha obtenido la distinción de ser el primer barrio mágico de la capital yucateca debido a su riqueza histórica y cultural."
+        },
+        "en": {
+            "title": "Cigno Hotel",
+            "subtitle": "Hotel Boutique Ermita",
+            "info": "Boutique hotel focused on becoming a refuge for explorers who seek an enriching experience on each trip. It is located in La Ermita, which has recently obtained the distinction of being the first \"Barrio Mágico\" (Magic neighborhood) of Mérida due to its historical and cultural wealth."
+        }
+    },
+    {
+        "cover": "img/web/hospitalary/amate.jpg",
+        "website": "https://experience.casaamate.com/",
+        "status": 1,
+        "seccion": "hospitality",
+        "es": {
+            "title": "Amate Experiencias",
+            "subtitle": "Tours personalizados",
+            "info": "Actividades diseñadas por personas locales para ofrecerle a los visitantes la oportunidad de disfrutar los atractivos turísticos, gastronómicos y culturales de Yucatán de forma personalizada y cercana."
+        },
+        "en": {
+            "title": "Amate Experiencias",
+            "subtitle": "Tailored tours",
+            "info": "Amate Experiencias is a fresh way to enjoy the finest attractions of Mérida and Yucatán in a personalized way carefully designed by local people."
+        }
+    },
+    {
+        "cover": "img/web/hospitalary/totem.jpg",
+        "website": "https://clubdeplayatotem.com/",
+        "status": 1,
+        "seccion": "hospitality",
+        "es": {
+            "title": "Tótem Beach Club",
+            "subtitle": "Club de playa",
+            "info": "Club de playa ubicado frente al mar de Celestún, Yucatán que cuenta con restaurante, piscinas, y todas las amenidades necesarias para disfrutar cómodamente del sol y la arena en familia, en pareja o con amigos. El club ofrece membresías para socios así como pases para el público en general."
+        },
+        "en": {
+            "title": "Tótem Beach Club",
+            "subtitle": "Beachside club",
+            "info": "This brand new beach club located by the sea of Celestún, Yucatán has a restaurant, swimming pools, and all the necessary amenities to comfortably enjoy the sun and sand along with family, significant other, or friends. The club offers memberships as well as passes for the general public."
+        }
+    }
+]

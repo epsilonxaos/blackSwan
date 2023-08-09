@@ -25,44 +25,6 @@ export default function Capital() {
     const { state } = useContext(AppContext);
     const { t, i18n } = useTranslation();
     const [toggler, setToggler] = useState(false); //? Videos
-    const proyectos = [
-        {
-            id: "tabFitorade",
-            cover: IMGfitorade,
-            url: "https://www.fitorade.com/",
-            title: "Fitorade",
-            subtitle: { es: "Daily Meal Plan", en: "Daily Meal Plan" },
-            text: {
-                es: "Servicio de comida saludable en Mérida que ofrece comidas elaboradas con alimentos integrales y completamente saludables.",
-                en: "Healthy food service in Mérida with the goal to offer meals made with whole and completely healthy foods.",
-            },
-        },
-        {
-            id: "tabGrupoLibera",
-            cover: IMGgrupo,
-            title: "Grupo Libera",
-            url: "https://www.grupolibera.mx/",
-            subtitle: {
-                es: "Comercialización y desarrollo de bienes inmuebles",
-                en: "Marketing and development of real estate",
-            },
-            text: {
-                es: "Empresa enfocada en la comercialización de proyectos inmobiliarios que tienen como objetivo asegurar tu futuro invirtiendo en las mejores zonas del estado de Yucatán.",
-                en: "Company focused on commercialization of real estate projects that aim to ensure the clients’ wealth by investing in the best areas of Yucatan.",
-            },
-        },
-        {
-            id: "tabKillerQuake",
-            cover: IMGkiller,
-            url: "https://killerquake.com.mx/",
-            title: "Killer Quake",
-            subtitle: { es: "Comercialización", en: "Commercialization" },
-            text: {
-                es: "Empresa enfocada en la creación de contenido que se plasma en diferentes artículos disponibles a la venta.",
-                en: "Company focused on the creation of content for different items available for sale.",
-            },
-        },
-    ];
 
     return (
         <main>
@@ -240,28 +202,35 @@ export default function Capital() {
                     />
                 </div>
 
-                <Tabs defaultTab={"tabFitorade"}>
-                    <div className="flex justify-between w-full max-w-[480px] mx-auto">
-                        {proyectos.map((item) => (
+                <Tabs defaultTab={"tab-id-" + state.capital[0].id}>
+                    <div className="flex justify-center flex-wrap w-full max-w-[780px] mx-auto">
+                        {state.capital.map((item) => (
                             <Tabs.Button
                                 key={item.id}
-                                tabid={item.id}
-                                className="w-1/2 text-[13px] md:text-[16px]"
+                                tabid={"tab-id-" + item.id}
+                                className="w-1/2 md:w-1/4 max-w-none text-[13px] md:text-[16px]"
                             >
-                                {item.title}
+                                {
+                                    item.translations.find(
+                                        ({ locale }) => locale == i18n.language
+                                    ).title
+                                }
                             </Tabs.Button>
                         ))}
                     </div>
 
-                    {proyectos.map((item) => (
+                    {state.capital.map((item) => (
                         <Tabs.Container
                             key={"container-" + item.id}
-                            tabref={item.id}
+                            tabref={"tab-id-" + item.id}
                         >
                             <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                                 <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
                                     <img
-                                        src={item.cover}
+                                        src={
+                                            import.meta.env.VITE_APP_URL +
+                                            item.cover
+                                        }
                                         className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
 										xl:h-full w-full max-w-full"
                                         alt={item.title}
@@ -271,44 +240,40 @@ export default function Capital() {
                                     <div className="flex flex-col h-full justify-center">
                                         <AnimatedTextWord
                                             className="text-left !mb-[5px] leading-[1.3]"
-                                            text={item.title}
+                                            text={
+                                                item.translations.find(
+                                                    ({ locale }) =>
+                                                        locale == i18n.language
+                                                ).title
+                                            }
                                         />
                                         <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
                                             <TextCustom>
-                                                {item.subtitle[i18n.language]}
+                                                {
+                                                    item.translations.find(
+                                                        ({ locale }) =>
+                                                            locale ==
+                                                            i18n.language
+                                                    ).subtitle
+                                                }
                                             </TextCustom>
                                         </h3>
-                                        <div className="mb-[30px] md:mb-[80px]">
-                                            {typeof item.text[i18n.language] ==
-                                            "string" ? (
-                                                <Parrafo className="text-left">
-                                                    {item.text[i18n.language]}
-                                                </Parrafo>
-                                            ) : (
-                                                item.text[i18n.language].map(
-                                                    (tx, idx) => (
-                                                        <Parrafo
-                                                            key={
-                                                                "parrafo-" +
-                                                                item.id +
-                                                                "-" +
-                                                                idx
-                                                            }
-                                                            className={`text-left ${
-                                                                item.length ==
-                                                                idx + 1
-                                                                    ? ""
-                                                                    : "mb-[30px]"
-                                                            }`}
-                                                            textParse={tx}
-                                                        ></Parrafo>
-                                                    )
-                                                )
-                                            )}
+                                        <div className="mb-[30px] md:mb-[80px] text-parrafos">
+                                            <TextCustom
+                                                className="block"
+                                                textParse={
+                                                    item.translations.find(
+                                                        ({ locale }) =>
+                                                            locale ==
+                                                            i18n.language
+                                                    ).info
+                                                }
+                                            />
                                         </div>
-                                        {item?.url && (
+
+                                        {item?.website && (
                                             <a
-                                                href={item.url}
+                                                href={item.website}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >

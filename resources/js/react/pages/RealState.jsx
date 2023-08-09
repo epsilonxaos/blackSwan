@@ -29,132 +29,15 @@ import AnimatedTextWord from "../animations/AnimationTextWord";
 import TextCustom from "../components/TextCustom";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import parse from "html-react-parser";
 import AppContext from "../context/AppContext";
+import FsLightbox from "fslightbox-react";
 
 export default function RealState() {
     const { state } = useContext(AppContext);
     const { t, i18n } = useTranslation();
-    const proyectos = [
-        {
-            id: "tabunicaliving",
-            cover: IMGunicaliving,
-            title: "Única Living",
-            url: "https://unicaliving.mx/",
-            subtitle: {
-                es: "Residencial Sustentable",
-                en: "Sustainable Residential",
-            },
-            text: {
-                es: "Desarrollo residencial ubicado al norte de Mérida, Yucatán, equipado con las mejores amenidades para disfrutar con comodidad y confort.",
-                en: "Residential development located north of Mérida, Yucatán, equipped with the best amenities to enjoy with ease and comfort.",
-            },
-        },
-        {
-            id: "tabalmaresidencial",
-            cover: IMGalmaresidencial,
-            title: "Alma Cholul",
-            subtitle: {
-                es: "Residencial Sustentable",
-                en: "Sustainable Residential",
-            },
-            text: {
-                es: "Es una privada pensada para las familias que buscan un lugar tranquilo con amplios espacios de recreación; localizada en la mejor zona residencial de crecimiento de Yucatán. El perfecto equilibrio entre urbanidad y tranquilidad.",
-                en: "This is a private residential project designed for families who look for a quiet place with wide spaces for recreation. It is located in the best growing residential area of Yucatan and offers the perfect balance between urbanity and tranquility.",
-            },
-        },
-        {
-            id: "tabxekenyxakah",
-            cover: IMGxekenyxakah,
-            title: "Xexén y Xakáh",
-            url: "https://xexenyxakah.com/",
-            subtitle: {
-                es: "Residencial Sustentable",
-                en: "Sustainable Residential",
-            },
-            text: {
-                es: [
-                    "Este desarrollo consta de 26 unidades totalmente urbanizadas y creadas para complacer al más exquisito gusto, lo cual las hace perfectas para complacer a los residentes y experimentar una convivencia armoniosa en Tulum.",
-                    "El complejo se divide en dos edificios de cuatro niveles: Jardín, Medio Bajo, Medio Alto y Azotea.",
-                ],
-                en: "This development consists of 26 fully urbanized units created to please the most exquisite taste with a harmonious coexistence in Tulum. The complex is divided into two buildings with four levels: Garden, Medium Low, Medium High and Rooftop.",
-            },
-        },
-        {
-            id: "tabsantamar",
-            cover: IMGsantamar,
-            title: "Santamar",
-            url: "https://santamarsisal.mx/",
-            subtitle: {
-                es: "Residencial Sustentable",
-                en: "Sustainable Residential",
-            },
-            text: {
-                es: [
-                    "Santamar es un proyecto residencial privado con un enfoque wellness. Su principal objetivo es ofrecer un espacio para disfrutar de una vida en pleno equilibrio mental, emocional y físico, con todas sus amenidades necesarias.",
-                    "A diez minutos de Santamar se encuentra Sisal, donde se construirá un Club de Playa frente al mar.",
-                ],
-                en: "Santamar is a private residential project with a wellness philosophy focus. Its main objective is to offer a place where people can enjoy a life in full mental, emotional and physical balance, with all its necessary amenities. Ten minutes away from Santa Mar is Sisal, where a Beach Club will be built facing the sea.",
-            },
-        },
-        {
-            id: "tabarenales",
-            cover: IMGarenales,
-            title: "Arenales",
-            url: "https://grupolibera.mx/desarrolloArenales/",
-            subtitle: {
-                es: "Residencial Sustentable",
-                en: "Sustainable Residential",
-            },
-            text: {
-                es: "Este proyecto de terrenos residenciales totalmente urbanizados está ubicado en Progreso, a pocos minutos de la hermosa playa de este puerto. Arenales cuenta con amenidades de primera categoría que aseguran la calidad de vida y comodidad de sus residentes.",
-                en: "This fully urbanized residential land project is located in Progreso, very close from the beautiful beach of this port. Arenales has first-class amenities that ensure a high quality of life and comfort of its residents.",
-            },
-        },
-        {
-            id: "tabtotem",
-            cover: IMGtotem,
-            title: "Tótem Residencial",
-            url: "https://totemsustentable.mx",
-            subtitle: {
-                es: "Residencial Sustentable",
-                en: "Sustainable Residential",
-            },
-            text: {
-                es: "Este proyecto residencial sustentable se ubica en Celestún, Yucatán y tiene como esencia la admiración, respeto y protección de la naturaleza, así como un compromiso con el desarrollo económico y social de las comunidades locales. Dentro de sus amenidades, Tótem residencial cuenta con un club de playa frente al mar.",
-                en: "This sustainable residential project is located in Celestún, Yucatán and has as its essence the admiration, respect and protection of nature, as well as a commitment to the economic and social development of local communities. Among its amenities, Tótem Residencial has a beautiful beach club facing the sea.",
-            },
-        },
-        {
-            id: "tabyukan",
-            cover: IMGyukan,
-            title: "Yukán Townhouses",
-            url: "https://yukan.mx",
-            subtitle: {
-                es: "Residencial Sustentable",
-                en: "Sustainable Residential",
-            },
-            text: {
-                es: "Conjunto de townhouses ubicado al norte de Mérida, equipados con las mejores amenidades y equipados de forma cómoda y funcional.",
-                en: "Set of townhouses located north of Mérida, equipped with the best amenities in a comfortable and functional way.",
-            },
-        },
-        {
-            id: "tabxomak",
-            cover: IMGxomak,
-            title: "Xomak",
-            url: "https://xomaktulum.com/",
-            subtitle: {
-                es: "Residencial Sustentable",
-                en: "Sustainable Residential",
-            },
-            text: {
-                es: "Conjunto de lujosos departamentos boho chic tipo estudio ubicados en Tulum, Quintana Roo, que conjuntan comodidad y sofisticación en un destino de ensueño.",
-                en: "Set of luxurious boho chic studio apartments located in Tulum, Quintana Roo, which combine comfort and sophistication in a dream destination.",
-            },
-        },
-    ];
+    const [toggler, setToggler] = useState(false); //? Videos
 
     return (
         <main>
@@ -182,10 +65,24 @@ export default function RealState() {
                         className="text-[32px] md:text-[40px] tracking-[-0.96px] font-medium text-center block w-full text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] justify-center items-center"
                     />
 
-                    {/* <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
+                    <FsLightbox
+                        toggler={toggler}
+                        sources={[state.website.capital_video]}
+                    />
+                    <Boton
+                        onClick={() => {
+                            console.log("click");
+                            setToggler(!toggler);
+                        }}
+                        className={`mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white ${
+                            state.website.capital_video
+                                ? ""
+                                : "opacity-0 pointer-events-none"
+                        }`}
+                    >
                         <img src={play} alt="Play icon" className="mr-[4px]" />{" "}
                         {t("verVideo")}
-                    </Boton> */}
+                    </Boton>
 
                     <TextCustom
                         className="tracking-[-0.54px] leading-[1.2] text-white text-[20px] mb-[40px] block"
@@ -311,28 +208,35 @@ export default function RealState() {
                     />
                 </div>
 
-                <Tabs defaultTab={"tabunicaliving"}>
+                <Tabs defaultTab={"tab-id-" + state.real[0].id}>
                     <div className="flex justify-center flex-wrap w-full max-w-[780px] mx-auto">
-                        {proyectos.map((item) => (
+                        {state.real.map((item) => (
                             <Tabs.Button
                                 key={item.id}
-                                tabid={item.id}
+                                tabid={"tab-id-" + item.id}
                                 className="w-1/2 md:w-1/4 max-w-none text-[13px] md:text-[16px]"
                             >
-                                {item.title}
+                                {
+                                    item.translations.find(
+                                        ({ locale }) => locale == i18n.language
+                                    ).title
+                                }
                             </Tabs.Button>
                         ))}
                     </div>
 
-                    {proyectos.map((item) => (
+                    {state.real.map((item) => (
                         <Tabs.Container
                             key={"container-" + item.id}
-                            tabref={item.id}
+                            tabref={"tab-id-" + item.id}
                         >
                             <div className="flex flex-col lg:flex-row w-full pt-[70px]">
                                 <div className="mb-[30px] lg:mb-0 lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
                                     <img
-                                        src={item.cover}
+                                        src={
+                                            import.meta.env.VITE_APP_URL +
+                                            item.cover
+                                        }
                                         className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
 										xl:h-full w-full max-w-full"
                                         alt={item.title}
@@ -342,45 +246,40 @@ export default function RealState() {
                                     <div className="flex flex-col h-full justify-center">
                                         <AnimatedTextWord
                                             className="text-left !mb-[5px] leading-[1.3]"
-                                            text={item.title}
+                                            text={
+                                                item.translations.find(
+                                                    ({ locale }) =>
+                                                        locale == i18n.language
+                                                ).title
+                                            }
                                         />
                                         <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
                                             <TextCustom>
-                                                {item.subtitle[i18n.language]}
+                                                {
+                                                    item.translations.find(
+                                                        ({ locale }) =>
+                                                            locale ==
+                                                            i18n.language
+                                                    ).subtitle
+                                                }
                                             </TextCustom>
                                         </h3>
-                                        <div className="mb-[30px] md:mb-[80px]">
-                                            {typeof item.text[i18n.language] ==
-                                            "string" ? (
-                                                <Parrafo className="text-left">
-                                                    {item.text[i18n.language]}
-                                                </Parrafo>
-                                            ) : (
-                                                item.text[i18n.language].map(
-                                                    (tx, idx) => (
-                                                        <Parrafo
-                                                            key={
-                                                                "parrafo-" +
-                                                                item.id +
-                                                                "-" +
-                                                                idx
-                                                            }
-                                                            className={`text-left ${
-                                                                item.length ==
-                                                                idx + 1
-                                                                    ? ""
-                                                                    : "mb-[30px]"
-                                                            }`}
-                                                            textParse={tx}
-                                                        ></Parrafo>
-                                                    )
-                                                )
-                                            )}
+                                        <div className="mb-[30px] md:mb-[80px] text-parrafos">
+                                            <TextCustom
+                                                className="block"
+                                                textParse={
+                                                    item.translations.find(
+                                                        ({ locale }) =>
+                                                            locale ==
+                                                            i18n.language
+                                                    ).info
+                                                }
+                                            />
                                         </div>
 
-                                        {item?.url && (
+                                        {item?.website && (
                                             <a
-                                                href={item.url}
+                                                href={item.website}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                             >

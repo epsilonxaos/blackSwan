@@ -39,7 +39,7 @@ $(".trumbowyg-panel").trumbowyg({
 $(".shorttext").trumbowyg({
     btns: [
         ["viewHTML"],
-        ["strong", "em", "del"],
+        ["strong", "em", "del", "underline"],
         ["link"],
         ["justifyLeft", "justifyCenter", "justifyRight", "justifyFull"],
         ["unorderedList", "orderedList"],

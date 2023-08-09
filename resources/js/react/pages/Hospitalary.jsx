@@ -18,8 +18,12 @@ import AnimatedTextWord from "../animations/AnimationTextWord";
 import TextCustom from "../components/TextCustom";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import AppContext from "../context/AppContext";
+import parse from "html-react-parser";
 
 export default function Hospitalary() {
+    const { state } = useContext(AppContext);
     const { t, i18n } = useTranslation();
     const proyectos = [
         {
@@ -92,13 +96,11 @@ export default function Hospitalary() {
                         alt="Hospitality"
                         className="w-[256px] xl:w-[400px] mx-auto mb-[70px] lg:mb-[90px]"
                     />
-                    <AnimatedTextWord
-                        text={t("hospi.subtitulo.part1")}
-                        className="text-white leading-[1.1] xl:text-[70px] !mb-0 justify-center items-center"
-                    />
-                    <AnimatedTextWord
-                        text={t("hospi.subtitulo.part2")}
-                        className="text-white leading-[1.2] mb-[55px] lg:mb-[80px] xl:text-[70px] justify-center items-center"
+                    <TextCustom
+                        textParse={
+                            state.textsi18n[i18n.language].hospi_s1_title ?? ""
+                        }
+                        className="text-[32px] md:text-[40px] tracking-[-0.96px] font-medium text-center block w-full text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] justify-center items-center"
                     />
 
                     <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
@@ -106,9 +108,12 @@ export default function Hospitalary() {
                         {t("verVideo")}
                     </Boton>
 
-                    <Parrafo
-                        className="text-white text-[20px] mb-[40px]"
-                        textParse={t("conoceMasNosotros")}
+                    <TextCustom
+                        className="tracking-[-0.54px] leading-[1.2] text-white text-[20px] mb-[40px] block"
+                        textParse={
+                            state.textsi18n[i18n.language].hospi_s1_subtitle ??
+                            ""
+                        }
                     />
 
                     <Link to={"#info"}>
@@ -134,22 +139,20 @@ export default function Hospitalary() {
                         alt="Capital"
                     />
                 </div>
-                <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[100px] relative -top-1">
-                    {t("hospi.subtitulo.part1")} <br />
-                    {t("hospi.subtitulo.part2")}
-                </h3>
-                <Parrafo
-                    className="text-left mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
-                    textParse={t("hospi.info.text.0")}
-                />
-                <Parrafo
-                    className="text-left  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
-                    textParse={t("hospi.info.text.1")}
-                />
-                <Parrafo
-                    className="text-left mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
-                    textParse={t("hospi.info.text.2")}
-                />
+                <div className="text-gris text-left text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
+                    {parse(state.textsi18n[i18n.language].hospi_s2_title ?? "")}
+                </div>
+                <Titulo className="text-[30px] leading-[0] text-left md:text-center !mb-0">
+                    {state.textsi18n[i18n.language].hospi_s2_title1}
+                </Titulo>
+                <Titulo className="text-[30px] leading-[0.5] mb-[40px] lg:mb-[50px]">
+                    <span className="font-bold">
+                        {state.textsi18n[i18n.language].hospi_s2_title2}
+                    </span>
+                </Titulo>
+                <div className="text-parrafos pb-[10px] md:w-[90%] max-w-[1300px] mx-auto">
+                    {parse(state.textsi18n[i18n.language].hospi_s2_info ?? "")}
+                </div>
             </MainContainer>
 
             {/* Separador */}
@@ -163,9 +166,13 @@ export default function Hospitalary() {
                     "pt-[60px] pb-[30px] lg:pt-[100px] lg:pb-[90px] px-[30px]"
                 }
             >
-                <h3 className="tracking-[-0.96px] leading-[1.05] font-medium text-center text-[30px] mb-[40px] md:text-[32px]">
-                    <TextCustom textParse={t("hospi.proyectos.titulo")} />
-                </h3>
+                <div className="tracking-[-0.96px] leading-[1.05] font-medium text-[30px] mb-[40px] md:text-[32px]">
+                    <TextCustom
+                        textParse={
+                            state.textsi18n[i18n.language].hospi_s3_title ?? ""
+                        }
+                    />
+                </div>
 
                 <Tabs defaultTab={"tabcasaamate"}>
                     <div className="flex justify-center flex-wrap w-full max-w-[780px] mx-auto">

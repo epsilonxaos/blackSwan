@@ -94,7 +94,9 @@ class TextosSeeder extends Seeder
 			$web->translateOrNew($locale)->real_s3_title = $textos[$locale]->real_s3_title;
 			$web->translateOrNew($locale)->hospi_s1_title = $textos[$locale]->hospi_s1_title;
 			$web->translateOrNew($locale)->hospi_s1_subtitle = $textos[$locale]->hospi_s1_subtitle;
-			$web->translateOrNew($locale)->hospi_s1_info = $textos[$locale]->hospi_s1_info;
+			$web->translateOrNew($locale)->hospi_s2_title1 = $textos[$locale]->hospi_s2_title1;
+			$web->translateOrNew($locale)->hospi_s2_title2 = $textos[$locale]->hospi_s2_title2;
+			$web->translateOrNew($locale)->hospi_s2_info = $textos[$locale]->hospi_s2_info;
 			$web->translateOrNew($locale)->hospi_s3_title = $textos[$locale]->hospi_s3_title;
 		}
 

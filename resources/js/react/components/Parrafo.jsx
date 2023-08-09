@@ -21,7 +21,7 @@ export default function Parrafo({
                 transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.35s",
             }}
             className={twMerge(
-                "text-center text-lg text-black tracking-[-0.54px] leading-[1.2]",
+                "text-left text-lg text-black tracking-[-0.54px] leading-[1.2]",
                 className
             )}
         >

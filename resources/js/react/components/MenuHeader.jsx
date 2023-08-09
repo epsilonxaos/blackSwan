@@ -58,7 +58,7 @@ export default function MenuHeader() {
             >
                 <Parrafo
                     className="text-gris max-w-[300px] md:max-w-[680px] opacity-80 mx-auto"
-                    textParse={t(state.textsi18n[i18n.language].header_info)}
+                    textParse={state.textsi18n[i18n.language].header_info}
                 />
 
                 <motion.ul

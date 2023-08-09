@@ -21,3 +21,12 @@ svg.text-white {
         background-image: url("../img/web/banner-nosotros.jpg");
     }
 }
+
+@layer base {
+    .text-parrafos-mb p {
+        @apply text-left text-lg text-black tracking-[-0.54px] leading-[1.2] mb-[30px];
+    }
+    .text-parrafos p {
+        @apply text-left text-lg text-black tracking-[-0.54px] leading-[1.2] min-h-[30px];
+    }
+}

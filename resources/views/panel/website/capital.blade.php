@@ -32,6 +32,13 @@
                     <div class=" mb-6">
                         <h2 class="mb-2 font-semibold text-gray-900 text-base">Primera Sección</h2>
 
+                        <div class="">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                for="capital_video">URL video</label>
+                            <input id="capital_video" name="capital_video" value="{{ $data->capital_video }}"
+                                autocomplete="off"
+                                class="mb-4 disabled:opacity-50 disabled:pointer-events-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        </div>
                         <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
                             <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="tab-seccion1"
                                 data-tabs-toggle="#tab-content-secc1" role="tablist">

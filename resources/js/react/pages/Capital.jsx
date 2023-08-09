@@ -17,11 +17,14 @@ import TextCustom from "../components/TextCustom";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import FsLightbox from "fslightbox-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import AppContext from "../context/AppContext";
+import parse from "html-react-parser";
 
 export default function Capital() {
+    const { state } = useContext(AppContext);
     const { t, i18n } = useTranslation();
-    const [toggler, setToggler] = useState(false);
+    const [toggler, setToggler] = useState(false); //? Videos
     const proyectos = [
         {
             id: "tabFitorade",
@@ -75,31 +78,39 @@ export default function Capital() {
                         alt="Capital"
                         className="w-[160px] mx-auto mb-[70px] lg:mb-[90px]"
                     />
-                    <AnimatedTextWord
-                        text={t("capital.subtitulo")}
-                        className="text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] justify-center items-center"
+                    <TextCustom
+                        textParse={
+                            state.textsi18n[i18n.language].capital_s1_title ??
+                            ""
+                        }
+                        className="text-[32px] md:text-[40px] tracking-[-0.96px] font-medium text-center block w-full text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] justify-center items-center"
                     />
 
                     <FsLightbox
                         toggler={toggler}
-                        sources={[
-                            "https://www.youtube.com/watch?v=3nQNiWdeH2Q",
-                        ]}
+                        sources={[state.website.capital_video]}
                     />
                     <Boton
-                        // onClick={() => {
-                        //     console.log("click");
-                        //     setToggler(!toggler);
-                        // }}
-                        className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white"
+                        onClick={() => {
+                            console.log("click");
+                            setToggler(!toggler);
+                        }}
+                        className={`mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white ${
+                            state.website.capital_video
+                                ? ""
+                                : "opacity-0 pointer-events-none"
+                        }`}
                     >
                         <img src={play} alt="Play icon" className="mr-[4px]" />{" "}
                         {t("verVideo")}
                     </Boton>
 
-                    <Parrafo
-                        className="text-white text-[20px] mb-[40px]"
-                        textParse={t("conoceMasNosotros")}
+                    <TextCustom
+                        className="tracking-[-0.54px] leading-[1.2] text-white text-[20px] mb-[40px] block"
+                        textParse={
+                            state.textsi18n[i18n.language]
+                                .capital_s1_subtitle ?? ""
+                        }
                     />
 
                     <Link to="#info">
@@ -125,72 +136,88 @@ export default function Capital() {
                         alt="Capital"
                     />
                 </div>
-                <h3 className="text-gris text-left text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
-                    {t("capital.subtitulo")}
-                </h3>
+                <div className="text-gris text-left text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
+                    {parse(state.textsi18n[i18n.language].capital_s1_title)}
+                </div>
                 <Titulo className="text-[30px] leading-[0] text-left md:text-center !mb-0">
-                    {t("capital.info.title_1")}
+                    {state.textsi18n[i18n.language].capital_s2_title1}
                 </Titulo>
                 <Titulo className="text-[30px] leading-[0.5] mb-[40px] lg:mb-[50px]">
-                    <span className="font-bold">Black Swan Capital</span>
+                    <span className="font-bold">
+                        {state.textsi18n[i18n.language].capital_s2_title2}
+                    </span>
                 </Titulo>
-                <Parrafo
-                    className="text-left mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
-                    textParse={t("capital.info.text.0")}
-                />
-                <Parrafo
-                    className="text-left  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
-                    textParse={t("capital.info.text.1")}
-                />
-                <Parrafo
-                    className="text-left  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
-                    textParse={t("capital.info.text.2")}
-                />
-                <Parrafo
-                    className="text-left mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
-                    textParse={t("capital.info.text.3")}
-                />
+
+                <div className="text-parrafos pb-[10px] md:w-[90%] max-w-[1300px] mx-auto">
+                    {parse(state.textsi18n[i18n.language].capital_s2_info)}
+                </div>
 
                 <ul className="lg:flex lg:items-start lg:justify-around lg:max-w-[1200px] md:mb-[50px] mx-auto">
                     <li className="text-center mb-[40px] lg:mb-0">
-                        <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            <TextCustom>{t("capital.info.text.4")}</TextCustom>
+                        <h4 className="text-[32px] md:text-[40px] leading-[1.05] text-center">
+                            <TextCustom>
+                                {
+                                    state.textsi18n[i18n.language]
+                                        .capital_s2_n1title
+                                }
+                            </TextCustom>
                         </h4>
-                        <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
-                            {t("capital.info.text.5")}
+                        <Parrafo className="text-gris leading-[1.2] text-center lg:text-[20px] xl:text-[24px] mb-[10px]">
+                            {
+                                state.textsi18n[i18n.language]
+                                    .capital_s2_n1subtitle
+                            }
                         </Parrafo>
-                        <Parrafo className="leading-[1.2]">
-                            {t("capital.info.text.6")}
+                        <Parrafo className="leading-[1.2] text-center">
+                            {state.textsi18n[i18n.language].capital_s2_n1info}
                         </Parrafo>
                     </li>
                     <li className="text-center mb-[40px] lg:mb-0">
-                        <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            <TextCustom>{t("capital.info.text.7")}</TextCustom>
+                        <h4 className="text-[32px] md:text-[40px] leading-[1.05] text-center">
+                            <TextCustom>
+                                {
+                                    state.textsi18n[i18n.language]
+                                        .capital_s2_n2title
+                                }
+                            </TextCustom>
                         </h4>
-                        <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
-                            {t("capital.info.text.8")}
+                        <Parrafo className="text-gris leading-[1.2] text-center lg:text-[20px] xl:text-[24px] mb-[10px]">
+                            {
+                                state.textsi18n[i18n.language]
+                                    .capital_s2_n2subtitle
+                            }
                         </Parrafo>
-                        <Parrafo className="leading-[1.2]">
-                            {t("capital.info.text.9")}
+                        <Parrafo className="leading-[1.2] text-center">
+                            {state.textsi18n[i18n.language].capital_s2_n2info ??
+                                ""}
                         </Parrafo>
                     </li>
                     <li className="text-center mb-[40px] lg:mb-0">
-                        <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
-                            <TextCustom>{t("capital.info.text.10")}</TextCustom>
+                        <h4 className="text-[32px] md:text-[40px] leading-[1.05] text-center">
+                            <TextCustom>
+                                {
+                                    state.textsi18n[i18n.language]
+                                        .capital_s2_n3title
+                                }
+                            </TextCustom>
                         </h4>
-                        <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
-                            {t("capital.info.text.11")}
+                        <Parrafo className="text-gris leading-[1.2] text-center lg:text-[20px] xl:text-[24px] mb-[10px]">
+                            {
+                                state.textsi18n[i18n.language]
+                                    .capital_s2_n3subtitle
+                            }
                         </Parrafo>
-                        <Parrafo className="leading-[1.2]">
-                            {t("capital.info.text.12")}
+                        <Parrafo className="leading-[1.2] text-center">
+                            {state.textsi18n[i18n.language].capital_s2_n3info}
                         </Parrafo>
                     </li>
                 </ul>
 
-                <Parrafo
-                    className="text-left sm:text-center mb-[40px]"
-                    textParse={t("capital.info.text.13")}
-                />
+                <div className="text-parrafos pb-[10px] md:w-[90%] max-w-[1300px] mx-auto">
+                    {parse(
+                        state.textsi18n[i18n.language].capital_s2_info2 ?? ""
+                    )}
+                </div>
             </MainContainer>
 
             {/* Separador */}
@@ -204,9 +231,14 @@ export default function Capital() {
                     "pt-[60px] pb-[30px] lg:pt-[100px] lg:pb-[90px] px-[30px]"
                 }
             >
-                <h3 className="tracking-[-0.96px] leading-[1.05] font-medium text-center text-[30px] mb-[40px] md:text-[32px]">
-                    <TextCustom textParse={t("capital.proyectos.titulo")} />
-                </h3>
+                <div className="tracking-[-0.96px] leading-[1.05] font-medium text-[30px] mb-[40px] md:text-[32px]">
+                    <TextCustom
+                        textParse={
+                            state.textsi18n[i18n.language].capital_s3_title ??
+                            ""
+                        }
+                    />
+                </div>
 
                 <Tabs defaultTab={"tabFitorade"}>
                     <div className="flex justify-between w-full max-w-[480px] mx-auto">

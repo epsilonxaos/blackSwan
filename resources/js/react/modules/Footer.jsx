@@ -5,8 +5,11 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import cisne from "../../../img/web/cisne.svg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import AppContext from "../context/AppContext";
+import { useContext } from "react";
 
 export default function Footer() {
+    const { state } = useContext(AppContext);
     const { t, i18n } = useTranslation();
     return (
         <footer
@@ -24,39 +27,50 @@ export default function Footer() {
                                         Social
                                     </Parrafo>
                                     <ul>
-                                        <li>
-                                            <a
-                                                href="https://instagram.com/blackswancapitalmx?igshid=Y2I2MzMwZWM3ZA=="
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    Instagram
-                                                </Parrafo>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="https://www.facebook.com/BlackSwanCapitalMx?mibextid=LQQJ4d"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    Facebook
-                                                </Parrafo>
-                                            </a>
-                                        </li>
-                                        <li className="hidden">
-                                            <a
-                                                href="#"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    LinkedIn
-                                                </Parrafo>
-                                            </a>
-                                        </li>
+                                        {state.website.social_in && (
+                                            <li>
+                                                <a
+                                                    href={
+                                                        state.website.social_in
+                                                    }
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <Parrafo className="text-white text-left font-normal text-[16px]">
+                                                        Instagram
+                                                    </Parrafo>
+                                                </a>
+                                            </li>
+                                        )}
+                                        {state.website.social_fb && (
+                                            <li>
+                                                <a
+                                                    href={
+                                                        state.website.social_fb
+                                                    }
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <Parrafo className="text-white text-left font-normal text-[16px]">
+                                                        Facebook
+                                                    </Parrafo>
+                                                </a>
+                                            </li>
+                                        )}
+                                        {/* //TODO: No esta en la BD, agregar de ser necesario */}
+                                        {false && (
+                                            <li>
+                                                <a
+                                                    href="#"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <Parrafo className="text-white text-left font-normal text-[16px]">
+                                                        LinkedIn
+                                                    </Parrafo>
+                                                </a>
+                                            </li>
+                                        )}
                                     </ul>
                                 </div>
                             </div>
@@ -66,31 +80,49 @@ export default function Footer() {
                                         {t("contacto")}
                                     </Parrafo>
                                     <ul>
-                                        <li>
-                                            <a href="mailto:">
-                                                <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    {t("footer.correo")}
-                                                </Parrafo>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="tel:+529999480017">
-                                                <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    {t("footer.telefono")}
-                                                </Parrafo>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a
-                                                href="https://goo.gl/maps/ov3ZmX4NabZxTZ2s7"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    Google Maps
-                                                </Parrafo>
-                                            </a>
-                                        </li>
+                                        {state.website.correo && (
+                                            <li>
+                                                <a
+                                                    href={
+                                                        "mailto:" +
+                                                        state.website.correo
+                                                    }
+                                                >
+                                                    <Parrafo className="text-white text-left font-normal text-[16px]">
+                                                        {t("footer.correo")}
+                                                    </Parrafo>
+                                                </a>
+                                            </li>
+                                        )}
+                                        {state.website.telefono && (
+                                            <li>
+                                                <a
+                                                    href={
+                                                        "tel:+52" +
+                                                        state.website.telefono
+                                                    }
+                                                >
+                                                    <Parrafo className="text-white text-left font-normal text-[16px]">
+                                                        {t("footer.telefono")}
+                                                    </Parrafo>
+                                                </a>
+                                            </li>
+                                        )}
+                                        {state.website.location && (
+                                            <li>
+                                                <a
+                                                    href={
+                                                        state.website.location
+                                                    }
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <Parrafo className="text-white text-left font-normal text-[16px]">
+                                                        Google Maps
+                                                    </Parrafo>
+                                                </a>
+                                            </li>
+                                        )}
                                     </ul>
                                 </div>
                             </div>

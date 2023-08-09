@@ -29,8 +29,12 @@ import AnimatedTextWord from "../animations/AnimationTextWord";
 import TextCustom from "../components/TextCustom";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import parse from "html-react-parser";
+import AppContext from "../context/AppContext";
 
 export default function RealState() {
+    const { state } = useContext(AppContext);
     const { t, i18n } = useTranslation();
     const proyectos = [
         {
@@ -171,13 +175,11 @@ export default function RealState() {
                         alt="Real Estate"
                         className="w-[256px] xl:w-[400px] mx-auto mb-[70px] lg:mb-[90px]"
                     />
-                    <AnimatedTextWord
-                        text={t("real.subtitulo.part1")}
-                        className="text-white leading-[1.1] xl:text-[70px] !mb-0 justify-center items-center"
-                    />
-                    <AnimatedTextWord
-                        text={t("real.subtitulo.part2")}
-                        className="text-white leading-[1.1] mb-[55px] lg:mb-[80px] xl:text-[70px] justify-center items-center"
+                    <TextCustom
+                        textParse={
+                            state.textsi18n[i18n.language].real_s1_title ?? ""
+                        }
+                        className="text-[32px] md:text-[40px] tracking-[-0.96px] font-medium text-center block w-full text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] justify-center items-center"
                     />
 
                     {/* <Boton className="mb-[40px] lg:mb-[80px] text-[14px] mx-auto flex items-center justify-center p-[6px] pr-[10px] text-[#CCCCCD] hover:text-black bg-[#3A3A3A] hover:bg-white">
@@ -185,9 +187,12 @@ export default function RealState() {
                         {t("verVideo")}
                     </Boton> */}
 
-                    <Parrafo
-                        className="text-white text-[20px] mb-[40px]"
-                        textParse={t("conoceMasNosotros")}
+                    <TextCustom
+                        className="tracking-[-0.54px] leading-[1.2] text-white text-[20px] mb-[40px] block"
+                        textParse={
+                            state.textsi18n[i18n.language].real_s1_subtitle ??
+                            ""
+                        }
                     />
 
                     <Link to={"#info"}>
@@ -213,76 +218,78 @@ export default function RealState() {
                         alt="Real estate"
                     />
                 </div>
-                <h3 className="text-gris text-left  text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
-                    {t("real.subtitulo.part1")} <br />
-                    {t("real.subtitulo.part2")}
-                </h3>
-                <Titulo className="text-[26px] mb-[40px] lg:mb-[50px] text-left md:text-center">
-                    <span className="font-bold">Black Swan Real Estate</span>
+                <div className="text-gris text-left text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
+                    {parse(state.textsi18n[i18n.language].real_s1_title)}
+                </div>
+                <Titulo className="text-[30px] leading-[0] text-left md:text-center !mb-0">
+                    {state.textsi18n[i18n.language].real_s2_title1}
                 </Titulo>
-                <Parrafo
-                    className="text-left mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
-                    textParse={t("real.info.text.0")}
-                />
-                <Parrafo
-                    className="text-left  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
-                    textParse={t("real.info.text.1")}
-                />
-                <Parrafo
-                    className="text-left mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
-                    textParse={t("real.info.text.2")}
-                />
+                <Titulo className="text-[30px] leading-[0.5] mb-[40px] lg:mb-[50px]">
+                    <span className="font-bold">
+                        {state.textsi18n[i18n.language].real_s2_title2}
+                    </span>
+                </Titulo>
+                <div className="text-parrafos pb-[10px] md:w-[90%] max-w-[1300px] mx-auto">
+                    {parse(state.textsi18n[i18n.language].real_s2_info)}
+                </div>
 
                 <ul className="lg:flex lg:items-start lg:justify-around lg:max-w-[1200px] md:mb-[50px] mx-auto">
                     <li className="text-center mb-[40px] lg:mb-0">
-                        <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
+                        <h4 className="text-[32px] md:text-[40px] leading-[1.05] text-center">
                             <TextCustom>
-                                {t("real.info.text.3")} m
+                                {state.textsi18n[i18n.language].real_s2_n1title}{" "}
+                                m
                                 <sup className="text-[16px] relative top-[-12px] md:top-[-18px]">
                                     2
                                 </sup>
                             </TextCustom>
                         </h4>
-                        <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
-                            {t("real.info.text.4")}
+                        <Parrafo className="text-gris leading-[1.2] text-center lg:text-[20px] xl:text-[24px] mb-[10px]">
+                            {state.textsi18n[i18n.language].real_s2_n1subtitle}
+                        </Parrafo>
+                        <Parrafo className="leading-[1.2] text-center">
+                            {state.textsi18n[i18n.language].real_s2_n1info}
                         </Parrafo>
                     </li>
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
                             <TextCustom>
-                                {t("real.info.text.7")} m
+                                {state.textsi18n[i18n.language].real_s2_n2title}{" "}
+                                m
                                 <sup className="text-[16px] relative top-[-12px] md:top-[-18px]">
                                     2
                                 </sup>
                             </TextCustom>
                         </h4>
-                        <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
-                            {t("real.info.text.8")}
+                        <Parrafo className="text-gris leading-[1.2] text-center lg:text-[20px] xl:text-[24px] mb-[10px]">
+                            {state.textsi18n[i18n.language].real_s2_n2subtitle}
+                        </Parrafo>
+                        <Parrafo className="leading-[1.2] text-center">
+                            {state.textsi18n[i18n.language].real_s2_n2info}
                         </Parrafo>
                     </li>
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05]">
                             <TextCustom>
-                                {t("real.info.text.5")} m
+                                {state.textsi18n[i18n.language].real_s2_n3title}{" "}
+                                m
                                 <sup className="text-[16px] relative top-[-12px] md:top-[-18px]">
                                     2
                                 </sup>
                             </TextCustom>
                         </h4>
-                        <Parrafo className="text-gris leading-[1.2] lg:text-[20px] xl:text-[24px] mb-[10px]">
-                            {t("real.info.text.6")}
+                        <Parrafo className="text-gris leading-[1.2] text-center lg:text-[20px] xl:text-[24px] mb-[10px]">
+                            {state.textsi18n[i18n.language].real_s2_n3subtitle}
+                        </Parrafo>
+                        <Parrafo className="leading-[1.2] text-center">
+                            {state.textsi18n[i18n.language].real_s2_n3info}
                         </Parrafo>
                     </li>
                 </ul>
 
-                <Parrafo
-                    className="text-left  mb-[30px] lg:mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
-                    textParse={t("real.info.text.9")}
-                />
-                <Parrafo
-                    className="text-left mb-[40px] md:w-[90%] max-w-[1300px] mx-auto"
-                    textParse={t("real.info.text.10")}
-                />
+                <div className="text-parrafos pb-[10px] md:w-[90%] max-w-[1300px] mx-auto">
+                    {parse(state.textsi18n[i18n.language].real_s2_info2 ?? "")}
+                </div>
             </MainContainer>
 
             {/* Separador */}
@@ -296,9 +303,13 @@ export default function RealState() {
                     "pt-[60px] pb-[30px] lg:pt-[100px] lg:pb-[90px] px-[30px]"
                 }
             >
-                <h3 className="tracking-[-0.96px] leading-[1.05] font-medium text-center text-[30px] mb-[40px] md:text-[32px]">
-                    <TextCustom textParse={t("real.proyectos.titulo")} />
-                </h3>
+                <div className="tracking-[-0.96px] leading-[1.05] font-medium text-[30px] mb-[40px] md:text-[32px]">
+                    <TextCustom
+                        textParse={
+                            state.textsi18n[i18n.language].real_s3_title ?? ""
+                        }
+                    />
+                </div>
 
                 <Tabs defaultTab={"tabunicaliving"}>
                     <div className="flex justify-center flex-wrap w-full max-w-[780px] mx-auto">
@@ -387,7 +398,7 @@ export default function RealState() {
             {/* Proyectos entregados */}
             <MainContainer className={"py-[80px] lg:pb-[140px]"}>
                 <Parrafo
-                    className="text-[25px] mb-[80px]"
+                    className="text-[25px] mb-[80px] text-center"
                     textParse={t("real.proyectos.entregados")}
                 />
 

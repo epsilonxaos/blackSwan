@@ -1,14 +1,10 @@
 import MainContainer from "../components/MainContainer";
-import Parrafo from "../components/Parrafo";
-import Titulo from "../components/Titulo";
-// import { Tabs } from "flowbite-react";
 import Tabs from "../components/Tabs";
 import { LiaRegistered } from "react-icons/lia";
 import { BiRegistered } from "react-icons/bi";
 
-import frasePrincipal from "../../../img/web/frase-principal.svg";
-import frasePrincipalDesk from "../../../img/web/frase-principal-desk.svg";
 import cisnePrincipal from "../../../img/web/cisne-banner.svg";
+import parse from "html-react-parser";
 
 import bSngr from "../../../img/web/blackswan-ngr.svg";
 import capital from "../../../img/web/recursos-oscuros/capital.svg";
@@ -17,18 +13,16 @@ import real from "../../../img/web/recursos-oscuros/real.svg";
 import onlyReal from "../../../img/web/recursos-oscuros/onlyReal.svg";
 import hospitality from "../../../img/web/recursos-oscuros/hospitality.svg";
 import onlyHospitality from "../../../img/web/recursos-oscuros/onlyHospitality.svg";
-import IMGcapital from "../../../img/web/capital.png";
-import IMGreal from "../../../img/web/real.jpg";
-import IMGhospitality from "../../../img/web/hospitality.png";
 import Boton from "../components/Buttons";
-import { useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import AnimatedTextWord from "../animations/AnimationTextWord";
 import TextCustom from "../components/TextCustom";
 import { useTranslation } from "react-i18next";
+import AppContext from "../context/AppContext";
 
 export default function Home() {
-    const [defaultTab, setDefaultTab] = useState("tabCapital");
+    const { state } = useContext(AppContext);
     const { t, i18n } = useTranslation();
 
     return (
@@ -42,21 +36,35 @@ export default function Home() {
                                 <p className="mb-[30px] lg:mb-[45px] xl:mb-[90px] font-bold">
                                     (MX)
                                 </p>
-                                <div className="relative pl-[28px]">
-                                    <BiRegistered className="text-[20px] lg:text-[26px] inline absolute top-3 left-0" />
-                                    <AnimatedTextWord
-                                        className="font-medium text-[35px] md:text-[40px] lg:text-[55px] xl:text-[70px] 2xl:text-[90px] tracking-[-1.5px] leading-[1.3] !mb-0"
-                                        text={t("home.banner.0")}
-                                    />
+                                <div className="relative">
+                                    <div className="flex flex-wrap">
+                                        <BiRegistered className="text-[20px] lg:text-[26px] inline absolute top-3 left-0" />
+
+                                        <TextCustom
+                                            className="w-full font-medium text-[35px] md:text-[40px] lg:text-[55px] xl:text-[70px] 2xl:text-[90px] tracking-[-1.5px] leading-[1.3] pl-[28px] !mb-0"
+                                            textParse={
+                                                state.textsi18n[i18n.language]
+                                                    .home_s1_title1
+                                            }
+                                        />
+                                    </div>
                                 </div>
-                                <AnimatedTextWord
+                                {/* <AnimatedTextWord
                                     className="font-medium text-[35px] md:text-[40px] lg:text-[55px] xl:text-[70px] 2xl:text-[90px] tracking-[-1.5px] leading-[1.3] pl-[28px] !mb-0"
                                     text={t("home.banner.1")}
-                                />
-                                <AnimatedTextWord
-                                    className="font-medium text-[35px] md:text-[40px] lg:text-[55px] xl:text-[70px] 2xl:text-[90px] tracking-[-1.5px] leading-[1.3] mb-[25px] lg:mb-[45px]"
-                                    text={t("home.banner.2")}
-                                />
+                                /> */}
+                                {state.textsi18n[i18n.language]
+                                    .home_s1_title2 ? (
+                                    <TextCustom
+                                        className="leading-[1.3] text-center w-full font-medium text-[35px] md:text-[40px] lg:text-[55px] xl:text-[70px] 2xl:text-[90px] tracking-[-1.5px] mb-[25px] lg:mb-[45px]"
+                                        textParse={
+                                            state.textsi18n[i18n.language]
+                                                .home_s1_title2
+                                        }
+                                    />
+                                ) : (
+                                    <div className="mb-[25px] lg:mb-[45px]"></div>
+                                )}
                                 <div className="border-t-2 border-t-black w-[48px]"></div>
                             </div>
                         </div>
@@ -79,19 +87,8 @@ export default function Home() {
                     className="mx-auto mb-[60px] md:mb-[70px]"
                 />
                 <div className="flex justify-center mb-[30px] md:mb-[70px]">
-                    <div className="w-full md:w-5/6 max-w-[1250px]">
-                        <Parrafo
-                            className="text-left mb-[30px]"
-                            textParse={t("home.infoInicial.0")}
-                        />
-                        <Parrafo
-                            className="text-left mb-[30px]"
-                            textParse={t("home.infoInicial.1")}
-                        />
-                        <Parrafo
-                            className="text-left mb-[30px]"
-                            textParse={t("home.infoInicial.2")}
-                        />
+                    <div className="w-full md:w-5/6 max-w-[1250px] text-parrafos">
+                        {parse(state.textsi18n[i18n.language].home_s2_text1)}
                     </div>
                 </div>
 
@@ -121,9 +118,9 @@ export default function Home() {
 
             {/* Secciones */}
             <MainContainer className={"py-[65px] md:py-[100px] px-[30px]"}>
-                <AnimatedTextWord
-                    className="justify-center"
-                    text={t("home.conoce_mas")}
+                <TextCustom
+                    className="text-[32px] md:text-[40px] tracking-[-0.96px] leading-[1.05] font-medium text-center mb-[30px] flex flex-wrap w-full justify-center"
+                    textParse={state.textsi18n[i18n.language].home_s3_title}
                 />
 
                 <Tabs defaultTab="tabCapital">
@@ -131,21 +128,18 @@ export default function Home() {
                         <Tabs.Button
                             tabid="tabCapital"
                             className=" text-[13px] md:text-[16px]"
-                            handleDefaultTab={(data) => setDefaultTab(data)}
                         >
                             Capital
                         </Tabs.Button>
                         <Tabs.Button
                             tabid="tabRealState"
                             className=" text-[13px] md:text-[16px]"
-                            handleDefaultTab={(data) => setDefaultTab(data)}
                         >
                             Real Estate
                         </Tabs.Button>
                         <Tabs.Button
                             tabid="tabHospitality"
                             className=" text-[13px] md:text-[16px]"
-                            handleDefaultTab={(data) => setDefaultTab(data)}
                         >
                             Hospitality
                         </Tabs.Button>
@@ -167,14 +161,19 @@ export default function Home() {
                                     />
                                     <LiaRegistered className="text-[16px] relative -top-1" />
                                 </div>
-                                <h3 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                    <TextCustom>
-                                        {t("capital.subtitulo")}
-                                    </TextCustom>
-                                </h3>
-                                <Parrafo
-                                    className="text-left mb-[30px] md:mb-[80px]"
-                                    textParse={t("home.capital.text")}
+                                <TextCustom
+                                    className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px] block"
+                                    textParse={
+                                        state.textsi18n[i18n.language]
+                                            .capital_s1_title
+                                    }
+                                />
+                                <TextCustom
+                                    className="block text-parrafos text-left mb-[30px] md:mb-[80px]"
+                                    textParse={
+                                        state.textsi18n[i18n.language]
+                                            .home_s3_info1
+                                    }
                                 />
                                 <Link to="/capital">
                                     <Boton>{t("verMas")}</Boton>
@@ -182,7 +181,10 @@ export default function Home() {
                             </div>
                             <div className="lg:w-[calc(100%-540px)] 2xl:w-[calc(100%-680px)]">
                                 <img
-                                    src={IMGcapital}
+                                    src={
+                                        import.meta.env.VITE_APP_URL +
+                                        state.website.home_s3_bg1
+                                    }
                                     className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
 									xl:h-full w-full max-w-full"
                                     alt="Capital"
@@ -206,16 +208,20 @@ export default function Home() {
                                     />
                                     <LiaRegistered className="text-[16px] relative -top-1" />
                                 </div>
-                                <h3 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                    <TextCustom>
-                                        {t("real.subtitulo.part1")} <br />{" "}
-                                        {t("real.subtitulo.part2")}
-                                    </TextCustom>
-                                </h3>
+                                <TextCustom
+                                    className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px] block"
+                                    textParse={
+                                        state.textsi18n[i18n.language]
+                                            .real_s1_title
+                                    }
+                                />
 
-                                <Parrafo
-                                    className="text-left mb-[30px] md:mb-[80px]"
-                                    textParse={t("home.real.text")}
+                                <TextCustom
+                                    className="block text-parrafos text-left mb-[30px] md:mb-[80px]"
+                                    textParse={
+                                        state.textsi18n[i18n.language]
+                                            .home_s3_info2
+                                    }
                                 />
                                 <Link to={"/real-state"}>
                                     <Boton>{t("verMas")}</Boton>
@@ -223,7 +229,10 @@ export default function Home() {
                             </div>
                             <div className="lg:w-[calc(100%-540px)] 2xl:w-[calc(100%-680px)]">
                                 <img
-                                    src={IMGreal}
+                                    src={
+                                        import.meta.env.VITE_APP_URL +
+                                        state.website.home_s3_bg2
+                                    }
                                     className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
 									xl:h-full w-full max-w-full"
                                     alt="Real Station"
@@ -247,16 +256,20 @@ export default function Home() {
                                     />
                                     <LiaRegistered className="text-[16px] relative -top-1" />
                                 </div>
-                                <h3 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                    <TextCustom>
-                                        {t("hospi.subtitulo.part1")} <br />{" "}
-                                        {t("hospi.subtitulo.part2")}
-                                    </TextCustom>
-                                </h3>
+                                <TextCustom
+                                    className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px] block"
+                                    textParse={
+                                        state.textsi18n[i18n.language]
+                                            .hospi_s1_title
+                                    }
+                                />
 
-                                <Parrafo
-                                    className="text-left mb-[30px] md:mb-[80px]"
-                                    textParse={t("home.hospi.text")}
+                                <TextCustom
+                                    className="block text-parrafos text-left mb-[30px] md:mb-[80px]"
+                                    textParse={
+                                        state.textsi18n[i18n.language]
+                                            .home_s3_info3
+                                    }
                                 />
                                 <Link to={"hospitality"}>
                                     <Boton>{t("verMas")}</Boton>
@@ -264,7 +277,10 @@ export default function Home() {
                             </div>
                             <div className="lg:w-[calc(100%-540px)] 2xl:w-[calc(100%-680px)]">
                                 <img
-                                    src={IMGhospitality}
+                                    src={
+                                        import.meta.env.VITE_APP_URL +
+                                        state.website.home_s3_bg3
+                                    }
                                     className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
 									xl:h-full w-full max-w-full"
                                     alt="Real Station"

@@ -77,31 +77,31 @@ class WebsiteController extends Controller
 		$upd = Website::find($id);
 
 		if ($request->hasFile('home_s3_bg1')) {
-			Helpers::deleteFileStorage('proyectos', 'home_s3_bg1', $id);
+			Helpers::deleteFileStorage('websites', 'home_s3_bg1', $id);
 			$home_s3_bg1 = Helpers::addFileStorage($request->file('home_s3_bg1'), $this->directorio);
 			$upd->home_s3_bg1 = $home_s3_bg1;
 			$upd->save();
 		}
 		if ($request->hasFile('home_s3_bg2')) {
-			Helpers::deleteFileStorage('proyectos', 'home_s3_bg2', $id);
+			Helpers::deleteFileStorage('websites', 'home_s3_bg2', $id);
 			$home_s3_bg2 = Helpers::addFileStorage($request->file('home_s3_bg2'), $this->directorio);
 			$upd->home_s3_bg2 = $home_s3_bg2;
 			$upd->save();
 		}
 		if ($request->hasFile('home_s3_bg3')) {
-			Helpers::deleteFileStorage('proyectos', 'home_s3_bg3', $id);
+			Helpers::deleteFileStorage('websites', 'home_s3_bg3', $id);
 			$home_s3_bg3 = Helpers::addFileStorage($request->file('home_s3_bg3'), $this->directorio);
 			$upd->home_s3_bg3 = $home_s3_bg3;
 			$upd->save();
 		}
 		if ($request->hasFile('about_s2_bg')) {
-			Helpers::deleteFileStorage('proyectos', 'about_s2_bg', $id);
+			Helpers::deleteFileStorage('websites', 'about_s2_bg', $id);
 			$about_s2_bg = Helpers::addFileStorage($request->file('about_s2_bg'), $this->directorio);
 			$upd->about_s2_bg = $about_s2_bg;
 			$upd->save();
 		}
 		if ($request->hasFile('about_s3_bg')) {
-			Helpers::deleteFileStorage('proyectos', 'about_s3_bg', $id);
+			Helpers::deleteFileStorage('websites', 'about_s3_bg', $id);
 			$about_s3_bg = Helpers::addFileStorage($request->file('about_s3_bg'), $this->directorio);
 			$upd->about_s3_bg = $about_s3_bg;
 			$upd->save();
@@ -112,6 +112,9 @@ class WebsiteController extends Controller
 		if ($request->correo) $upd->correo = $request->correo;
 		if ($request->telefono) $upd->telefono = $request->telefono;
 		if ($request->location) $upd->location = $request->location;
+		if ($request->capital_video) $upd->capital_video = $request->capital_video;
+		if ($request->real_video) $upd->real_video = $request->real_video;
+		if ($request->hospi_video) $upd->hospi_video = $request->hospi_video;
 		$upd->save();
 
 		foreach ($this->locales as $locale) {
@@ -168,7 +171,10 @@ class WebsiteController extends Controller
 			if ($request->real_s3_title) $upd->translateOrNew($locale)->real_s3_title = $request->real_s3_title[$locale];
 			if ($request->hospi_s1_title) $upd->translateOrNew($locale)->hospi_s1_title = $request->hospi_s1_title[$locale];
 			if ($request->hospi_s1_subtitle) $upd->translateOrNew($locale)->hospi_s1_subtitle = $request->hospi_s1_subtitle[$locale];
-			if ($request->hospi_s1_info) $upd->translateOrNew($locale)->hospi_s1_info = $request->hospi_s1_info[$locale];
+			if ($request->hospi_s2_title1) $upd->translateOrNew($locale)->hospi_s2_title1 = $request->hospi_s2_title1[$locale];
+			if ($request->hospi_s2_title2) $upd->translateOrNew($locale)->hospi_s2_title2 = $request->hospi_s2_title2[$locale];
+			if ($request->hospi_s2_info) $upd->translateOrNew($locale)->hospi_s2_info = $request->hospi_s2_info[$locale];
+			if ($request->hospi_s2_info2) $upd->translateOrNew($locale)->hospi_s2_info2 = $request->hospi_s2_info2[$locale];
 			if ($request->hospi_s3_title) $upd->translateOrNew($locale)->hospi_s3_title = $request->hospi_s3_title[$locale];
 		}
 

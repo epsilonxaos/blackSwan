@@ -32,6 +32,12 @@
                     <div class=" mb-6">
                         <h2 class="mb-2 font-semibold text-gray-900 text-base">Primera Sección</h2>
 
+                        <div class="">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                for="hospi_video">URL video</label>
+                            <input id="hospi_video" name="hospi_video" value="{{ $data->hospi_video }}" autocomplete="off"
+                                class="mb-4 disabled:opacity-50 disabled:pointer-events-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        </div>
                         <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
                             <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="tab-seccion1"
                                 data-tabs-toggle="#tab-content-secc1" role="tablist">
@@ -117,7 +123,7 @@
                                     puede realizar desde el mismo editor de texto presionando el siguiente botón
                                     <img src="{{ asset('img/panel/clear-format.png') }}" alt="Clear format">
                                 </small>
-                                {{-- <div class="mb-3">
+                                <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                         for="hospi_s2_title1">Titulo 1</label>
                                     <input id="hospi_s2_title1" name="hospi_s2_title1[es]"
@@ -130,12 +136,11 @@
                                     <input id="hospi_s2_title2" name="hospi_s2_title2[es]"
                                         value="{{ $data->translate('es')->hospi_s2_title2 }}" autocomplete="off"
                                         class="mb-4 disabled:opacity-50 disabled:pointer-events-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                </div> --}}
-                                {{-- Todo: esto pertenece a la seccion 2 en realidad --}}
+                                </div>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="hospi_s1_info">Descripción</label>
-                                    <textarea name="hospi_s1_info[es]" class="trumbowyg-panel" cols="30" rows="10">{{ $data->{'hospi_s1_info:es'} }}</textarea>
+                                        for="hospi_s2_info">Descripción</label>
+                                    <textarea name="hospi_s2_info[es]" class="trumbowyg-panel" cols="30" rows="10">{{ $data->{'hospi_s2_info:es'} }}</textarea>
                                 </div>
 
 
@@ -229,7 +234,7 @@
                                     puede realizar desde el mismo editor de texto presionando el siguiente botón
                                     <img src="{{ asset('img/panel/clear-format.png') }}" alt="Clear format">
                                 </small>
-                                {{-- <div class="mb-3">
+                                <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                                         for="hospi_s2_title1">Titulo 1</label>
                                     <input id="hospi_s2_title1" name="hospi_s2_title1[en]"
@@ -242,12 +247,12 @@
                                     <input id="hospi_s2_title2" name="hospi_s2_title2[en]"
                                         value="{{ $data->translate('en')->hospi_s2_title2 }}" autocomplete="off"
                                         class="mb-4 disabled:opacity-50 disabled:pointer-events-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                </div> --}}
+                                </div>
                                 {{-- Todo: esto pertenece a la seccion 2 en realidad --}}
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="hospi_s1_info">Descripción</label>
-                                    <textarea name="hospi_s1_info[en]" class="trumbowyg-panel" cols="30" rows="10">{{ $data->{'hospi_s1_info:en'} }}</textarea>
+                                        for="hospi_s2_info">Descripción</label>
+                                    <textarea name="hospi_s2_info[en]" class="trumbowyg-panel" cols="30" rows="10">{{ $data->{'hospi_s2_info:en'} }}</textarea>
                                 </div>
 
                                 {{-- <div class="grid grid-cols-1 md:grid-cols-3 md:gap-x-2">

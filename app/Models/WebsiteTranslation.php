@@ -63,7 +63,10 @@ class WebsiteTranslation extends Model
 		'real_s3_title',
 		'hospi_s1_title',
 		'hospi_s1_subtitle',
-		'hospi_s1_info',
+		'hospi_s2_title1',
+		'hospi_s2_title2',
+		'hospi_s2_info',
+		'hospi_s2_info2',
 		'hospi_s3_title',
 	];
 }

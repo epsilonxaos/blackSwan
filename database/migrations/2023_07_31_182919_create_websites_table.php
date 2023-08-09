@@ -30,6 +30,13 @@ return new class extends Migration
 			// Nosotros - seccion 3
 			$table->string('about_s3_bg')->nullable();
 
+			//Capital - seccion 1
+			$table->string('capital_video')->nullable();
+			//Real estate - seccion 1
+			$table->string('real_video')->nullable();
+			//Hospitality - seccion 1
+			$table->string('hospi_video')->nullable();
+
 			$table->timestamps();
 		});
 
@@ -111,7 +118,10 @@ return new class extends Migration
 			$table->string('hospi_s1_title')->nullable();
 			$table->string('hospi_s1_subtitle')->nullable();
 			// Hopitality - seccion 2
-			$table->longText('hospi_s1_info')->nullable();
+			$table->longText('hospi_s2_title1')->nullable();
+			$table->longText('hospi_s2_title2')->nullable();
+			$table->longText('hospi_s2_info')->nullable();
+			$table->longText('hospi_s2_info2')->nullable();
 			// Hopitality - seccion 3
 			$table->string('hospi_s3_title')->nullable();
 

@@ -16,8 +16,8 @@ class TextosSeeder extends Seeder
 	public function run(): void
 	{
 		$locales = config('translatable.locale') ?? ['es', 'en'];
-		$textES = File::get("database/data/es.json");
-		$textEN = File::get("database/data/en.json");
+		$textES = File::get(public_path("data/es.json"));
+		$textEN = File::get(public_path("data/en.json"));
 
 		$textos = [
 			'es' => json_decode($textES),

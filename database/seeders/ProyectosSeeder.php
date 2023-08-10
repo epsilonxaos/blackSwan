@@ -16,7 +16,7 @@ class ProyectosSeeder extends Seeder
 	public function run(): void
 	{
 		$locales = config('translatable.locale') ?? ['es', 'en'];
-		$proyectos = json_decode(File::get("database/data/proyectos.json"));
+		$proyectos = json_decode(File::get(public_path("data/proyectos.json")));
 
 		DB::statement('SET FOREIGN_KEY_CHECKS = 0;');
 		DB::table('proyectos')->truncate();

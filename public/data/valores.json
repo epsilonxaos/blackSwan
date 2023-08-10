@@ -1,0 +1,82 @@
+[
+    {
+        "title": {
+            "es": "Humanismo consciente",
+            "en": "Conscious humanism"
+        },
+        "info": {
+            "es": "Atención y conciencia plena hacia los principios humanistas en todo lo que hacemos.",
+            "en": "Attention and full awareness towards humanist principles in everything we do."
+        }
+    },
+    {
+        "title": {
+            "es": "Lealtad inquebrantable",
+            "en": "Unwavering loyalty"
+        },
+        "info": {
+            "es": "Mantenemos nuestra adhesión hacia la empresa, así como nuestro compromiso con los clientes y entre nosotros, sin importar los obstáculos y desafíos hasta lograr nuestras metas.",
+            "en": "We maintain our adherence to the company, as well as our commitment to clients and to each other, regardless of the obstacles and challenges until we achieve our goals."
+        }
+    },
+    {
+        "title": {
+            "es": "Equidad en todos los sentidos",
+            "en": "Equity in every way"
+        },
+        "info": {
+            "es": "Trato digno, igualdad de oportunidades y justicia para todas las personas involucradas en la empresa, sin hacer distinciones de ningún aspecto.",
+            "en": "Dignified treatment, equal opportunities and justice for all the people involved in the company, without making distinctions of any sort."
+        }
+    },
+    {
+        "title": {
+            "es": "Espíritu de servicio",
+            "en": "Service spirit"
+        },
+        "info": {
+            "es": "Mantenemos una actitud y mentalidad centradas en la superación de las expectativas de nuestros clientes, compañeros de trabajo y demás partes interesadas.",
+            "en": "We maintain an attitude and mindset focused on exceeding the expectations of our customers, coworkers, and other stakeholders."
+        }
+    },
+    {
+        "title": {
+            "es": "Relaciones ganar-ganar",
+            "en": "Win-win relationships"
+        },
+        "info": {
+            "es": "Nos enfocamos en que todas las partes involucradas en las actividades de la empresa internas y externas, obtengan beneficios mutuos y satisfactorios para lograr relaciones productivas de largo plazo.",
+            "en": "We focus our attention on all parties involved in the company's internal and external activities obtaining mutual and satisfactory benefits to achieve long-term productive relationships."
+        }
+    },
+    {
+        "title": {
+            "es": "Sinergia colaborativa",
+            "en": "Collaborative synergy"
+        },
+        "info": {
+            "es": "Convertimos nuestras diferencias en fortalezas, integrando una enriquecedora combinación de habilidades y competencias para un alto rendimiento.",
+            "en": "We turn our differences into strengths, integrating an enriching combination of skills and competencies for high performance."
+        }
+    },
+    {
+        "title": {
+            "es": "La verdad nos hace libres",
+            "en": "The truth sets us free"
+        },
+        "info": {
+            "es": "La transparencia y veracidad en todo lo que decimos y hacemos, nos mantiene libres de la falsedad, la duda y la incertidumbre. Honramos nuestra palabra por convicción, nos complace ser confiables.",
+            "en": "Transparency and veracity in everything we say and do keeps us free from falsehood, doubt and uncertainty. We honor our word out of conviction, we are pleased to be reliable."
+        }
+    },
+    {
+        "title": {
+            "es": "Somos Cisne Negro",
+            "en": "We are black swan"
+        },
+        "info": {
+            "es": "Logramos cosas poco probables y de gran impacto; hacemos que suceda lo inesperado, somos antifrágiles.",
+            "en": "We achieve unlikely and high-impact things; we make the unexpected happen, we are antifragile."
+        }
+    }
+]

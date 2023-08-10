@@ -25,7 +25,7 @@ $(".trumbowyg-panel").trumbowyg({
     btns: [
         ["viewHTML"],
         ["formatting"],
-        ["strong", "em", "del"],
+        ["strong", "em", "del", "underline"],
         ["link"],
         ["base64"],
         ["justifyLeft", "justifyCenter", "justifyRight", "justifyFull"],

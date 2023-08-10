@@ -107,80 +107,97 @@ export default function Nosotros() {
                         textParse={t("nosotros.valores")}
                     />
 
+                    {/* <ul className="text-parrafos columns-2">
+                        {state.valores.length > 0 &&
+                            state.valores
+                                .slice(0, Math.ceil(state.valores.length))
+                                .map((item) => (
+                                    <li>
+                                        <TextCustom
+                                            className="font-bold block"
+                                            textParse={
+                                                item.translations.find(
+                                                    ({ locale }) =>
+                                                        locale == i18n.language
+                                                ).title
+                                            }
+                                        />
+                                        <TextCustom
+                                            className="mb-[30px] block"
+                                            textParse={
+                                                item.translations.find(
+                                                    ({ locale }) =>
+                                                        locale == i18n.language
+                                                ).info
+                                            }
+                                        />
+                                    </li>
+                                ))}
+                    </ul> */}
                     <div className="flex flex-col lg:flex-row" id="valores">
                         <div className="w-full lg:w-1/2 lg:pr-4 xl:pr-6">
-                            <Parrafo
-                                className="text-left mb-0 font-bold"
-                                textParse={t("valores.0")}
-                            />
-                            <Parrafo
-                                className="text-left mb-[30px]"
-                                textParse={t("valores.1")}
-                            />
-
-                            <Parrafo
-                                className="text-left mb-0 font-bold"
-                                textParse={t("valores.2")}
-                            />
-                            <Parrafo
-                                className="text-left mb-[30px]"
-                                textParse={t("valores.3")}
-                            />
-
-                            <Parrafo
-                                className="text-left mb-0 font-bold"
-                                textParse={t("valores.4")}
-                            />
-                            <Parrafo
-                                className="text-left mb-[30px]"
-                                textParse={t("valores.5")}
-                            />
-
-                            <Parrafo
-                                className="text-left mb-0 font-bold"
-                                textParse={t("valores.6")}
-                            />
-                            <Parrafo
-                                className="text-left mb-[30px]"
-                                textParse={t("valores.7")}
-                            />
+                            {state.valores.length > 0 &&
+                                state.valores
+                                    .slice(
+                                        0,
+                                        Math.ceil(state.valores.length / 2)
+                                    )
+                                    .map((item) => (
+                                        <>
+                                            <TextCustom
+                                                className="font-bold block"
+                                                textParse={
+                                                    item.translations.find(
+                                                        ({ locale }) =>
+                                                            locale ==
+                                                            i18n.language
+                                                    ).title
+                                                }
+                                            />
+                                            <TextCustom
+                                                className="mb-[30px] block"
+                                                textParse={
+                                                    item.translations.find(
+                                                        ({ locale }) =>
+                                                            locale ==
+                                                            i18n.language
+                                                    ).info
+                                                }
+                                            />
+                                        </>
+                                    ))}
                         </div>
                         <div className="w-full lg:w-1/2 lg:pl-4 xl:pl-6">
-                            <Parrafo
-                                className="text-left mb-0 font-bold"
-                                textParse={t("valores.8")}
-                            />
-                            <Parrafo
-                                className="text-left mb-[30px]"
-                                textParse={t("valores.9")}
-                            />
-
-                            <Parrafo
-                                className="text-left mb-0 font-bold"
-                                textParse={t("valores.10")}
-                            />
-                            <Parrafo
-                                className="text-left mb-[30px]"
-                                textParse={t("valores.11")}
-                            />
-
-                            <Parrafo
-                                className="text-left mb-0 font-bold"
-                                textParse={t("valores.12")}
-                            />
-                            <Parrafo
-                                className="text-left mb-[30px]"
-                                textParse={t("valores.13")}
-                            />
-
-                            <Parrafo
-                                className="text-left mb-0 font-bold"
-                                textParse={t("valores.14")}
-                            />
-                            <Parrafo
-                                className="text-left mb-[30px]"
-                                textParse={t("valores.15")}
-                            />
+                            {state.valores.length > 0 &&
+                                state.valores
+                                    .slice(
+                                        Math.ceil(state.valores.length / 2),
+                                        state.valores.length
+                                    )
+                                    .map((item) => (
+                                        <>
+                                            <TextCustom
+                                                className="font-bold block"
+                                                textParse={
+                                                    item.translations.find(
+                                                        ({ locale }) =>
+                                                            locale ==
+                                                            i18n.language
+                                                    ).title
+                                                }
+                                            />
+                                            <TextCustom
+                                                className="mb-[30px] block"
+                                                textParse={
+                                                    item.translations.find(
+                                                        ({ locale }) =>
+                                                            locale ==
+                                                            i18n.language
+                                                    ).info
+                                                }
+                                            />
+                                        </>
+                                    ))}
                         </div>
                     </div>
                 </div>

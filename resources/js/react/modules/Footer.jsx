@@ -218,14 +218,14 @@ export default function Footer() {
                 </div>
 
                 <div className="w-full lg:flex lg:items-center lg:justify-between lg:pt-[130px]">
-                    <Parrafo className="text-white text-[16px] font-normal">
+                    <Parrafo className="text-white text-[16px] font-normal text-center">
                         © BLACK SWAN, 2023
                     </Parrafo>
-                    <Parrafo className="text-white text-[16px] font-normal">
+                    <Parrafo className="text-white text-[16px] font-normal text-center">
                         {t("footer.desarrollo")} x{" "}
                         <span className="font-bold">MadebyPartners®</span>
                     </Parrafo>
-                    <Parrafo className="text-white text-[16px] font-normal">
+                    <Parrafo className="text-white text-[16px] font-normal text-center">
                         <Link to="/politicas">{t("footer.politicas")}</Link>
                     </Parrafo>
                 </div>

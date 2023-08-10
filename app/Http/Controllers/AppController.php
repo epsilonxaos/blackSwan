@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Proyecto;
+use App\Models\Valores;
 use Illuminate\Http\Request;
 use App\Models\Website;
 
@@ -15,6 +16,7 @@ class AppController extends Controller
 		$capital = Proyecto::where([['status', '=', 1], ['seccion', '=', 'capital']])->translated()->get();
 		$real = Proyecto::where([['status', '=', 1], ['seccion', '=', 'real']])->translated()->get();
 		$hospitality = Proyecto::where([['status', '=', 1], ['seccion', '=', 'hospitality']])->translated()->get();
+		$valores = Valores::translated()->get();
 
 		$datos = [
 			'website' => $website,
@@ -22,6 +24,7 @@ class AppController extends Controller
 			'capital' => $capital,
 			'real' => $real,
 			'hospitality' => $hospitality,
+			'valores' => $valores
 		];
 
 		return response($datos, 200);

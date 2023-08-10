@@ -24,6 +24,7 @@ export default function Web() {
         capital: null,
         real: null,
         hospitality: null,
+        valores: null,
     };
     const [state, dispatch] = useReducer(reducer, initialArgs);
 
@@ -38,13 +39,7 @@ export default function Web() {
                 capital: response.data.capital,
                 real: response.data.real,
                 hospitality: response.data.hospitality,
-            });
-            console.log({
-                website: response.data.website,
-                textsi18n: response.data.textsi18n,
-                capital: response.data.capital,
-                real: response.data.real,
-                hospitality: response.data.hospitality,
+                valores: response.data.valores,
             });
             setTimeout(() => {
                 dispatch({ loading: false });

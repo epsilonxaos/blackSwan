@@ -5,6 +5,7 @@ use App\Http\Controllers\ComandosController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProyectoController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\ValoresController;
 use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/artisan', [ComandosController::class, 'executeComands']);
 Route::view('/', 'app')->where('path', '.*');
 Route::view('/capital', 'app')->where('path', '.*');
 Route::view('/real-state', 'app')->where('path', '.*');
@@ -80,6 +82,17 @@ Route::middleware(['auth:admin', 'verified'])->prefix('/admin')->group(function 
 		Route::put('{seccion}/update/{id}', [ProyectoController::class, 'update'])->name('panel.proyectos.update');
 		Route::delete('/destroy/{id}', [ProyectoController::class, 'destroy'])->name('panel.proyectos.destroy');
 		Route::post('/change/status', [ProyectoController::class, 'changeStatus'])->name('panel.proyectos.changeStatus');
+	});
+
+	// Valores
+	Route::prefix('/valores')->group(function () {
+		Route::get('/', [ValoresController::class, 'index'])->name('panel.valores.index');
+		Route::get('/create', [ValoresController::class, 'create'])->name('panel.valores.create');
+		Route::post('/store', [ValoresController::class, 'store'])->name('panel.valores.store');
+		Route::get('/edit/{id}', [ValoresController::class, 'edit'])->name('panel.valores.edit');
+		Route::put('/update/{id}', [ValoresController::class, 'update'])->name('panel.valores.update');
+		Route::delete('/destroy/{id}', [ValoresController::class, 'destroy'])->name('panel.valores.destroy');
+		Route::post('/change/status', [ValoresController::class, 'changeStatus'])->name('panel.valores.changeStatus');
 	});
 
 	// Website

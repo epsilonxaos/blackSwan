@@ -13,6 +13,7 @@ import Politicas from "./pages/Politicas";
 import { useEffect, useReducer } from "react";
 import axios from "axios";
 import AppContext from "./context/AppContext";
+import { Toaster } from "sonner";
 
 export default function Web() {
     const location = useLocation();
@@ -57,6 +58,7 @@ export default function Web() {
 
     return (
         <div className="min-h-screen pt-[64px] sm:pt-[67px]">
+            <Toaster richColors={true} />
             <AppContext.Provider value={{ state, dispatch }}>
                 <Header />
                 <AnimatePresence mode="wait">

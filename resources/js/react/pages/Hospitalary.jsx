@@ -105,7 +105,7 @@ export default function Hospitalary() {
                     />
                 </div>
                 <div className="text-gris text-left text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
-                    {parse(state.textsi18n[i18n.language].hospi_s2_title ?? "")}
+                    {parse(state.textsi18n[i18n.language].hospi_s1_title ?? "")}
                 </div>
                 <Titulo className="text-[30px] leading-[0] text-left md:text-center !mb-0">
                     {state.textsi18n[i18n.language].hospi_s2_title1}

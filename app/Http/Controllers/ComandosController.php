@@ -11,20 +11,8 @@ class ComandosController extends Controller
 	{
 		// Artisan::call('key:generate');
 		Artisan::call('optimize:clear');
-		Artisan::call('migrate:refresh', [
-			'--force' => true
-		]);
-		Artisan::call('db:seed', [
-			'--force' => true
-		]);
-		// Artisan::call('db:seed', [
-		// 	'--class' => 'TextosSeeder',
-		// 	'--force' => true
-		// ]);
-		// Artisan::call('db:seed', [
-		// 	'--class' => 'ProyectosSeeder',
-		// 	'--force' => true
-		// ]);
+		Artisan::call('migrate');
+		Artisan::call('db:seed');
 
 		return 'Comandos ejecutados con exito';
 	}

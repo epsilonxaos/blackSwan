@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/inicial', [AppController::class, 'documentoInicial']);
+Route::post('/newsletter', [AppController::class, 'newsletterStore']);

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ComandosController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProyectoController;
 use App\Http\Controllers\RoleController;
@@ -93,6 +94,13 @@ Route::middleware(['auth:admin', 'verified'])->prefix('/admin')->group(function 
 		Route::put('/update/{id}', [ValoresController::class, 'update'])->name('panel.valores.update');
 		Route::delete('/destroy/{id}', [ValoresController::class, 'destroy'])->name('panel.valores.destroy');
 		Route::post('/change/status', [ValoresController::class, 'changeStatus'])->name('panel.valores.changeStatus');
+	});
+
+	// Newsletter
+	Route::prefix('/newsletter')->group(function () {
+		Route::get('/', [NewsletterController::class, 'index'])->name('panel.newsletter.index');
+		Route::delete('/destroy/all', [NewsletterController::class, 'destroyAll'])->name('panel.newsletter.destroyAll');
+		Route::delete('/destroy/{id}', [NewsletterController::class, 'destroy'])->name('panel.newsletter.destroy');
 	});
 
 	// Website

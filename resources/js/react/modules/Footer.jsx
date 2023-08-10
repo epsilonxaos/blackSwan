@@ -6,11 +6,28 @@ import cisne from "../../../img/web/cisne.svg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import AppContext from "../context/AppContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import axios from "axios";
+import { toast } from "sonner";
 
 export default function Footer() {
     const { state } = useContext(AppContext);
     const { t, i18n } = useTranslation();
+    const [correo, setCorreo] = useState("");
+
+    function sendNewsletter() {
+        axios
+            .post(import.meta.env.VITE_APP_URL + "api/newsletter", {
+                correo: correo,
+            })
+            .then(function (response) {
+                toast("Registro realizado con éxito");
+            })
+            .catch(function (error) {
+                toast("Ups! Intente más tarde");
+            });
+    }
+
     return (
         <footer
             className="bg-black py-[50px] lg:pb-[40px] lg:pt-[130px] text-white"
@@ -203,8 +220,12 @@ export default function Footer() {
                                 id="website-admin"
                                 className=" border border-r-0 bg-black outline-none focus:ring-transparent !border-white rounded-l-[14px] text-white block flex-1 min-w-0 w-full text-sm p-2.5 placeholder:text-white"
                                 placeholder="email@"
+                                onChange={(ev) => setCorreo(ev.target.value)}
                             />
-                            <span className="inline-flex items-center px-3 text-sm text-white bg-black rounded-none rounded-r-[14px] border border-l-0 border-gray-300 ">
+                            <span
+                                onClick={() => sendNewsletter()}
+                                className="inline-flex items-center px-3 text-sm text-white bg-black rounded-none rounded-r-[14px] border border-l-0 border-gray-300 cursor-pointer"
+                            >
                                 <AiOutlineArrowRight />
                             </span>
                         </div>

@@ -58,21 +58,12 @@ class ValoresController extends Controller
 
 		foreach ($this->locales as $locale) {
 			$p->translateOrNew($locale)->title = $request->title[$locale];
-			// $p->translateOrNew($locale)->subtitle = $request->subtitle[$locale];
 			$p->translateOrNew($locale)->info = $request->info[$locale];
 		}
 
 		$p->save();
 
 		return redirect()->back()->with('success', 'El registro se ha creado correctamente');
-	}
-
-	/**
-	 * Display the specified resource.
-	 */
-	public function show(Valores $valores)
-	{
-		//
 	}
 
 	/**
@@ -107,16 +98,9 @@ class ValoresController extends Controller
 	public function update(Int $id, Request $request)
 	{
 		$upd = Valores::find($id);
-		// if ($request->hasFile('cover')) {
-		// 	Helpers::deleteFileStorage('proyectos', 'cover', $id);
-		// 	$cover = Helpers::addFileStorage($request->file('cover'), $this->directorio);
-		// 	$upd->cover = $cover;
-		// 	$upd->save();
-		// }
 
 		foreach ($this->locales as $locale) {
 			$upd->translateOrNew($locale)->title = $request->title[$locale];
-			// $upd->translateOrNew($locale)->subtitle = $request->subtitle[$locale];
 			$upd->translateOrNew($locale)->info = $request->info[$locale];
 		}
 

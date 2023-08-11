@@ -11,15 +11,6 @@ import realText from "../../../img/web/real/realText.svg";
 import play from "../../../img/web/play.svg";
 import onlyReal from "../../../img/web/recursos-oscuros/onlyReal.svg";
 
-import IMGalmaresidencial from "../../../img/web/real/almaresidencial.png";
-import IMGarenales from "../../../img/web/real/arenales.jpg";
-import IMGsantamar from "../../../img/web/real/santamar.jpg";
-import IMGtotem from "../../../img/web/real/totem.png";
-import IMGunicaliving from "../../../img/web/real/unicaliving.jpg";
-import IMGxekenyxakah from "../../../img/web/real/xekenyxakah.png";
-import IMGxomak from "../../../img/web/real/xomak.jpg";
-import IMGyukan from "../../../img/web/real/yukan.jpg";
-
 import logo1 from "../../../img/web/logos/1.png";
 import logo2 from "../../../img/web/logos/2.png";
 import logo3 from "../../../img/web/logos/3.png";
@@ -33,6 +24,7 @@ import { useContext, useState } from "react";
 import parse from "html-react-parser";
 import AppContext from "../context/AppContext";
 import FsLightbox from "fslightbox-react";
+import TextCustom2 from "../components/TextCustom2";
 
 export default function RealState() {
     const { state } = useContext(AppContext);
@@ -58,12 +50,12 @@ export default function RealState() {
                         alt="Real Estate"
                         className="w-[256px] xl:w-[400px] mx-auto mb-[70px] lg:mb-[90px]"
                     />
-                    <TextCustom
-                        textParse={
-                            state.textsi18n[i18n.language].real_s1_title ?? ""
-                        }
-                        className="text-[32px] md:text-[40px] tracking-[-0.96px] font-medium text-center block w-full text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] justify-center items-center"
-                    />
+                    <TextCustom2 className="text-[32px] md:text-[40px] tracking-[-0.96px] font-medium text-center block w-full text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] justify-center items-center">
+                        {parse(
+                            state.textsi18n[i18n.language].real_s1_title ??
+                                false
+                        )}
+                    </TextCustom2>
 
                     <FsLightbox
                         toggler={toggler}
@@ -84,13 +76,15 @@ export default function RealState() {
                         {t("verVideo")}
                     </Boton>
 
-                    <TextCustom
-                        className="tracking-[-0.54px] leading-[1.2] text-white text-[20px] mb-[40px] block"
-                        textParse={
+                    <TextCustom2
+                        delay={3}
+                        className="tracking-[-0.54px] leading-[1.2] text-white text-[20px] mb-[40px]"
+                    >
+                        {parse(
                             state.textsi18n[i18n.language].real_s1_subtitle ??
-                            ""
-                        }
-                    />
+                                false
+                        )}
+                    </TextCustom2>
 
                     <Link to={"#info"}>
                         <HiArrowDown className="text-white text-[24px] mx-auto" />
@@ -105,19 +99,22 @@ export default function RealState() {
             >
                 <hr className="border-black mb-[20px] hidden md:block" />
                 <div className="flex items-center justify-between">
-                    <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                        REAL ESTATE{" "}
-                        <LiaRegistered className="text-[16px] relative top-[2px]" />
-                    </Titulo>
+                    <div className="text-left !mb-[5px] leading-[0.6] flex items-start">
+                        <AnimatedTextWord
+                            className="text-left !mb-[5px] leading-[0.6] max-w-max"
+                            text={"REAL ESTATE"}
+                        />
+                        <LiaRegistered className="text-[16px] relative -top-1" />
+                    </div>
                     <img
                         src={onlyReal}
                         className="w-[40px] md:w-[60px] relative -top-[6px]"
                         alt="Real estate"
                     />
                 </div>
-                <div className="text-gris text-left text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
+                <TextCustom2 className="text-gris text-left text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
                     {parse(state.textsi18n[i18n.language].real_s1_title)}
-                </div>
+                </TextCustom2>
                 <Titulo className="text-[30px] leading-[0] text-left md:text-center !mb-0">
                     {state.textsi18n[i18n.language].real_s2_title1}
                 </Titulo>
@@ -126,8 +123,11 @@ export default function RealState() {
                         {state.textsi18n[i18n.language].real_s2_title2}
                     </span>
                 </Titulo>
+
                 <div className="text-parrafos pb-[10px] md:w-[90%] max-w-[1300px] mx-auto">
-                    {parse(state.textsi18n[i18n.language].real_s2_info)}
+                    <TextCustom2
+                        textParse={state.textsi18n[i18n.language].real_s2_info}
+                    />
                 </div>
 
                 <ul className="lg:flex lg:items-start lg:justify-around lg:max-w-[1200px] md:mb-[50px] mx-auto">
@@ -185,7 +185,13 @@ export default function RealState() {
                 </ul>
 
                 <div className="text-parrafos pb-[10px] md:w-[90%] max-w-[1300px] mx-auto">
-                    {parse(state.textsi18n[i18n.language].real_s2_info2 ?? "")}
+                    <TextCustom2
+                        textParse={
+                            state.textsi18n[i18n.language].capital_s2_info2
+                                ? state.textsi18n[i18n.language].real_s2_info2
+                                : false
+                        }
+                    />
                 </div>
             </MainContainer>
 
@@ -253,28 +259,31 @@ export default function RealState() {
                                                 ).title
                                             }
                                         />
-                                        <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                            <TextCustom>
-                                                {
-                                                    item.translations.find(
-                                                        ({ locale }) =>
-                                                            locale ==
-                                                            i18n.language
-                                                    ).subtitle
-                                                }
-                                            </TextCustom>
-                                        </h3>
-                                        <div className="mb-[30px] md:mb-[80px] text-parrafos">
-                                            <TextCustom
-                                                className="block"
-                                                textParse={
+                                        <TextCustom2
+                                            delay={5}
+                                            className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]"
+                                        >
+                                            {parse(
+                                                item.translations.find(
+                                                    ({ locale }) =>
+                                                        locale == i18n.language
+                                                ).subtitle
+                                            )}
+                                        </TextCustom2>
+
+                                        <div className="mb-[30px] md:mb-[80px]">
+                                            <TextCustom2
+                                                delay={5}
+                                                className="text-parrafos text-left"
+                                            >
+                                                {parse(
                                                     item.translations.find(
                                                         ({ locale }) =>
                                                             locale ==
                                                             i18n.language
                                                     ).info
-                                                }
-                                            />
+                                                )}
+                                            </TextCustom2>
                                         </div>
 
                                         {item?.website && (

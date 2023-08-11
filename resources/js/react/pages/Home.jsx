@@ -20,6 +20,7 @@ import AnimatedTextWord from "../animations/AnimationTextWord";
 import TextCustom from "../components/TextCustom";
 import { useTranslation } from "react-i18next";
 import AppContext from "../context/AppContext";
+import TextCustom2 from "../components/TextCustom2";
 
 export default function Home() {
     const { state } = useContext(AppContext);
@@ -82,8 +83,13 @@ export default function Home() {
                     className="mx-auto mb-[60px] md:mb-[70px]"
                 />
                 <div className="flex justify-center mb-[30px] md:mb-[70px]">
-                    <div className="w-full md:w-5/6 max-w-[1250px] text-parrafos">
-                        {parse(state.textsi18n[i18n.language].home_s2_text1)}
+                    <div className="block w-full md:w-5/6 max-w-[1250px] ">
+                        <TextCustom2
+                            className="text-parrafos"
+                            textParse={
+                                state.textsi18n[i18n.language].home_s2_text1
+                            }
+                        />
                     </div>
                 </div>
 
@@ -151,25 +157,26 @@ export default function Home() {
 
                                 <div className="text-left !mb-[5px] leading-[0.6] flex items-start">
                                     <AnimatedTextWord
-                                        className="text-left !mb-[5px] leading-[0.6]"
+                                        className="text-left !mb-[5px] leading-[0.6] max-w-max"
                                         text={"CAPITAL"}
                                     />
                                     <LiaRegistered className="text-[16px] relative -top-1" />
                                 </div>
-                                <TextCustom
-                                    className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px] block"
-                                    textParse={
+                                <TextCustom2 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
+                                    {parse(
                                         state.textsi18n[i18n.language]
                                             .capital_s1_title
-                                    }
-                                />
-                                <TextCustom
-                                    className="block text-parrafos text-left mb-[30px] md:mb-[80px]"
-                                    textParse={
-                                        state.textsi18n[i18n.language]
-                                            .home_s3_info1
-                                    }
-                                />
+                                    )}
+                                </TextCustom2>
+
+                                <div className="mb-[30px] md:mb-[80px]">
+                                    <TextCustom2 className="text-parrafos text-left">
+                                        {parse(
+                                            state.textsi18n[i18n.language]
+                                                .home_s3_info1
+                                        )}
+                                    </TextCustom2>
+                                </div>
                                 <Link to="/capital">
                                     <Boton>{t("verMas")}</Boton>
                                 </Link>
@@ -198,26 +205,26 @@ export default function Home() {
 
                                 <div className="text-left !mb-[5px] leading-[0.6] flex items-start">
                                     <AnimatedTextWord
-                                        className="text-left !mb-[5px] leading-[0.6]"
+                                        className="text-left !mb-[5px] leading-[0.6] max-w-max"
                                         text={"REAL ESTATE"}
                                     />
                                     <LiaRegistered className="text-[16px] relative -top-1" />
                                 </div>
-                                <TextCustom
-                                    className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px] block"
-                                    textParse={
+                                <TextCustom2 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
+                                    {parse(
                                         state.textsi18n[i18n.language]
                                             .real_s1_title
-                                    }
-                                />
+                                    )}
+                                </TextCustom2>
 
-                                <TextCustom
-                                    className="block text-parrafos text-left mb-[30px] md:mb-[80px]"
-                                    textParse={
-                                        state.textsi18n[i18n.language]
-                                            .home_s3_info2
-                                    }
-                                />
+                                <div className="mb-[30px] md:mb-[80px]">
+                                    <TextCustom2 className="text-parrafos text-left">
+                                        {parse(
+                                            state.textsi18n[i18n.language]
+                                                .home_s3_info2
+                                        )}
+                                    </TextCustom2>
+                                </div>
                                 <Link to={"/real-state"}>
                                     <Boton>{t("verMas")}</Boton>
                                 </Link>
@@ -246,26 +253,26 @@ export default function Home() {
 
                                 <div className="text-left !mb-[5px] leading-[0.6] flex items-start">
                                     <AnimatedTextWord
-                                        className="text-left !mb-[5px] leading-[0.6]"
+                                        className="text-left !mb-[5px] leading-[0.6] max-w-max"
                                         text={"HOSPITALITY"}
                                     />
-                                    <LiaRegistered className="text-[16px] relative -top-1" />
+                                    <LiaRegistered className="text-[16px] relative inline -top-1" />
                                 </div>
-                                <TextCustom
-                                    className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px] block"
-                                    textParse={
+                                <TextCustom2 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
+                                    {parse(
                                         state.textsi18n[i18n.language]
                                             .hospi_s1_title
-                                    }
-                                />
+                                    )}
+                                </TextCustom2>
 
-                                <TextCustom
-                                    className="block text-parrafos text-left mb-[30px] md:mb-[80px]"
-                                    textParse={
-                                        state.textsi18n[i18n.language]
-                                            .home_s3_info3
-                                    }
-                                />
+                                <div className="mb-[30px] md:mb-[80px]">
+                                    <TextCustom2 className="text-parrafos text-left">
+                                        {parse(
+                                            state.textsi18n[i18n.language]
+                                                .home_s3_info3
+                                        )}
+                                    </TextCustom2>
+                                </div>
                                 <Link to={"hospitality"}>
                                     <Boton>{t("verMas")}</Boton>
                                 </Link>

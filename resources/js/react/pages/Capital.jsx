@@ -20,6 +20,7 @@ import FsLightbox from "fslightbox-react";
 import { useContext, useState } from "react";
 import AppContext from "../context/AppContext";
 import parse from "html-react-parser";
+import TextCustom2 from "../components/TextCustom2";
 
 export default function Capital() {
     const { state } = useContext(AppContext);
@@ -40,13 +41,12 @@ export default function Capital() {
                         alt="Capital"
                         className="w-[160px] mx-auto mb-[70px] lg:mb-[90px]"
                     />
-                    <TextCustom
-                        textParse={
+                    <TextCustom2 className="text-[32px] md:text-[40px] tracking-[-0.96px] font-medium text-center block w-full text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] justify-center items-center">
+                        {parse(
                             state.textsi18n[i18n.language].capital_s1_title ??
-                            ""
-                        }
-                        className="text-[32px] md:text-[40px] tracking-[-0.96px] font-medium text-center block w-full text-white leading-[1.3] mb-[65px] lg:mb-[100px] xl:text-[70px] xl:h-[140px] justify-center items-center"
-                    />
+                                false
+                        )}
+                    </TextCustom2>
 
                     <FsLightbox
                         toggler={toggler}
@@ -67,13 +67,15 @@ export default function Capital() {
                         {t("verVideo")}
                     </Boton>
 
-                    <TextCustom
-                        className="tracking-[-0.54px] leading-[1.2] text-white text-[20px] mb-[40px] block"
-                        textParse={
+                    <TextCustom2
+                        delay={3}
+                        className="tracking-[-0.54px] leading-[1.2] text-white text-[20px] mb-[40px]"
+                    >
+                        {parse(
                             state.textsi18n[i18n.language]
-                                .capital_s1_subtitle ?? ""
-                        }
-                    />
+                                .capital_s1_subtitle ?? false
+                        )}
+                    </TextCustom2>
 
                     <Link to="#info">
                         <HiArrowDown className="text-white text-[24px] mx-auto" />
@@ -88,19 +90,22 @@ export default function Capital() {
             >
                 <hr className="border-black mb-[20px] hidden md:block" />
                 <div className="flex items-center justify-between">
-                    <Titulo className="text-left !mb-[5px] leading-[0.6] flex items-start">
-                        CAPITAL{" "}
+                    <div className="text-left !mb-[5px] leading-[0.6] flex items-start">
+                        <AnimatedTextWord
+                            className="text-left !mb-[5px] leading-[0.6] max-w-max"
+                            text={"CAPITAL"}
+                        />
                         <LiaRegistered className="text-[16px] relative -top-1" />
-                    </Titulo>
+                    </div>
                     <img
                         src={onlyCapital}
                         className="w-[80px] relative -top-[6px]"
                         alt="Capital"
                     />
                 </div>
-                <div className="text-gris text-left text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
+                <TextCustom2 className="text-gris text-left text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[50px] md:mb-[80px] lg:mb-[150px] relative -top-1">
                     {parse(state.textsi18n[i18n.language].capital_s1_title)}
-                </div>
+                </TextCustom2>
                 <Titulo className="text-[30px] leading-[0] text-left md:text-center !mb-0">
                     {state.textsi18n[i18n.language].capital_s2_title1}
                 </Titulo>
@@ -111,18 +116,22 @@ export default function Capital() {
                 </Titulo>
 
                 <div className="text-parrafos pb-[10px] md:w-[90%] max-w-[1300px] mx-auto">
-                    {parse(state.textsi18n[i18n.language].capital_s2_info)}
+                    <TextCustom2
+                        textParse={
+                            state.textsi18n[i18n.language].capital_s2_info
+                        }
+                    />
                 </div>
 
                 <ul className="lg:flex lg:items-start lg:justify-around lg:max-w-[1200px] md:mb-[50px] mx-auto">
                     <li className="text-center mb-[40px] lg:mb-0">
                         <h4 className="text-[32px] md:text-[40px] leading-[1.05] text-center">
-                            <TextCustom>
+                            <TextCustom2>
                                 {
                                     state.textsi18n[i18n.language]
                                         .capital_s2_n1title
                                 }
-                            </TextCustom>
+                            </TextCustom2>
                         </h4>
                         <Parrafo className="text-gris leading-[1.2] text-center lg:text-[20px] xl:text-[24px] mb-[10px]">
                             {
@@ -176,9 +185,14 @@ export default function Capital() {
                 </ul>
 
                 <div className="text-parrafos pb-[10px] md:w-[90%] max-w-[1300px] mx-auto">
-                    {parse(
-                        state.textsi18n[i18n.language].capital_s2_info2 ?? ""
-                    )}
+                    <TextCustom2
+                        textParse={
+                            state.textsi18n[i18n.language].capital_s2_info2
+                                ? state.textsi18n[i18n.language]
+                                      .capital_s2_info2
+                                : false
+                        }
+                    />
                 </div>
             </MainContainer>
 
@@ -247,28 +261,32 @@ export default function Capital() {
                                                 ).title
                                             }
                                         />
-                                        <h3 className="text-gris text-[32px] xl:text-[40px] tracking-[-1.2px] leading-[1] mb-[20px]">
-                                            <TextCustom>
-                                                {
-                                                    item.translations.find(
-                                                        ({ locale }) =>
-                                                            locale ==
-                                                            i18n.language
-                                                    ).subtitle
-                                                }
-                                            </TextCustom>
-                                        </h3>
-                                        <div className="mb-[30px] md:mb-[80px] text-parrafos">
-                                            <TextCustom
-                                                className="block"
-                                                textParse={
+
+                                        <TextCustom2
+                                            delay={5}
+                                            className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]"
+                                        >
+                                            {parse(
+                                                item.translations.find(
+                                                    ({ locale }) =>
+                                                        locale == i18n.language
+                                                ).subtitle
+                                            )}
+                                        </TextCustom2>
+
+                                        <div className="mb-[30px] md:mb-[80px]">
+                                            <TextCustom2
+                                                delay={5}
+                                                className="text-parrafos text-left"
+                                            >
+                                                {parse(
                                                     item.translations.find(
                                                         ({ locale }) =>
                                                             locale ==
                                                             i18n.language
                                                     ).info
-                                                }
-                                            />
+                                                )}
+                                            </TextCustom2>
                                         </div>
 
                                         {item?.website && (

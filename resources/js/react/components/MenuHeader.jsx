@@ -118,7 +118,10 @@ export default function MenuHeader() {
                         </Link>
                     </motion.li>
                     <li className="px-1">/</li>
-                    <motion.li variants={itemB}>
+                    <motion.li
+                        variants={itemB}
+                        onClick={() => setActive(false)}
+                    >
                         <a href="#footer" className="opacity-60 uppercase">
                             {t("contacto")}
                         </a>

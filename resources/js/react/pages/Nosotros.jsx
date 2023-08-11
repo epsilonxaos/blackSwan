@@ -10,6 +10,7 @@ import { useContext } from "react";
 import AppContext from "../context/AppContext";
 import TextCustom from "../components/TextCustom";
 import { BiRegistered } from "react-icons/bi";
+import TextCustom2 from "../components/TextCustom2";
 
 export default function Nosotros() {
     const { state } = useContext(AppContext);
@@ -63,9 +64,11 @@ export default function Nosotros() {
                             {state.textsi18n[i18n.language].about_s2_title}
                         </Parrafo>
                         <div className="text-parrafos">
-                            {parse(
-                                state.textsi18n[i18n.language].about_s2_info
-                            )}
+                            <TextCustom2
+                                textParse={
+                                    state.textsi18n[i18n.language].about_s2_info
+                                }
+                            />
                         </div>
                     </div>
                     <div className="w-full lg:w-1/2 mb-[25px] px-[40px] md:px-0 lg:mb-0">
@@ -99,7 +102,11 @@ export default function Nosotros() {
                         }
                     />
                     <div className="text-parrafos pb-[75px]">
-                        {parse(state.textsi18n[i18n.language].about_s3_info)}
+                        <TextCustom2
+                            textParse={
+                                state.textsi18n[i18n.language].about_s3_info
+                            }
+                        />
                     </div>
 
                     <Parrafo
@@ -107,33 +114,6 @@ export default function Nosotros() {
                         textParse={t("nosotros.valores")}
                     />
 
-                    {/* <ul className="text-parrafos columns-2">
-                        {state.valores.length > 0 &&
-                            state.valores
-                                .slice(0, Math.ceil(state.valores.length))
-                                .map((item) => (
-                                    <li>
-                                        <TextCustom
-                                            className="font-bold block"
-                                            textParse={
-                                                item.translations.find(
-                                                    ({ locale }) =>
-                                                        locale == i18n.language
-                                                ).title
-                                            }
-                                        />
-                                        <TextCustom
-                                            className="mb-[30px] block"
-                                            textParse={
-                                                item.translations.find(
-                                                    ({ locale }) =>
-                                                        locale == i18n.language
-                                                ).info
-                                            }
-                                        />
-                                    </li>
-                                ))}
-                    </ul> */}
                     <div className="flex flex-col lg:flex-row" id="valores">
                         <div className="w-full lg:w-1/2 lg:pr-4 xl:pr-6">
                             {state.valores.length > 0 &&
@@ -144,8 +124,8 @@ export default function Nosotros() {
                                     )
                                     .map((item) => (
                                         <>
-                                            <TextCustom
-                                                className="font-bold block"
+                                            <Parrafo
+                                                className="font-bold"
                                                 textParse={
                                                     item.translations.find(
                                                         ({ locale }) =>
@@ -154,16 +134,18 @@ export default function Nosotros() {
                                                     ).title
                                                 }
                                             />
-                                            <TextCustom
-                                                className="mb-[30px] block"
-                                                textParse={
+                                            <TextCustom2
+                                                className="mb-[30px]"
+                                                delay={2}
+                                            >
+                                                {parse(
                                                     item.translations.find(
                                                         ({ locale }) =>
                                                             locale ==
                                                             i18n.language
                                                     ).info
-                                                }
-                                            />
+                                                )}
+                                            </TextCustom2>
                                         </>
                                     ))}
                         </div>
@@ -176,8 +158,8 @@ export default function Nosotros() {
                                     )
                                     .map((item) => (
                                         <>
-                                            <TextCustom
-                                                className="font-bold block"
+                                            <Parrafo
+                                                className="font-bold"
                                                 textParse={
                                                     item.translations.find(
                                                         ({ locale }) =>
@@ -186,16 +168,18 @@ export default function Nosotros() {
                                                     ).title
                                                 }
                                             />
-                                            <TextCustom
-                                                className="mb-[30px] block"
-                                                textParse={
+                                            <TextCustom2
+                                                className="mb-[30px]"
+                                                delay={2}
+                                            >
+                                                {parse(
                                                     item.translations.find(
                                                         ({ locale }) =>
                                                             locale ==
                                                             i18n.language
                                                     ).info
-                                                }
-                                            />
+                                                )}
+                                            </TextCustom2>
                                         </>
                                     ))}
                         </div>

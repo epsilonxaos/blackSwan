@@ -2,6 +2,7 @@
 
 namespace App\DataTables;
 
+use App\Helpers\Helpers;
 use App\Models\Proyecto;
 use App\Providers\PermissionKey;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
@@ -20,6 +21,9 @@ class ProyectoDataTable extends DataTable
 	 *
 	 * @param QueryBuilder $query Results from query() method.
 	 */
+
+
+
 	public function dataTable(QueryBuilder $query): EloquentDataTable
 	{
 		return (new EloquentDataTable($query))
@@ -44,8 +48,8 @@ class ProyectoDataTable extends DataTable
 
 				$acciones = '<div class="flex items-start justify-center mx-auto" style="min-width: 100px">';
 
-				// if (auth()->user()->hasAllPermissions([PermissionKey::Socios['permissions']['edit']['name'], PermissionKey::Socios['permissions']['update']['name']])) {
-				$acciones .= '
+				if (Helpers::validPermission($this->seccion, 'editAndUpdate')) {
+					$acciones .= '
 					<a  href="' . route("panel.proyectos.edit", ["seccion" => $this->seccion, "id" => $p->id]) . '" class="font-medium text-emerald-600 dark:text-emerald-500 mr-2" title="Editar">
 						<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 							<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -54,24 +58,24 @@ class ProyectoDataTable extends DataTable
 							<path d="M16 5l3 3"></path>
 						</svg>
 					</a>';
-				// } else {
-				// 	if (auth()->user()->hasPermissionTo(PermissionKey::Socios['permissions']['edit']['name'])) {
-				// $acciones .= '
-				// 		<a href="' . route("panel.proyectos.edit", ["seccion" => $this->seccion, "id" => $p->id]) . '" class="font-medium text-blue-600 dark:text-blue-500 mr-2" title="Ver detalle">
-				// 			<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-				// 				<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-				// 				<path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
-				// 				<path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
-				// 				<path d="M3 6l0 13"></path>
-				// 				<path d="M12 6l0 13"></path>
-				// 				<path d="M21 6l0 13"></path>
-				// 			</svg>
-				// 		</a>';
-				// 	}
-				// }
+				} else {
+					if (Helpers::validPermission($this->seccion, 'edit')) {
+						$acciones .= '
+						<a href="' . route("panel.proyectos.edit", ["seccion" => $this->seccion, "id" => $p->id]) . '" class="font-medium text-blue-600 dark:text-blue-500 mr-2" title="Ver detalle">
+							<svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+								<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+								<path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
+								<path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"></path>
+								<path d="M3 6l0 13"></path>
+								<path d="M12 6l0 13"></path>
+								<path d="M21 6l0 13"></path>
+							</svg>
+						</a>';
+					}
+				}
 
-				// if (auth()->user()->hasPermissionTo(PermissionKey::Socios['permissions']['destroy']['name'])) {
-				$acciones .= '
+				if (Helpers::validPermission($this->seccion, 'destroy')) {
+					$acciones .= '
 					<form action="' . route("panel.proyectos.destroy", ["id" => $p->id]) . '" method="post" class="inline delete-form-' . $p->id . '">
 						<input type="hidden" name="_token" value="' . csrf_token() . '" />
 						<input type="hidden" name="_method" value="DELETE">
@@ -86,7 +90,7 @@ class ProyectoDataTable extends DataTable
 							</svg>
 						</button>
 					</form>';
-				// }
+				}
 
 				$acciones .= '</div>';
 

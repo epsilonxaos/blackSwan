@@ -75,4 +75,119 @@ class PermissionKey extends ServiceProvider
 			],
 		]
 	];
+
+	const General = [
+		'name' => 'Módulo General (Ver/Editar)',
+		'permissions' => [
+			'inicio' => [
+				'display_name' => 'Inicio',
+				'name' => 'general.inicio'
+			],
+			'nosotros' => [
+				'display_name' => 'Nosotros',
+				'name' => 'general.nosotros'
+			],
+			'valores' => [
+				'display_name' => 'Valores',
+				'name' => 'general.valores'
+			],
+			'contacto' => [
+				'display_name' => 'Contacto',
+				'name' => 'general.contacto'
+			],
+			'newsletter' => [
+				'display_name' => 'Newsletter',
+				'name' => 'general.newsletter'
+			],
+		]
+	];
+
+	const Capital = [
+		'name' => 'Módulo Capital',
+		'permissions' => [
+			'texts' => [
+				'display_name' => 'Editar textos',
+				'name' => 'capital.texts'
+			],
+			'index' => [
+				'display_name' => 'Ver módulo',
+				'name' => 'capital.index'
+			],
+			'create' => [
+				'display_name' => 'Creación',
+				'name' => 'capital.create'
+			],
+			'edit' => [
+				'display_name' => 'Ver detalles',
+				'name' => 'capital.edit'
+			],
+			'update' => [
+				'display_name' => 'Modificar',
+				'name' => 'capital.update'
+			],
+			'destroy' => [
+				'display_name' => 'Eliminar',
+				'name' => 'capital.destroy'
+			],
+		]
+	];
+	const Real = [
+		'name' => 'Módulo Real Estate',
+		'permissions' => [
+			'texts' => [
+				'display_name' => 'Editar textos',
+				'name' => 'real.texts'
+			],
+			'index' => [
+				'display_name' => 'Ver módulo',
+				'name' => 'real.index'
+			],
+			'create' => [
+				'display_name' => 'Creación',
+				'name' => 'real.create'
+			],
+			'edit' => [
+				'display_name' => 'Ver detalles',
+				'name' => 'real.edit'
+			],
+			'update' => [
+				'display_name' => 'Modificar',
+				'name' => 'real.update'
+			],
+			'destroy' => [
+				'display_name' => 'Eliminar',
+				'name' => 'real.destroy'
+			],
+		]
+	];
+
+	const Hospitality = [
+		'name' => 'Módulo Hospitality',
+		'permissions' => [
+			'texts' => [
+				'display_name' => 'Editar textos',
+				'name' => 'hospi.texts'
+			],
+			'index' => [
+				'display_name' => 'Ver módulo',
+				'name' => 'hospi.index'
+			],
+			'create' => [
+				'display_name' => 'Creación',
+				'name' => 'hospi.create'
+			],
+			'edit' => [
+				'display_name' => 'Ver detalles',
+				'name' => 'hospi.edit'
+			],
+			'update' => [
+				'display_name' => 'Modificar',
+				'name' => 'hospi.update'
+			],
+			'destroy' => [
+				'display_name' => 'Eliminar',
+				'name' => 'hospi.destroy'
+			],
+		]
+	];
 }

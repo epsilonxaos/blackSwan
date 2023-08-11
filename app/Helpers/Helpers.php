@@ -2,6 +2,7 @@
 
 namespace App\Helpers;
 
+use App\Providers\PermissionKey;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Carbon;
@@ -84,5 +85,122 @@ class Helpers
 		$fecha = Carbon::parse($fecha);
 		$mes = $meses[($fecha->format('n')) - 1];
 		return $fecha->format('d') . '/' . $mes . '/' . $fecha->format('Y');
+	}
+
+	public static function validPermission($seccion, $accion)
+	{
+		if ($accion == 'editAndUpdate') {
+			if (
+				$seccion == 'capital' &&
+				auth()->user()->hasAllPermissions([
+					PermissionKey::Capital['permissions']['edit']['name'],
+					PermissionKey::Capital['permissions']['update']['name']
+				])
+			) {
+				return true;
+			}
+			if (
+				$seccion == 'real' &&
+				auth()->user()->hasAllPermissions([
+					PermissionKey::Real['permissions']['edit']['name'],
+					PermissionKey::Real['permissions']['update']['name']
+				])
+			) {
+				return true;
+			}
+			if (
+				$seccion == 'hospitality' &&
+				auth()->user()->hasAllPermissions([
+					PermissionKey::Hospitality['permissions']['edit']['name'],
+					PermissionKey::Hospitality['permissions']['update']['name']
+				])
+			) {
+				return true;
+			}
+		}
+
+		if ($accion == 'update') {
+			if (
+				$seccion == 'capital' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Capital['permissions']['update']['name'])
+			) {
+				return true;
+			}
+			if (
+				$seccion == 'real' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Real['permissions']['update']['name'])
+			) {
+				return true;
+			}
+			if (
+				$seccion == 'hospitality' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Hospitality['permissions']['update']['name'])
+			) {
+				return true;
+			}
+		}
+
+		if ($accion == 'edit') {
+			if (
+				$seccion == 'capital' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Capital['permissions']['edit']['name'])
+			) {
+				return true;
+			}
+			if (
+				$seccion == 'real' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Real['permissions']['edit']['name'])
+			) {
+				return true;
+			}
+			if (
+				$seccion == 'hospitality' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Hospitality['permissions']['edit']['name'])
+			) {
+				return true;
+			}
+		}
+
+		if ($accion == 'destroy') {
+			if (
+				$seccion == 'capital' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Capital['permissions']['destroy']['name'])
+			) {
+				return true;
+			}
+			if (
+				$seccion == 'real' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Real['permissions']['destroy']['name'])
+			) {
+				return true;
+			}
+			if (
+				$seccion == 'hospitality' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Hospitality['permissions']['destroy']['name'])
+			) {
+				return true;
+			}
+		}
+
+		if ($accion == 'create') {
+			if (
+				$seccion == 'capital' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Capital['permissions']['create']['name'])
+			) {
+				return true;
+			}
+			if (
+				$seccion == 'real' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Real['permissions']['create']['name'])
+			) {
+				return true;
+			}
+			if (
+				$seccion == 'hospitality' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Hospitality['permissions']['create']['name'])
+			) {
+				return true;
+			}
+		}
 	}
 }

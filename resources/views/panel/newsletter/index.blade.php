@@ -3,11 +3,13 @@
 @section('content')
     <div class="relative overflow-x-auto">
 
-        <p class="pb-2 text-xs">
-            Si desea eliminar todos los registros actuales para obtener nuevos, puede eliminar todos los datos, esta acción
-            es irrevertible, por lo que le pedimos tener cuidado al realizar esta operación ya que los datos se perderan
-            para siempre, antes de ejecutar le recomendamos realizar los respaldos pertinentes exportando los datos actuales
-            en excel.
+        <p class="pb-2 text-sm font-normal">
+            Si busca renovar los registros actuales con nuevos datos, tiene la opción de eliminar toda la información
+            presente. Sin embargo, es esencial tener en cuenta que esta acción es <span
+                class="font-bold text-red-800">irreversible y conlleva la pérdida permanente de los datos.</span> Por tanto,
+            le recomendamos proceder con precaución al llevar a cabo esta operación. Antes de ejecutarla, <span
+                class="font-bold text-green-700">es altamente aconsejable realizar respaldos</span> adecuados exportando los
+            datos actuales a un archivo Excel.
         </p>
         <div class="flex items-center justify-end pb-4 bg-white dark:bg-gray-900 mb-3">
             <form action="{{ route('panel.newsletter.destroyAll') }}" method="post" class="inline delete-form-all">

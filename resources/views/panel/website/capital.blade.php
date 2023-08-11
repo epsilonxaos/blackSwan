@@ -61,7 +61,7 @@
                                     Recomendamos siempre que al copiar y pegar información desde algún sitio o
                                     archivo eliminar el formato de los textos para un óptimo funcionamiento, esto se
                                     puede realizar desde el mismo editor de texto presionando el siguiente botón
-                                    <img src="{{ asset('img/panel/clear-format.png') }}" alt="Clear format">
+                                    <img src="{{ asset('img/panel/clear-format.png') }}" class="inline" alt="Clear format">
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -80,7 +80,7 @@
                                     Recomendamos siempre que al copiar y pegar información desde algún sitio o
                                     archivo eliminar el formato de los textos para un óptimo funcionamiento, esto se
                                     puede realizar desde el mismo editor de texto presionando el siguiente botón
-                                    <img src="{{ asset('img/panel/clear-format.png') }}" alt="Clear format">
+                                    <img src="{{ asset('img/panel/clear-format.png') }}" class="inline" alt="Clear format">
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -121,7 +121,8 @@
                                     Recomendamos siempre que al copiar y pegar información desde algún sitio o
                                     archivo eliminar el formato de los textos para un óptimo funcionamiento, esto se
                                     puede realizar desde el mismo editor de texto presionando el siguiente botón
-                                    <img src="{{ asset('img/panel/clear-format.png') }}" alt="Clear format">
+                                    <img src="{{ asset('img/panel/clear-format.png') }}" class="inline"
+                                        alt="Clear format">
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -238,7 +239,8 @@
                                     Recomendamos siempre que al copiar y pegar información desde algún sitio o
                                     archivo eliminar el formato de los textos para un óptimo funcionamiento, esto se
                                     puede realizar desde el mismo editor de texto presionando el siguiente botón
-                                    <img src="{{ asset('img/panel/clear-format.png') }}" alt="Clear format">
+                                    <img src="{{ asset('img/panel/clear-format.png') }}" class="inline"
+                                        alt="Clear format">
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"

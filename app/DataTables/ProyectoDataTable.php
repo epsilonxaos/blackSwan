@@ -32,12 +32,21 @@ class ProyectoDataTable extends DataTable
 
 				$ruta = route('panel.proyectos.changeStatus');
 
-				$status = '<div class="flex items-start justify-center mx-auto" style="min-width: 100px">';
-				$status .= '
-				<label class="relative inline-flex items-center mb-4 cursor-pointer">
-					<input type="checkbox" id="toggle_' . $p->id . '" value="' . $p->id . '" class="sr-only peer" ' . (($p->status == 1) ? 'checked="checked"' : '') . '>
-					<div id="divtoggle_' . $p->id . '" onclick="cambiar_status(\'divtoggle_' . $p->id . '\', ' . $p->id . ', ' . ($p->status == 1 ? 0 : 1) . ', \'' . $ruta . '\')" class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[\'\'] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
-				</label>';
+				$status = '<div class=" mx-auto" style="min-width: 100px">';
+				if (Helpers::validPermission($this->seccion, 'update')) {
+					$status .= '
+					<div class="wp">
+						<input class="tgl tgl-light chkbx-toggle" id="toggle_' . $p->id . '" value="' . $p->id . '" type="checkbox" ' . (($p->status == 1) ? 'checked="checked"' : '') . '/>
+						<label class="tgl-btn toggle_' . $p->id . '" for="toggle_' . $p->id . '" id="divtoggle_' . $p->id . '" onclick="cambiar_status(\'divtoggle_' . $p->id . '\', ' . $p->id . ', ' . ($p->status == 1 ? 0 : 1) . ', \'' . $ruta . '\')"></label>
+					</div>';
+				} else {
+
+					$status .= '
+					<div class="wp">
+						<input class="tgl tgl-light chkbx-toggle" type="checkbox" disabled/>
+						<label class="tgl-btn toggle_' . $p->id . '" for="toggle_' . $p->id . '"></label>
+					</div>';
+				}
 
 
 				$status .= '</div>';

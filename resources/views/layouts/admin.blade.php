@@ -16,7 +16,7 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/css/panel/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="{{ asset('plugins/dropify/css/dropify.css') }}">
-    {{-- <link rel="stylesheet" href="{{ asset('css/admin/app.css') }}"> --}}
+    <link rel="stylesheet" href="{{ asset('plugins/bootstrap-icons/font/bootstrap-icons.css') }}">
     <style>
         .dropify-render {
             margin: auto;

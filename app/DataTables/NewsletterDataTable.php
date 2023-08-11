@@ -83,7 +83,7 @@ class NewsletterDataTable extends DataTable
 			->orderBy(0)
 			->selectStyleSingle()
 			->buttons([
-				// Button::make('excel'),
+				Button::make('excel'),
 				// Button::make('csv'),
 				// Button::make('pdf'),
 				// Button::make('print'),

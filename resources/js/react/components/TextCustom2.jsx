@@ -16,27 +16,34 @@ export default function TextCustom2({
         else setParsedHtml("");
     }, [textParse]);
 
-    return (
-        <AnimatePresence>
-            {parsedHtml ? (
-                <>
-                    {parsedHtml.map((element, index) => (
-                        <IndivudualText
-                            key={"text-" + generateRandomId(5)}
-                            index={index}
-                            className={className}
-                        >
-                            {element}
-                        </IndivudualText>
-                    ))}
-                </>
-            ) : (
-                <IndivudualText index={delay} className={className}>
-                    {children}
-                </IndivudualText>
-            )}
-        </AnimatePresence>
-    );
+    try {
+        return (
+            <AnimatePresence>
+                {parsedHtml && parsedHtml.length ? (
+                    <>
+                        {parsedHtml.map((element, index) => (
+                            <IndivudualText
+                                key={"text-" + generateRandomId(5)}
+                                index={index}
+                                className={className}
+                            >
+                                {element}
+                            </IndivudualText>
+                        ))}
+                    </>
+                ) : (
+                    <IndivudualText index={delay} className={className}>
+                        {children}
+                    </IndivudualText>
+                )}
+            </AnimatePresence>
+        );
+    } catch (error) {
+        console.log(">>> Error generado por el texto");
+        console.log(textParse);
+        console.log(parsedHtml);
+        console.log(error);
+    }
 }
 
 function generateRandomId(size = 4) {

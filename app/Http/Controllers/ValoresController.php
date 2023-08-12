@@ -106,7 +106,7 @@ class ValoresController extends Controller
 
 		$upd->save();
 
-		return redirect()->back()->with('success', 'Registro actualizado correctamente!');
+		return redirect()->back()->with('success', 'El registro se ha actualizado correctamente');
 	}
 
 	/**
@@ -115,6 +115,6 @@ class ValoresController extends Controller
 	public function destroy(Int $id)
 	{
 		Valores::where('id', $id)->delete();
-		return redirect()->back()->with('success', 'Registro eliminado correctamente!');
+		return redirect()->back()->with('success', 'El registro se ha eliminado correctamente');
 	}
 }

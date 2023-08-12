@@ -30,7 +30,7 @@ class NewsletterController extends Controller
 	public function destroy(Int $id)
 	{
 		Newsletter::where('id', $id)->delete();
-		return redirect()->back()->with('success', 'Registro eliminado correctamente!');
+		return redirect()->back()->with('success', 'El registro se ha eliminado correctamente');
 	}
 
 	/**
@@ -39,6 +39,6 @@ class NewsletterController extends Controller
 	public function destroyAll()
 	{
 		Newsletter::truncate();
-		return redirect()->back()->with('success', 'Todos los datos se han eliminado correctamente!');
+		return redirect()->back()->with('success', 'Todos los datos se han eliminado correctamente');
 	}
 }

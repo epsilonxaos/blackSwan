@@ -63,7 +63,7 @@ export default function Nosotros() {
                         <Parrafo className="mb-[30px] font-bold text-[24px] xl:text-[28px] text-left">
                             {state.textsi18n[i18n.language].about_s2_title}
                         </Parrafo>
-                        <div className="text-parrafos">
+                        <div className="text-parrafos mx-auto max-w-[760px]">
                             <TextCustom2
                                 textParse={
                                     state.textsi18n[i18n.language].about_s2_info
@@ -86,29 +86,34 @@ export default function Nosotros() {
 
             {/* Equipo */}
             <MainContainer className={"!px-0"}>
-                <img
-                    src={
-                        import.meta.env.VITE_APP_URL + state.website.about_s3_bg
-                    }
-                    alt="Equipo Black Swan"
-                    className="aspect-video object-contain"
-                    id="quienesSomos"
-                />
-                <div className="pt-[50px] pb-[70px] px-[40px] sm:px-[30px] max-w-[1100px] mx-auto">
+                <div className="pt-[50px] pb-[70px] px-[40px] sm:px-[30px] max-w-[1320px] mx-auto">
                     <Parrafo
                         className="mb-[30px] lg:mb-[45px] text-[24px] lg:text-[28px] text-center"
                         textParse={
                             state.textsi18n[i18n.language].about_s3_title
                         }
                     />
-                    <div className="text-parrafos pb-[75px]">
+                    <div className="text-parrafos">
                         <TextCustom2
                             textParse={
                                 state.textsi18n[i18n.language].about_s3_info
                             }
                         />
                     </div>
+                </div>
+                <img
+                    src={
+                        import.meta.env.VITE_APP_URL + state.website.about_s3_bg
+                    }
+                    alt="Equipo Black Swan"
+                    className="aspect-video object-contain mb-[75px]"
+                    id="quienesSomos"
+                />
+            </MainContainer>
 
+            {/* Valores */}
+            <MainContainer className={"!px-0"}>
+                <div className="mx-auto max-w-[1320px] px-[40px] sm:px-[30px] ">
                     <Parrafo
                         className="mb-[30px] lg:mb-[45px] text-[24px] lg:text-[28px] text-center"
                         textParse={t("nosotros.valores")}

@@ -121,7 +121,7 @@ export default function Politicas() {
                         de CV, and includes{" "}
                         <span className="font-bold">AR Capital SA de CV</span>{" "}
                         companies worldwide (known as “Website or Mobile
-                        Application from
+                        Application from{" "}
                         <span className="font-bold">AR Capital SA de CV</span>
                         ”). It also applies to all personal information that{" "}
                         <span className="font-bold">

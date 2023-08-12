@@ -183,7 +183,7 @@ class AdminController extends Controller
 		$user->syncRoles([]);
 		$user->delete();
 
-		if ($id) return Redirect::route('panel.usuarios.index')->with('success', 'Eliminado');
+		if ($id) return Redirect::route('panel.usuarios.index')->with('success', 'El registro se ha eliminado correctamente');
 
 		Auth::guard('admin')->logout();
 		$request->session()->invalidate();

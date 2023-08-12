@@ -107,18 +107,19 @@ export default function Capital() {
                     {parse(state.textsi18n[i18n.language].capital_s1_title)}
                 </TextCustom2>
                 <Titulo className="text-[30px] leading-[0] text-left md:text-center !mb-0">
-                    {state.textsi18n[i18n.language].capital_s2_title1}
+                    {state.textsi18n[i18n.language].capital_s2_title1 ?? ""}
                 </Titulo>
                 <Titulo className="text-[30px] leading-[0.5] mb-[40px] lg:mb-[50px]">
                     <span className="font-bold">
-                        {state.textsi18n[i18n.language].capital_s2_title2}
+                        {state.textsi18n[i18n.language].capital_s2_title2 ?? ""}
                     </span>
                 </Titulo>
 
                 <div className="text-parrafos pb-[10px] md:w-[90%] max-w-[1300px] mx-auto">
                     <TextCustom2
                         textParse={
-                            state.textsi18n[i18n.language].capital_s2_info
+                            state.textsi18n[i18n.language].capital_s2_info ??
+                            false
                         }
                     />
                 </div>
@@ -270,7 +271,7 @@ export default function Capital() {
                                                 item.translations.find(
                                                     ({ locale }) =>
                                                         locale == i18n.language
-                                                ).subtitle
+                                                ).subtitle ?? ""
                                             )}
                                         </TextCustom2>
 
@@ -284,7 +285,7 @@ export default function Capital() {
                                                         ({ locale }) =>
                                                             locale ==
                                                             i18n.language
-                                                    ).info
+                                                    ).info ?? ""
                                                 )}
                                             </TextCustom2>
                                         </div>

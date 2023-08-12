@@ -43,7 +43,7 @@
                                 <li class="mr-2" role="presentation">
                                     <button class="inline-block p-4 border-b-2 rounded-t-lg" id="en-tab-secc1"
                                         data-tabs-target="#en-secc1" type="button" role="tab" aria-controls="en-secc1"
-                                        aria-selected="false">Ingles</button>
+                                        aria-selected="false">Inglés</button>
                                 </li>
                             </ul>
                         </div>
@@ -58,12 +58,12 @@
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="home_s1_title1">Titulo banner 1</label>
+                                        for="home_s1_title1">Título banner 1</label>
                                     <textarea name="home_s1_title1[es]" class="shorttext" cols="30" rows="3">{{ $data->{'home_s1_title1:es'} }}</textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="home_s1_title2">Titulo banner 2</label>
+                                        for="home_s1_title2">Título banner 2</label>
                                     <textarea name="home_s1_title2[es]" class="shorttext" cols="30" rows="3">{{ $data->{'home_s1_title2:es'} }}</textarea>
                                 </div>
                             </div>
@@ -77,12 +77,12 @@
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="home_s1_title1">Titulo banner 1</label>
+                                        for="home_s1_title1">Título banner 1</label>
                                     <textarea name="home_s1_title1[en]" class="shorttext" cols="30" rows="10">{{ $data->{'home_s1_title1:en'} }}</textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="home_s1_title2">Titulo banner 2</label>
+                                        for="home_s1_title2">Título banner 2</label>
                                     <textarea name="home_s1_title2[en]" class="shorttext" cols="30" rows="10">{{ $data->{'home_s1_title2:en'} }}</textarea>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@
                                 <li class="mr-2" role="presentation">
                                     <button class="inline-block p-4 border-b-2 rounded-t-lg" id="en-tab-secc2"
                                         data-tabs-target="#en-secc2" type="button" role="tab"
-                                        aria-controls="en-secc2" aria-selected="false">Ingles</button>
+                                        aria-controls="en-secc2" aria-selected="false">Inglés</button>
                                 </li>
                             </ul>
                         </div>
@@ -119,7 +119,7 @@
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="home_s2_text1">Titulo banner 1</label>
+                                        for="home_s2_text1">Título banner 1</label>
                                     <textarea name="home_s2_text1[es]" class="trumbowyg-panel" cols="30" rows="10">{{ $data->{'home_s2_text1:es'} }}</textarea>
                                 </div>
                             </div>
@@ -134,7 +134,7 @@
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="home_s2_text1">Titulo banner 1</label>
+                                        for="home_s2_text1">Título banner 1</label>
                                     <textarea name="home_s2_text1[en]" class="trumbowyg-panel" cols="30" rows="10">{{ $data->{'home_s2_text1:en'} }}</textarea>
                                 </div>
                             </div>
@@ -153,8 +153,8 @@
                                     <input type="file" name="home_s3_bg1" class="dropify" data-height="150"
                                         data-max-file-size="1M" data-allowed-file-extensions="jpg jpeg png"
                                         data-default-file="{{ asset($data->home_s3_bg1) }}" />
-                                    <small>Las medidas recomendadas son 670 x 396 px, solo se aceptan .jpg, .jpeg y .png
-                                        con un maximo de peso de 1MB.</small>
+                                    <small>Las medidas recomendadas son 950 x 650 px, solo se aceptan .jpg, .jpeg y .png
+                                        con un máximo de peso de 1MB.</small>
                                 </div>
                             </div>
                             <div class="col-span-1">
@@ -165,8 +165,8 @@
                                     <input type="file" name="home_s3_bg2" class="dropify" data-height="150"
                                         data-max-file-size="1M" data-allowed-file-extensions="jpg jpeg png"
                                         data-default-file="{{ asset($data->home_s3_bg2) }}" />
-                                    <small>Las medidas recomendadas son 670 x 396 px, solo se aceptan .jpg, .jpeg y .png
-                                        con un maximo de peso de 1MB.</small>
+                                    <small>Las medidas recomendadas son 950 x 650 px, solo se aceptan .jpg, .jpeg y .png
+                                        con un máximo de peso de 1MB.</small>
                                 </div>
                             </div>
                             <div class="col-span-1">
@@ -177,12 +177,14 @@
                                     <input type="file" name="home_s3_bg3" class="dropify" data-height="150"
                                         data-max-file-size="1M" data-allowed-file-extensions="jpg jpeg png"
                                         data-default-file="{{ asset($data->home_s3_bg3) }}" />
-                                    <small>Las medidas recomendadas son 670 x 396 px, solo se aceptan .jpg, .jpeg y .png
-                                        con un maximo de peso de 1MB.</small>
+                                    <small>Las medidas recomendadas son 950 x 650 px, solo se aceptan .jpg, .jpeg y .png
+                                        con un máximo de peso de 1MB.</small>
                                 </div>
                             </div>
 
                         </div>
+
+                        Is undergoing a process to develop its first investment fund: Black Swan Fund.
 
                         <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
                             <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="tab-seccion3"
@@ -195,7 +197,7 @@
                                 <li class="mr-2" role="presentation">
                                     <button class="inline-block p-4 border-b-2 rounded-t-lg" id="en-tab-secc3"
                                         data-tabs-target="#en-secc3" type="button" role="tab"
-                                        aria-controls="en-secc3" aria-selected="false">Ingles</button>
+                                        aria-controls="en-secc3" aria-selected="false">Inglés</button>
                                 </li>
                             </ul>
                         </div>
@@ -211,7 +213,7 @@
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="home_s3_title">Titulo</label>
+                                        for="home_s3_title">Título</label>
                                     <input id="home_s3_title" name="home_s3_title[es]"
                                         value="{{ $data->translate('es')->home_s3_title }}" autocomplete="off"
                                         class="mb-4 disabled:opacity-50 disabled:pointer-events-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -243,7 +245,7 @@
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="home_s3_title">Titulo</label>
+                                        for="home_s3_title">Título</label>
                                     <input id="home_s3_title" name="home_s3_title[en]"
                                         value="{{ $data->translate('en')->home_s3_title }}" autocomplete="off"
                                         class="mb-4 disabled:opacity-50 disabled:pointer-events-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">

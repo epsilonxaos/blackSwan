@@ -50,7 +50,7 @@
                                 <li class="mr-2" role="presentation">
                                     <button class="inline-block p-4 border-b-2 rounded-t-lg" id="en-tab-secc1"
                                         data-tabs-target="#en-secc1" type="button" role="tab" aria-controls="en-secc1"
-                                        aria-selected="false">Ingles</button>
+                                        aria-selected="false">Inglés</button>
                                 </li>
                             </ul>
                         </div>
@@ -65,12 +65,12 @@
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="capital_s1_title">Titulo</label>
+                                        for="capital_s1_title">Título</label>
                                     <textarea name="capital_s1_title[es]" class="shorttext" cols="30" rows="3">{{ $data->{'capital_s1_title:es'} }}</textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="capital_s1_subtitle">Subtitulo</label>
+                                        for="capital_s1_subtitle">Subtítulo</label>
                                     <textarea name="capital_s1_subtitle[es]" class="shorttext" cols="30" rows="3">{{ $data->{'capital_s1_subtitle:es'} }}</textarea>
                                 </div>
                             </div>
@@ -84,12 +84,12 @@
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="capital_s1_title">Titulo banner 1</label>
+                                        for="capital_s1_title">Título banner 1</label>
                                     <textarea name="capital_s1_title[en]" class="shorttext" cols="30" rows="10">{{ $data->{'capital_s1_title:en'} }}</textarea>
                                 </div>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="capital_s1_subtitle">Titulo banner 2</label>
+                                        for="capital_s1_subtitle">Título banner 2</label>
                                     <textarea name="capital_s1_subtitle[en]" class="shorttext" cols="30" rows="10">{{ $data->{'capital_s1_subtitle:en'} }}</textarea>
                                 </div>
                             </div>
@@ -110,7 +110,7 @@
                                 <li class="mr-2" role="presentation">
                                     <button class="inline-block p-4 border-b-2 rounded-t-lg" id="en-tab-secc2"
                                         data-tabs-target="#en-secc2" type="button" role="tab"
-                                        aria-controls="en-secc2" aria-selected="false">Ingles</button>
+                                        aria-controls="en-secc2" aria-selected="false">Inglés</button>
                                 </li>
                             </ul>
                         </div>
@@ -126,14 +126,14 @@
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="capital_s2_title1">Titulo 1</label>
+                                        for="capital_s2_title1">Título 1</label>
                                     <input id="capital_s2_title1" name="capital_s2_title1[es]"
                                         value="{{ $data->translate('es')->capital_s2_title1 }}" autocomplete="off"
                                         class="mb-4 disabled:opacity-50 disabled:pointer-events-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 </div>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="capital_s2_title2">Titulo 2</label>
+                                        for="capital_s2_title2">Título 2</label>
                                     <input id="capital_s2_title2" name="capital_s2_title2[es]"
                                         value="{{ $data->translate('es')->capital_s2_title2 }}" autocomplete="off"
                                         class="mb-4 disabled:opacity-50 disabled:pointer-events-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -149,7 +149,7 @@
                                     <div class="col-span-1">
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                                for="capital_s2_n1title">Titulo 1</label>
+                                                for="capital_s2_n1title">Título 1</label>
                                             <input id="capital_s2_n1title" name="capital_s2_n1title[es]"
                                                 value="{{ $data->translate('es')->capital_s2_n1title }}"
                                                 autocomplete="off"
@@ -157,7 +157,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                                for="capital_s2_n1subtitle">Subtitulo 1</label>
+                                                for="capital_s2_n1subtitle">Subtítulo 1</label>
                                             <input id="capital_s2_n1subtitle" name="capital_s2_n1subtitle[es]"
                                                 value="{{ $data->translate('es')->capital_s2_n1subtitle }}"
                                                 autocomplete="off"
@@ -175,7 +175,7 @@
                                     <div class="col-span-1">
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                                for="capital_s2_n2title">Titulo 2</label>
+                                                for="capital_s2_n2title">Título 2</label>
                                             <input id="capital_s2_n2title" name="capital_s2_n2title[es]"
                                                 value="{{ $data->translate('es')->capital_s2_n2title }}"
                                                 autocomplete="off"
@@ -183,7 +183,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                                for="capital_s2_n2subtitle">Subtitulo 2</label>
+                                                for="capital_s2_n2subtitle">Subtítulo 2</label>
                                             <input id="capital_s2_n2subtitle" name="capital_s2_n2subtitle[es]"
                                                 value="{{ $data->translate('es')->capital_s2_n2subtitle }}"
                                                 autocomplete="off"
@@ -201,7 +201,7 @@
                                     <div class="col-span-1">
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                                for="capital_s2_n3title">Titulo 3</label>
+                                                for="capital_s2_n3title">Título 3</label>
                                             <input id="capital_s2_n3title" name="capital_s2_n3title[es]"
                                                 value="{{ $data->translate('es')->capital_s2_n3title }}"
                                                 autocomplete="off"
@@ -209,7 +209,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                                for="capital_s2_n3subtitle">Subtitulo 3</label>
+                                                for="capital_s2_n3subtitle">Subtítulo 3</label>
                                             <input id="capital_s2_n3subtitle" name="capital_s2_n3subtitle[es]"
                                                 value="{{ $data->translate('es')->capital_s2_n3subtitle }}"
                                                 autocomplete="off"
@@ -244,14 +244,14 @@
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="capital_s2_title1">Titulo 1</label>
+                                        for="capital_s2_title1">Título 1</label>
                                     <input id="capital_s2_title1" name="capital_s2_title1[en]"
                                         value="{{ $data->translate('en')->capital_s2_title1 }}" autocomplete="off"
                                         class="mb-4 disabled:opacity-50 disabled:pointer-events-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 </div>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="capital_s2_title2">Titulo 2</label>
+                                        for="capital_s2_title2">Título 2</label>
                                     <input id="capital_s2_title2" name="capital_s2_title2[en]"
                                         value="{{ $data->translate('en')->capital_s2_title2 }}" autocomplete="off"
                                         class="mb-4 disabled:opacity-50 disabled:pointer-events-none bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
@@ -266,7 +266,7 @@
                                     <div class="col-span-1">
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                                for="capital_s2_n1title">Titulo 1</label>
+                                                for="capital_s2_n1title">Título 1</label>
                                             <input id="capital_s2_n1title" name="capital_s2_n1title[en]"
                                                 value="{{ $data->translate('en')->capital_s2_n1title }}"
                                                 autocomplete="off"
@@ -274,7 +274,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                                for="capital_s2_n1subtitle">Subtitulo 1</label>
+                                                for="capital_s2_n1subtitle">Subtítulo 1</label>
                                             <input id="capital_s2_n1subtitle" name="capital_s2_n1subtitle[en]"
                                                 value="{{ $data->translate('en')->capital_s2_n1subtitle }}"
                                                 autocomplete="off"
@@ -292,7 +292,7 @@
                                     <div class="col-span-1">
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                                for="capital_s2_n2title">Titulo 2</label>
+                                                for="capital_s2_n2title">Título 2</label>
                                             <input id="capital_s2_n2title" name="capital_s2_n2title[en]"
                                                 value="{{ $data->translate('en')->capital_s2_n2title }}"
                                                 autocomplete="off"
@@ -300,7 +300,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                                for="capital_s2_n2subtitle">Subtitulo 2</label>
+                                                for="capital_s2_n2subtitle">Subtítulo 2</label>
                                             <input id="capital_s2_n2subtitle" name="capital_s2_n2subtitle[en]"
                                                 value="{{ $data->translate('en')->capital_s2_n2subtitle }}"
                                                 autocomplete="off"
@@ -318,7 +318,7 @@
                                     <div class="col-span-1">
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                                for="capital_s2_n3title">Titulo 3</label>
+                                                for="capital_s2_n3title">Título 3</label>
                                             <input id="capital_s2_n3title" name="capital_s2_n3title[en]"
                                                 value="{{ $data->translate('en')->capital_s2_n3title }}"
                                                 autocomplete="off"
@@ -326,7 +326,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                                for="capital_s2_n3subtitle">Subtitulo 3</label>
+                                                for="capital_s2_n3subtitle">Subtítulo 3</label>
                                             <input id="capital_s2_n3subtitle" name="capital_s2_n3subtitle[en]"
                                                 value="{{ $data->translate('en')->capital_s2_n3subtitle }}"
                                                 autocomplete="off"
@@ -367,7 +367,7 @@
                                 <li class="mr-2" role="presentation">
                                     <button class="inline-block p-4 border-b-2 rounded-t-lg" id="en-tab-secc3"
                                         data-tabs-target="#en-secc3" type="button" role="tab"
-                                        aria-controls="en-secc3" aria-selected="false">Ingles</button>
+                                        aria-controls="en-secc3" aria-selected="false">Inglés</button>
                                 </li>
                             </ul>
                         </div>
@@ -384,7 +384,7 @@
 
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="capital_s3_title">Titulo</label>
+                                        for="capital_s3_title">Título</label>
                                     <textarea name="capital_s3_title[es]" class="shorttext" cols="30" rows="3">{{ $data->{'capital_s3_title:es'} }}</textarea>
                                 </div>
                             </div>
@@ -399,7 +399,7 @@
                                 </small>
                                 <div class="mb-3">
                                     <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                                        for="capital_s3_title">Titulo</label>
+                                        for="capital_s3_title">Título</label>
                                     <textarea name="capital_s3_title[en]" class="shorttext" cols="30" rows="10">{{ $data->{'capital_s3_title:en'} }}</textarea>
                                 </div>
                             </div>

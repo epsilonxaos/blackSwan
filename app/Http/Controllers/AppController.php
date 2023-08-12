@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\NewsletterRequest;
 use App\Models\Newsletter;
 use App\Models\Proyecto;
 use App\Models\Valores;
@@ -31,7 +32,7 @@ class AppController extends Controller
 		return response($datos, 200);
 	}
 
-	public function newsletterStore(Request $request)
+	public function newsletterStore(NewsletterRequest $request)
 	{
 		Newsletter::create([
 			'correo' => $request->correo

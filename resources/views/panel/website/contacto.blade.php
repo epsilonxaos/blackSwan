@@ -43,7 +43,7 @@
                                 <li class="mr-2" role="presentation">
                                     <button class="inline-block p-4 border-b-2 rounded-t-lg" id="en-tab-secc1"
                                         data-tabs-target="#en-secc1" type="button" role="tab" aria-controls="en-secc1"
-                                        aria-selected="false">Ingles</button>
+                                        aria-selected="false">Inglés</button>
                                 </li>
                             </ul>
                         </div>

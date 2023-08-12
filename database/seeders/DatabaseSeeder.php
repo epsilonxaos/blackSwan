@@ -16,6 +16,6 @@ class DatabaseSeeder extends Seeder
 		$this->call(AdminSeeder::class);
 		// $this->call(ProyectosSeeder::class);
 		// $this->call(TextosSeeder::class);
-		$this->call(ValoresSeeder::class);
+		// $this->call(ValoresSeeder::class);
 	}
 }

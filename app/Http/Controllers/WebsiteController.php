@@ -180,7 +180,7 @@ class WebsiteController extends Controller
 
 		$upd->save();
 
-		return redirect()->back()->with('success', 'Registro actualizado correctamente!');
+		return redirect()->back()->with('success', 'El registro se ha actualizado correctamente');
 	}
 
 	/**

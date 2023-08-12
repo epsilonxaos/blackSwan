@@ -47,8 +47,8 @@
                                     <input type="file" name="cover" class="dropify" data-height="300"
                                         data-max-file-size="1M" data-allowed-file-extensions="jpg jpeg png"
                                         data-default-file="{{ asset($data->cover) }}" />
-                                    <small>Las medidas recomendadas son 670 x 396 px, solo se aceptan .jpg, .jpeg y .png
-                                        con un maximo de peso de 1MB.</small>
+                                    <small>Las medidas recomendadas son 950 x 650 px, solo se aceptan .jpg, .jpeg y .png
+                                        con un máximo de peso de 1MB.</small>
                                 </div>
 
                                 <div class="mb-3">
@@ -73,7 +73,7 @@
                                         <li class="mr-2" role="presentation">
                                             <button class="inline-block p-4 border-b-2 rounded-t-lg" id="en-tab"
                                                 data-tabs-target="#en" type="button" role="tab" aria-controls="en"
-                                                aria-selected="false">Ingles</button>
+                                                aria-selected="false">Inglés</button>
                                         </li>
                                     </ul>
                                 </div>

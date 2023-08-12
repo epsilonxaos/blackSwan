@@ -9,24 +9,43 @@ import AppContext from "../context/AppContext";
 import { useContext, useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
+import { useForm } from "react-hook-form";
 
 export default function Footer() {
     const { state } = useContext(AppContext);
     const { t, i18n } = useTranslation();
     const [correo, setCorreo] = useState("");
+    const {
+        handleSubmit,
+        register,
+        formState: { errors },
+    } = useForm({
+        defaultValues: {
+            correo: "",
+        },
+    });
 
-    function sendNewsletter() {
+    const styleError = {
+        borderColor: "#EC008C #EC008C #EC008C rgb(236, 89, 144)",
+        borderStyle: "solid",
+        borderWidth: "1px 1px 1px 8px",
+        borderImage: "none 100% / 1 / 0 stretch",
+    };
+
+    const handleFormSubmit = async (data, ev) => {
+        ev.preventDefault();
+
         axios
-            .post(import.meta.env.VITE_APP_URL + "api/newsletter", {
-                correo: correo,
-            })
+            .post(import.meta.env.VITE_APP_URL + "api/newsletter", data)
             .then(function (response) {
-                toast("Registro realizado con éxito");
+                toast.success("Gracias por suscribirte");
+                ev.target.reset();
             })
             .catch(function (error) {
-                toast("Ups! Intente más tarde");
+                console.log(error);
+                toast.error(error.response.data.message);
             });
-    }
+    };
 
     return (
         <footer
@@ -214,21 +233,37 @@ export default function Footer() {
                         <Parrafo className="text-white text-left text-[16px] mb-[15px]">
                             {t("footer.compartir")}
                         </Parrafo>
-                        <div className="flex">
-                            <input
-                                type="text"
-                                id="website-admin"
-                                className=" border border-r-0 bg-black outline-none focus:ring-transparent !border-white rounded-l-[14px] text-white block flex-1 min-w-0 w-full text-sm p-2.5 placeholder:text-white"
-                                placeholder="email@"
-                                onChange={(ev) => setCorreo(ev.target.value)}
-                            />
-                            <span
-                                onClick={() => sendNewsletter()}
-                                className="inline-flex items-center px-3 text-sm text-white bg-black rounded-none rounded-r-[14px] border border-l-0 border-gray-300 cursor-pointer"
-                            >
-                                <AiOutlineArrowRight />
-                            </span>
-                        </div>
+                        <form onSubmit={handleSubmit(handleFormSubmit)}>
+                            <div className="flex">
+                                <input
+                                    type="email"
+                                    className=" border border-r-0 bg-black focus:border-white outline-none focus:ring-transparent border-white rounded-l-[14px] text-white block flex-1 min-w-0 w-full text-sm p-2.5 placeholder:text-white"
+                                    placeholder="email@"
+                                    {...register("correo", {
+                                        required: "Este campo es obligatorio",
+                                        pattern: {
+                                            value: /^\S+@\S+$/i,
+                                            message:
+                                                "Correo electrónico no valido",
+                                        },
+                                    })}
+                                    {...(errors.correo && {
+                                        style: styleError,
+                                    })}
+                                />
+                                <button
+                                    type="submit"
+                                    className="inline-flex items-center px-3 text-sm text-white bg-black rounded-none rounded-r-[14px] border border-l-0 border-gray-300 cursor-pointer"
+                                >
+                                    <AiOutlineArrowRight />
+                                </button>
+                            </div>
+                            {errors.correo && (
+                                <p className="text-xs text-pink-600 font-medium pt-1">
+                                    {errors.correo.message}
+                                </p>
+                            )}
+                        </form>
                     </div>
 
                     <img

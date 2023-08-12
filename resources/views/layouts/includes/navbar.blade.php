@@ -21,11 +21,11 @@
                 <div class="flex items-center ml-3">
                     <div>
                         <button type="button"
-                            class="flex text-sm bg-gray-200 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                            class="flex text-sm bg-gray-200 rounded-sm focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                             aria-expanded="false" data-dropdown-toggle="dropdown-user">
                             <span class="sr-only">Abrir menú de usuario</span>
-                            <img class="w-8 h-8 rounded-full" src="{{ Vite::asset('resources/img/panel/user.png') }}"
-                                alt="user">
+                            <img class="w-8 h-8 rounded border border-slate-300 shadow-sm overflow-hidden"
+                                src="{{ asset('img/favicon/favicon-32x32.png') }}" alt="user">
                         </button>
                     </div>
                     <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"

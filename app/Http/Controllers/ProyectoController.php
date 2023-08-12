@@ -146,7 +146,7 @@ class ProyectoController extends Controller
 
 		$upd->save();
 
-		return redirect()->back()->with('success', 'Registro actualizado correctamente!');
+		return redirect()->back()->with('success', 'El registro se ha actualizado correctamente');
 	}
 
 	/**
@@ -156,7 +156,7 @@ class ProyectoController extends Controller
 	{
 		Helpers::deleteFileStorage('proyectos', 'cover', $id);
 		Proyecto::where('id', $id)->delete();
-		return redirect()->back()->with('success', 'Registro eliminado correctamente!');
+		return redirect()->back()->with('success', 'El registro se ha eliminado correctamente');
 	}
 
 	/**

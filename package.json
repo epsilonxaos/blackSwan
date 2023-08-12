@@ -27,6 +27,7 @@
         "fslightbox-react": "^1.7.6",
         "html-react-parser": "^4.0.0",
         "i18next": "^23.2.11",
+        "react-hook-form": "^7.45.4",
         "react-i18next": "^13.0.2",
         "react-icons": "^4.10.1",
         "react-router-dom": "^6.14.1",

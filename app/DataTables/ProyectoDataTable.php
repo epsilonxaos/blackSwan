@@ -158,7 +158,7 @@ class ProyectoDataTable extends DataTable
 		return [
 			Column::make('id'),
 			Column::make('cover')->title('Portada'),
-			Column::make('title')->title('Titulo'),
+			Column::make('title')->title('Título'),
 			Column::computed('status')->title('Visualizar')
 				->exportable(false)
 				->printable(false)

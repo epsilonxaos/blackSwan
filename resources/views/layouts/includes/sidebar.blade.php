@@ -116,6 +116,23 @@
                         </a>
                     </li>
                 @endcan
+                @can(PermissionKey::Entregados['permissions']['index']['name'])
+                    <li>
+                        <a href="{{ route('panel.proyectos.index', ['seccion' => 'entregados']) }}"
+                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ request()->is('admin/proyectos/entregados*') ? 'bg-gray-100' : '' }}">
+                            <svg aria-hidden="true"
+                                class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                                width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M9 4h3l2 2h5a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2">
+                                </path>
+                                <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h2"></path>
+                            </svg>
+                            <span class="ml-3">P. Entregados</span>
+                        </a>
+                    </li>
+                @endcan
             </ul>
         @endcanany
 

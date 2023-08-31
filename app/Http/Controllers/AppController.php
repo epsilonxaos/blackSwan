@@ -18,6 +18,7 @@ class AppController extends Controller
 		$capital = Proyecto::where([['status', '=', 1], ['seccion', '=', 'capital']])->translated()->get();
 		$real = Proyecto::where([['status', '=', 1], ['seccion', '=', 'real']])->translated()->get();
 		$hospitality = Proyecto::where([['status', '=', 1], ['seccion', '=', 'hospitality']])->translated()->get();
+		$entregados = Proyecto::where([['status', '=', 1], ['seccion', '=', 'entregados']])->translated()->get();
 		$valores = Valores::translated()->get();
 
 		$datos = [
@@ -26,6 +27,7 @@ class AppController extends Controller
 			'capital' => $capital,
 			'real' => $real,
 			'hospitality' => $hospitality,
+			'entregados' => $entregados,
 			'valores' => $valores
 		];
 

@@ -86,7 +86,7 @@ export default function Nosotros() {
 
             {/* Equipo */}
             <MainContainer className={"!px-0"}>
-                <div className="pt-[50px] pb-[70px] px-[40px] sm:px-[30px] max-w-[1320px] mx-auto">
+                <div className="pt-[50px] pb-[40px] lg:pb-[70px] px-[40px] sm:px-[30px] max-w-[1320px] mx-auto">
                     <Parrafo
                         className="mb-[30px] lg:mb-[45px] text-[24px] lg:text-[28px] text-center"
                         textParse={
@@ -106,14 +106,14 @@ export default function Nosotros() {
                         import.meta.env.VITE_APP_URL + state.website.about_s3_bg
                     }
                     alt="Equipo Black Swan"
-                    className="aspect-video object-contain mb-[75px]"
+                    className="aspect-video object-contain mb-[40px] lg:mb-[75px]"
                     id="quienesSomos"
                 />
             </MainContainer>
 
             {/* Valores */}
             <MainContainer className={"!px-0"}>
-                <div className="mx-auto max-w-[1320px] px-[40px] sm:px-[30px] ">
+                <div className="mx-auto max-w-[1320px] px-[40px] sm:px-[30px] lg:pb-[70px]">
                     <Parrafo
                         className="mb-[30px] lg:mb-[45px] text-[24px] lg:text-[28px] text-center"
                         textParse={t("nosotros.valores")}

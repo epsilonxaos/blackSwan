@@ -22,7 +22,7 @@ class ProyectoController extends Controller
 
 
 		return $dataTable->with('seccion', $seccion)->render('panel.proyectos.index', [
-			"title" => "Capital",
+			"title" => ucfirst($seccion),
 			"breadcrumb" => [
 				[
 					'title' => ucfirst($seccion),

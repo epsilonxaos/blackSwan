@@ -190,4 +190,34 @@ class PermissionKey extends ServiceProvider
 			],
 		]
 	];
+
+	const Entregados = [
+		'name' => 'Módulo P. Entregados',
+		'permissions' => [
+			'texts' => [
+				'display_name' => 'Editar textos',
+				'name' => 'entregados.texts'
+			],
+			'index' => [
+				'display_name' => 'Ver módulo',
+				'name' => 'entregados.index'
+			],
+			'create' => [
+				'display_name' => 'Creación',
+				'name' => 'entregados.create'
+			],
+			'edit' => [
+				'display_name' => 'Ver detalles',
+				'name' => 'entregados.edit'
+			],
+			'update' => [
+				'display_name' => 'Modificar',
+				'name' => 'entregados.update'
+			],
+			'destroy' => [
+				'display_name' => 'Eliminar',
+				'name' => 'entregados.destroy'
+			],
+		]
+	];
 }

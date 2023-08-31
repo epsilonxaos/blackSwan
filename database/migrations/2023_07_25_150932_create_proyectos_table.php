@@ -28,7 +28,7 @@ return new class extends Migration
 
 			$table->string('title');
 			$table->string('subtitle');
-			$table->mediumText('info');
+			$table->mediumText('info')->nullable();
 
 			$table->unique(['proyecto_id', 'locale']);
 			$table->foreign('proyecto_id')->references('id')->on('proyectos')->onDelete('cascade');

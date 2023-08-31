@@ -117,6 +117,15 @@ class Helpers
 			) {
 				return true;
 			}
+			if (
+				$seccion == 'entregados' &&
+				auth()->user()->hasAllPermissions([
+					PermissionKey::Entregados['permissions']['edit']['name'],
+					PermissionKey::Entregados['permissions']['update']['name']
+				])
+			) {
+				return true;
+			}
 		}
 
 		if ($accion == 'update') {
@@ -135,6 +144,12 @@ class Helpers
 			if (
 				$seccion == 'hospitality' &&
 				auth()->user()->hasPermissionTo(PermissionKey::Hospitality['permissions']['update']['name'])
+			) {
+				return true;
+			}
+			if (
+				$seccion == 'entregados' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Entregados['permissions']['update']['name'])
 			) {
 				return true;
 			}
@@ -159,6 +174,12 @@ class Helpers
 			) {
 				return true;
 			}
+			if (
+				$seccion == 'entregados' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Entregados['permissions']['edit']['name'])
+			) {
+				return true;
+			}
 		}
 
 		if ($accion == 'destroy') {
@@ -180,6 +201,12 @@ class Helpers
 			) {
 				return true;
 			}
+			if (
+				$seccion == 'entregados' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Entregados['permissions']['destroy']['name'])
+			) {
+				return true;
+			}
 		}
 
 		if ($accion == 'create') {
@@ -198,6 +225,12 @@ class Helpers
 			if (
 				$seccion == 'hospitality' &&
 				auth()->user()->hasPermissionTo(PermissionKey::Hospitality['permissions']['create']['name'])
+			) {
+				return true;
+			}
+			if (
+				$seccion == 'entregados' &&
+				auth()->user()->hasPermissionTo(PermissionKey::Entregados['permissions']['create']['name'])
 			) {
 				return true;
 			}

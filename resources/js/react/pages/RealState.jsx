@@ -101,7 +101,7 @@ export default function RealState() {
                 <div className="flex items-center justify-between">
                     <div className="text-left !mb-[5px] leading-[0.6] flex items-start">
                         <AnimatedTextWord
-                            className="text-left !mb-[5px] leading-[0.6] max-w-max"
+                            className="!mb-0 max-w-max"
                             text={"REAL ESTATE"}
                         />
                         <LiaRegistered className="text-[16px] relative -top-1" />
@@ -304,50 +304,154 @@ export default function RealState() {
             </MainContainer>
 
             {/* Proyectos entregados */}
-            <MainContainer className={"py-[80px] lg:pb-[140px]"}>
-                <Parrafo
-                    className="text-[25px] mb-[80px] text-center"
-                    textParse={t("real.proyectos.entregados")}
-                />
+            {state.entregados && state.entregados.length && (
+                <>
+                    <MainContainer className={"py-[80px] lg:pb-[140px]"}>
+                        <Parrafo
+                            className="text-[25px] mb-[80px] text-center"
+                            textParse={t("real.proyectos.entregados")}
+                        />
+                        <Tabs defaultTab={"tab-id-" + state.entregados[0].id}>
+                            <div className="flex justify-center flex-wrap w-full max-w-[780px] mx-auto">
+                                {state.entregados.map((item) => (
+                                    <Tabs.Button
+                                        key={item.id}
+                                        tabid={"tab-id-" + item.id}
+                                        className="w-1/2 md:w-1/4 max-w-none text-[13px] md:text-[16px]"
+                                    >
+                                        {
+                                            item.translations.find(
+                                                ({ locale }) =>
+                                                    locale == i18n.language
+                                            ).title
+                                        }
+                                    </Tabs.Button>
+                                ))}
+                            </div>
 
-                <ul className="flex flex-wrap justify-between max-w-[1250px] mx-auto">
-                    <li className="w-[40%] md:w-1/3 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-[70px] lg:mb-0">
-                        <img
-                            src={logo1}
-                            alt="Xomak"
-                            className="max-w-[150px] h-auto"
-                        />
-                    </li>
-                    <li className="w-[40%] md:w-1/3 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-[70px] lg:mb-0">
-                        <img
-                            src={logo2}
-                            alt="Kantara"
-                            className="max-w-[150px] h-auto"
-                        />
-                    </li>
-                    <li className="w-[40%] md:w-1/3 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-[70px] lg:mb-0">
-                        <img
-                            src={logo3}
-                            alt="Yukan"
-                            className="max-w-[150px] h-auto"
-                        />
-                    </li>
-                    <li className="w-[40%] md:w-1/2 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-0">
-                        <img
-                            src={logo4}
-                            alt="Palma Real"
-                            className="max-w-[150px] h-auto"
-                        />
-                    </li>
-                    <li className="w-[100%] md:w-1/2 lg:w-auto h-[120px] flex items-end justify-center">
-                        <img
-                            src={logo5}
-                            alt="Unica"
-                            className="max-w-[150px] h-[70%] md:h-[80%]"
-                        />
-                    </li>
-                </ul>
-            </MainContainer>
+                            {state.entregados.map((item) => (
+                                <Tabs.Container
+                                    key={"container-" + item.id}
+                                    tabref={"tab-id-" + item.id}
+                                >
+                                    <div className="flex flex-col lg:flex-row w-full pt-[70px]">
+                                        <div className="lg:pr-[60px] w-full lg:max-w-[460px] 2xl:pl-[200px] 2xl:max-w-[600px] mb-[30px] lg:mb-0 ">
+                                            <div className="flex flex-col h-full justify-center">
+                                                <AnimatedTextWord
+                                                    className="text-left !mb-[5px] leading-[1.3]"
+                                                    text={
+                                                        item.translations.find(
+                                                            ({ locale }) =>
+                                                                locale ==
+                                                                i18n.language
+                                                        ).title
+                                                    }
+                                                />
+                                                <TextCustom2
+                                                    delay={5}
+                                                    className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]"
+                                                >
+                                                    {parse(
+                                                        item.translations.find(
+                                                            ({ locale }) =>
+                                                                locale ==
+                                                                i18n.language
+                                                        ).subtitle
+                                                    )}
+                                                </TextCustom2>
+
+                                                {item.translations.find(
+                                                    ({ locale }) =>
+                                                        locale == i18n.language
+                                                ).info && (
+                                                    <div className="mb-[30px] md:mb-[80px]">
+                                                        <TextCustom2
+                                                            delay={5}
+                                                            className="text-parrafos text-left"
+                                                        >
+                                                            {parse(
+                                                                item.translations.find(
+                                                                    ({
+                                                                        locale,
+                                                                    }) =>
+                                                                        locale ==
+                                                                        i18n.language
+                                                                ).info
+                                                            )}
+                                                        </TextCustom2>
+                                                    </div>
+                                                )}
+
+                                                {item?.website && (
+                                                    <a
+                                                        href={item.website}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                    >
+                                                        <Boton>
+                                                            {t("verMas")}
+                                                        </Boton>
+                                                    </a>
+                                                )}
+                                            </div>
+                                        </div>
+                                        <div className="lg:w-[calc(100%-460px)] 2xl:w-[calc(100%-600px)]">
+                                            <img
+                                                src={
+                                                    import.meta.env
+                                                        .VITE_APP_URL +
+                                                    item.cover
+                                                }
+                                                className="object-cover h-[310px] sm:h-[400px] md:h-[490px]
+										xl:h-full w-full max-w-full"
+                                                alt={item.title}
+                                            />
+                                        </div>
+                                    </div>
+                                </Tabs.Container>
+                            ))}
+                        </Tabs>
+
+                        <ul className="flex flex-wrap justify-between max-w-[1250px] mx-auto hidden">
+                            <li className="w-[40%] md:w-1/3 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-[70px] lg:mb-0">
+                                <img
+                                    src={logo1}
+                                    alt="Xomak"
+                                    className="max-w-[150px] h-auto"
+                                />
+                            </li>
+                            <li className="w-[40%] md:w-1/3 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-[70px] lg:mb-0">
+                                <img
+                                    src={logo2}
+                                    alt="Kantara"
+                                    className="max-w-[150px] h-auto"
+                                />
+                            </li>
+                            <li className="w-[40%] md:w-1/3 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-[70px] lg:mb-0">
+                                <img
+                                    src={logo3}
+                                    alt="Yukan"
+                                    className="max-w-[150px] h-auto"
+                                />
+                            </li>
+                            <li className="w-[40%] md:w-1/2 lg:w-auto h-[120px] flex items-end justify-center mb-[30px] md:mb-0">
+                                <img
+                                    src={logo4}
+                                    alt="Palma Real"
+                                    className="max-w-[150px] h-auto"
+                                />
+                            </li>
+                            <li className="w-[100%] md:w-1/2 lg:w-auto h-[120px] flex items-end justify-center">
+                                <img
+                                    src={logo5}
+                                    alt="Unica"
+                                    className="max-w-[150px] h-[70%] md:h-[80%]"
+                                />
+                            </li>
+                        </ul>
+                    </MainContainer>
+                </>
+            )}
         </main>
     );
 }

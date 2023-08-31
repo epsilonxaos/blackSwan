@@ -82,7 +82,7 @@ export default function Home() {
                     alt="Black Swan"
                     className="mx-auto mb-[60px] md:mb-[70px]"
                 />
-                <div className="flex justify-center mb-[30px] md:mb-[70px]">
+                <div className="flex justify-center mb-[50px] md:mb-[70px]">
                     <div className="block w-full md:w-5/6 max-w-[1250px] ">
                         <TextCustom2
                             className="text-parrafos"
@@ -95,13 +95,13 @@ export default function Home() {
 
                 <ul className="flex flex-col md:flex-row items-center justify-center">
                     <li className="mb-[95px] md:mb-0 md:mr-[150px]">
-                        <Link to={"capital"}>
-                            <img src={capital} alt="" />
+                        <Link to={"real-state"}>
+                            <img src={real} alt="" />
                         </Link>
                     </li>
                     <li className="mb-[95px] md:mb-0 md:mr-[150px]">
-                        <Link to={"real-state"}>
-                            <img src={real} alt="" />
+                        <Link to={"capital"}>
+                            <img src={capital} alt="" />
                         </Link>
                     </li>
                     <li>
@@ -160,7 +160,7 @@ export default function Home() {
                                         className="text-left !mb-[5px] leading-[0.6] max-w-max"
                                         text={"CAPITAL"}
                                     />
-                                    <LiaRegistered className="text-[16px] relative -top-1" />
+                                    <LiaRegistered className="text-[16px] relative top-[2px]" />
                                 </div>
                                 <TextCustom2 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
                                     {parse(
@@ -208,7 +208,7 @@ export default function Home() {
                                         className="text-left !mb-[5px] leading-[0.6] max-w-max"
                                         text={"REAL ESTATE"}
                                     />
-                                    <LiaRegistered className="text-[16px] relative -top-1" />
+                                    <LiaRegistered className="text-[16px] relative top-[2px]" />
                                 </div>
                                 <TextCustom2 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
                                     {parse(
@@ -256,7 +256,7 @@ export default function Home() {
                                         className="text-left !mb-[5px] leading-[0.6] max-w-max"
                                         text={"HOSPITALITY"}
                                     />
-                                    <LiaRegistered className="text-[16px] relative inline -top-1" />
+                                    <LiaRegistered className="text-[16px] relative inline top-[2px]" />
                                 </div>
                                 <TextCustom2 className="text-gris text-[32px] tracking-[-1.2px] leading-[1] mb-[20px]">
                                     {parse(

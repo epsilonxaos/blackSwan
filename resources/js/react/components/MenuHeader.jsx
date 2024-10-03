@@ -68,15 +68,6 @@ export default function MenuHeader() {
                     className="flex w-full max-w-6xl mx-auto items-center justify-center md:justify-around flex-col md:flex-row max-md:gap-8 landscape:py-12 py-[30px] md:py-[120px]"
                 >
                     <motion.li variants={itemA}>
-                        <Link onClick={() => setActive(false)} to={"capital"}>
-                            <img
-                                className="w-[140px] h-[90px]"
-                                src={logo1}
-                                alt="Capital"
-                            />
-                        </Link>
-                    </motion.li>
-                    <motion.li variants={itemA}>
                         <Link
                             onClick={() => setActive(false)}
                             to={"real-state"}
@@ -85,6 +76,15 @@ export default function MenuHeader() {
                                 className="w-[140px] h-[90px]"
                                 src={logo2}
                                 alt="Real Estate"
+                            />
+                        </Link>
+                    </motion.li>
+                    <motion.li variants={itemA}>
+                        <Link onClick={() => setActive(false)} to={"capital"}>
+                            <img
+                                className="w-[140px] h-[90px]"
+                                src={logo1}
+                                alt="Capital"
                             />
                         </Link>
                     </motion.li>

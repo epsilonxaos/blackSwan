@@ -78,7 +78,7 @@ export default function Nosotros() {
                                 state.website.about_s2_bg
                             }
                             alt="Raúl y Jacobo"
-                            className="bg-white w-full h-[500px] lg:h-[850px] object-contain max-w-[670px] mx-auto lg:mr-0"
+                            className="bg-white w-full h-[300px] lg:h-[650px] object-contain max-w-[670px] mx-auto lg:mr-0"
                         />
                     </div>
                 </div>
@@ -86,7 +86,7 @@ export default function Nosotros() {
 
             {/* Equipo */}
             <MainContainer className={"!px-0"}>
-                <div className="pt-[50px] pb-[40px] lg:pb-[70px] px-[40px] sm:px-[30px] max-w-[1320px] mx-auto">
+                <div className="md:pt-[50px] pb-[40px] lg:pb-[70px] px-[40px] sm:px-[30px] max-w-[1320px] mx-auto">
                     <Parrafo
                         className="mb-[30px] lg:mb-[45px] text-[24px] lg:text-[28px] text-center"
                         textParse={
@@ -128,7 +128,7 @@ export default function Nosotros() {
                                         Math.ceil(state.valores.length / 2)
                                     )
                                     .map((item) => (
-                                        <>
+                                        <div key={item.id + "-valor"}>
                                             <Parrafo
                                                 className="font-bold"
                                                 textParse={
@@ -151,7 +151,7 @@ export default function Nosotros() {
                                                     ).info
                                                 )}
                                             </TextCustom2>
-                                        </>
+                                        </div>
                                     ))}
                         </div>
                         <div className="w-full lg:w-1/2 lg:pl-4 xl:pl-6">
@@ -162,7 +162,7 @@ export default function Nosotros() {
                                         state.valores.length
                                     )
                                     .map((item) => (
-                                        <>
+                                        <div key={item.id + "-valor"}>
                                             <Parrafo
                                                 className="font-bold"
                                                 textParse={
@@ -185,7 +185,7 @@ export default function Nosotros() {
                                                     ).info
                                                 )}
                                             </TextCustom2>
-                                        </>
+                                        </div>
                                     ))}
                         </div>
                     </div>

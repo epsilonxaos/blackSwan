@@ -304,7 +304,7 @@ export default function RealState() {
             </MainContainer>
 
             {/* Proyectos entregados */}
-            {state.entregados && state.entregados.length && (
+            {state.entregados && state.entregados.length > 0 && (
                 <>
                     <MainContainer className={"py-[80px] lg:pb-[140px]"}>
                         <Parrafo

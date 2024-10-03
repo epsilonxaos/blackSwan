@@ -169,16 +169,16 @@ export default function Footer() {
                                     </Parrafo>
                                     <ul>
                                         <li>
-                                            <Link to={"/capital"}>
+                                            <Link to="/real-state">
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    Capital
+                                                    Real Estate
                                                 </Parrafo>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/real-state">
+                                            <Link to={"/capital"}>
                                                 <Parrafo className="text-white text-left font-normal text-[16px]">
-                                                    Real Estate
+                                                    Capital
                                                 </Parrafo>
                                             </Link>
                                         </li>

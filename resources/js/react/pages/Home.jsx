@@ -124,19 +124,19 @@ export default function Home() {
                     textParse={state.textsi18n[i18n.language].home_s3_title}
                 />
 
-                <Tabs defaultTab="tabCapital">
+                <Tabs defaultTab="tabRealState">
                     <div className="flex justify-between w-full max-w-[480px] mx-auto">
-                        <Tabs.Button
-                            tabid="tabCapital"
-                            className=" text-[13px] md:text-[16px]"
-                        >
-                            Capital
-                        </Tabs.Button>
                         <Tabs.Button
                             tabid="tabRealState"
                             className=" text-[13px] md:text-[16px]"
                         >
                             Real Estate
+                        </Tabs.Button>
+                        <Tabs.Button
+                            tabid="tabCapital"
+                            className=" text-[13px] md:text-[16px]"
+                        >
+                            Capital
                         </Tabs.Button>
                         <Tabs.Button
                             tabid="tabHospitality"
